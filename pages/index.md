@@ -8,22 +8,27 @@ including a national health record system.
 
 Using this API, applications can access the following information about the patient:
 
-* basic identification details
-* problem list
-* past encounters
-* current and past medications
-* immunization history
-* allergies and intolerances 
-* Diagnostic reports (e.g. labs, imaging)
-* vital signs and other clinical observations
-* patient forms / questionnaires
-* clinical notes & other patient documents
-* care plans and care teams
+* [basic identification details](StructureDefinition-patient.html)
+* [problem list](StructureDefinition-condition.html)
+* [past encounters](StructureDefinition-encounter.html)
+* [current and past medications](StructureDefinition-medicationrequrest.html)
+* [immunization history](StructureDefinition-immunization.html)
+* [allergies and intolerances](StructureDefinition-allergyintolerance.html)
+* [diagnostic reports (e.g. labs, imaging)](StructureDefinition-diagnosticreport.html)
+* [vital signs and other clinical observations](StructureDefinition-observation.html)
+* [patient forms / questionnaires](StructureDefinition-questionnaireresponse.html)
+* [clinical notes & other patient documents](StructureDefinition-documentreference.html)
+* [care plans](StructureDefinition-careplan.html) and [care teams](StructureDefinition-careteam.html)
 
-In addition, the application can also access the Audit Trail and additional
-provenance information for the patient's record. 
+These resources are supported by information about [practitioners](StructureDefinition-practitioner.html), 
+[organizations](StructureDefinition-organization.html), [related persons](StructureDefinition-relatedperson.html), 
+[locations](StructureDefinition-location.html), and [devices](StructureDefinition-device.html). 
+In addition, the application can also access the [audit trail](StructureDefinition-auditevent.html) and additional
+[provenance](StructureDefinition-provenance.html) information for the patient's record. 
 
-Note that this  API is read-only, though implementations may [provide write access too](writing.html).
+Notes:
+* not [all servers provide all of this information](conformance.html)
+* this  API is read-only, though implementations may [provide write access too](writing.html).
 
 = Relationship to National Specifications =
 
