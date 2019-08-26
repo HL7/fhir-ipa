@@ -56,7 +56,7 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
  - [maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
  - [Managing privacy and consent](privacy.html)
  - [Internationalization](internationalization.html) - language and timezone issues  
- - [Application expectations, and how to test conformance](conformance.html), 
+ - [Application expectations, and how to test conformance](conformance.html)
 
 = Where to get Support =
 
