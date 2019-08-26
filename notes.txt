@@ -5,6 +5,9 @@
  
  
 * documentation sections
+
+Introduction
+
  - front page: access summary
     - patient details
     - problem list / medical history
@@ -17,7 +20,16 @@
     - forms & other questionnaires
     - clinical notes & other documents
     - care team / plan
+    In addition:
     - Audit Trail + provenance
+ 
+Relationship to other 
+Documentation:
+ - getting access to a patient record (and other security details)
+ - finding/retrieving information about the patient (and generating specific documents)
+ - maintaining a synchronized copy of the patient's information
+ - managing private and consent
+  
  - access - how login works
  - search - how to find patient information + generate patient documents + paging + graphql
  - security 

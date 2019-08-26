@@ -28,7 +28,7 @@ In addition, the application can also access the [audit trail](StructureDefiniti
 
 Notes:
 * not [all servers provide all of this information](conformance.html)
-* this  API is read-only, though implementations may [provide write access too](writing.html).
+* this  API is read-only, though implementations may [provide write access too](conformance.html#writing).
 
 = Relationship to National Specifications =
 
