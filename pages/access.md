@@ -26,6 +26,10 @@ A client application gets access a patient record by following this general sequ
 
 * At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient infomration](fetching.html)
 
+== Scopes ==
+
+Scopes work as described in the Smart on FHIR specification, but note that many servers limit a server to the scopes approved on it's registration, 
+and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
 == Server Obligations ==
 
@@ -40,6 +44,5 @@ Servers that are conformant to the International Patient Access API conform to t
 * If the client requests access to a patient record, checks that the authenticated user of the application has access to the specified record 
 * If the client does not nominate a particular patient record, requires that the user must choose a single patient record to which the application has access
 * enforces [patient privacy and consent](privacy.html)
-
 
 Note that both the CapabilityStatement and the smart configuration file may be different for authenticated and unauthenticated clients.
