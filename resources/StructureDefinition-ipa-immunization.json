@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization",
+  "version": "0.1.0",
+  "name": "IPAImmunization",
+  "title": "Immunization - International Patient Access",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-08-26T15:10:00+10:00",
+  "description": "Minimum expectations for an Immunization resource when accessed via a International Patient Access API",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "path": "Immunization.status",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.statusReason",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.vaccineCode",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.patient",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "path": "Immunization.occurrence[x]",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-location",
+  "version": "0.1.0",
+  "name": "IPALocation",
+  "title": "Location - International Patient Access",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-08-26T15:10:00+10:00",
+  "description": "Minimum expectations for a Location resource when accessed via a International Patient Access API",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "path": "Location.status",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "path": "Location.name",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "path": "Location.managingOrganization",
+        "comment" : "Should be provided when relevant to the use of the location",
+        "min": 0,
+        "max": "1"
+      }
+    ]
+  }
+}
