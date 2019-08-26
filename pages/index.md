@@ -35,9 +35,9 @@ Notes:
 The International Patient Access specification describes how to access patient 
 records anywhere in the world. It provides a very minimal set of access methods 
 and rules about the content that are true everywhere. Working healthcare systems 
-need additional rules about the access to meet other use cases, and make many 
+need additional rules about the access API to meet other use cases, and make many 
 additional rules about the content based on national laws, regulations and accepted
-practice in order to support their own healthcare system. 
+practice in order to support the provision of health in their healthcare system. 
 
 No health care system implements the International Patient Access specification 
 directly; instead, each country publishes their own national patient access specification 
@@ -47,11 +47,11 @@ See [International Patient Access by Country](ipa-by-country.html) for a list of
 
 In addition, there is an [International Patient Summary](http://hl7.org/fhir/uv/ips) specification which specifies
 a more extensive set of rules about the content that clinical systems may conform to.
-See [Relationship to the International Patient Summary](ips-relationship.html) for 
+See [Relationship to the International Patient Summary](ips-relationship.html) for further details.
 
 = Using the International Patient Access API =
 
- - [getting access to a patient record](access.html) while [in a secure fashion](security.html)
+ - [getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
  - [finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
  - [maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
  - [Managing privacy and consent](privacy.html)
