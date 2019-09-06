@@ -13,7 +13,7 @@ The specifications do overlap, in that some systems that are required conform to
 Such systems will produce content that has two different sets of rules applied - the minimal expectations 
 in this specification, and the more extensive rules specified in IPS. 
 
-These rules are consistent; the content rules in this specification are a subset of the IPS rules, 
+These rules are consistent; the content rules in this specification are a subset of the IPS content rules, 
 and any system that meets the information requirements in IPS automatically conforms to the 
 requirements on the content specified here. 
 

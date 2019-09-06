@@ -10,7 +10,7 @@ Using this API, applications can access the following information about the pati
 
 * [Basic patient details](ipa-patient.html)
 * [Problem list](ipa-condition.html)
-* [Past encounters](ipa-encounter.html)
+* [Encounters](ipa-encounter.html)
 * [Current and past medications](ipa-medicationrequest.html)
 * [Immunization history](ipa-immunization.html)
 * [Allergies and intolerances](ipa-allergyintolerance.html)

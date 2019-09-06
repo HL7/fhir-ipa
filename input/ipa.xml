@@ -58,6 +58,7 @@
       <page><nameUrl value="conformance.html"/><title value="Conforming to this specification"/><generation value="markdown"/></page>
       <page><nameUrl value="ipa-by-country.html"/><title value="IPA Specifications by Country"/><generation value="markdown"/></page>
       <page><nameUrl value="ips-relationship.html"/><title value="Relationship with International Patient Summary"/><generation value="markdown"/></page>
+      <page><nameUrl value="artifacts.html"/><title value="Artifact List"/><generation value="markdown"/></page>
     </page>
   </definition>
 </ImplementationGuide>
