@@ -1,4 +1,3 @@
-= Synchronizing Patient Records =
 
 Many (if not most) applications that use this API to access patient records keep 
 a synchronized copy of the patient record elsewhere.  

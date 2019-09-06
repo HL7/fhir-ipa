@@ -1,43 +1,41 @@
-= Getting Access to a Patient Record =
-
 An application gets access to a patient record using the 
 [Smart App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the 
 stand alone launch sequence.
 
-== Client Process ==
+# Client Process 
 
 A client application gets access a patient record by following this general sequence of steps:
 
-* identifying the appropriate end point [URL] at which the International Patient Access API is found. 
- * Note that this specification does not specify how the end-point might be found; different countries will have different arrangements around this 
+* Identifying the appropriate end point [URL] at which the International Patient Access API is found. 
+  * Note that this specification does not specify how the end-point might be found; different countries will have different arrangements around this 
   
-* fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html#declaration):
+* Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html#declaration):
 
-    "imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]
+    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
-* fetch the [end-point configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
+* Fetch the [end-point configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
 
-* registering itself as a client application with the end-point. 
- * This may require a manual step on the part of the user or the developer, or the end-point may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
- * if the application supports automatic registration, the end-point will be specified in the [url]/.well-known/smart-configuration.json
- * note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported
+* Registering itself as a client application with the end-point. 
+  * This may require a manual step on the part of the user or the developer, or the end-point may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
+  * if the application supports automatic registration, the end-point will be specified in the [url]/.well-known/smart-configuration.json
+  * note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported
 
-* follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/index.html#standalone-launch-sequence) using the authorization endpoint from the smart-configuration.json file
+* Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/index.html#standalone-launch-sequence) using the authorization endpoint from the smart-configuration.json file
 
 * At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient infomration](fetching.html)
 
-== Scopes ==
+# Scopes 
 
 Scopes work as described in the Smart on FHIR specification, but note that many servers limit a server to the scopes approved on it's registration, 
 and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
-== Server Obligations ==
+# Server Obligations 
 
 Servers that are conformant to the International Patient Access API conform to the following rules:
 
 * The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
 
-    "imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]
+    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients
 * The server conforms to the Smart App Launch specification, and checks that the authenticated user of the application has access 

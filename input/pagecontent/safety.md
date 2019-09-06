@@ -1,4 +1,3 @@
-= Safety Check List =
 
 Accessing Patient records raises many questions of safety. Both accessing the wrong patient records, 
 or missing correct records, or displaying records incorrectly can create real harm to patients.
@@ -14,9 +13,9 @@ FHIR APIs like this one. All implementers should carefully consider each of the 
 
 Note that getting these issues right is necessary but not sufficient for delivering safe patient applications.
 
-== Client Safety Check list ==
+# Client Safety Check list 
 
-CLient should complete this check list, and are likely to be asked by servers to confirm that they have done so
+Clients should complete this check list, and are likely to be asked by servers to confirm that they have done so:
 
 * The client [checks the patient resource to which access has been granted](fetching.html)
 * the client etc
@@ -26,7 +25,7 @@ CLient should complete this check list, and are likely to be asked by servers to
 * synchronization issues 
 * information appearing in multiple places
 
-== Server Safety Check List ==
+# Server Safety Check List 
 
 * etc
 * xhtml

@@ -1,4 +1,4 @@
-Welcome to the International Patient Access API Specification
+#Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from an clinical records system using
@@ -8,17 +8,17 @@ including a national health record system.
 
 Using this API, applications can access the following information about the patient:
 
-* [basic patient details](ipa-patient.html)
-* [problem list](ipa-condition.html)
-* [past encounters](ipa-encounter.html)
-* [current and past medications](ipa-medicationrequest.html)
-* [immunization history](ipa-immunization.html)
-* [allergies and intolerances](ipa-allergyintolerance.html)
-* [diagnostic reports (e.g. labs, imaging)](ipa-diagnosticreport.html)
-* [vital signs and other clinical observations](ipa-observation.html)
-* [patient forms / questionnaires](ipa-questionnaireresponse.html)
-* [clinical notes & other patient documents](ipa-documentreference.html)
-* [care plans](StructureDefinition-careplan.html) and [care teams](ipa-careteam.html)
+* [Basic patient details](ipa-patient.html)
+* [Problem list](ipa-condition.html)
+* [Past encounters](ipa-encounter.html)
+* [Current and past medications](ipa-medicationrequest.html)
+* [Immunization history](ipa-immunization.html)
+* [Allergies and intolerances](ipa-allergyintolerance.html)
+* [Diagnostic reports (e.g. labs, imaging)](ipa-diagnosticreport.html)
+* [Vital signs and other clinical observations](ipa-observation.html)
+* [Patient forms / questionnaires](ipa-questionnaireresponse.html)
+* [Clinical notes & other patient documents](ipa-documentreference.html)
+* [Care plans](StructureDefinition-careplan.html) and [Care teams](ipa-careteam.html)
 
 These resources are supported by information about [practitioners](ipa-practitioner.html), 
 [organizations](ipa-organization.html), [related persons](ipa-relatedperson.html), 
@@ -47,16 +47,16 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 
 ## Using the International Patient Access API
 
- - [getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
- - [finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
- - [maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
+ - [Getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
+ - [Finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
+ - [Maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
  - [Managing privacy and consent](privacy.html)
  - [Internationalization](internationalization.html) - language and timezone issues  
  - [Application expectations, and how to test conformance](conformance.html)
 
 Notes:
-* not [all servers provide all of this information](conformance.html)
-* this  API is read-only, though implementations may [provide write access too](conformance.html#writing).
+* Not [all servers provide all of this information](conformance.html)
+* This  API is read-only, though implementations may [provide write access too](conformance.html#writing).
 
 ## Where to get Support 
 

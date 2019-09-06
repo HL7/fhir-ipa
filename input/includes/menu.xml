@@ -2,67 +2,23 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SDC Background<b class="caret">
-      </b>
-    </a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Using the API</a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="intro.html">FHIR usage</a>
-      </li>
-      <li>
-        <a href="security.html">Security</a>
-      </li>
-      <li>
-        <a href="workflow.html">Workflow</a>
-      </li>
-      <li>
-        <a href="expressions.html">Using Expressions</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SDC Specification<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="search.html">Finding a Questionnaire</a>
-      </li>
-      <li>
-        <a href="rendering.html">Advanced Rendering</a>
-      </li>
-      <li>
-        <a href="behavior.html">Form Behavior</a>
-      </li>
-      <li>
-        <a href="adaptive.html">Adaptive Forms</a>
-      </li>
-      <li>
-        <a href="populate.html">Questionnaire Population</a>
-      </li>
-      <li>
-        <a href="extraction.html">Data Extraction</a>
-      </li>
+      <li><a href="ipa.html">API Definition</a></li>
+      <li><a href="access.html">Gaining Access</a></li>
+      <li><a href="fetching.html">Finding / Retrieving information about the patient</a></li>
+      <li><a href="synchronization.html">Synchronization</a></li>
+      <li><a href="internationalization.html">Internationalization</a></li>
     </ul>
   </li>
   <li><a href="artifacts.html">Artifact Index</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
-      </b>
-    </a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support</a>
     <ul class="dropdown-menu">
-      <li>
-        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
-      </li>
-      <li>
-        <a target="_blank" href="http://hl7.org/fhirpath">FHIRPath Spec <img src="external.png" style="text-align: baseline"/></a>
-      </li>
-      <li>
-        <a target="_blank" href="http://cql.hl7.org">CQL Spec <img src="external.png" style="text-align: baseline"/></a>
-      </li>
-      <li>
-        <a href="downloads.html">Downloads</a>
-      </li>
+      <li><a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a></li>
+      <li><a target="_blank" href="http://hl7.org/fhirpath">FHIRPath Spec <img src="external.png" style="text-align: baseline"/></a></li>
+      <li><a target="_blank" href="http://cql.hl7.org">CQL Spec <img src="external.png" style="text-align: baseline"/></a></li>
+      <li><a href="downloads.html">Downloads</a></li>
     </ul>
   </li>
 </ul>      

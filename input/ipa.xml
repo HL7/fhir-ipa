@@ -47,13 +47,13 @@
     <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource>
     <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
       <page><nameUrl value="access.html"/><title value="Gaining Access to a patient record"/><generation value="markdown"/></page>
-      <page><nameUrl value="fetching.html"/><title value="Finding Patient Information"/><generation value="markdown"/></page>
+      <page><nameUrl value="fetching.html"/><title value="Finding / Retrieving information about the patient"/><generation value="markdown"/></page>
       <page><nameUrl value="doc-gen.html"/><title value="Generating Patient Documents"/><generation value="markdown"/></page>
       <page><nameUrl value="internationalization.html"/><title value="Internationalization Issues"/><generation value="markdown"/></page>
-      <page><nameUrl value="safety.html"/><title value="Safety"/><generation value="markdown"/></page>
+      <page><nameUrl value="safety.html"/><title value="Safety Check List"/><generation value="markdown"/></page>
       <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
       <page><nameUrl value="privacy.html"/><title value="Privacy and Consent"/><generation value="markdown"/></page>
-      <page><nameUrl value="synchronization.html"/><title value="Synchronizing Records"/><generation value="markdown"/></page>
+      <page><nameUrl value="synchronization.html"/><title value="Synchronizing Patient Records"/><generation value="markdown"/></page>
       <page><nameUrl value="conformance.html"/><title value="Conforming to this specification"/><generation value="markdown"/></page>
       <page><nameUrl value="ipa-by-country.html"/><title value="IPA Specifications by Country"/><generation value="markdown"/></page>
       <page><nameUrl value="ips-relationship.html"/><title value="Relationship with International Patient Summary"/><generation value="markdown"/></page>
