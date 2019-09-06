@@ -48,7 +48,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/us-core-patient"
+              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
             ]
           }
         ],

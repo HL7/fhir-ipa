@@ -27,7 +27,7 @@
         "comment" : "In some contexts, the real name of the related person is obscured. However this is handled, the resource must include at least some useable name for the person in the name.text element",
         "min": 1,
         "max": "*",
-        "mustSupport": true,
+        "mustSupport": true
       }
     ]
   }

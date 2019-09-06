@@ -56,10 +56,7 @@
             }
           ],
           "type" : "AllergyIntolerance",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance",
           "interaction" : [
             {
               "extension" : [
@@ -142,7 +139,14 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode" : "SHOULD"
+            }
+          ],
           "type" : "AuditEvent",
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-auditevent",
           "interaction" : [
             {
               "code" : "read"
@@ -190,10 +194,7 @@
             }
           ],
           "type" : "CarePlan",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-careplan",
           "interaction" : [
             {
               "extension" : [
@@ -295,10 +296,7 @@
             }
           ],
           "type" : "CareTeam",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/CareTeam",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-careteam",
           "interaction" : [
             {
               "extension" : [
@@ -388,10 +386,7 @@
             }
           ],
           "type" : "Condition",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Condition",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition",
           "interaction" : [
             {
               "extension" : [
@@ -505,10 +500,7 @@
             }
           ],
           "type" : "Device",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Device",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-device",
           "interaction" : [
             {
               "extension" : [
@@ -574,11 +566,7 @@
             }
           ],
           "type" : "DiagnosticReport",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-diagnosticreport",
           "interaction" : [
             {
               "extension" : [
@@ -680,10 +668,7 @@
             }
           ],
           "type" : "DocumentReference",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
           "documentation" : "The DocumentReference.type binding SHALL support at a minimum the [5 Common Clinical Notes](ValueSet-us-core-clinical-note-type.html) and may extend to the full US Core DocumentReference Type Value Set",
           "interaction" : [
             {
@@ -811,10 +796,7 @@
             }
           ],
           "type" : "Encounter",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Encounter",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-encounter",
           "interaction" : [
             {
               "extension" : [
@@ -892,10 +874,7 @@
             }
           ],
           "type" : "Goal",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Goal",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-goal",
           "interaction" : [
             {
               "extension" : [
@@ -973,10 +952,7 @@
             }
           ],
           "type" : "Immunization",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Immunization",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization",
           "interaction" : [
             {
               "extension" : [
@@ -1050,14 +1026,11 @@
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueString" : "SHALL"
+              "valueCode" : "SHALL"
             }
           ],
           "type" : "Location",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Location",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-location",
           "interaction" : [
             {
               "extension" : [
@@ -1084,14 +1057,11 @@
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueString" : "SHALL"
+              "valueCode" : "SHALL"
             }
           ],
           "type" : "Medication",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Medication",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication",
           "documentation" : "The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria  **SHALL**  be supported.",
           "interaction" : [
             {
@@ -1123,11 +1093,7 @@
             }
           ],
           "type" : "MedicationRequest",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-          ],
-          "documentation" : "The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the _include` parameter for searching this element. The client application must support all methods.\r\n\r\n For example, A server **SHALL** be capable of returning all medications for a patient using one of or both:\r\n\r\n `GET /MedicationRequest?patient=[id]`\r\n\r\n `GET /MedicationRequest?patient=[id]&_include=MedicationRequest:medication`",
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest",
           "interaction" : [
             {
               "extension" : [
@@ -1232,10 +1198,7 @@
             }
           ],
           "type" : "MedicationStatement",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement",
           "documentation" : "The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the _include` parameter for searching this element. The client application must support all methods.\r\n\r\n For example, A server **SHALL** be capable of returning all medications for a patient using one of or both:\r\n\r\n `GET /MedicationRequest?patient=[id]`\r\n\r\n `GET /MedicationRequest?patient=[id]&_include=MedicationRequest:medication`",
           "interaction" : [
             {
@@ -1326,14 +1289,7 @@
             }
           ],
           "type" : "Observation",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Observation",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
-            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height",
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
-            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age",
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation",
           "interaction" : [
             {
               "extension" : [
@@ -1419,14 +1375,11 @@
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueString" : "SHALL"
+              "valueCode" : "SHALL"
             }
           ],
           "type" : "Organization",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Organization",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-organization",
           "interaction" : [
             {
               "extension" : [
@@ -1453,14 +1406,11 @@
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueString" : "SHALL"
+              "valueCode" : "SHALL"
             }
           ],
           "type" : "Patient",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Patient",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
           "interaction" : [
             {
               "extension" : [
@@ -1491,10 +1441,7 @@
             }
           ],
           "type" : "Practitioner",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Practitioner",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
           "interaction" : [
             {
               "extension" : [
@@ -1525,10 +1472,7 @@
             }
           ],
           "type" : "PractitionerRole",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
           "interaction" : [
             {
               "extension" : [
@@ -1563,10 +1507,7 @@
             }
           ],
           "type" : "Procedure",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Procedure",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-procedure",
           "interaction" : [
             {
               "extension" : [
@@ -1668,10 +1609,7 @@
             }
           ],
           "type" : "Provenance",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Provenance",
-          "supportedProfile" : [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
-          ],
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-provenance",
           "documentation" : "If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they **SHALL** provide this organization as the source and **MAY** include the free text provider.",
           "interaction" : [
             {
@@ -1740,7 +1678,14 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode" : "SHOULD"
+            }
+          ],
           "type" : "Questionnaire",
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-questionnaire",
           "interaction" : [
             {
               "code" : "read"
@@ -1749,6 +1694,10 @@
               "code" : "search-type"
             }
           ],
+          "updateCreate" : false,
+          "conditionalCreate" : false,
+          "conditionalUpdate" : false,
+          "conditionalDelete" : "not-supported",
           "searchParam" : [
             {
               "extension" : [
@@ -1813,7 +1762,14 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode" : "SHOULD"
+            }
+          ],
           "type" : "QuestionnaireResponse",
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-questionnaireresponse",
           "interaction" : [
             {
               "code" : "read"
@@ -1822,6 +1778,10 @@
               "code" : "search-type"
             }
           ],
+          "updateCreate" : false,
+          "conditionalCreate" : false,
+          "conditionalUpdate" : false,
+          "conditionalDelete" : "not-supported",
           "searchParam" : [
             {
               "extension" : [
@@ -1862,12 +1822,23 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode" : "SHOULD"
+            }
+          ],
           "type" : "RelatedPerson",
+          "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-relatedperson",
           "interaction" : [
             {
               "code" : "read"
             }
-          ]
+          ],
+          "updateCreate" : false,
+          "conditionalCreate" : false,
+          "conditionalUpdate" : false,
+          "conditionalDelete" : "not-supported"
         }
       ],
       "interaction" : [

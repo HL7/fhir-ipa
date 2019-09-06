@@ -27,7 +27,6 @@
         "min": 1,
         "max": "*",
         "mustSupport": true
-        ]
       },
       {
         "path": "Patient.identifier.system",
@@ -55,7 +54,7 @@
             "xpath": "f:given or f:family"
           }
         ],
-        "mustSupport": true,
+        "mustSupport": true
       },
       {
         "path": "Patient.gender",
