@@ -45,7 +45,8 @@
     <resource><reference><reference value="StructureDefinition/ipa-questionnaire"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-questionnaireresponse"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource>
-    <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
+    <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/>
+      <page><nameUrl value="index.html"/><title value="International Patient Access"/><generation value="markdown"/></page>
       <page><nameUrl value="access.html"/><title value="Gaining Access to a patient record"/><generation value="markdown"/></page>
       <page><nameUrl value="fetching.html"/><title value="Finding / Retrieving information about the patient"/><generation value="markdown"/></page>
       <page><nameUrl value="doc-gen.html"/><title value="Generating Patient Documents"/><generation value="markdown"/></page>
