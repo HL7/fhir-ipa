@@ -26,13 +26,9 @@ These resources are supported by information about [practitioners](ipa-practitio
 In addition, the application can also access the [audit trail](ipa-auditevent.html) and additional
 [provenance](ipa-provenance.html) information for the patient's record. 
 
-Notes:
-* not [all servers provide all of this information](conformance.html)
-* this  API is read-only, though implementations may [provide write access too](conformance.html#writing).
-
 ## Relationship to National Specifications 
 
-The International Patient Access specification describes how to access patient 
+This International Patient Access specification describes how to access patient 
 records anywhere in the world. It provides a very minimal set of access methods 
 and rules about the content that are true everywhere. Working healthcare systems 
 need additional rules about the access API to meet other use cases, and make many 
@@ -57,6 +53,10 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
  - [Managing privacy and consent](privacy.html)
  - [Internationalization](internationalization.html) - language and timezone issues  
  - [Application expectations, and how to test conformance](conformance.html)
+
+Notes:
+* not [all servers provide all of this information](conformance.html)
+* this  API is read-only, though implementations may [provide write access too](conformance.html#writing).
 
 ## Where to get Support 
 
