@@ -60,5 +60,21 @@
       <page><nameUrl value="ips-relationship.html"/><title value="Relationship with International Patient Summary"/><generation value="markdown"/></page>
       <page><nameUrl value="artifacts.html"/><title value="Artifact List"/><generation value="markdown"/></page>
     </page>
+    <parameter>
+      <code value="logging"/>
+      <value value="init"/>
+    </parameter>
+    <parameter>
+      <code value="logging"/>
+      <value value="progress"/>
+    </parameter>
+    <parameter>
+      <code value="logging"/>
+      <value value="tx"/>
+    </parameter>
+    <parameter>
+      <code value="logging"/>
+      <value value="context"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
