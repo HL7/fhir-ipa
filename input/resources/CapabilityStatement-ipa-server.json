@@ -1,6 +1,6 @@
 {
   "resourceType" : "CapabilityStatement",
-  "url" : "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa",
+  "url" : "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server",
   "version" : "0.0.0",
   "name" : "InternationalPatientAccessAPI",
   "title" : "CapabilityStatement - International Patient Access",
