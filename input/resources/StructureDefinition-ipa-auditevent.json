@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-auditevent",
   "version": "0.1.0",
   "name": "IPAAuditEvent",
-  "title": "AuditEvent - International Patient Access",
+  "title": "IPA-AuditEvent",
   "status": "draft",
   "date": "2019-08-26T15:10:00+10:00",
   "description": "Minimum expectations for an AuditEvent resource when accessed via a International Patient Access API",

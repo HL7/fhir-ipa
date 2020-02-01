@@ -1,4 +1,4 @@
-Once an application has [obtained a token that provides access to the patient record](access.html]), it can 
+Once an application has [obtained a token that provides access to the patient record](access.html), it can 
 find and retrieve information about the patient. 
 
 ## Initial Patient Identity Check 
@@ -36,7 +36,7 @@ Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to man
 Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number
 of resources returned, but except for the few search parameters documented clearly below, servers are not obliged to support
 the search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters
-were process (or consult the [CapabilityStatement](xx.html) in advance to know which parameters are supported). 
+were process (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
 Note that servers may decline to perform some searches unless particular parameters are specified - (more details needed)
 

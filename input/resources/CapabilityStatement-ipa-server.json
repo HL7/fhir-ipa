@@ -49,12 +49,6 @@
       },
       "resource" : [
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "AllergyIntolerance",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance",
           "interaction" : [
@@ -92,59 +86,53 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "clinical-status",
               "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "active | inactive | resolved"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "Code that identifies the allergy or intolerance"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Date first version of the resource instance was recorded"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "verification-status",
               "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "unconfirmed | confirmed | refuted | entered-in-error"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHOULD"
-            }
-          ],
           "type" : "AuditEvent",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-auditevent",
           "interaction" : [
@@ -164,19 +152,19 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/AuditEvent-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Time when the event was recorded"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "entity",
@@ -187,12 +175,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "CarePlan",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-careplan",
           "interaction" : [
@@ -230,71 +212,65 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Type of plan"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Time period plan covers"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "intent",
               "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-intent",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "proposal | plan | order | option"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "draft | active | suspended | completed | entered-in-error | cancelled | unknown"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/CarePlan-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Encounter created as part of"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "CareTeam",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-careteam",
           "interaction" : [
@@ -332,35 +308,35 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/CareTeam-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Type of team"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/CareTeam-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Time period team covers"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/CareTeam-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Encounter created as part of"
             },
@@ -368,23 +344,17 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/CareTeam-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "proposed | active | suspended | inactive | entered-in-error"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Condition",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition",
           "interaction" : [
@@ -422,47 +392,47 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/Condition-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The category of the condition"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "clinical-status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Condition-clinical-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The clinical status of the condition"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Condition-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "Code for the condition"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Condition-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Encounter created as part of"
             },
@@ -470,35 +440,29 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "recorded-date",
               "definition" : "http://hl7.org/fhir/SearchParameter/Condition-recorded-date",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "Date record was first recorded"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "verification-status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Condition-verification-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Device",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-device",
           "interaction" : [
@@ -536,35 +500,29 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Device-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "active | inactive | entered-in-error | unknown"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "type",
               "definition" : "http://hl7.org/fhir/SearchParameter/Device-type",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The type of the device"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "DiagnosticReport",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-diagnosticreport",
           "interaction" : [
@@ -602,47 +560,47 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Which diagnostic discipline/department created the report"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "The clinically relevant time of the report"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "The Encounter when the order was made"
             },
@@ -650,23 +608,17 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The status of the report"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "DocumentReference",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
           "documentation" : "The DocumentReference.type binding SHALL support at a minimum the [5 Common Clinical Notes](ValueSet-us-core-clinical-note-type.html) and may extend to the full US Core DocumentReference Type Value Set",
@@ -705,35 +657,35 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Categorization of document"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "When this document reference was created"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Context of the document  content"
             },
@@ -741,36 +693,36 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "period",
               "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-period",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "Time of service that is being documented"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "current | superseded | entered-in-error"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "type",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-type",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-type",
+              "type" : "token",
               "documentation" : "Kind of document (LOINC if possible)"
             }
           ],
@@ -789,12 +741,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Encounter",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-encounter",
           "interaction" : [
@@ -832,47 +778,41 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "A date within the period the Encounter lasted"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "type",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Encounter-type",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-type",
+              "type" : "token",
               "documentation" : "Specific type of encounter"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Goal",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-goal",
           "interaction" : [
@@ -910,47 +850,41 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/Goal-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "E.g. Treatment, dietary, behavioral, etc."
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "start-date",
               "definition" : "http://hl7.org/fhir/SearchParameter/Goal-start-date",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "When goal pursuit begins"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "target-date",
               "definition" : "http://hl7.org/fhir/SearchParameter/Goal-target-date",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "Reach goal on or before"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Immunization",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization",
           "interaction" : [
@@ -988,47 +922,41 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Immunization-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Vaccination  (non)-Administration Date"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Immunization-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Immunization event status"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "vaccine-code",
               "definition" : "http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Vaccine Product Administered"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Location",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-location",
           "interaction" : [
@@ -1054,12 +982,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Medication",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication",
           "documentation" : "The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria  **SHALL**  be supported.",
@@ -1086,12 +1008,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHOULD"
-            }
-          ],
           "type" : "MedicationRequest",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest",
           "interaction" : [
@@ -1132,47 +1048,47 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/MedicationRequest-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Returns prescriptions with different categories"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationRequest-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "Return prescriptions of this medication code"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationRequest-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Returns medication request to be administered on a specific date"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationRequest-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Return prescriptions with this encounter identifier"
             },
@@ -1180,23 +1096,17 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationRequest-status",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/medications-status",
+              "type" : "token",
               "documentation" : "Status of the prescription"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "MedicationStatement",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement",
           "documentation" : "The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained) or an external resource. The server application **MAY** choose any one way or more than one method, but if an external reference to Medication is used, the server **SHALL** support the _include` parameter for searching this element. The client application must support all methods.\r\n\r\n For example, A server **SHALL** be capable of returning all medications for a patient using one of or both:\r\n\r\n `GET /MedicationRequest?patient=[id]`\r\n\r\n `GET /MedicationRequest?patient=[id]&_include=MedicationRequest:medication`",
@@ -1235,59 +1145,53 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/MedicationStatement-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Returns statements of this category of medicationstatement"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationStatement-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "Return statements of this medication code"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "effective",
               "definition" : "http://hl7.org/fhir/SearchParameter/MedicationStatement-effective",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "Date when patient was taking (or not taking) the medication"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
-              "definition" : "http://hl7.org/fhir/SearchParameter/MedicationStatement-status",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/medications-status",
+              "type" : "token",
               "documentation" : "Return statements that match the given status"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Observation",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation",
           "interaction" : [
@@ -1325,59 +1229,53 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/Observation-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The classification of the type of observation"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Observation-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "The code of the observation type"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Observation-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "Obtained date/time. If the obtained element is a period, a date that falls in the period"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Observation-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The status of the observation"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Organization",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-organization",
           "interaction" : [
@@ -1403,12 +1301,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Patient",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
           "interaction" : [
@@ -1434,12 +1326,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Practitioner",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
           "interaction" : [
@@ -1465,12 +1351,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "PractitionerRole",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
           "interaction" : [
@@ -1500,12 +1380,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Procedure",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-procedure",
           "interaction" : [
@@ -1543,47 +1417,47 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "category",
               "definition" : "http://hl7.org/fhir/SearchParameter/Procedure-category",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "Classification of the procedure"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Procedure-code",
-              "type" : "date",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type" : "token",
               "documentation" : "A code to identify a  procedure"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Procedure-date",
-              "type" : "quantity",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type" : "date",
               "documentation" : "When the procedure was performed"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "encounter",
-              "definition" : "http://hl7.org/fhir/SearchParameter/Procedure-encounter",
+              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type" : "reference",
               "documentation" : "Encounter created as part of"
             },
@@ -1591,7 +1465,7 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "subject",
@@ -1602,12 +1476,6 @@
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHALL"
-            }
-          ],
           "type" : "Provenance",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-provenance",
           "documentation" : "If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they **SHALL** provide this organization as the source and **MAY** include the free text provider.",
@@ -1643,19 +1511,19 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "recorded",
               "definition" : "http://hl7.org/fhir/SearchParameter/Provenance-recorded",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "When the activity was recorded / updated"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "target",
@@ -1667,23 +1535,17 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "when",
               "definition" : "http://hl7.org/fhir/SearchParameter/Provenance-when",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "When the activity occurred"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHOULD"
-            }
-          ],
           "type" : "Questionnaire",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-questionnaire",
           "interaction" : [
@@ -1703,71 +1565,65 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "code",
               "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-code",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "A code that corresponds to one of its items in the questionnaire"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "date",
               "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-date",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "The questionnaire publication date"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "effective",
               "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-effective",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "The time during which the questionnaire is intended to be in use"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "name",
               "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-name",
-              "type" : "number",
+              "type" : "string",
               "documentation" : "Computationally friendly name of the questionnaire"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/Questionnaire-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The current status of the questionnaire"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHOULD"
-            }
-          ],
           "type" : "QuestionnaireResponse",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-questionnaireresponse",
           "interaction" : [
@@ -1787,19 +1643,19 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "authored",
               "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-authored",
-              "type" : "quantity",
+              "type" : "date",
               "documentation" : "When the questionnaire response was last changed"
             },
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHALL"
+                  "valueCode" : "SHALL"
                 }
               ],
               "name" : "questionnaire",
@@ -1811,28 +1667,37 @@
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueString" : "SHOULD"
+                  "valueCode" : "SHOULD"
                 }
               ],
               "name" : "status",
               "definition" : "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-status",
-              "type" : "date",
+              "type" : "token",
               "documentation" : "The status of the questionnaire response"
             }
           ]
         },
         {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode" : "SHOULD"
-            }
-          ],
           "type" : "RelatedPerson",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-relatedperson",
           "interaction" : [
             {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode" : "MAY"
+                }
+              ],
               "code" : "read"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode" : "MAY"
+                }
+              ],
+              "code" : "search-type"
             }
           ],
           "updateCreate" : false,

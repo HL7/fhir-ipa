@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-diagnosticreport",
   "version": "0.1.0",
   "name": "IPADiagnosticReport",
-  "title": "DiagnosticReport - International Patient Access",
+  "title": "IPA-DiagnosticReport",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-26T15:10:00+10:00",
@@ -99,7 +99,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation-diagnostic"
+              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
             ]
           }
         ],

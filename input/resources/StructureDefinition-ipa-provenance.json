@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-provenance",
   "version": "0.1.0",
   "name": "IPAProvenance",
-  "title": "Provenance - International Patient Access",
+  "title": "IPA-Provenance",
   "status": "draft",
   "date": "2019-08-26T15:10:00+10:00",
   "description": "Minimum expectations for a Provenance resource when accessed via a International Patient Access API",

@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
   "version": "0.1.0",
   "name": "IPAPractitioner",
-  "title": "Practitioner - International Patient Access",
+  "title": "IPA-Practitioner",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-19T00:00:00+10:00",

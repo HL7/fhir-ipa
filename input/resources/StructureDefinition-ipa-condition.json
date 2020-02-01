@@ -1,9 +1,10 @@
 {
-  "resourceType": "StructureDefinition",
+  "resourceType" : "StructureDefinition",
+  "id" : "ipa-condition",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition",
   "version": "0.1.0",
   "name": "IPACondition",
-  "title": "Condition - International Patient Access",
+  "title": "IPA-Condition",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-26T15:10:00+10:00",

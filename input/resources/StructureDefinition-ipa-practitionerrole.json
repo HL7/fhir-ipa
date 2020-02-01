@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
   "version": "0.1.0",
   "name": "IPAPractitionerRole",
-  "title": "PractitionerRole - International Patient Access",
+  "title": "IPA-PractitionerRole",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-26T15:10:00+10:00",
@@ -16,6 +16,12 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "path": "PractitionerRole.active",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
       {
         "path": "PractitionerRole.practitioner",
         "min": 1,

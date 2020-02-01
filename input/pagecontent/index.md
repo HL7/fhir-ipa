@@ -8,23 +8,23 @@ including a national health record system.
 
 Using this API, applications can access the following information about the patient:
 
-* [Basic patient details](ipa-patient.html)
-* [Problem list](ipa-condition.html)
-* [Encounters](ipa-encounter.html)
-* [Current and past medications](ipa-medicationrequest.html)
-* [Immunization history](ipa-immunization.html)
-* [Allergies and intolerances](ipa-allergyintolerance.html)
-* [Diagnostic reports (e.g. labs, imaging)](ipa-diagnosticreport.html)
-* [Vital signs and other clinical observations](ipa-observation.html)
-* [Patient forms / questionnaires](ipa-questionnaireresponse.html)
-* [Clinical notes & other patient documents](ipa-documentreference.html)
-* [Care plans](StructureDefinition-careplan.html) and [Care teams](ipa-careteam.html)
+* [Basic patient details](StructureDefinition-ipa-patient.html)
+* [Problems / Conditions](StructureDefinition-ipa-condition.html)
+* [Encounters](StructureDefinition-ipa-encounter.html)
+* [Current and past medications](StructureDefinition-ipa-medicationrequest.html)
+* [Immunization history](StructureDefinition-ipa-immunization.html)
+* [Allergies and intolerances](StructureDefinition-ipa-allergyintolerance.html)
+* [Diagnostic reports (e.g. labs, imaging)](StructureDefinition-ipa-diagnosticreport.html)
+* [Vital signs and other clinical observations](StructureDefinition-ipa-observation.html)
+* [Patient forms / questionnaires](StructureDefinition-ipa-questionnaireresponse.html)
+* [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
+* [Care plans](StructureDefinition-ipa-careplan.html) and [Care teams](StructureDefinition-ipa-careteam.html)
 
-These resources are supported by information about [practitioners](ipa-practitioner.html), 
-[organizations](ipa-organization.html), [related persons](ipa-relatedperson.html), 
-[locations](ipa-location.html), and [devices](ipa-device.html). 
-In addition, the application can also access the [audit trail](ipa-auditevent.html) and additional
-[provenance](ipa-provenance.html) information for the patient's record. 
+These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html), 
+[organizations](StructureDefinition-ipa-organization.html), [related persons](StructureDefinition-ipa-relatedperson.html), 
+[locations](StructureDefinition-ipa-location.html), and [devices](StructureDefinition-ipa-device.html). 
+In addition, the application can also access the [audit trail](StructureDefinition-ipa-auditevent.html) and additional
+[provenance](StructureDefinition-ipa-provenance.html) information for the patient's record. 
 
 ## Relationship to National Specifications 
 
@@ -56,7 +56,7 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 
 Notes:
 * Not [all servers provide all of this information](conformance.html)
-* This  API is read-only, though implementations may [provide write access too](conformance.html#writing).
+* This  API is read-only, though implementations may [provide write access too](conformance.html).
 
 ## Where to get Support 
 

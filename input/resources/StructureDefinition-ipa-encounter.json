@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-encounter",
   "version": "0.1.0",
   "name": "IPAEncounter",
-  "title": "Encounter - International Patient Access",
+  "title": "IPA-Encounter",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-26T15:10:00+10:00",

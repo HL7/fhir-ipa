@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication",
   "version": "0.1.0",
   "name": "IPAMedication",
-  "title": "Medication - International Patient Access",
+  "title": "IPA-Medication",
   "status": "draft",
   "experimental": false,
   "date": "2019-05-21T00:00:00+10:00",

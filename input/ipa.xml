@@ -17,7 +17,7 @@
   <copyright value="Creative Commons Public Domain"/>
   <packageId value="hl7.fhir.uv.ipa"/> 
   <license value="CC0-1.0"/>
-  <fhirVersion value="4.0.0"/> 
+  <fhirVersion value="4.0.1"/> 
   <definition>
     <resource><reference><reference value="CapabilityStatement/ipa-server"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-allergyintolerance"/></reference></resource>
@@ -59,22 +59,15 @@
       <page><nameUrl value="ipa-by-country.html"/><title value="IPA Specifications by Country"/><generation value="markdown"/></page>
       <page><nameUrl value="ips-relationship.html"/><title value="Relationship with International Patient Summary"/><generation value="markdown"/></page>
       <page><nameUrl value="artifacts.html"/><title value="Artifact List"/><generation value="markdown"/></page>
+      <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
+      <page><nameUrl value="ipa-server.html"/><title value="IPA Server Rules"/><generation value="markdown"/></page>
     </page>
-    <parameter>
-      <code value="logging"/>
-      <value value="init"/>
-    </parameter>
-    <parameter>
-      <code value="logging"/>
-      <value value="progress"/>
-    </parameter>
-    <parameter>
-      <code value="logging"/>
-      <value value="tx"/>
-    </parameter>
-    <parameter>
-      <code value="logging"/>
-      <value value="context"/>
-    </parameter>
+    <parameter><code value="logging"/><value value="init"/></parameter>
+    <parameter><code value="logging"/><value value="progress"/></parameter>
+    <parameter><code value="logging"/><value value="tx"/></parameter>
+    <parameter><code value="logging"/><value value="context"/></parameter>
+    <parameter><code value="releaselabel"/><value value="draft"/></parameter>
+    <parameter><code value="copyrightyear"/><value value="2019"/></parameter>
+    <parameter><code value="show-inherited-invariants"/><value value="false"/></parameter>
   </definition>
 </ImplementationGuide>

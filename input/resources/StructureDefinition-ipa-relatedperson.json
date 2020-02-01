@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-relatedperson",
   "version": "0.1.0",
   "name": "IPARelatedPerson",
-  "title": "RelatedPerson - International Patient Access",
+  "title": "IPA-RelatedPerson",
   "status": "draft",
   "experimental": false,
   "date": "2019-08-26T15:10:00+10:00",
@@ -20,13 +20,21 @@
         "path": "RelatedPerson.active",
         "min": 1,
         "max": "1",
+        "mustSupport": true,
+        "constraint" : [{
+          "key" : "rp-1",
+          "severity" : "error",
+          "human" : "Either a name or a relationship SHALL be provided (or both)",
+          "expression" : "name.exists() or relationship.exists()"
+        }]
+      },
+      {
+        "path": "RelatedPerson.relationship",
         "mustSupport": true
       },
       {
         "path": "RelatedPerson.name",
-        "comment" : "In some contexts, the real name of the related person is obscured. However this is handled, the resource must include at least some useable name for the person in the name.text element",
-        "min": 1,
-        "max": "*",
+        "comment" : "In some contexts, the real name of the related person is obscured. The resource SHOULD include at least some useable name for the person in the name.text element",
         "mustSupport": true
       }
     ]

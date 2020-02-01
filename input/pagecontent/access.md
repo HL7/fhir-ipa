@@ -9,7 +9,7 @@ A client application gets access a patient record by following this general sequ
 * Identifying the appropriate end point [URL] at which the International Patient Access API is found. 
   * Note that this specification does not specify how the end-point might be found; different countries will have different arrangements around this 
   
-* Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html#declaration):
+* Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html):
 
     ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
@@ -33,7 +33,7 @@ and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
 Servers that are conformant to the International Patient Access API conform to the following rules:
 
-* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
+* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](http://hl7,org/fhir/capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
 
     ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
