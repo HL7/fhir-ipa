@@ -73,7 +73,7 @@
     <parameter><code value="logging"/><value value="tx"/></parameter>
     <parameter><code value="logging"/><value value="context"/></parameter>
     <parameter><code value="releaselabel"/><value value="draft"/></parameter>
-    <parameter><code value="copyrightyear"/><value value="2019"/></parameter>
+    <parameter><code value="copyrightyear"/><value value="2021+"/></parameter>
     <parameter><code value="show-inherited-invariants"/><value value="false"/></parameter>
   </definition>
 </ImplementationGuide>
