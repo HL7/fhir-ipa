@@ -1,0 +1,24 @@
+{
+  "package-id": "hl7.fhir.uv.ipa",
+  "title": "International Patient Access",
+  "canonical": "http://hl7.org/fhir/uv/ipa",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/HL7/fhir-ipa",
+      "fhirversion": "4.0.1",
+      "status": "ci-build",
+      "current": true
+    },
+        {
+          "version": "0.1.0",
+          "date": "2021-06-02",
+          "desc": "STU 1 Draft",
+          "path": "https://build.fhir.org/ig/HL7/fhir-ipa",
+          "sequence": "STU 1",
+          "fhirversion": "4.0.1",
+          "status": "draft"
+        }
+      ]
+}
