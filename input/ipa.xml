@@ -14,6 +14,12 @@
       <value value="http://hl7.org"/>
     </telecom>
   </contact>
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
   <copyright value="Creative Commons Public Domain"/>
   <packageId value="hl7.fhir.uv.ipa"/> 
   <license value="CC0-1.0"/>
