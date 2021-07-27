@@ -1,6 +1,4 @@
-An application gets access to a patient record using the 
-[Smart App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the 
-stand alone launch sequence.
+An application gets access to a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the stand alone launch sequence.
 
 # Client Process 
 
@@ -26,7 +24,7 @@ A client application gets access a patient record by following this general sequ
 
 # Scopes 
 
-Scopes work as described in the Smart on FHIR specification, but note that many servers limit a server to the scopes approved on it's registration, 
+Scopes work as described in the SMART on FHIR specification, but note that many servers limit a client to the scopes approved on its registration, 
 and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
 # Server Obligations 
@@ -37,10 +35,10 @@ Servers that are conformant to the International Patient Access API conform to t
 
     ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
-* The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients
-* The server conforms to the Smart App Launch specification, and checks that the authenticated user of the application has access 
-* If the client requests access to a patient record, checks that the authenticated user of the application has access to the specified record 
-* If the client does not nominate a particular patient record, requires that the user must choose a single patient record to which the application has access
-* enforces [patient privacy and consent](privacy.html)
+* The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
+* The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
+* If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
+* If the client does not nominate a particular patient record, the server requires that the user must choose a single patient record to which the application has access.
+* The server enforces [patient privacy and consent](privacy.html).
 
 Note that both the CapabilityStatement and the smart configuration file may be different for authenticated and unauthenticated clients.
