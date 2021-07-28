@@ -23,7 +23,7 @@ the full set of access rules in the scopes, and SHALL be prepared to handle fail
 Servers MAY choose to inform a client when information is not available, but most servers will simply 
 behave as if it doesn't exist (see [note in FHIR specification](http://hl7.org/fhir/security.html#AccessDenied)).
 
-Note that this specification labels some elements as [must-support](conformance.html#must-support]. This 
+Note that this specification labels some elements as [must-support](conformance.html#must-support). This 
 does not override the patient's right to decide whether to authorize an application to access their information.
 
 
