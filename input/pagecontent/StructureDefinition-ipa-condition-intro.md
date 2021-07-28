@@ -28,8 +28,9 @@ Servers SHOULD support the following search parameters:
 * encounter
 * recorded-date
 
-** Todo: How to get the current problem list? **
+The current problem list is retrieved by specifying the patient, category and and clinical-status:
 
+```GET [url]/Condition?patient=[patient-id]&category=problem-list-item&clinical-status=active```
 
 Regardless of which way they are accessed, all Condition resources have to conform to the following rules:
 
