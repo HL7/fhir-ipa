@@ -32,4 +32,14 @@ To claim conformance to a US Core Profile a server:
 
 
 ## Must-support
-<todo -- erg: https://www.hl7.org/fhir/us/core/conformance-expectations.html#must-support-elements >
+In the context of IPA, Supported on any data element SHALL be interpreted as follows:
+* Responders SHALL be capable of including the data element as part of the query results as specified by the IPA conformance resources.
+* Requestors SHALL be capable of processing resource instances containing the data elements. In other words Requestors SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
+* In situations where information on a particular data element is not present and the reason for absence is unknown, Responders SHALL NOT include the data elements in the resource instance returned as part of the query results.
+* When querying Responders, Requestors SHALL interpret missing data elements within resource instances as data not present in the Responder’s systems.
+* In situations where information on a particular data element is missing and the Responder knows the precise reason for the absence of data, Responders MAY send the reason for the missing information using values from the value set where they exist or using the dataAbsentReason extension.
+* Requestors SHALL be able to process resource instances containing data elements asserting missing information.
+
+NOTE: Responders who do not have the capability to store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA  conformance resources.
+NOTE: The above definition of Supported is derived from HL7v2 concept “Required but may be empty - RE” described in HL7v2 V28_CH02B_Conformance.doc.
+NOTE: Readers are advised to understand FHIR Terminology requirements, FHIR RESTful API based on the HTTP protocol, along with FHIR DataTypes, FHIR Search and FHIR Resource formats before implementing IPA requirements.
