@@ -1,7 +1,7 @@
 
 Yet to be written
 
-Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in FHIR Conformance Rules.
+Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 
 This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. A system SHALL support the resources as profiled by IPA to represent clinical information (Profile Support) and the RESTful interactions defined for it (Profile Support + Interaction Support). 
 
