@@ -38,7 +38,7 @@ Servers that are conformant to the International Patient Access API conform to t
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
 * The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
 * If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
-* If the client does not nominate a particular patient record, the server requires that the user must choose a single patient record to which the application has access.
+* If the user is authorized to access multiple patient records, the server requires that the user must choose a single patient record to which the application has access.
 * The server enforces [patient privacy and consent](privacy.html).
 
 Note that both the CapabilityStatement and the smart configuration file may be different for authenticated and unauthenticated clients.
