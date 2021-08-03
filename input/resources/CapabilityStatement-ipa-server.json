@@ -621,7 +621,6 @@
         {
           "type" : "DocumentReference",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
-          "documentation" : "The DocumentReference.type binding SHALL support at a minimum the [5 Common Clinical Notes](ValueSet-us-core-clinical-note-type.html) and may extend to the full US Core DocumentReference Type Value Set",
           "interaction" : [
             {
               "extension" : [
