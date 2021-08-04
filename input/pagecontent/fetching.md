@@ -1,36 +1,31 @@
 Once an application has [obtained a token that provides access to the patient record](access.html), it can 
-find and retrieve information about the patient. 
+find and retrieve information about the patient using the patient FHIR id provided as a SMART launch context parameter (alongside the access token). 
 
 ## Initial Patient Identity Check 
 
-The first thing that the application should do is retrieve the patient record that it has obtained access to,
-and confirm that it is about the right patient.
+The first thing that the application should do is retrieve the patient record that it has obtained access to, and confirm that it is about the right patient.
 
-    GET [url]/Patient
+    GET [url]/Patient/[id]
 
-This [search](http://hl7.org/fhir/http.html#search) should return a [Bundle](http://hl7.org/fhir/bundle.html) with a single Patient record.
+This [read](http://hl7.org/fhir/http.html#read) returns a single FHIR Patient resource.
 The details in the patient record should match what the user of the application is expecting. The application chooses how to check this, though some jurisdictions may make additional rules about how it is done. 
 
 Notes:
-* the server may grant access to a different patient than the user (e.g. a fmaily member)
-* correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted
-* Jurisdications may have applicable law or regulation about displaying / checking this information in the application
-
-This is an especially important check if the client application is [synchronizing it's own copy of the patient record](synchronization.html).
+* The server may grant access to a different patient than the user (e.g. a family member)
+* Correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted. This is an especially important check if the client application is [synchronizing it's own copy of the patient record](synchronization.html).
+* Jurisdications may have applicable law or regulation about displaying / checking this information in the application.
 
 # Fetching Patient Records 
 
 Once the patient identity is confirmed, the application can access the patient record by searching on a set of different resources, using this pattern:
 
-    GET [url]/Condition
+    GET [url]/Condition?[params]
     
 or more generally, 
 
-    GET [url]/XX
+    GET [url]/XX?[params]
 
-Where XX is the name of a resource taken from the table below. No patient needs to be identified, since the application only has 
-access to the records of a single patient. Some of the lists returned from these calls will be relatively short, but some may 
-be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
+Where XX is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number
@@ -45,6 +40,35 @@ Note that servers may decline to perform some searches unless particular paramet
 The following resources can be searched to access patient information:
 
 -- table of resources and search parameters -
+
+|Resource | Supported search params|
+| ------- | ---------------------- | 
+| AllergyIntolerance | clinical-status, patient, patient+clinical+status |
+| AuditEvent | todo |
+| CarePlan | category, date, patient, status patient+category, patient+category+status+date, patient+category+status, patient+category+date	 |
+| CareTeam | patient, status patient+status	|
+| Condition | category, clinical-status, patient, onset-date, code patient+code, patient+onset-date, patient+clinical-status, patient+category	|
+| Device | patient, type patient+type |
+| DiagnosticReport | status, patient, category, code, date patient+code+date, patient+category, patient+status, patient+category+date, patient+code	|
+| DocumentReference | \_id, status, patient, category, type, date, period patient+category, patient+status, patient+type+period, patient+type, patient+category+date |
+| Encounter | \_id, class, date, identifier, patient, status, type date+patient, patient+status, class+patient, patient+type |
+| Goal | lifecycle-status, patient, target-date patient+lifecycle-status, patient+target-date | 
+| Immunization | patient, status, date patient+status, patient+date	|
+| Location | name, address, address-city, address-state, address-postalcode |
+| Medication | - |
+| MedicationRequest | status, intent, patient, encounter, authoredon patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
+| MedicationStatement | ? |
+| Observation | status, category, code, date, patient patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
+| Organization | name, address |
+| Patient | \_id, birthdate, family, gender, given, identifier, name family+gender, birthdate+family, birthdate+name, gender+name |
+| Practitioner | name, identifier | 
+| PractitionerRole | specialty, practitioner |
+| Procedure | status, patient, date, code patient+code+date, patient+date, patient+status |
+| Provenance | - |
+| Questionnaire | ? |
+| QuestionnaireResponse | ? |
+| RelatedPerson | ? |
+
 
 # Supporting Resources
 
