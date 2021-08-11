@@ -116,5 +116,5 @@ server's CapabilityStatement to see if they provide this information.
 
 Servers SHALL
 
-* Implement the required resource types Patient, AllergyIntolerance, Condition, MedicationRequest, Medication, Encounter, Immunization, Observation, Procedure
+* Implement the required resource types Patient, AllergyIntolerance, Condition, MedicationRequest, Medication, Observation.
  * Note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.
