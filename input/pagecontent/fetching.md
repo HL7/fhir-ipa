@@ -44,7 +44,7 @@ The following resources can be searched to access patient information:
 |Resource | Supported search params|
 | ------- | ---------------------- | 
 | AllergyIntolerance | clinical-status, patient, patient+clinical+status |
-| AuditEvent | todo |
+| AuditEvent | - |
 | CarePlan | category, date, patient, status patient+category, patient+category+status+date, patient+category+status, patient+category+date	 |
 | CareTeam | patient, status patient+status	|
 | Condition | category, clinical-status, patient, onset-date, code patient+code, patient+onset-date, patient+clinical-status, patient+category	|
@@ -57,7 +57,7 @@ The following resources can be searched to access patient information:
 | Location | name, address, address-city, address-state, address-postalcode |
 | Medication | - |
 | MedicationRequest | status, intent, patient, encounter, authoredon patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
-| MedicationStatement | ? |
+| MedicationStatement | patient |
 | Observation | status, category, code, date, patient patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
 | Organization | name, address |
 | Patient | \_id, birthdate, family, gender, given, identifier, name family+gender, birthdate+family, birthdate+name, gender+name |
@@ -65,9 +65,9 @@ The following resources can be searched to access patient information:
 | PractitionerRole | specialty, practitioner |
 | Procedure | status, patient, date, code patient+code+date, patient+date, patient+status |
 | Provenance | - |
-| Questionnaire | ? |
-| QuestionnaireResponse | ? |
-| RelatedPerson | ? |
+| Questionnaire | - |
+| QuestionnaireResponse | - |
+| RelatedPerson | - |
 
 
 # Supporting Resources
