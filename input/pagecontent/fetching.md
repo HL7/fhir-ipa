@@ -44,7 +44,7 @@ The following resources can be searched to access patient information:
 |Resource | Supported search params|
 | ------- | ---------------------- | 
 | AllergyIntolerance | clinical-status, patient, patient+clinical+status |
-| AuditEvent | - |
+| AuditEvent | entity, target, date |
 | CarePlan | category, date, patient, status patient+category, patient+category+status+date, patient+category+status, patient+category+date	 |
 | CareTeam | patient, status patient+status	|
 | Condition | category, clinical-status, patient, onset-date, code patient+code, patient+onset-date, patient+clinical-status, patient+category	|
@@ -116,6 +116,5 @@ server's CapabilityStatement to see if they provide this information.
 
 Servers SHALL
 
-* Implement the required resource types Patient, AllergyIntolerance, Condition, ?
- * note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided
-* todo
+* Implement the required resource types Patient, AllergyIntolerance, Condition, MedicationRequest, Medication, Encounter, Immunization, Observation, Procedure
+ * Note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.
