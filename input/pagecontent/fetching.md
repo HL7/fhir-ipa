@@ -44,29 +44,18 @@ The following resources can be searched to access patient information:
 |Resource | Supported search params|
 | ------- | ---------------------- | 
 | AllergyIntolerance | clinical-status, patient, patient+clinical+status |
-| AuditEvent | entity, target, date |
-| CarePlan | category, date, patient, status patient+category, patient+category+status+date, patient+category+status, patient+category+date	 |
-| CareTeam | patient, status patient+status	|
-| Condition | category, clinical-status, patient, onset-date, code patient+code, patient+onset-date, patient+clinical-status, patient+category	|
-| Device | patient, type patient+type |
+| Condition | category, clinical-status, patient, onset-date, code, patient+code, patient+onset-date, patient+clinical-status, patient+category	|
 | DiagnosticReport | status, patient, category, code, date patient+code+date, patient+category, patient+status, patient+category+date, patient+code	|
 | DocumentReference | \_id, status, patient, category, type, date, period patient+category, patient+status, patient+type+period, patient+type, patient+category+date |
 | Encounter | \_id, class, date, identifier, patient, status, type date+patient, patient+status, class+patient, patient+type |
-| Goal | lifecycle-status, patient, target-date patient+lifecycle-status, patient+target-date | 
 | Immunization | patient, status, date patient+status, patient+date	|
-| Location | name, address, address-city, address-state, address-postalcode |
 | Medication | - |
 | MedicationRequest | status, intent, patient, encounter, authoredon patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
-| MedicationStatement | patient |
 | Observation | status, category, code, date, patient patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
-| Organization | name, address |
 | Patient | \_id, birthdate, family, gender, given, identifier, name family+gender, birthdate+family, birthdate+name, gender+name |
 | Practitioner | name, identifier | 
 | PractitionerRole | specialty, practitioner |
 | Procedure | status, patient, date, code patient+code+date, patient+date, patient+status |
-| Provenance | - |
-| Questionnaire | - |
-| QuestionnaireResponse | - |
 | RelatedPerson | - |
 
 
