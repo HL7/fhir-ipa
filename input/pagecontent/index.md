@@ -1,4 +1,4 @@
-#Welcome to the International Patient Access API Specification
+# Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from an clinical records system using
