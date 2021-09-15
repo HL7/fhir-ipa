@@ -15,9 +15,10 @@ In fact, the implementers are encouraged to return all data relevant to the pati
 The data may be HL7 FHIR data, [CDA](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7) data, data in any other format, or data in mixed formats.
 
 Making the data accessible to the patient, regardless of its format, is valuable for a number of reasons.
-It enables technologically savy people to check their own data and analyze it in various ways, or just to keep their own backup of their data.
-It also enables the creation of apps that do that for a wider audience.
-The apps may target a very specific use case and for that use case be prepared to parse many different representations of data.
+* It enables technologically savy people to check their own data and analyze it in various ways, or just to keep their own backup of their data.
+* It also enables the creation of apps that do that for a wider audience.
+* It serves apps that may target a very specific use case and for that use case be prepared to parse many different representations of data.
+* This approach also enables creation of applications that pare the data to FHIR format on behalf of systems that don't support FHIR natively.
 
 Further profiles of the base specification are expected to build on this implementation guide, adding more detailed information on supported data formats.
 These profiles make the data more accessible for an even wider range of applications.
