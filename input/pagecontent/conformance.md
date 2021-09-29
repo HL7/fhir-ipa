@@ -1,5 +1,5 @@
 
-Yet to be written
+Initial Submission
 
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 
@@ -14,7 +14,7 @@ The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defin
 
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) guidance requires specifications to define exactly the support expected for profile elements labeled Must Support. The sections below illustrate how these elements are displayed and define the rules for interpreting profile elements and subelements labeled Mandatory and Must Support for requesters and responders.
 
-The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Serversas well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
+The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Servers as well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
 
 ## Profile Support + Interaction Support
 Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access the information. Systems that implement both can claim conformance to IPA. This is done by implementing all of the IPA CapabilityStatement into their capabilities.
