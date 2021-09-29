@@ -13,7 +13,7 @@
       "telecom" : [
         {
           "system" : "url",
-          "value" : "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+          "value" : "http://www.hl7.org/Special/committees/patientcare/index.cfm"
         }
       ]
     }
@@ -29,9 +29,9 @@
       ]
     }
   ],
-  "copyright" : "To be part of HL7 specifications - Creative Commons",
+  "copyright" : "Used by permission of HL7 International, all rights reserved Creative Commons License",
   "kind" : "requirements",
-  "fhirVersion" : "4.0.0",
+  "fhirVersion" : "4.0.1",
   "format" : [
     "xml",
     "json",
@@ -43,7 +43,7 @@
   "rest" : [
     {
       "mode" : "server",
-      "documentation" : "The IPA Server **SHALL**:\n\n1. Support the IPA Patient resource profile.\n1. Support at least one additional resource profile from the list of IPA Profiles.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all US Core interactions.\n1. Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.\n\nThe IPA Server **SHOULD**:\n\n1. Support xml source formats for all IPA interactions.\n1. Identify the IPA profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1. Support xml resource formats for  questionnaire interactions.",
+      "documentation" : "The IPA Server **SHALL**:\n\n1. Support the IPA Patient resource profile.\n1. Support at least one additional resource profile from the list of IPA Profiles.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all IPA interactions.\n1. Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.\n\nThe IPA Server **SHOULD**:\n\n1. Support xml source formats for all IPA interactions.\n1. Identify the IPA profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1. Support xml resource formats for all IPA questionnaire interactions.",
       "security" : {
         "description" : "1. See the [General Security Considerations](security.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
       },
@@ -621,7 +621,6 @@
         {
           "type" : "DocumentReference",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
-          "documentation" : "The DocumentReference.type binding SHALL support at a minimum the [5 Common Clinical Notes](ValueSet-us-core-clinical-note-type.html) and may extend to the full US Core DocumentReference Type Value Set",
           "interaction" : [
             {
               "extension" : [

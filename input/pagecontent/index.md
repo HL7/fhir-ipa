@@ -1,4 +1,4 @@
-#Welcome to the International Patient Access API Specification
+## Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from an clinical records system using
@@ -57,7 +57,3 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 Notes:
 * Not [all servers provide all of this information](conformance.html)
 * This  API is read-only, though implementations may [provide write access too](conformance.html).
-
-## Where to get Support 
-
-Todo...
