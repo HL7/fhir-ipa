@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 29, 2021 18:04+0000 for FHIR v4.6.0 
+  Generated on Thu, Sep 30, 2021 10:58+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -42290,7 +42290,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Business identifier for the authorization, typically this is assigned by the authorizing body.</xs:documentation>
+              <xs:documentation xml:lang="en">Business identifier for the authorization, typically assigned by the authorizing body.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -42343,11 +42343,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">The legal or regulatory framework against which this authorization is granted, or other reasons for it.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="relatedDate" type="RegulatedAuthorization.RelatedDate" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Other dates associated with the authorization. It is common for an authorization to have renewal dates, initial time limited phases and so on.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="holder" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The organization that holds the granted authorization.</xs:documentation>
@@ -42366,29 +42361,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="case" type="RegulatedAuthorization.Case" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The case or regulatory procedure for granting or amending a marketing authorization. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="RegulatedAuthorization.RelatedDate">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:choice minOccurs="1" maxOccurs="1" >
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Another date associated with the authorization.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="datePeriod" type="Period"/>
-            <xs:element name="dateDateTime" type="dateTime"/>
-          </xs:choice>
-          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The meaning of the related date for a regulated product, treatment, facility or activity.  As an example, the data exclusivity period for a regulated product.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
