@@ -45,17 +45,17 @@ The following resources can be searched to access patient information:
 | ------- | ---------------------- | 
 | AllergyIntolerance | clinical-status, patient, patient+clinical+status |
 | Condition | category, clinical-status, patient, onset-date, code, patient+code, patient+onset-date, patient+clinical-status, patient+category	|
-| DiagnosticReport | status, patient, category, code, date patient+code+date, patient+category, patient+status, patient+category+date, patient+code	|
-| DocumentReference | \_id, status, patient, category, type, date, period patient+category, patient+status, patient+type+period, patient+type, patient+category+date |
-| Encounter | \_id, class, date, identifier, patient, status, type date+patient, patient+status, class+patient, patient+type |
-| Immunization | patient, status, date patient+status, patient+date	|
+| DiagnosticReport | status, patient, category, code, date, patient+code+date, patient+category, patient+status, patient+category+date, patient+code	|
+| DocumentReference | \_id, status, patient, category, type, date, period, patient+category, patient+status, patient+type+period, patient+type, patient+category+date |
+| Encounter | \_id, class, date, identifier, patient, status, type, date+patient, patient+status, class+patient, patient+type |
+| Immunization | patient, status, date, patient+status, patient+date	|
 | Medication | - |
-| MedicationRequest | status, intent, patient, encounter, authoredon patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
-| Observation | status, category, code, date, patient patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
-| Patient | \_id, birthdate, family, gender, given, identifier, name family+gender, birthdate+family, birthdate+name, gender+name |
+| MedicationRequest | status, intent, patient, encounter, authoredon, patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
+| Observation | status, category, code, date, patient, patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
+| Patient | \_id, birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name |
 | Practitioner | name, identifier | 
 | PractitionerRole | specialty, practitioner |
-| Procedure | status, patient, date, code patient+code+date, patient+date, patient+status |
+| Procedure | status, patient, date, code, patient+code+date, patient+date, patient+status |
 | RelatedPerson | - |
 
 
