@@ -1,7 +1,7 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "docref",
-  "url": "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref",
+  "id": "ipa-docref",
+  "url": "http://hl7.org/fhir/uv/ipa/OperationDefinition/ipa-docref",
   "version": "0.1.0",
   "name": "IPAFetchDocumentReference",
   "title": "IPA Fetch DocumentReference",
