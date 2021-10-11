@@ -4,7 +4,7 @@ Formal definition of the API:
 
 Operations:
 
-* [Document Reference Fetch ($docref )](OperationDefinition-ipa-docref.html)
+* [Document Reference ($ipa-docref )](OperationDefinition-ipa-docref.html)
 
 Profiles: Content Definitions for resources
 
