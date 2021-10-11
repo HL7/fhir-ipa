@@ -13,7 +13,7 @@ FHIR APIs like this one. All implementers should carefully consider each of the 
 
 Note that getting these issues right is necessary but not sufficient for delivering safe patient applications.
 
-# Client Safety Check list 
+### Client Safety Check list 
 
 Clients should complete this check list, and are likely to be asked by servers to confirm that they have done so:
 
@@ -25,7 +25,7 @@ Clients should complete this check list, and are likely to be asked by servers t
 * synchronization issues 
 * information appearing in multiple places
 
-# Server Safety Check List 
+### Server Safety Check List 
 
 * etc
 * xhtml

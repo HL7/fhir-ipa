@@ -1,6 +1,4 @@
-#Welcome to the International Patient Access API Specification
-
-Formal definition of the API)
+Formal definition of the API:
 
 * [IPA CapabilityStatement](ipa-server.html)
 

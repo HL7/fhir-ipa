@@ -1,4 +1,4 @@
-# Relationship between IPA and IPS 
+### Relationship between IPA and IPS 
 
 * IPA (this specification): a specification for access to a patient record with minimal expectations about the content
 * [IPS](http://hl7.org/fhir/uv/ips/): a specification that describes a package that contains a clinical summary for the patient
@@ -20,7 +20,7 @@ requirements on the content specified here.
 Note that not all systems that conform to IPS are required to provide  direct patient access, though many will. 
 Also, many systems that provide access to patient as described by this specification will not be able to conform IPS, but some will.
 
-## Generating IPS Documents 
+### Generating IPS Documents 
 
 If a server conforms to this specification and also to IPS, this API can be used to generate IPS documents, 
 Using the [$generate-document operation](doc-gen.html) with the code ```???```:
