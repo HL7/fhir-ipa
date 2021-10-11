@@ -1,4 +1,4 @@
-# Welcome to the International Patient Access API Specification
+### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from an clinical records system using
@@ -26,7 +26,7 @@ These resources are supported by information about [practitioners](StructureDefi
 In addition, the application can also access the [audit trail](StructureDefinition-ipa-auditevent.html) and additional
 [provenance](StructureDefinition-ipa-provenance.html) information for the patient's record. 
 
-## Relationship to National Specifications 
+### Relationship to National Specifications 
 
 This International Patient Access specification describes how to access patient 
 records anywhere in the world. It provides a very minimal set of access methods 
@@ -45,7 +45,7 @@ In addition, there is an [International Patient Summary](http://hl7.org/fhir/uv/
 a more extensive set of rules about the content that clinical systems may conform to.
 See [Relationship to the International Patient Summary](ips-relationship.html) for further details.
 
-## Using the International Patient Access API
+### Using the International Patient Access API
 
  - [Getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
  - [Finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
