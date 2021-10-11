@@ -2,6 +2,10 @@ Formal definition of the API:
 
 * [IPA CapabilityStatement](CapabilityStatement-ipa-server.html)
 
+Operations:
+
+* [Document Reference Fetch ($docref )](OperationDefinition-ipa-docref.html)
+
 Profiles: Content Definitions for resources
 
 * [Allergy/Intolerance](StructureDefinition-ipa-allergyintolerance.html)
