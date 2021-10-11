@@ -22,7 +22,7 @@ Systems deploy, and support, the IPA Profiles to represent clinical information 
 To claim conformance to an IPA Profile a server:
 
 * SHALL be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
-* SHALL declare conformance with the the IPA Server Capability Statement by including its official URL in the server’s CapabilityStatement.instantiates element: http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server <todo: need a uri, here, US Core's is: http://hl7.org/fhir/uv/core/CapabilityStatement/us-core-server>
+* SHALL declare conformance with the the IPA Server Capability Statement by including its official URL in the server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement.
   * Declare support for the IPA Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.supportedProfile` element
   * Declare support for the IPA Profile’s FHIR RESTful transactions
