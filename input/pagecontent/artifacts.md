@@ -1,6 +1,6 @@
 Formal definition of the API:
 
-* [IPA CapabilityStatement](ipa-server.html)
+* [IPA CapabilityStatement](CapabilityStatement-ipa-server.html)
 
 Profiles: Content Definitions for resources
 
