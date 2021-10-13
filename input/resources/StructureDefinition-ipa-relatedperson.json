@@ -15,13 +15,16 @@
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
   "derivation": "constraint",
   "differential": {
-    "constraint" : [{
-      "key" : "rp-1",
-      "severity" : "error",
-      "human" : "Either a name or a relationship SHALL be provided (or both)",
-      "expression" : "name.exists() or relationship.exists()"
-    }],
     "element": [
+      {
+        "path": "RelatedPerson",
+        "constraint" : [{
+          "key" : "rp-1",
+          "severity" : "error",
+          "human" : "Either a name or a relationship SHALL be provided (or both)",
+          "expression" : "name.exists() or relationship.exists()"
+        }]
+      },
       {
         "path": "RelatedPerson.active",
         "min": 1,
