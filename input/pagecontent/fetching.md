@@ -30,10 +30,10 @@ Where XX is the name of a resource taken from the table below and the list of pa
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number
 of resources returned, but except for the few search parameters documented clearly below, servers are not obliged to support
-the search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters
-were process (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
+search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters
+were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
-Note that servers may decline to perform some searches unless particular parameters are specified - (more details needed)
+Note that servers may decline to perform some searches unless particular parameters are specified.
 
 ### Search resources 
 
@@ -103,7 +103,7 @@ server's CapabilityStatement to see if they provide this information.
 
 ### Server Obligations
 
-Servers SHALL
+Servers SHALL:
 
 * Implement the required resource types Patient, AllergyIntolerance, Condition, MedicationRequest, Medication, Observation.
  * Note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.
