@@ -23,8 +23,4 @@ Also, many systems that provide access to patient as described by this specifica
 ### Generating IPS Documents 
 
 If a server conforms to this specification and also to IPS, this API can be used to generate IPS documents, 
-Using the [$generate-document operation](doc-gen.html) with the code ```???```:
-
-   |example|
-
-
+using the [$doc-ref operation](doc-gen.html) with a specific code as defined in the [IPS implementation guide](http://hl7.org/fhir/uv/ips/principles.html#publishing-or-accessing-the-ips).
