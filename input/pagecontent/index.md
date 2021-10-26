@@ -10,21 +10,14 @@ Using this API, applications can access the following information about the pati
 
 * [Basic patient details](StructureDefinition-ipa-patient.html)
 * [Problems / Conditions](StructureDefinition-ipa-condition.html)
-* [Encounters](StructureDefinition-ipa-encounter.html)
 * [Current and past medications](StructureDefinition-ipa-medicationrequest.html)
 * [Immunization history](StructureDefinition-ipa-immunization.html)
 * [Allergies and intolerances](StructureDefinition-ipa-allergyintolerance.html)
-* [Diagnostic reports (e.g. labs, imaging)](StructureDefinition-ipa-diagnosticreport.html)
 * [Vital signs and other clinical observations](StructureDefinition-ipa-observation.html)
-* [Patient forms / questionnaires](StructureDefinition-ipa-questionnaireresponse.html)
 * [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
-* [Care plans](StructureDefinition-ipa-careplan.html) and [Care teams](StructureDefinition-ipa-careteam.html)
 
-These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html), 
-[organizations](StructureDefinition-ipa-organization.html), [related persons](StructureDefinition-ipa-relatedperson.html), 
-[locations](StructureDefinition-ipa-location.html), and [devices](StructureDefinition-ipa-device.html). 
-In addition, the application can also access the [audit trail](StructureDefinition-ipa-auditevent.html) and additional
-[provenance](StructureDefinition-ipa-provenance.html) information for the patient's record. 
+These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
+
 
 ### Relationship to National Specifications 
 
