@@ -26,7 +26,7 @@
   <fhirVersion value="4.0.1"/> 
   <definition>
     <resource><reference><reference value="CapabilityStatement/ipa-server"/></reference></resource>
-    <resource><reference><reference value="OperationDefinition/ipa-docref"/></reference></resource>
+    <resource><reference><reference value="OperationDefinition/docref"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-allergyintolerance"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>

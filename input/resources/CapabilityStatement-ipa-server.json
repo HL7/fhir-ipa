@@ -733,9 +733,9 @@
                   "valueCode" : "SHALL"
                 }
               ],
-              "name" : "ipa-docref",
-              "definition" : "http://hl7.org/fhir/uv/ipa/OperationDefinition/ipa-docref",
-              "documentation" : "A server **SHALL** be capable of responding to a $ipa-docref operation and  capable of returning at least a reference to a generated CCD document, if available. **MAY** provide references to other 'on-demand' and 'stable' documents (or 'delayed/deferred assembly') that meet the query parameters as well. If a context date range is supplied the server ** SHOULD**  provide references to any document that falls within the date range If no date range is supplied, then the server **SHALL** provide references to last or current encounter.  **SHOULD** document what resources, if any, are returned as included resources\n\n`GET [base]/DocumentReference/$ipa-docref?patient=[id]`"
+              "name" : "docref",
+              "definition" : "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref",
+              "documentation" : "A server **SHOULD** be capable of responding to a $docref operation and capable of returning at least a reference to a CDA document, if available. **MAY** provide references to other 'on-demand' and 'stable' documents (or 'delayed/deferred assembly') that meet the query parameters as well. If a context date range is supplied the server ** SHOULD**  provide references to any document that falls within the date range If no date range is supplied, then the server **SHALL** provide references to last or current encounter.  **SHOULD** document what resources, if any, are returned as included resources\n\n`GET [base]/DocumentReference/$docref?patient=[id]`"
             }
           ]
         },
