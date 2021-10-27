@@ -10,7 +10,7 @@ Using this API, applications can access the following information about the pati
 
 * [Basic patient details](StructureDefinition-ipa-patient.html)
 * [Problems / Conditions](StructureDefinition-ipa-condition.html)
-* [Current and past medications](StructureDefinition-ipa-medicationrequest.html)
+* [Medication orders](StructureDefinition-ipa-medicationrequest.html) and [usage](StructureDefinition-ipa-medicationstatement.html)
 * [Immunization history](StructureDefinition-ipa-immunization.html)
 * [Allergies and intolerances](StructureDefinition-ipa-allergyintolerance.html)
 * [Vital signs and other clinical observations](StructureDefinition-ipa-observation.html)
