@@ -64,10 +64,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
               "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-relatedperson",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-device",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-organization"            ]
+              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"            ]
           }
         ],
         "mustSupport": true
@@ -127,10 +124,7 @@
         "max": "1",
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-encounter"
-            ]
+            "code": "Reference"
           }
         ],
         "mustSupport": true

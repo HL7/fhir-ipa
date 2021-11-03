@@ -28,30 +28,33 @@
     <resource><reference><reference value="CapabilityStatement/ipa-server"/></reference></resource>
     <resource><reference><reference value="OperationDefinition/docref"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-allergyintolerance"/></reference></resource>
+    <!--
     <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-careteam"/></reference></resource>
+    <resource><reference><reference value="StructureDefinition/ipa-careteam"/></reference></resource> -->
     <resource><reference><reference value="StructureDefinition/ipa-condition"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-diagnosticreport"/></reference></resource>
+    <!-- <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
+    <resource><reference><reference value="StructureDefinition/ipa-diagnosticreport"/></reference></resource> -->
     <resource><reference><reference value="StructureDefinition/ipa-documentreference"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-goal"/></reference></resource>
+    <!-- <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
+    <resource><reference><reference value="StructureDefinition/ipa-goal"/></reference></resource> -->
     <resource><reference><reference value="StructureDefinition/ipa-immunization"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource>
+    <!-- <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource> -->
     <resource><reference><reference value="StructureDefinition/ipa-medication"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-medicationrequest"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-medicationstatement"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-observation"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-organization"/></reference></resource>
+    <!--
+    <resource><reference><reference value="StructureDefinition/ipa-organization"/></reference></resource> -->
     <resource><reference><reference value="StructureDefinition/ipa-patient"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-practitioner"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-practitionerrole"/></reference></resource>
+    <!--
     <resource><reference><reference value="StructureDefinition/ipa-procedure"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-provenance"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-questionnaire"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-questionnaireresponse"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource>
+    <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource> -->
     <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/>
       <page><nameUrl value="index.html"/><title value="International Patient Access"/><generation value="markdown"/></page>
       <page><nameUrl value="access.html"/><title value="Gaining Access to a patient record"/><generation value="markdown"/></page>
