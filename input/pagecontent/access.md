@@ -20,7 +20,7 @@ A client application gets access a patient record by following this general sequ
 
 * Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/index.html#standalone-launch-sequence) using the authorization endpoint from the smart-configuration.json file
 
-* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient infomration](fetching.html)
+* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html)
 
 ### Scopes
 
