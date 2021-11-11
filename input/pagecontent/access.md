@@ -1,6 +1,6 @@
 An application gets access to a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the stand alone launch sequence.
 
-### Client Process 
+### Client Process
 
 A client application gets access a patient record by following this general sequence of steps:
 
@@ -20,14 +20,14 @@ A client application gets access a patient record by following this general sequ
 
 * Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/index.html#standalone-launch-sequence) using the authorization endpoint from the smart-configuration.json file
 
-* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient infomration](fetching.html)
+* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html)
 
-###Scopes 
+### Scopes
 
 Scopes work as described in the SMART on FHIR specification, but note that many servers limit a client to the scopes approved on its registration, 
 and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
-### Server Obligations 
+### Server Obligations
 
 Servers that are conformant to the International Patient Access API conform to the following rules:
 
