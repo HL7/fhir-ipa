@@ -50,7 +50,7 @@ The following resources can be searched to access patient information:
 | MedicationRequest | authoredon, encounter, intent, patient, status, patient+intent, patient+intent+authoredon, patient+intent+encounter, patient+intent+status	|
 | MedicationStatement | ?	|
 | Observation | category, code, date, patient, status, patient+category+status, patient+category, patient+code, patient+category+date, patient+code+date 	|
-| Patient | \_id, birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name |
+| Patient | \_id    | birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name
 
 
 ### Supporting Resources
