@@ -9,7 +9,7 @@ A client application gets access a patient record by following this general sequ
   
 * Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html):
 
-    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
+    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
 * Fetch the [end-point configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
 
@@ -33,7 +33,7 @@ Servers that are conformant to the International Patient Access API conform to t
 
 * The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](http://hl7,org/fhir/capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
 
-    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
+    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
 * The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
