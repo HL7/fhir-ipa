@@ -81,6 +81,14 @@
             <reference value="StructureDefinition/ipa-medicationrequest" />
          </reference>
       </resource>
+      <resource>
+         <reference>
+            <reference value="MedicationRequest/e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest" />
+         <name value="IPA MedicationRequest example" />
+         <description value="MedicationRequest example" />
+      </resource>	
 	  
       <resource>
          <reference>
@@ -113,7 +121,7 @@
 	  
 	  <resource>
          <reference>
-            <reference value="Observation/socialhx.smoking.euvO8iq4aYWriTr-MA7S-IkCxqCXJDmc.rRo7MsHFYNG0HdfUGgXpHY.GcKccA1fi3" />
+            <reference value="Observation/smoking.euvO8iq4aYWriTr" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
          <name value="IPA Observation example" />
