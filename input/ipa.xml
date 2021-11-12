@@ -81,6 +81,7 @@
             <reference value="StructureDefinition/ipa-medicationrequest" />
          </reference>
       </resource>
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-medicationstatement" />
@@ -103,7 +104,7 @@
       </resource>
       <resource>
          <reference>
-            <reference value="Observation/lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2.IKlXjyJutrkLFIsp-nUbBiW4D3" />
+            <reference value="Observation/lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
          <name value="IPA Observation example" />
