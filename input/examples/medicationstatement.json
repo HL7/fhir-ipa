@@ -1,0 +1,69 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "eDbMrWBI0seji4oPY6tVc3cwkkwXSAwjaLb4KmARROyQ3",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "1.2.840.114350.1.13.861.1.7.2.798268",
+      "value": "5131734"
+    }
+  ],
+  "status": "active",
+  "category": {
+    "coding": [
+      {
+        "code": "inpatient",
+        "display": "Inpatient"
+      }
+    ],
+    "text": "Inpatient"
+  },
+  "medicationReference": {
+    "reference": "https://hostname/instance/api/FHIR/STU3/Medication/eq7Ib9QN5yAnUEPPN2tO1Av9b19DdLZPqjbyljiwwahKrtkKZtRVhx2OrRjD7EkrJ3",
+    "display": "Ibuprofen suspension 40 mg"
+  },
+  "effectivePeriod": {
+    "start": "2017-04-26T22:00:00Z"
+  },
+  "informationSource": {
+    "reference": "https://hostname/instance/api/FHIR/STU3/Practitioner/egCj4Z7EG1mplI4xYrONFRQ3",
+    "display": "PROVIDER, TESTING"
+  },
+  "subject": {
+    "reference": "https://hostname/instance/api/FHIR/STU3/Patient/eFKsVr2y75R9CKzJKJ37wMg3",
+    "display": "Friend, All"
+  },
+  "taken": "unk",
+  "dosage": [
+    {
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2017-04-26T22:00:00Z"
+          },
+          "timeOfDay": [
+            "12:00:00",
+            "18:00:00"
+          ]
+        }
+      },
+      "asNeededBoolean": false,
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "260548002",
+            "display": "Oral"
+          }
+        ],
+        "text": "Oral"
+      },
+      "doseQuantity": {
+        "value": "1",
+        "unit": "mL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mL"
+      }
+    }
+  ]
+}
