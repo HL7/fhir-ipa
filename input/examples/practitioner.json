@@ -1,5 +1,20 @@
 {
   "resourceType": "Practitioner",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "PractitionerRole Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Practitioner example for the *IPA PractitionerRole Profile*."
+      }
+    ]
+  },
   "id": "emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
   "identifier": [
     {
