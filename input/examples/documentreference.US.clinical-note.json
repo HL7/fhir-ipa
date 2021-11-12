@@ -1,0 +1,62 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "eeFpluqNp7Shf.jP.KW4K1xMLcijrg6l1Zv.xiOHz.1Y3",
+  "status": "current",
+  "docStatus": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11506-3",
+        "display": "Progress Note"
+      },
+      {
+        "system": "urn:oid:1.2.840.114350.1.13.861.1.7.4.737880.5010",
+        "code": "1",
+        "display": "Progress Notes"
+      }
+    ],
+    "text": "Progress Note"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note"
+        }
+      ],
+      "text": "Clinical Note"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/e7XZi7JJ6AZSxlmZBc9-Rdw3",
+    "display": "Fhir D Cds Jr., DDS"
+  },
+  "date": "2019-05-21T20:19:30Z",
+  "author": [
+    {
+      "reference": "Practitioner/e1iKCKct1N3beTTPAUSJN7A3",
+      "display": "User, Epic, RPh"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/html",
+        "url": "Binary/ekAJmRWsOeeVsqjgMnmX-5ZTCqyW.NZW3fvSH8mNXZSg3"
+      }
+    }
+  ],
+  "context": {
+    "encounter": [
+      {
+        "reference": "Encounter/eUYzqPWXxEvtcwrItyp7H3xYs37qc3b3dYZln86UIj.43"
+      }
+    ],
+    "period": {
+      "start": "2019-05-21T04:59:00Z"
+    }
+  }
+}
