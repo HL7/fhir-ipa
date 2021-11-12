@@ -1,0 +1,30 @@
+{
+  "resourceType": "Practitioner",
+  "id": "emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.295",
+      "value": "1538344056"
+    },
+    {
+      "use": "usual",
+      "type": {
+        "text": "EXTERNAL"
+      },
+      "value": "5337"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "usual",
+      "text": "Marty Seeger",
+      "family": "Seeger",
+      "given": [
+        "Marty"
+      ]
+    }
+  ],
+  "gender": "male"
+}
