@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+   <id value="eeJxm9Vi8-QmUQuWDhBMklw3" />
+   <clinicalStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+         <version value="4.0.0" />
+         <code value="active" />
+         <display value="Active" />
+      </coding>
+   </clinicalStatus>
+   <verificationStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+         <version value="4.0.0" />
+         <code value="confirmed" />
+         <display value="Confirmed" />
+      </coding>
+   </verificationStatus>
+   <category value="medication" />
+   <code>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.6.88" />
+         <code value="9835" />
+         <display value="SMALLPOX VACCINE" />
+      </coding>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.4.9" />
+         <code value="4SV59689SK" />
+      </coding>
+      <text value="SMALLPOX VACCINE" />
+   </code>
+   <patient>
+      <reference value="https://hostname/instance/api/FHIR/R4/Patient/e06xbT0QqabCKCMIqZo98DA3" />
+      <display value="Lurch, William" />
+   </patient>
+   <recordedDate value="2019-04-19" />
+</AllergyIntolerance>
