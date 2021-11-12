@@ -1,5 +1,20 @@
 {
   "resourceType": "Observation",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Observation Lab Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Observation example for the *IPA Observation Profile* containing a lab result."
+      }
+    ]
+  },
   "id": "eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2.IKlXjyJutrkLFIsp-nUbBiW4D3",
   "status": "amended",
   "category": [

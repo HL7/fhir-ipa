@@ -91,13 +91,21 @@
             <reference value="StructureDefinition/ipa-observation" />
          </reference>
       </resource>
-      <!--
-    <resource><reference><reference value="StructureDefinition/ipa-organization"/></reference></resource> -->
+      <resource>
+         <reference>
+            <reference value="Observation/lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2.IKlXjyJutrkLFIsp-nUbBiW4D3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
+         <name value="IPA Observation example" />
+         <description value="Laboratory Observation example" />
+      </resource>	  
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-patient" />
          </reference>
       </resource>
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitioner" />
@@ -105,10 +113,10 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="Practitioner/practitioner-emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3" />
+            <reference value="Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner" />
-         <name value="IPA Practitioner Role example" />
+         <name value="IPA Practitioner example" />
          <description value="Marty Seeger" />
       </resource>
 	  
