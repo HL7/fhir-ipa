@@ -103,6 +103,15 @@
             <reference value="StructureDefinition/ipa-practitioner" />
          </reference>
       </resource>
+	  <resource>
+         <reference>
+            <reference value="Practitioner/practitioner-emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner" />
+         <name value="IPA Practitioner Role example" />
+         <description value="Marty Seeger" />
+      </resource>
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitionerrole" />

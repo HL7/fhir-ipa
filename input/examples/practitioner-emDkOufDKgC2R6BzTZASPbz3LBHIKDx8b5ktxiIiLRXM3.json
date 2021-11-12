@@ -7,11 +7,11 @@
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "PractitionerRole Example"
+        "valueString": "Practitioner Example"
       },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a Practitioner example for the *IPA PractitionerRole Profile*."
+        "valueMarkdown": "This is a Practitioner example for the *IPA Practitioner Profile*."
       }
     ]
   },
