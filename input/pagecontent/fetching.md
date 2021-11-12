@@ -41,16 +41,16 @@ The following resources can be searched to access patient information:
 
 -- table of resources and search parameters -
 
-|Resource | Required search params| Recommend search params |
+|Resource | Required search params| Recommended search params |
 | ------- | ----------------------- | ---------------------- |
 | AllergyIntolerance    | patient   | patient+clinical-status |
 | Condition             | patient   | patient+category, patient+clinical-status, patient+code, patient+onset-date|
-| DocumentReference     | \_id, patient, patient+category, patient+type, patient+category+date, patient+type+date | patient+contenttype, patient+encounter, patient+status, patient+type+period |
-| Immunization | date, patient, status, patient+date, patient+status	|
-| MedicationRequest | authoredon, encounter, intent, patient, status, patient+intent, patient+intent+authoredon, patient+intent+encounter, patient+intent+status	|
-| MedicationStatement | ?	|
-| Observation | category, code, date, patient, status, patient+category+status, patient+category, patient+code, patient+category+date, patient+code+date 	|
-| Patient | \_id    | birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name
+| DocumentReference     | \_id, patient, patient+category, patient+type, patient+category+date | patient+contenttype, patient+encounter, patient+status, patient+type+date,  patient+type+period |
+| Immunization          | patient   | patient+date, patient+status |
+| MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
+| MedicationStatement   | subject	| subject+status                    |
+| Observation           | patient+category, patient+code, patient+category+date 	| patient+category+status, patient+code+date |
+| Patient               | \_id      | birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name |
 
 
 ### Supporting Resources
