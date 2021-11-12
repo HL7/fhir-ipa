@@ -31,7 +31,7 @@
       <text value="SMALLPOX VACCINE" />
    </code>
    <patient>
-      <reference value="https://hostname/instance/api/FHIR/R4/Patient/e06xbT0QqabCKCMIqZo98DA3" />
+      <reference value="https://example.com/instance/api/FHIR/R4/Patient/e06xbT0QqabCKCMIqZo98DA3" />
       <display value="Lurch, William" />
    </patient>
    <recordedDate value="2019-04-19" />

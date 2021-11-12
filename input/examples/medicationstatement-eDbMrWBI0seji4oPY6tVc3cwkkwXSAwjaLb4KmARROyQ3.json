@@ -34,18 +34,18 @@
     "text": "Inpatient"
   },
   "medicationReference": {
-    "reference": "https://hostname/instance/api/FHIR/STU3/Medication/eq7Ib9QN5yAnUEPPN2tO1Av9b19DdLZPqjbyljiwwahKrtkKZtRVhx2OrRjD7EkrJ3",
+    "reference": "https://example.com/instance/api/FHIR/R4/Medication/eq7Ib9QN5yAnUEPPN2tO1Av9b19DdLZPqjbyljiwwahKrtkKZtRVhx2OrRjD7EkrJ3",
     "display": "Ibuprofen suspension 40 mg"
   },
   "effectivePeriod": {
     "start": "2017-04-26T22:00:00Z"
   },
   "informationSource": {
-    "reference": "https://hostname/instance/api/FHIR/STU3/Practitioner/egCj4Z7EG1mplI4xYrONFRQ3",
+    "reference": "https://example.com/instance/api/FHIR/R4/Practitioner/egCj4Z7EG1mplI4xYrONFRQ3",
     "display": "PROVIDER, TESTING"
   },
   "subject": {
-    "reference": "https://hostname/instance/api/FHIR/STU3/Patient/eFKsVr2y75R9CKzJKJ37wMg3",
+    "reference": "https://example.com/instance/api/FHIR/R4/Patient/eFKsVr2y75R9CKzJKJ37wMg3",
     "display": "Friend, All"
   },
   "taken": "unk",
