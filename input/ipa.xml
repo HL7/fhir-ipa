@@ -49,6 +49,12 @@
     <resource><reference><reference value="StructureDefinition/ipa-patient"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-practitioner"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-practitionerrole"/></reference></resource>
+    <resource><reference><reference value="PractitionerRole/eKXIu2L1.u3.DjMFsl.DcYFyJ3YM5dTtXBjZIYXdkVZs3"/></reference>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole" />
+      <name value="IPA Practitioner Role example" />
+      <description value="The first example for IPA" /> 
+    </resource>
+
     <!--
     <resource><reference><reference value="StructureDefinition/ipa-procedure"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-provenance"/></reference></resource>
