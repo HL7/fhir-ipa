@@ -1,93 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ipa"/>
-  <url value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/ipa"/>
-  <version value="0.1.0"/>
-  <name value="InternationalPatientAccess"/>
-  <title value="International Patient Access"/>
-  <status value="active"/>
-  <publisher value="HL7"/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="https://www.hl7.org/Special/committees/patientcare/index.cfm"/>
-    </telecom>
-  </contact>
-	<jurisdiction>
-		<coding>
-			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-			<code value="001"/>
-		</coding>
-	</jurisdiction>
-  <copyright value="Creative Commons Public Domain"/>
-  <packageId value="hl7.fhir.uv.ipa"/> 
-  <license value="CC0-1.0"/>
-  <fhirVersion value="4.0.1"/> 
-  <definition>
-    <resource><reference><reference value="CapabilityStatement/ipa-server"/></reference></resource>
-    <resource><reference><reference value="OperationDefinition/docref"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-allergyintolerance"/></reference></resource>
-	<resource><reference><reference value="AllergyIntolerance/eeJxm9Vi8-QmUQuWDhBMklw3"/></reference>
-    <name value="IPA AllergyIntolerance"/>
-    <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance"/>
-  </resource>
-    <!--
+   <id value="ipa" />
+   <url value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/ipa" />
+   <version value="0.1.0" />
+   <name value="InternationalPatientAccess" />
+   <title value="International Patient Access" />
+   <status value="active" />
+   <publisher value="HL7" />
+   <contact>
+      <telecom>
+         <system value="url" />
+         <value value="https://www.hl7.org/Special/committees/patientcare/index.cfm" />
+      </telecom>
+   </contact>
+   <jurisdiction>
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm" />
+         <code value="001" />
+      </coding>
+   </jurisdiction>
+   <copyright value="Creative Commons Public Domain" />
+   <packageId value="hl7.fhir.uv.ipa" />
+   <license value="CC0-1.0" />
+   <fhirVersion value="4.0.1" />
+   <definition>
+      <resource>
+         <reference>
+            <reference value="CapabilityStatement/ipa-server" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="OperationDefinition/docref" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-allergyintolerance" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="AllergyIntolerance/eeJxm9Vi8-QmUQuWDhBMklw3" />
+         </reference>
+         <name value="IPA AllergyIntolerance" />
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
+      </resource>
+      <!--
     <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-careteam"/></reference></resource> -->
-    <resource><reference><reference value="StructureDefinition/ipa-condition"/></reference></resource>
-    <!-- <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-condition" />
+         </reference>
+      </resource>
+      <!-- <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-diagnosticreport"/></reference></resource> -->
-    <resource><reference><reference value="StructureDefinition/ipa-documentreference"/></reference></resource>
-    <!-- <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-documentreference" />
+         </reference>
+      </resource>
+      <!-- <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-goal"/></reference></resource> -->
-    <resource><reference><reference value="StructureDefinition/ipa-immunization"/></reference></resource>
-    <!-- <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource> -->
-    <resource><reference><reference value="StructureDefinition/ipa-medication"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-medicationrequest"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-medicationstatement"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-observation"/></reference></resource>
-    <!--
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-immunization" />
+         </reference>
+      </resource>
+      <!-- <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource> -->
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-medication" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-medicationrequest" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-medicationstatement" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-observation" />
+         </reference>
+      </resource>
+      <!--
     <resource><reference><reference value="StructureDefinition/ipa-organization"/></reference></resource> -->
-    <resource><reference><reference value="StructureDefinition/ipa-patient"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-practitioner"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-practitionerrole"/></reference></resource>
-    <resource><reference><reference value="PractitionerRole/eKXIu2L1.u3.DjMFsl.DcYFyJ3YM5dTtXBjZIYXdkVZs3"/></reference>
-      <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole" />
-      <name value="IPA Practitioner Role example" />
-      <description value="The first example for IPA" /> 
-    </resource>
-
-    <!--
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-patient" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-practitioner" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="StructureDefinition/ipa-practitionerrole" />
+         </reference>
+      </resource>
+      <resource>
+         <reference>
+            <reference value="PractitionerRole/eKXIu2L1.u3.DjMFsl.DcYFyJ3YM5dTtXBjZIYXdkVZs3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole" />
+         <name value="IPA Practitioner Role example" />
+         <description value="The first example for IPA" />
+      </resource>
+      <!--
     <resource><reference><reference value="StructureDefinition/ipa-procedure"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-provenance"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-questionnaire"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-questionnaireresponse"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource> -->
-    <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/>
-      <page><nameUrl value="index.html"/><title value="International Patient Access"/><generation value="markdown"/></page>
-      <page><nameUrl value="access.html"/><title value="Gaining Access to a patient record"/><generation value="markdown"/></page>
-      <page><nameUrl value="fetching.html"/><title value="Finding / Retrieving information about the patient"/><generation value="markdown"/></page>
-      <page><nameUrl value="doc-gen.html"/><title value="Generating Patient Documents"/><generation value="markdown"/></page>
-      <page><nameUrl value="internationalization.html"/><title value="Internationalization Issues"/><generation value="markdown"/></page>
-      <page><nameUrl value="safety.html"/><title value="Safety Check List"/><generation value="markdown"/></page>
-      <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
-      <page><nameUrl value="privacy.html"/><title value="Privacy and Consent"/><generation value="markdown"/></page>
-      <page><nameUrl value="synchronization.html"/><title value="Synchronizing Patient Records"/><generation value="markdown"/></page>
-      <page><nameUrl value="conformance.html"/><title value="Conforming to this specification"/><generation value="markdown"/></page>
-      <page><nameUrl value="ipa-by-country.html"/><title value="IPA Specifications by Country"/><generation value="markdown"/></page>
-      <page><nameUrl value="ips-relationship.html"/><title value="Relationship with International Patient Summary"/><generation value="markdown"/></page>
-      <page><nameUrl value="artifacts.html"/><title value="Artifact List"/><generation value="markdown"/></page>
-      <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
-      <page><nameUrl value="ipa-server.html"/><title value="IPA Server Rules"/><generation value="markdown"/></page>
-    </page>
-    <parameter><code value="logging"/><value value="init"/></parameter>
-    <parameter><code value="logging"/><value value="progress"/></parameter>
-    <parameter><code value="logging"/><value value="tx"/></parameter>
-    <parameter><code value="logging"/><value value="context"/></parameter>
-    <parameter><code value="releaselabel"/><value value="draft"/></parameter>
-    <parameter><code value="copyrightyear"/><value value="2021+"/></parameter>
-    <parameter><code value="show-inherited-invariants"/><value value="false"/></parameter>
-  </definition>
+      <page>
+         <nameUrl value="toc.html" />
+         <title value="Table of Contents" />
+         <generation value="html" />
+         <page>
+            <nameUrl value="index.html" />
+            <title value="International Patient Access" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="access.html" />
+            <title value="Gaining Access to a patient record" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="fetching.html" />
+            <title value="Finding / Retrieving information about the patient" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="doc-gen.html" />
+            <title value="Generating Patient Documents" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="internationalization.html" />
+            <title value="Internationalization Issues" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="safety.html" />
+            <title value="Safety Check List" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="security.html" />
+            <title value="Security" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="privacy.html" />
+            <title value="Privacy and Consent" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="synchronization.html" />
+            <title value="Synchronizing Patient Records" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="conformance.html" />
+            <title value="Conforming to this specification" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="ipa-by-country.html" />
+            <title value="IPA Specifications by Country" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="ips-relationship.html" />
+            <title value="Relationship with International Patient Summary" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="artifacts.html" />
+            <title value="Artifact List" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="downloads.html" />
+            <title value="Downloads" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="ipa-server.html" />
+            <title value="IPA Server Rules" />
+            <generation value="markdown" />
+         </page>
+      </page>
+      <parameter>
+         <code value="logging" />
+         <value value="init" />
+      </parameter>
+      <parameter>
+         <code value="logging" />
+         <value value="progress" />
+      </parameter>
+      <parameter>
+         <code value="logging" />
+         <value value="tx" />
+      </parameter>
+      <parameter>
+         <code value="logging" />
+         <value value="context" />
+      </parameter>
+      <parameter>
+         <code value="releaselabel" />
+         <value value="draft" />
+      </parameter>
+      <parameter>
+         <code value="copyrightyear" />
+         <value value="2021+" />
+      </parameter>
+      <parameter>
+         <code value="show-inherited-invariants" />
+         <value value="false" />
+      </parameter>
+   </definition>
 </ImplementationGuide>
