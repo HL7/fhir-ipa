@@ -86,6 +86,16 @@
             <reference value="StructureDefinition/ipa-medicationstatement" />
          </reference>
       </resource>
+	  
+	  <resource>
+         <reference>
+            <reference value="MedicationStatement/eDbMrWBI0seji4oPY6tVc3cwkkwXSAwjaLb4KmARROyQ3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement" />
+         <name value="IPA Medication Statement example" />
+         <description value="Medication Statement example" />
+      </resource>	  
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-observation" />

@@ -1,5 +1,20 @@
 {
   "resourceType": "MedicationStatement",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "MedicationStatement Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a MedicationStatement example for the *IPA MedicationStatement Profile*."
+      }
+    ]
+  },
   "id": "eDbMrWBI0seji4oPY6tVc3cwkkwXSAwjaLb4KmARROyQ3",
   "identifier": [
     {
