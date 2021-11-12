@@ -28,7 +28,10 @@
     <resource><reference><reference value="CapabilityStatement/ipa-server"/></reference></resource>
     <resource><reference><reference value="OperationDefinition/docref"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-allergyintolerance"/></reference></resource>
-	<resource><reference><reference value="AllergyIntolerance/allergyintolerance"/><name value="IPA AllergyIntolerance"/><exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ipa"/></reference></resource>
+	<resource><reference><reference value="AllergyIntolerance/eeJxm9Vi8-QmUQuWDhBMklw3"/></reference>
+    <name value="IPA AllergyIntolerance"/>
+    <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance"/>
+  </resource>
     <!--
     <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
     <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>
