@@ -100,6 +100,15 @@
          <description value="Laboratory Observation example" />
       </resource>	  
 	  
+	  <resource>
+         <reference>
+            <reference value="Observation/socialhx.smoking.euvO8iq4aYWriTr-MA7S-IkCxqCXJDmc.rRo7MsHFYNG0HdfUGgXpHY.GcKccA1fi3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
+         <name value="IPA Observation example" />
+         <description value="Social History smoking Observation example" />
+      </resource>	  
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-patient" />
