@@ -1,0 +1,58 @@
+{
+  "resourceType": "PractitionerRole",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "PractitionerRole Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a PractitionerRole example for the *IPA PractitionerRole Profile*."
+      }
+    ]
+  },
+  "id": "eKXIu2L1.u3.DjMFsl.DcYFyJ3YM5dTtXBjZIYXdkVZs3",
+  "active": true,
+  "practitioner": {
+    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "display": "Marty Seeger"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.861.1.7.10.836982.1040",
+          "code": "1",
+          "display": "Physician"
+        }
+      ],
+      "text": "Physician"
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160",
+          "code": "19",
+          "display": "Family Practice"
+        }
+      ],
+      "text": "Family Practice"
+    },
+    {
+      "coding": [
+        {
+          "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4160",
+          "code": "32",
+          "display": "Internal Medicine"
+        }
+      ],
+      "text": "Internal Medicine"
+    }
+  ]
+}
