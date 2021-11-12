@@ -1,6 +1,21 @@
 {
   "resourceType": "DocumentReference",
-  "id": "eeFpluqNp7Shf.jP.KW4K1xMLcijrg6l1Zv.xiOHz.1Y3",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "DocumentReference Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a DocumentReference example for the *IPA DocumentReference Profile*."
+      }
+    ]
+  },
+  "id": "US.clinical-note.eeFpluqNp7Shf",
   "status": "current",
   "docStatus": "final",
   "type": {
