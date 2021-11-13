@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
    <id value="eMMKGfU7AJS5yjSRNjZdLxA3" />
+   <meta>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+         <valueString value="IPA Patient Example" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+         <valueMarkdown value="This is a Patient example for the *IPA Patient Profile*." />
+      </extension>
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
+   </meta>
    <identifier>
       <use value="usual" />
       <type>

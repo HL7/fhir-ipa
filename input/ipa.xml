@@ -44,7 +44,8 @@
          <reference>
             <reference value="AllergyIntolerance/eeJxm9Vi8-QmUQuWDhBMklw3" />
          </reference>
-         <name value="IPA AllergyIntolerance" />
+         <name value="IPA AllergyIntolerance example" />
+         <description value="AllergyIntolerance example" />
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
       </resource>
       <!--
@@ -152,7 +153,14 @@
             <reference value="StructureDefinition/ipa-patient" />
          </reference>
       </resource>
-	  
+	  <resource>
+         <reference>
+            <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
+         <name value="IPA Patient example" />
+         <description value="Meiko Lufhir Jr., PhD" />
+      </resource>	 
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitioner" />

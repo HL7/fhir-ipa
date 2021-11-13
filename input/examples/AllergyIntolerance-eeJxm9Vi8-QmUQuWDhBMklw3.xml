@@ -20,19 +20,19 @@
    <category value="medication" />
    <code>
       <coding>
-         <system value="urn:oid:2.16.840.1.113883.6.88" />
-         <code value="9835" />
-         <display value="SMALLPOX VACCINE" />
+         <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+         <code value="833082" />
+         <display value="smallpox (vaccinia) vaccine, live Injectable Solution" />
       </coding>
       <coding>
-         <system value="urn:oid:2.16.840.1.113883.4.9" />
+         <system value="http://fdasis.nlm.nih.gov" />
          <code value="4SV59689SK" />
       </coding>
       <text value="SMALLPOX VACCINE" />
    </code>
    <patient>
-      <reference value="https://example.com/instance/api/FHIR/R4/Patient/e06xbT0QqabCKCMIqZo98DA3" />
-      <display value="Lurch, William" />
+      <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
+      <display value="Lufhir, Meiko" />
    </patient>
    <recordedDate value="2019-04-19" />
 </AllergyIntolerance>
