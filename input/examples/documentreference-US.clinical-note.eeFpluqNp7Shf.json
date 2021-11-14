@@ -1,6 +1,7 @@
 {
   "resourceType": "DocumentReference",
-    "meta": {
+  "id": "US.clinical-note.eeFpluqNp7Shf",
+  "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
     ],
@@ -15,7 +16,6 @@
       }
     ]
   },
-  "id": "US.clinical-note.eeFpluqNp7Shf",
   "status": "current",
   "docStatus": "final",
   "type": {
@@ -24,11 +24,6 @@
         "system": "http://loinc.org",
         "code": "11506-3",
         "display": "Progress Note"
-      },
-      {
-        "system": "urn:oid:1.2.840.114350.1.13.861.1.7.4.737880.5010",
-        "code": "1",
-        "display": "Progress Notes"
       }
     ],
     "text": "Progress Note"
@@ -37,9 +32,9 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
-          "code": "clinical-note",
-          "display": "Clinical Note"
+          "system": "http://loinc.org",
+          "code": "34109-9",
+          "display": "Note"
         }
       ],
       "text": "Clinical Note"
@@ -47,7 +42,7 @@
   ],
   "subject": {
     "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
-    "display": "Fhir D Cds Jr., DDS"
+    "display": "Lufhir, Meiko"
   },
   "date": "2019-05-21T20:19:30Z",
   "author": [
