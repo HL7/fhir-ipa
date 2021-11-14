@@ -10,5 +10,6 @@ Note that all these guides make additional rules about access and content to mee
 but these rules are consistent with this specification.
 
 Note also that not all implementations of these implementation guides are conformant to this 
-specification. In particular, this specification makes specific rules around language, timezone,
-and how patient merge is handled that are not required by some or all of these specifications.
+specification. In particular, this specification makes specific rules and suggestions around
+language, timezone, and how patient merge is handled that are not implemented or required by some
+or all of these specifications.
