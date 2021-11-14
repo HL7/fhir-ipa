@@ -7,10 +7,12 @@ It also provides for producers of generic patient-facing applications a basis on
 that the application would be as compatible as possible with as many globally available
 implementations as possible.
 
-However, many healthcare systems are inherently local, with not many features useful for true
-internationalization and localization implemented.
+__This base version of the specification aims to provide general guidance rather than hard rules.
+The authors of the specification welcome feedback and suggestions on what should be required of
+implementations.__
 
-This base version of the specification aims to provide general guidance rather than hard rules.
+### Language
+
 
 ### Codeable concepts
 
@@ -36,4 +38,3 @@ and [addresses](https://www.hl7.org/fhir/datatypes.html#address).
 
 To be usable for a wide range of internationally available applications, implementations SHOULD
 expose the text element for this kind of data.
-
