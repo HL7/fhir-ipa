@@ -13,6 +13,9 @@ implementations.__
 
 ### Language
 
+This version of the specification makes no specific rules around language. However, further
+versions and other specifications building on top of this base specification are expected to impose
+constraints and recommendations on language.
 
 ### Codeable concepts
 
