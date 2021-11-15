@@ -35,6 +35,8 @@ were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-ser
 
 Note that servers may decline to perform some searches unless particular parameters are specified.
 
+The application can also use the [$docref operation](OperationDefinition-docref.html) to obtain a document, or a set of documents, related to the patient. This operation is considered useful especially for implementations that are not based on FHIR and may not generally expose data as FHIR resources. This operation is a way for such implementations to expose the information they have to patient-facing applications.
+
 ### Search resources 
 
 The following resources can be searched to access patient information:
