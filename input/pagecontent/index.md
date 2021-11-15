@@ -44,7 +44,7 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
  - [Finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
  - [Maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
  - [Managing privacy and consent](privacy.html)
- - [Internationalization](internationalization.html) - language and timezone issues  
+ - [Internationalization](internationalization.html) - how to best support a wide range of international applications  
  - [Application expectations, and how to test conformance](conformance.html)
 
 Notes:
