@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+   <id value="e7ijxUCtjzFLHvDFSIqXu2w3" />
+   <clinicalStatus>
+      <coding>
+         <system value="http://hl7.org/fhir/ValueSet/condition-clinical" />
+         <code value="active" />
+         <display value="Active" />
+      </coding>
+      <text value="Active" />
+   </clinicalStatus>
+   <verificationStatus>
+      <coding>
+         <system value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
+         <code value="confirmed" />
+         <display value="Confirmed" />
+      </coding>
+      <text value="Confirmed" />
+   </verificationStatus>
+   <category>
+      <coding>
+         <system value="http://hl7.org/fhir/condition-category" />
+         <code value="problem-list-item" />
+         <display value="Problem List Item" />
+      </coding>
+      <text value="Problem List Item" />
+   </category>
+   <code>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.6.90" />
+         <code value="L60.0" />
+      </coding>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.6.96" />
+         <code value="400097005" />
+      </coding>
+      <text value="Ingrowing nail" />
+   </code>
+   <subject>
+      <reference value="Patient/ej4nFxzySJAysjMuv4rTBNA3" />
+      <display value="Lufhir, Meiko H Jr., MD" />
+   </subject>
+   <recordedDate value="2018-11" />
+</Condition>

@@ -1,0 +1,72 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "US.clinical-note.eeFpluqNp7Shf",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "DocumentReference Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a DocumentReference example for the *IPA DocumentReference Profile*."
+      }
+    ]
+  },
+  "status": "current",
+  "docStatus": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11506-3",
+        "display": "Progress Note"
+      }
+    ],
+    "text": "Progress Note"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "34109-9",
+          "display": "Note"
+        }
+      ],
+      "text": "Clinical Note"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "display": "Lufhir, Meiko"
+  },
+  "date": "2019-05-21T20:19:30Z",
+  "author": [
+    {
+      "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+      "display": "Marty Seeger"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/html",
+        "url": "Binary/ekAJmRWsOeeVsqjgMnmX-5ZTCqyW.NZW3fvSH8mNXZSg3"
+      }
+    }
+  ],
+  "context": {
+    "encounter": [
+      {
+        "reference": "Encounter/eUYzqPWXxEvtcwrItyp7H3xYs37qc3b3dYZln86UIj.43"
+      }
+    ],
+    "period": {
+      "start": "2019-05-21T04:59:00Z"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+   <id value="eeJxm9Vi8-QmUQuWDhBMklw3" />
+   <clinicalStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+         <version value="4.0.0" />
+         <code value="active" />
+         <display value="Active" />
+      </coding>
+   </clinicalStatus>
+   <verificationStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+         <version value="4.0.0" />
+         <code value="confirmed" />
+         <display value="Confirmed" />
+      </coding>
+   </verificationStatus>
+   <category value="medication" />
+   <code>
+      <coding>
+         <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+         <code value="833082" />
+         <display value="smallpox (vaccinia) vaccine, live Injectable Solution" />
+      </coding>
+      <coding>
+         <system value="http://fdasis.nlm.nih.gov" />
+         <code value="4SV59689SK" />
+      </coding>
+      <text value="SMALLPOX VACCINE" />
+   </code>
+   <patient>
+      <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
+      <display value="Lufhir, Meiko" />
+   </patient>
+   <recordedDate value="2019-04-19" />
+</AllergyIntolerance>
