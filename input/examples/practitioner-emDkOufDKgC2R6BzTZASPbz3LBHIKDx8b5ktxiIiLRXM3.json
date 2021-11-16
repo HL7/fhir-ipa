@@ -21,13 +21,6 @@
       "use": "usual",
       "system": "urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.295",
       "value": "1538344056"
-    },
-    {
-      "use": "usual",
-      "type": {
-        "text": "EXTERNAL"
-      },
-      "value": "5337"
     }
   ],
   "active": true,

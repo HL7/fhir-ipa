@@ -48,17 +48,21 @@
          <description value="AllergyIntolerance example" />
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
       </resource>
-      <!--
-    <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-careteam"/></reference></resource> -->
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-condition" />
          </reference>
       </resource>
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-diagnosticreport"/></reference></resource> -->
+	  <resource>
+         <reference>
+            <reference value="Condition/problem.e7ijxUCtjzFLHvDFSIqXu2w3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
+         <name value="IPA Condition example" />
+         <description value="Condition example for problem list item" />
+      </resource>	
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-documentreference" />
@@ -73,15 +77,20 @@
          <description value="DocumentReference example" />
       </resource>	
 	  
-	  
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-goal"/></reference></resource> -->
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-immunization" />
          </reference>
       </resource>
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource> -->
+	  <resource>
+         <reference>
+            <reference value="Immunization/eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
+         <name value="IPA Immunization example" />
+         <description value="Immunization example" />
+      </resource>
+
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-medication" />
@@ -161,6 +170,7 @@
          <name value="IPA Patient example" />
          <description value="Meiko Lufhir Jr., PhD" />
       </resource>	 
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitioner" />
@@ -188,12 +198,7 @@
          <name value="IPA Practitioner Role example" />
          <description value="The first example for IPA" />
       </resource>
-      <!--
-    <resource><reference><reference value="StructureDefinition/ipa-procedure"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-provenance"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-questionnaire"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-questionnaireresponse"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource> -->
+
       <page>
          <nameUrl value="toc.html" />
          <title value="Table of Contents" />

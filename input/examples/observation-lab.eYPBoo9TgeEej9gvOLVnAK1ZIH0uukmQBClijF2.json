@@ -21,7 +21,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/observation-category",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
           "code": "laboratory",
           "display": "Laboratory"
         }
@@ -57,9 +57,6 @@
     "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
     "display": "Fhir D Cds Jr., DDS"
   },
-  "encounter": {
-    "reference": "Encounter/eVPeowQpE8g3UREPg4zIOFpaybhQP7xM8SV2SN39JGUs3"
-  },
   "effectiveDateTime": "2019-09-23T13:50:39Z",
   "issued": "2019-09-23T14:50:39Z",
   "valueQuantity": {
@@ -72,7 +69,7 @@
     {
       "coding": [
         {
-          "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
           "code": "A",
           "display": "Abnormal"
         }
