@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationStatement",
-    "meta": {
+  "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement"
     ],
@@ -19,36 +19,26 @@
   "identifier": [
     {
       "use": "usual",
-      "system": "1.2.840.114350.1.13.861.1.7.2.798268",
+      "system": "urn:1.2.840.114350.1.13.861.1.7.2.798268",
       "value": "5131734"
     }
   ],
   "status": "active",
-  "category": {
-    "coding": [
-      {
-        "code": "inpatient",
-        "display": "Inpatient"
-      }
-    ],
-    "text": "Inpatient"
-  },
   "medicationReference": {
-    "reference": "https://example.com/instance/api/FHIR/R4/Medication/eq7Ib9QN5yAnUEPPN2tO1Av9b19DdLZPqjbyljiwwahKrtkKZtRVhx2OrRjD7EkrJ3",
-    "display": "Ibuprofen suspension 40 mg"
+    "reference": "Medication/xygoh5R9HcYaTHPGS3",
+    "display": "Percocet"
   },
   "effectivePeriod": {
     "start": "2017-04-26T22:00:00Z"
   },
   "informationSource": {
-    "reference": "https://example.com/instance/api/FHIR/R4/Practitioner/egCj4Z7EG1mplI4xYrONFRQ3",
-    "display": "PROVIDER, TESTING"
+    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "display": "Seeger, Marty"
   },
   "subject": {
-    "reference": "https://example.com/instance/api/FHIR/R4/Patient/eFKsVr2y75R9CKzJKJ37wMg3",
-    "display": "Friend, All"
+    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "display": "Lufhir, Meiko"
   },
-  "taken": "unk",
   "dosage": [
     {
       "timing": {
@@ -73,12 +63,25 @@
         ],
         "text": "Oral"
       },
-      "doseQuantity": {
-        "value": "1",
-        "unit": "mL",
-        "system": "http://unitsofmeasure.org",
-        "code": "mL"
-      }
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "Ordered"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          }
+        }
+      ]
     }
   ]
 }

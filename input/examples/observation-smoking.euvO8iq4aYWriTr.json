@@ -76,11 +76,6 @@
             "system": "http://loinc.org",
             "code": "81228-9",
             "display": "Tobacco product"
-          },
-          {
-            "system": "http://snomed.info/sct",
-            "code": "53661000146106",
-            "display": "Type of tobacco used (observable entity)"
           }
         ],
         "text": "Type"
@@ -103,11 +98,6 @@
             "system": "http://loinc.org",
             "code": "81228-9",
             "display": "Tobacco product"
-          },
-          {
-            "system": "http://snomed.info/sct",
-            "code": "53661000146106",
-            "display": "Type of tobacco used (observable entity)"
           }
         ],
         "text": "Type"
