@@ -6,7 +6,7 @@
          <valueString value="IPA Immunization Example" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
-         <valueMarkdown value="This is an Immunization example for the *IPA Immunization Profile*. Note both US and Australian codes." />
+         <valueMarkdown value="This is an Immunization example for the *IPA Immunization Profile*." />
       </extension>
       <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
    </meta>
@@ -17,10 +17,6 @@
    </identifier>
    <status value="completed" />
    <vaccineCode>
-      <coding>
-         <system value="http://hl7.org/fhir/sid/cvx" />
-         <code value="8987" />
-      </coding>
       <coding>
          <system value="urn:oid:1.2.36.1.2001.1005.17" />
          <code value="GNMEA" />
