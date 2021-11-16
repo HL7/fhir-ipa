@@ -84,7 +84,15 @@
             <reference value="StructureDefinition/ipa-immunization" />
          </reference>
       </resource>
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-location"/></reference></resource> -->
+	  <resource>
+         <reference>
+            <reference value="Immunization/eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
+         <name value="IPA Immunization example" />
+         <description value="Immunization example" />
+      </resource>
+
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-medication" />

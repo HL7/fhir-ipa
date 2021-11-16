@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Immunization>
    <id value="eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+      <meta>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+         <valueString value="IPA Immunization Example" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+         <valueMarkdown value="This is an Immunization example for the *IPA Immunization Profile*. Note both US and Australian codes." />
+      </extension>
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
+   </meta>
    <identifier>
       <use value="usual" />
       <system value="urn:oid:1.2.840.114350.1.13.861.1.7.2.768076" />
@@ -12,15 +21,15 @@
          <system value="http://hl7.org/fhir/sid/cvx" />
          <code value="8987" />
       </coding>
+      <coding>
+         <system value="urn:oid:1.2.36.1.2001.1005.17" />
+         <code value="GNMEA" />
+      </coding>
       <text value="Measles" />
    </vaccineCode>
    <patient>
-      <reference value="Patient/e0305qj8fg3M1O30qqEGaJLy03K.hjrYTj2ASI9h5.aQ3" />
-      <display value="TestImm, Hayden" />
+      <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
    </patient>
-   <encounter>
-      <reference value="Encounter/ekzmW1Rj-Mo.fnA5H81BhI2OMQ7nvCkysOljCHSXu3xI3" />
-   </encounter>
    <occurrenceDateTime value="2020-04-08T05:00:00Z" />
    <primarySource value="true" />
    <lotNumber value="1" />
