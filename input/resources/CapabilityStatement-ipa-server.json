@@ -646,6 +646,19 @@
         {
           "type" : "Observation",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation",
+          "supportedProfile" : [
+            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+          ],
+          "_supportedProfile": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ],
           "interaction" : [
             {
               "extension" : [
