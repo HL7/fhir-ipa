@@ -56,9 +56,9 @@
       <line value="100 Main St" />
       <line value="G-442" />
       <city value="Madison" />
+      <district value="DANE" />
       <state value="WI" />
       <postalCode value="53703" />
-      <district value="DANE" />
       <country value="USA" />
    </address>
    <maritalStatus>
