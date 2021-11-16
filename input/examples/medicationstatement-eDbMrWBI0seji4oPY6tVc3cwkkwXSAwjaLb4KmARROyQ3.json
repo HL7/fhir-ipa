@@ -39,7 +39,6 @@
     "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
     "display": "Lufhir, Meiko"
   },
-  "taken": "unk",
   "dosage": [
     {
       "timing": {
@@ -76,7 +75,7 @@
             ]
           },
           "doseQuantity": {
-            "value": "1",
+            "value": 1,
             "unit": "mL",
             "system": "http://unitsofmeasure.org",
             "code": "mL"
