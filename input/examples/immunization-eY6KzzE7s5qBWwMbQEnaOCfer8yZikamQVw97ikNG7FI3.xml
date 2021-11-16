@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Immunization>
+
+<Immunization xmlns="http://hl7.org/fhir">
    <id value="eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
-      <meta>
+   <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
          <valueString value="IPA Immunization Example" />
       </extension>
@@ -10,60 +11,66 @@
       </extension>
       <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
    </meta>
-   <identifier>
-      <use value="usual" />
-      <system value="urn:oid:1.2.840.114350.1.13.861.1.7.2.768076" />
-      <value value="1030748" />
-   </identifier>
-   <status value="completed" />
-   <vaccineCode>
-      <coding>
-         <system value="urn:oid:1.2.36.1.2001.1005.17" />
-         <code value="GNMEA" />
-      </coding>
-      <text value="Measles" />
-   </vaccineCode>
-   <patient>
-      <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
-   </patient>
-   <occurrenceDateTime value="2020-04-08T05:00:00Z" />
-   <primarySource value="true" />
-   <lotNumber value="1" />
-   <expirationDate value="2030-04-08" />
-   <site>
-      <coding>
-         <system value="urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.4040" />
-         <code value="10" />
-         <display value="Right quadriceps" />
-      </coding>
-      <text value="Right quadriceps" />
-   </site>
-   <route>
-      <coding>
-         <system value="urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.4030" />
-         <code value="5" />
-         <display value="Subcutaneous" />
-      </coding>
-      <text value="Subcutaneous" />
-   </route>
-   <doseQuantity>
-      <value value="0.5" />
-      <unit value="mL" />
-      <system value="urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.4019" />
-      <code value="1" />
-   </doseQuantity>
-   <performer>
-      <function>
-         <coding>
-            <system value="http://hl7.org/fhir/ValueSet/immunization-function" />
-            <code value="AP" />
-            <display value="Administering Provider" />
-         </coding>
-         <text value="Administering Provider" />
-      </function>
-      <actor>
-         <reference value="Practitioner/ef81ZrgFqs7ufzYI2X9ixcA3" />
-         <display value="User, Clinician, RPh" />
-      </actor>
-   </performer>
-</Immunization>
+
+  <identifier> 
+    <system value="urn:ietf:rfc:3986"/> 
+    <value value="urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"/> 
+  </identifier> 
+  <status value="completed"/> 
+  <vaccineCode> 
+    <coding> 
+      <system value="urn:oid:1.2.36.1.2001.1005.17"/> 
+      <code value="FLUVAX"/> 
+    </coding> 
+    <text value="Fluvax (Influenza)"/> 
+  </vaccineCode> 
+  <patient> 
+    <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3"/> 
+  </patient> 
+  <occurrenceDateTime value="2013-01-10"/> 
+  <primarySource value="true"/> 
+  <location> 
+    <reference value="Location/1"/> 
+  </location> 
+  <lotNumber value="AAJN11K"/> 
+  <expirationDate value="2015-02-15"/> 
+  <site> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActSite"/> 
+      <code value="LA"/> 
+      <display value="left arm"/> 
+    </coding> 
+  </site> 
+  <route> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/> 
+      <code value="IM"/> 
+      <display value="Injection, intramuscular"/> 
+    </coding> 
+  </route> 
+  <doseQuantity> 
+    <value value="5"/> 
+    <system value="http://unitsofmeasure.org"/> 
+    <code value="mg"/> 
+  </doseQuantity> 
+  <performer> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/> 
+        <code value="OP"/> 
+      </coding> 
+    </function> 
+      <actor> 
+         <reference value="Practitioner/ef81ZrgFqs7ufzYI2X9ixcA3"/> 
+      </actor> 
+  </performer> 
+  <note> 
+    <text value="Notes on adminstration of vaccine"/> 
+  </note> 
+  <reasonCode> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="429060002"/> 
+    </coding> 
+  </reasonCode> 
+</Immunization> 
