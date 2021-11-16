@@ -117,15 +117,14 @@
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest" />
          <name value="IPA MedicationRequest example" />
          <description value="MedicationRequest example" />
-      </resource>	
+      </resource>
 	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-medicationstatement" />
          </reference>
       </resource>
-	  
-	  <resource>
+	    <resource>
          <reference>
             <reference value="MedicationStatement/eDbMrWBI0seji4oPY6tVc3cwkkwXSAwjaLb4KmARROyQ3" />
          </reference>
@@ -147,8 +146,8 @@
          <name value="IPA Observation example" />
          <description value="Laboratory Observation example" />
       </resource>	  
-	  
-	  <resource>
+
+	    <resource>
          <reference>
             <reference value="Observation/smoking.euvO8iq4aYWriTr" />
          </reference>
