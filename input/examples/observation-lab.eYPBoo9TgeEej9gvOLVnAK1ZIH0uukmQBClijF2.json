@@ -1,0 +1,105 @@
+{
+  "resourceType": "Observation",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Observation Lab Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Observation example for the *IPA Observation Profile* containing a lab result."
+      }
+    ]
+  },
+  "id": "lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2",
+  "status": "amended",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ],
+      "text": "Laboratory"
+    },
+    {
+      "coding": [
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.861.1.7.10.798268.30",
+          "code": "Lab",
+          "display": "Lab"
+        }
+      ],
+      "text": "Lab"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2093-3",
+        "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+      },
+      {
+        "system": "urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.99930006",
+        "code": "CHOL58"
+      }
+    ],
+    "text": "Cholesterol"
+  },
+  "subject": {
+    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "display": "Fhir D Cds Jr., DDS"
+  },
+  "encounter": {
+    "reference": "Encounter/eVPeowQpE8g3UREPg4zIOFpaybhQP7xM8SV2SN39JGUs3"
+  },
+  "effectiveDateTime": "2019-09-23T13:50:39Z",
+  "issued": "2019-09-23T14:50:39Z",
+  "valueQuantity": {
+    "value": 105,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+          "code": "A",
+          "display": "Abnormal"
+        }
+      ],
+      "text": "Abnormal"
+    }
+  ],
+  "note": [
+    {
+      "text": "From the Results Generator"
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 128,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "high": {
+        "value": 250,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "text": "128 - 250 mg/dL"
+    }
+  ]
+}

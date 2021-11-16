@@ -35,28 +35,24 @@ were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-ser
 
 Note that servers may decline to perform some searches unless particular parameters are specified.
 
+The application can also use the [$docref operation](OperationDefinition-docref.html) to obtain a document, or a set of documents, related to the patient. This operation is considered useful especially for implementations that are not based on FHIR and may not generally expose data as FHIR resources. This operation is a way for such implementations to expose the information they have to patient-facing applications.
+
 ### Search resources 
 
 The following resources can be searched to access patient information:
 
 -- table of resources and search parameters -
 
-|Resource | Supported search params|
-| ------- | ---------------------- | 
-| AllergyIntolerance | clinical-status, patient, patient+clinical+status |
-| Condition | category, clinical-status, patient, onset-date, code, patient+code, patient+onset-date, patient+clinical-status, patient+category	|
-| DiagnosticReport | status, patient, category, code, date, patient+code+date, patient+category, patient+status, patient+category+date, patient+code	|
-| DocumentReference | \_id, status, patient, category, type, date, period, patient+category, patient+status, patient+type+period, patient+type, patient+category+date |
-| Encounter | \_id, class, date, identifier, patient, status, type, date+patient, patient+status, class+patient, patient+type |
-| Immunization | patient, status, date, patient+status, patient+date	|
-| Medication | - |
-| MedicationRequest | status, intent, patient, encounter, authoredon, patient+intent+authoredon, patient+intent, patient+intent+encounter, patient+intent+status	|
-| Observation | status, category, code, date, patient, patient+category+status, patient+code+date, patient+category, patient+category+date, patient+code	|
-| Patient | \_id, birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name |
-| Practitioner | name, identifier | 
-| PractitionerRole | specialty, practitioner |
-| Procedure | status, patient, date, code, patient+code+date, patient+date, patient+status |
-| RelatedPerson | - |
+|Resource | Required search params| Recommended search params |
+| ------- | ----------------------- | ---------------------- |
+| AllergyIntolerance    | patient   | patient+clinical-status |
+| Condition             | patient   | patient+category, patient+clinical-status, patient+code, patient+onset-date|
+| DocumentReference     | \_id, patient, patient+category, patient+type, patient+category+date | patient+contenttype, patient+encounter, patient+status, patient+type+date,  patient+type+period |
+| Immunization          | patient   | patient+date, patient+status |
+| MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
+| MedicationStatement   | subject	| subject+status                    |
+| Observation           | patient+category, patient+code, patient+category+date 	| patient+category+status, patient+code+date |
+| Patient               | \_id      | birthdate, family, gender, given, identifier, name, family+gender, birthdate+family, birthdate+name, gender+name |
 
 
 ### Supporting Resources
@@ -64,7 +60,9 @@ The following resources can be searched to access patient information:
 The API also provides access to a number of supporting resources. The following resources are referred to from the 
 resources above, and may be read directly:
 
-* list
+* Medication
+* Practitioner
+* PractitionerRole
 
 All these resources are accessed by 
 
@@ -83,27 +81,10 @@ in support of existing records that refer directly to them.
 In order to save time, client applications may ask for these resources to be included in the search response, but
 servers are not required to do this, so clients should be prepared to fetch these directly and cache them locally. 
 
-### Audit Trail and Provenance
-
-These resources are special. Servers are required to support the mandatory search parameters ```entity``` and ```target```
-which restrict the information provided to the specified resource:
-
-    GET [url]/AuditEvent?entity=Condition/23
-    
-This returns all the audit information that is associated with the specified resources. Servers may also support 
-general query without the specific parameter, e.g.:
-
-    GET [url]/AuditEvent?date=2018-05 
-    
-This is a request to return all the audit events for May 2018. 
-
-Note that servers are not required to support AuditEvent and Provenance at all - clients must consult the 
-server's CapabilityStatement to see if they provide this information.
-
 
 ### Server Obligations
 
 Servers SHALL:
 
-* Implement the required resource types Patient, AllergyIntolerance, Condition, MedicationRequest, Medication, Observation.
+* Implement the IPA defined resource types.
  * Note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.

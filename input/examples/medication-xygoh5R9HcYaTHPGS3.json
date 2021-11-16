@@ -1,0 +1,36 @@
+{
+  "resourceType": "Medication",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Medication Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Medication example for the *IPA Medication Profile*."
+      }
+    ]
+  },
+  "id": "xygoh5R9HcYaTHPGS3",
+  "code": {
+    "text": "ord disp name lpp 34920"
+  },
+  "ingredient": [
+    {
+      "itemReference": {
+        "reference": "Medication/eCu-p5H7xIY321uw8wJJX-g3",
+        "display": "D5W"
+      }
+    },
+    {
+      "itemReference": {
+        "reference": "Medication/eUFtCkME4p0C8M0FqvU3ISA3",
+        "display": "DOPamine (INOTROPIN) injection 160 mg/mL"
+      }
+    }
+  ]
+}

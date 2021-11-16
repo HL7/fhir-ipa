@@ -1,0 +1,146 @@
+{
+  "resourceType": "MedicationRequest",
+    "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "MedicationRequest Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a MedicationRequest example for the *IPA MedicationRequest Profile*."
+      }
+    ]
+  },
+  "id": "e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3",
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:1.2.840.114350.1.13.861.1.7.2.798268",
+      "value": "2454978"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        }
+      ],
+      "text": "Outpatient"
+    }
+  ],
+  "medicationReference": {
+    "reference": "Medication/eFnx9hyX.YTNJ407PR9g4zpiT8lXCElOXkldLgGDYrAU-fszvYmrUZlYzRfJl-qKj3",
+    "display": "oxybutynin (DITROPAN XL) CR tablet"
+  },
+  "subject": {
+    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "display": "Friend, All"
+  },
+  "encounter": {
+    "reference": "Encounter/eiUjKDnCzAklY4taV-ZqAfRDw-CztkJ5lLnQ5bCBa9Dw3"
+  },
+  "authoredOn": "2018-09-20T15:41:39Z",
+  "requester": {
+    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "display": "Clinician User"
+  },
+  "recorder": {
+    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "display": "Clinician User"
+  },
+  "dosageInstruction": [
+    {
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2018-09-21T04:00:00Z"
+          }
+        },
+        "code": {
+          "text": "2100"
+        }
+      },
+      "asNeededBoolean": false,
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.840.114350.1.13.861.1.7.4.798268.7025",
+            "code": "15",
+            "display": "Oral"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "code": "260548002",
+            "display": "Oral"
+          }
+        ],
+        "text": "Oral"
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "calculated",
+                "display": "calculated"
+              }
+            ],
+            "text": "calculated"
+          },
+          "doseQuantity": {
+            "value": 15,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "admin-amount",
+                "display": "admin-amount"
+              }
+            ],
+            "text": "admin-amount"
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "tablet",
+            "system": "http://unitsofmeasure.org",
+            "code": "{tbl}"
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://epic.com/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "ordered"
+              }
+            ],
+            "text": "ordered"
+          },
+          "doseQuantity": {
+            "value": 10,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ]
+    }
+  ]
+}

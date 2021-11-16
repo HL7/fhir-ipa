@@ -1,6 +1,6 @@
 An application gets access to a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the stand alone launch sequence.
 
-### Client Process 
+### Client Process
 
 A client application gets access a patient record by following this general sequence of steps:
 
@@ -9,7 +9,7 @@ A client application gets access a patient record by following this general sequ
   
 * Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html):
 
-    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
+    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
 * Fetch the [end-point configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
 
@@ -20,20 +20,20 @@ A client application gets access a patient record by following this general sequ
 
 * Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/index.html#standalone-launch-sequence) using the authorization endpoint from the smart-configuration.json file
 
-* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient infomration](fetching.html)
+* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html)
 
-###Scopes 
+### Scopes
 
 Scopes work as described in the SMART on FHIR specification, but note that many servers limit a client to the scopes approved on its registration, 
 and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
-### Server Obligations 
+### Server Obligations
 
 Servers that are conformant to the International Patient Access API conform to the following rules:
 
 * The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](http://hl7,org/fhir/capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
 
-    ```"imports" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
+    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
 * The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
