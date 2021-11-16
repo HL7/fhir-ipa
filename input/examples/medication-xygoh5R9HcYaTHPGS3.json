@@ -21,7 +21,7 @@
       {
         "system": "http://hl7.org/fhir/sid/ndc",
         "code": "16590-619-30",
-        "display": "Percocet tablet"
+        "display": "PERCOCET, 30 TABLET in 1 BOTTLE (16590-619-30) (package)"
       }
     ]
   },
@@ -30,7 +30,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "385055001",
-        "display": "Tablet dose form (qualifier value)"
+        "display": "Tablet"
       }
     ]
   },
@@ -41,7 +41,7 @@
           {
             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
             "code": "82063",
-            "display": "Oxycodone HCl"
+            "display": "oxyCODONE hydrochloride"
           }
         ]
       },
