@@ -38,15 +38,12 @@
     }
   ],
   "medicationReference": {
-    "reference": "Medication/eFnx9hyX.YTNJ407PR9g4zpiT8lXCElOXkldLgGDYrAU-fszvYmrUZlYzRfJl-qKj3",
-    "display": "oxybutynin (DITROPAN XL) CR tablet"
+    "reference": "Medication/xygoh5R9HcYaTHPGS3",
+    "display": "Percocet tablet"
   },
   "subject": {
     "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
     "display": "Friend, All"
-  },
-  "encounter": {
-    "reference": "Encounter/eiUjKDnCzAklY4taV-ZqAfRDw-CztkJ5lLnQ5bCBa9Dw3"
   },
   "authoredOn": "2018-09-20T15:41:39Z",
   "requester": {
