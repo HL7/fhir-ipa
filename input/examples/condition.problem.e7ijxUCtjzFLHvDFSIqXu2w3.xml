@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Condition xmlns="http://hl7.org/fhir">
    <id value="e7ijxUCtjzFLHvDFSIqXu2w3" />
+      <meta>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+         <valueString value="IPA Condition Example" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+         <valueMarkdown value="This is a problem list item example for the *IPA Condition Profile*." />
+      </extension>
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
+   </meta>
    <clinicalStatus>
       <coding>
-         <system value="http://hl7.org/fhir/ValueSet/condition-clinical" />
+         <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
          <code value="active" />
          <display value="Active" />
       </coding>
@@ -11,7 +20,7 @@
    </clinicalStatus>
    <verificationStatus>
       <coding>
-         <system value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
+         <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
          <code value="confirmed" />
          <display value="Confirmed" />
       </coding>
@@ -19,7 +28,7 @@
    </verificationStatus>
    <category>
       <coding>
-         <system value="http://hl7.org/fhir/condition-category" />
+         <system value="http://terminology.hl7.org/CodeSystem/condition-category" />
          <code value="problem-list-item" />
          <display value="Problem List Item" />
       </coding>
@@ -27,7 +36,7 @@
    </category>
    <code>
       <coding>
-         <system value="urn:oid:2.16.840.1.113883.6.90" />
+         <system value="http://hl7.org/fhir/sid/icd-10" />
          <code value="L60.0" />
       </coding>
       <coding>

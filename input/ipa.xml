@@ -48,17 +48,20 @@
          <description value="AllergyIntolerance example" />
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
       </resource>
-      <!--
-    <resource><reference><reference value="StructureDefinition/ipa-auditevent"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-careplan"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-careteam"/></reference></resource> -->
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-condition" />
          </reference>
       </resource>
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-device"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-diagnosticreport"/></reference></resource> -->
+	  <resource>
+         <reference>
+            <reference value="Condition/condition.problem.e7ijxUCtjzFLHvDFSIqXu2w3" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
+         <name value="IPA Condition example" />
+         <description value="Condition example for problem list item" />
+      </resource>	
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-documentreference" />
