@@ -48,6 +48,7 @@
          <description value="AllergyIntolerance example" />
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
       </resource>
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-condition" />
@@ -76,9 +77,6 @@
          <description value="DocumentReference example" />
       </resource>	
 	  
-	  
-      <!-- <resource><reference><reference value="StructureDefinition/ipa-encounter"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-goal"/></reference></resource> -->
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-immunization" />

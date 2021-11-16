@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <Immunization xmlns="http://hl7.org/fhir">
    <id value="eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
    <meta>
@@ -29,9 +27,6 @@
   </patient> 
   <occurrenceDateTime value="2013-01-10"/> 
   <primarySource value="true"/> 
-  <location> 
-    <reference value="Location/1"/> 
-  </location> 
   <lotNumber value="AAJN11K"/> 
   <expirationDate value="2015-02-15"/> 
   <site> 
