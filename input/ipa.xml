@@ -170,6 +170,7 @@
          <name value="IPA Patient example" />
          <description value="Meiko Lufhir Jr., PhD" />
       </resource>	 
+	  
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitioner" />
@@ -197,12 +198,7 @@
          <name value="IPA Practitioner Role example" />
          <description value="The first example for IPA" />
       </resource>
-      <!--
-    <resource><reference><reference value="StructureDefinition/ipa-procedure"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-provenance"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-questionnaire"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-questionnaireresponse"/></reference></resource>
-    <resource><reference><reference value="StructureDefinition/ipa-relatedperson"/></reference></resource> -->
+
       <page>
          <nameUrl value="toc.html" />
          <title value="Table of Contents" />
