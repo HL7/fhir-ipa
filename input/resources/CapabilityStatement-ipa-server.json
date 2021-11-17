@@ -48,7 +48,29 @@
         "description" : "1. See the [General Security Considerations](security.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
       },
       "resource" : [
-        {
+        { "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "required",
+                  "valueString": "clinical-status"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            }
+          ],
           "type" : "AllergyIntolerance",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance",
           "interaction" : [
@@ -95,40 +117,16 @@
               "documentation" : "active | inactive | resolved"
             },
             {
-              "extension" : [
+              "extension": [
                 {
-                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode" : "SHOULD"
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
                 }
               ],
-              "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
-              "type" : "token",
-              "documentation" : "Code that identifies the allergy or intolerance"
-            },
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode" : "SHALL"
-                }
-              ],
-              "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
-              "type" : "date",
-              "documentation" : "Date first version of the resource instance was recorded"
-            },
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode" : "SHALL"
-                }
-              ],
-              "name" : "verification-status",
-              "definition" : "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status",
-              "type" : "token",
-              "documentation" : "unconfirmed | confirmed | refuted | entered-in-error"
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+              "type": "reference",
+              "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\nThe server **SHALL** support both."
             }
           ]
         },
