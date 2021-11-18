@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Sun, Nov 14, 2021 00:58+0000 for FHIR v4.6.0 
+  Generated on Thu, Nov 18, 2021 22:23+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -11971,7 +11971,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">An effective date or period for a status of the citation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="relatesTo" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
+          <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
             <xs:annotation>
               <xs:documentation xml:lang="en">Artifact related to the Citation Resource.</xs:documentation>
            </xs:annotation>
@@ -12450,7 +12450,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="classifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Code the reason for different URLs, e.g. abstract and full-text.</xs:documentation>
            </xs:annotation>
@@ -21567,7 +21567,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="media" type="DiagnosticReport.Media" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
+              <xs:documentation xml:lang="en">A list of key images or data associated with this report. The images or data are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="composition" minOccurs="0" maxOccurs="1" type="Reference">
@@ -21603,12 +21603,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
         <xs:sequence>
           <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.</xs:documentation>
+              <xs:documentation xml:lang="en">A comment about the image or data. Typically, this is used to provide an explanation for why the image or data is included, or to draw the viewer's attention to important features.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="link" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to the image source.</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to the image or data source.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
