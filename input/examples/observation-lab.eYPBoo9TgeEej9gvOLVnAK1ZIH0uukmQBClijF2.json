@@ -27,16 +27,6 @@
         }
       ],
       "text": "Laboratory"
-    },
-    {
-      "coding": [
-        {
-          "system": "urn:oid:1.2.840.114350.1.13.861.1.7.10.798268.30",
-          "code": "Lab",
-          "display": "Lab"
-        }
-      ],
-      "text": "Lab"
     }
   ],
   "code": {
@@ -45,10 +35,6 @@
         "system": "http://loinc.org",
         "code": "2093-3",
         "display": "Cholesterol [Mass/volume] in Serum or Plasma"
-      },
-      {
-        "system": "urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.99930006",
-        "code": "CHOL58"
       }
     ],
     "text": "Cholesterol"
