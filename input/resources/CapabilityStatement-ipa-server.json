@@ -69,7 +69,7 @@
     }
   ],
   "implementationGuide": [
-    "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"
+    "http://hl7.org/fhir/smart-app-launch/"
   ],
   "_implementationGuide": [
     {
