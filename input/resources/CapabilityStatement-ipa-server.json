@@ -69,7 +69,7 @@
     }
   ],
   "implementationGuide": [
-    "http://hl7.org/fhir/smart-app-launch/"
+    "http://fhir-registry.smarthealthit.org/ImplementationGuide/ig"
   ],
   "_implementationGuide": [
     {
