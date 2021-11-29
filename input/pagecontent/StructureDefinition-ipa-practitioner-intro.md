@@ -2,16 +2,16 @@ This profile describes how applications fetch Practitioner resources that provid
 
 ### Example Usage Scenarios:
 
-A patient's record is full of records of events or planned actions where the actors of various kinds are 
+A patient's record is full of records of events or planned actions where the actors  are 
 care practitioners of various kinds. Note that these include any person employed by a healthcare provider,
 including clerical staff, orderlies, etc as well as the more obvious practitioners such as doctors and 
-nurses. All these may be represented as a PractitionerRole resource.
+nurses. All these may be represented as a Practitioner resource.
 
 Note that the Patient Access API provides access to both Practitioner and [PractitionerRole](StructureDefinition-ipa-practitionerrole.html) resources.
 The difference in underlying record keeping that leads to this choice is not of interest to clients
 that access patient records, but they can expect to encounter both types of resource.
 
-All servers SHALL provide an API to access Practitioner Resources as described here. 
+All servers SHALL provide an API to access Practitioner resources as described here. 
 Note that servers are allowed to provide some practitioner records as contained resources, but 
 SHOULD avoid doing so where ever possible. 
 
