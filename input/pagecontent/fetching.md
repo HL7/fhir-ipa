@@ -47,7 +47,7 @@ The following resources can be searched to access patient information:
 | ------- | ----------------------- | ---------------------- |
 | AllergyIntolerance    | patient   | patient+clinical-status |
 | Condition             | patient   | patient+category, patient+clinical-status, patient+code, patient+onset-date|
-| DocumentReference     | \_id, patient, patient+category, patient+type, patient+category+date | patient+contenttype, patient+status, patient+type+date,  patient+type+period |
+| DocumentReference     | \_id, patient, patient+category, patient+type | patient+category+date, patient+status, patient+type+period |
 | Immunization          | patient   | patient+date, patient+status |
 | MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
 | MedicationStatement   | subject	| subject+status                    |
