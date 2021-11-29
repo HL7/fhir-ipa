@@ -19,8 +19,8 @@ Clients access practitioner resources using this call:
 
 ```GET [url]/Practitioner/[id]```
 
-where id is found in some other resource that refers to a Practitioner. The result of this search is 
-a Practitioner resource, or an error there is no resource the client can access for that id. 
+where id is found in some other resource that refers to a Practitioner. The result of this request is 
+a Practitioner resource, or an error if there is no resource the client can access for that id. 
 
 The Practitioner SHALL have:
 
