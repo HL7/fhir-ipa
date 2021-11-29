@@ -6,7 +6,6 @@
    <version value="0.1.0" />
    <name value="InternationalPatientAccess" />
    <title value="International Patient Access" />
-   <status value="active" />
    <publisher value="HL7" />
    <contact>
       <telecom>
@@ -269,16 +268,6 @@
          <page>
             <nameUrl value="artifacts.html" />
             <title value="Artifact List" />
-            <generation value="markdown" />
-         </page>
-         <page>
-            <nameUrl value="downloads.html" />
-            <title value="Downloads" />
-            <generation value="markdown" />
-         </page>
-         <page>
-            <nameUrl value="ipa-server.html" />
-            <title value="IPA Server Rules" />
             <generation value="markdown" />
          </page>
       </page>
