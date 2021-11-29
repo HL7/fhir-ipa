@@ -1,7 +1,7 @@
 This specification depends on [Smart App Launch](http://hl7.org/fhir/smart-app-launch) which uses an OAuth based Authorization process,
 where the user decides what access to grant to the application that they are using. 
 
-The application asks for the access it requires based on [SMART App Launch Patient Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#patient-specific-scopes), either when the OAuth process is initiated, 
+The application asks for the access it requires based on [SMART App Launch Patient Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes), either when the OAuth process is initiated, 
 or when the application is registered. Other additional information may be collected during whatever registration process applies 
 for the application. 
 
