@@ -2,7 +2,7 @@ This profile describes how applications fetch PractitionerRole resources that pr
 
 ### Example Usage Scenarios:
 
-A patient's record is full of records of events or planned actions where the actors of various kinds are 
+A patient's record is full of records of events or planned actions where the actors are 
 care practitioners of various kinds. Note that these include any person employed by a healthcare provider,
 including clerical staff, orderlies, etc as well as the more obvious practitioners such as doctors and 
 nurses. All these may be represented as a PractitionerRole resource.
@@ -19,8 +19,8 @@ Clients access PractitionerRole resources using this call:
 
 ```GET [url]/PractitionerRole/[id]```
 
-where id is found in some other resource that refers to a PractitionerRole. The result of this search is 
-a PractitionerRole resource, or an error there is no resource the client can access for that id. 
+where id is found in some other resource that refers to a PractitionerRole. The result of this request is 
+a PractitionerRole resource, or an error if there is no resource the client can access for that id. 
 
 The PractitionerRole SHALL have:
 
@@ -28,7 +28,7 @@ The PractitionerRole SHALL have:
 * a practitioner reference (which is an [IPA Practitioner](StructureDefinition-ipa-practitioner.html))
 
 Servers may choose to provide additional information, or may be required to do so by national or other additional 
-profiles on practitioner that apply in the servers context. The ```role``` property is often required by such
+profiles on practitionerrole that apply in the servers context. The ```role``` property is often required by such
 profiles.
 
 #### Search

@@ -6,15 +6,18 @@ Operations:
 
 * [Document Reference ($docref )](OperationDefinition-docref.html)
 
-Profiles: Content Definitions for resources
+Profiles: Content Definitions for primary resources
 
-* [Allergy/Intolerance](StructureDefinition-ipa-allergyintolerance.html)
-* [Clinical note/patient document](StructureDefinition-ipa-documentreference.html)
+* [AllergyIntolerance](StructureDefinition-ipa-allergyintolerance.html)
 * [Condition](StructureDefinition-ipa-condition.html) aka Problem (but not all conditions are problems e.g. being Pregnant)
+* [DocumentReference](StructureDefinition-ipa-documentreference.html) (e.g. Clinical note or patient document)
 * [Immunization](StructureDefinition-ipa-immunization.html)
-* [Medication Usage](StructureDefinition-ipa-medicationstatement.html)
+* [MedicationRequest](StructureDefinition-ipa-medicationrequest.html) (e.g. prescription)
+* [MedicationStatement](StructureDefinition-ipa-medicationstatement.html) (medication usage, including patient reported)
+* [Observation](StructureDefinition-ipa-observation.html)
 * [Patient](StructureDefinition-ipa-patient.html)
-* [Practitioner Role](StructureDefinition-ipa-practitionerrole.html), 
-* [Practitioner](StructureDefinition-ipa-practitioner.html), 
-* [Prescription](StructureDefinition-ipa-medicationrequest.html)
-* [Vital signs and other clinical observation](StructureDefinition-ipa-observation.html)
+
+Profiles: Content definitions for supporting resources
+* [Medication](StructureDefinition-ipa-medication.html)
+* [Practitioner](StructureDefinition-ipa-practitioner.html)
+* [PractitionerRole](StructureDefinition-ipa-practitionerrole.html)

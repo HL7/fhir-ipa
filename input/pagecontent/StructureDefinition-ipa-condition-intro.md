@@ -9,24 +9,13 @@ etc.
 
 All servers SHALL provide an API to access Condition Resources as described here. 
 
-Clients access Conditions resources using one of these two calls:
+Clients access Condition resources using one of these two calls:
 
 ```GET [url]/Condition/[id]```
 
 where id is found in some other resource that refers to a Condition. The result of this read is 
 a Condition resource, or an error if there is no resource the client can access for that id. 
-Alternatively, the client may search for condition resources:
-
-```GET [url]/Condition?params```
-
-The result of this search is a bundle containing zero more Condition resources. 
-Servers SHOULD support the following search parameters:
-* clinical-status
-* verification-status
-* category
-* code
-* encounter
-* recorded-date
+Alternatively, the client may search for condition resources.
 
 The current problem list is retrieved by specifying the patient, category and and clinical-status:
 
