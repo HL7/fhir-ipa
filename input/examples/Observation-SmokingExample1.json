@@ -15,7 +15,7 @@
       }
     ]
   },
-  "id": "smoking.euvO8iq4aYWriTr",
+  "id": "SmokingExample1",
   "status": "final",
   "category": [
     {
@@ -45,7 +45,7 @@
     "text": "Smoking History"
   },
   "subject": {
-    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "reference": "Patient/PatientExample1",
     "display": "Test, Patient FHIR"
   },
   "effectivePeriod": {

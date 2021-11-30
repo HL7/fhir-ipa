@@ -150,15 +150,24 @@
          <description value="Laboratory Observation example" />
       </resource>	  
 
-	    <resource>
+	   <resource>
          <reference>
-            <reference value="Observation/smoking.euvO8iq4aYWriTr" />
+            <reference value="Observation/SmokingExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
          <name value="IPA Observation example" />
-         <description value="Social History smoking Observation example" />
+         <description value="Social History Smoking Observation example" />
       </resource>	  
-	  
+	   
+      <resource>
+         <reference>
+            <reference value="Observation/VitalSignsExample1" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/vitalsigns" />
+         <name value="IPA Vital Signs Observation example" />
+         <description value="FHIR Core Vital Signs Profile example" />
+      </resource>	
+
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-patient" />
@@ -166,7 +175,7 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
+            <reference value="Patient/PatientExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
          <name value="IPA Patient example" />
@@ -268,6 +277,16 @@
          <page>
             <nameUrl value="artifacts.html" />
             <title value="Artifact List" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="downloads.html" />
+            <title value="Downloads" />
+            <generation value="markdown" />
+         </page>
+         <page>
+            <nameUrl value="ipa-server.html" />
+            <title value="IPA Server Requirements" />
             <generation value="markdown" />
          </page>
       </page>

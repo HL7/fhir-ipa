@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="eizmjygdN9YY0-abviOrMfcbd8esh7G-wPYmSzcav8lxekRZfdsGmzwU9x-gKdyEyW0mlnkIDi0BK83wSZnkSlA3" />
+   <id value="VitalSignsExample1" />
    <status value="final" />
    <category>
       <coding>

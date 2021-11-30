@@ -23,7 +23,7 @@
     <text value="Fluvax (Influenza)"/> 
   </vaccineCode> 
   <patient> 
-    <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3"/> 
+    <reference value="Patient/PatientExample1"/> 
   </patient> 
   <occurrenceDateTime value="2013-01-10"/> 
   <primarySource value="true"/> 
