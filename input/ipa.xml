@@ -180,6 +180,14 @@
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
          <name value="IPA Patient example" />
          <description value="Meiko Lufhir Jr., PhD" />
+      </resource>
+      <resource>
+         <reference>
+            <reference value="Patient/PatientGenderExample1" />
+         </reference>
+         <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
+         <name value="IPA Patient example with gender extension" />
+         <description value="Meiko Lufhir Jr., PhD" />
       </resource>	 
 	  
       <resource>

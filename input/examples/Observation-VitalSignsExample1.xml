@@ -43,7 +43,7 @@
       <text value="Weight" />
    </code>
    <subject>
-      <reference value="Patient/eZO66HeGXB6VCJemL-ciSKA3" />
+      <reference value="Patient/PatientExample1" />
       <display value="Meiko Lufhir" />
    </subject>
    <encounter>

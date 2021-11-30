@@ -215,6 +215,27 @@
                 },
                 {
                   "url": "required",
+                  "valueString": "category"
+                },
+                {
+                  "url": "required",
+                  "valueString": "clinical-status"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "required",
                   "valueString": "code"
                 }
               ],

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
-   <id value="eMMKGfU7AJS5yjSRNjZdLxA3" />
+   <id value="PatientExample1" />
    <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
          <valueString value="IPA Patient Example" />
