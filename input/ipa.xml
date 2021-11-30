@@ -46,7 +46,7 @@
       </resource>
       <resource>
          <reference>
-            <reference value="AllergyIntolerance/eeJxm9Vi8-QmUQuWDhBMklw3" />
+            <reference value="AllergyIntolerance/AllIntExample1" />
          </reference>
          <name value="IPA AllergyIntolerance example" />
          <description value="AllergyIntolerance example" />

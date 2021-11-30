@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-   <id value="eeJxm9Vi8-QmUQuWDhBMklw3" />
+   <id value="AllIntExample1" />
    <clinicalStatus>
       <coding>
          <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
