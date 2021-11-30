@@ -60,7 +60,7 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="Condition/problem.e7ijxUCtjzFLHvDFSIqXu2w3" />
+            <reference value="Condition/ProblemExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
          <name value="IPA Condition example" />
