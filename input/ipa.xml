@@ -129,7 +129,7 @@
       </resource>
 	    <resource>
          <reference>
-            <reference value="MedicationStatement/eDbMrWBI0seji4oPY6tVc3cwkkwXSAwjaLb4KmARROyQ3" />
+            <reference value="MedicationStatement/MedStatementExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement" />
          <name value="IPA Medication Statement example" />
@@ -143,7 +143,7 @@
       </resource>
       <resource>
          <reference>
-            <reference value="Observation/lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2" />
+            <reference value="Observation/LabExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
          <name value="IPA Observation example" />
