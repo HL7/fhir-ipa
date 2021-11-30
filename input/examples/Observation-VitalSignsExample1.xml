@@ -4,27 +4,13 @@
    <status value="final" />
    <category>
       <coding>
-         <system value="http://hl7.org/fhir/observation-category" />
+         <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
          <code value="vital-signs" />
          <display value="Vital Signs" />
       </coding>
       <text value="Vital Signs" />
    </category>
    <code>
-      <coding>
-         <system value="urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679" />
-         <code value="14" />
-         <display value="Weight" />
-      </coding>
-      <coding>
-         <system value="http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id" />
-         <code value="ttjlASTxfaxgiecvotrb78w0" />
-         <display value="Weight" />
-      </coding>
-      <coding>
-         <system value="urn:oid:1.2.246.537.6.96" />
-         <code value="29463-7" />
-      </coding>
       <coding>
          <system value="http://loinc.org" />
          <code value="29463-7" />
@@ -46,9 +32,6 @@
       <reference value="Patient/PatientExample1" />
       <display value="Meiko Lufhir" />
    </subject>
-   <encounter>
-      <reference value="Encounter/e.R4dWbUDqF01.Z6BEIfEkZecZklxAhL82tS5wzzlD0o3" />
-   </encounter>
    <effectiveDateTime value="2019-09-05T20:00:00Z" />
    <issued value="2019-09-05T20:49:27Z" />
    <performer>

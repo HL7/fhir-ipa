@@ -146,7 +146,7 @@
             <reference value="Observation/LabExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
-         <name value="IPA Observation example" />
+         <name value="IPA Lab Observation example" />
          <description value="Laboratory Observation example" />
       </resource>	  
 
@@ -155,7 +155,7 @@
             <reference value="Observation/SmokingExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation" />
-         <name value="IPA Observation example" />
+         <name value="IPA Smoking Observation example" />
          <description value="Social History Smoking Observation example" />
       </resource>	  
 	   
@@ -181,6 +181,7 @@
          <name value="IPA Patient example" />
          <description value="Meiko Lufhir Jr., PhD" />
       </resource>
+      <!--
       <resource>
          <reference>
             <reference value="Patient/PatientGenderExample1" />
@@ -189,7 +190,7 @@
          <name value="IPA Patient example with gender extension" />
          <description value="Meiko Lufhir Jr., PhD" />
       </resource>	 
-	  
+      -->
       <resource>
          <reference>
             <reference value="StructureDefinition/ipa-practitioner" />
