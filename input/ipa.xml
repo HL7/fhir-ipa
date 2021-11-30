@@ -74,7 +74,7 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="DocumentReference/US.clinical-note.eeFpluqNp7Shf" />
+            <reference value="DocumentReference/USClinicalNoteExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference" />
          <name value="IPA DocumentReference example" />
