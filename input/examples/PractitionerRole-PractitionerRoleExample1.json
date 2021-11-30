@@ -15,10 +15,10 @@
       }
     ]
   },
-  "id": "eKXIu2L1.u3.DjMFsl.DcYFyJ3YM5dTtXBjZIYXdkVZs3",
+  "id": "PractitionerRoleExample1",
   "active": true,
   "practitioner": {
-    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "reference": "Practitioner/PractitionerExample1",
     "display": "Marty Seeger"
   },
   "code": [

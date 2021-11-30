@@ -70,7 +70,7 @@
       <text value="Married" />
    </maritalStatus>
    <generalPractitioner>
-      <reference value="Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3" />
+      <reference value="Practitioner/PractitionerExample1" />
       <display value="Amber Hxl, MD" />
    </generalPractitioner>
 </Patient>

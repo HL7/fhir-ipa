@@ -52,8 +52,8 @@
    <effectiveDateTime value="2019-09-05T20:00:00Z" />
    <issued value="2019-09-05T20:49:27Z" />
    <performer>
-      <reference value="Practitioner/euJOUNeZyX6mofWELWG0Ibg3" />
-      <display value="Starter Provider, MD" />
+      <reference value="Practitioner/PractitionerExample1" />
+      <display value="Marty Seeger, MD" />
    </performer>
    <valueQuantity>
       <value value="50" />

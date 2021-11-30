@@ -47,11 +47,11 @@
   },
   "authoredOn": "2018-09-20T15:41:39Z",
   "requester": {
-    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "reference": "Practitioner/PractitionerExample1",
     "display": "Clinician User"
   },
   "recorder": {
-    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "reference": "Practitioner/PractitionerExample1",
     "display": "Clinician User"
   },
   "dosageInstruction": [
