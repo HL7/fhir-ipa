@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description" : "This section describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by Internatuional Patient Access requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by International Patient Access servers are defined. International Patient Access clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+  "description" : "This section describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by International Patient Access servers are defined in this CapabilityStatement. International Patient Access clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
   "jurisdiction" : [
     {
       "coding" : [
