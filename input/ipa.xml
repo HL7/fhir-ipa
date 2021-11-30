@@ -87,7 +87,7 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="Immunization/eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+            <reference value="Immunization/ImmExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization" />
          <name value="IPA Immunization example" />

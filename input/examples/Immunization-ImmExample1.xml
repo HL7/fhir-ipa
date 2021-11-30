@@ -1,5 +1,5 @@
 <Immunization xmlns="http://hl7.org/fhir">
-   <id value="eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+   <id value="ImmExample1" />
    <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
          <valueString value="IPA Immunization Example" />
