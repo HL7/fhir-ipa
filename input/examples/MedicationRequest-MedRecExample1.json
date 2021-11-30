@@ -15,7 +15,7 @@
       }
     ]
   },
-  "id": "e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3",
+  "id": "MedRecExample1",
   "identifier": [
     {
       "use": "usual",
@@ -38,20 +38,20 @@
     }
   ],
   "medicationReference": {
-    "reference": "Medication/xygoh5R9HcYaTHPGS3",
+    "reference": "Medication/MedExample1",
     "display": "Percocet tablet"
   },
   "subject": {
-    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "reference": "Patient/PatientExample1",
     "display": "Friend, All"
   },
   "authoredOn": "2018-09-20T15:41:39Z",
   "requester": {
-    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "reference": "Practitioner/PractitionerExample1",
     "display": "Clinician User"
   },
   "recorder": {
-    "reference": "Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3",
+    "reference": "Practitioner/PractitionerExample1",
     "display": "Clinician User"
   },
   "dosageInstruction": [

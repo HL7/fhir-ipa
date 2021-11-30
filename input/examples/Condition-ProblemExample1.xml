@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Condition xmlns="http://hl7.org/fhir">
-   <id value="problem.e7ijxUCtjzFLHvDFSIqXu2w3" />
+   <id value="ProblemExample1" />
       <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
          <valueString value="IPA Condition Example" />
@@ -46,7 +46,7 @@
       <text value="Ingrowing nail" />
    </code>
    <subject>
-      <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3" />
+      <reference value="Patient/PatientExample1" />
       <display value="Lufhir, Meiko H Jr., MD" />
    </subject>
    <recordedDate value="2018-11" />

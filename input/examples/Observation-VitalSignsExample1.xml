@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-   <id value="eizmjygdN9YY0-abviOrMfcbd8esh7G-wPYmSzcav8lxekRZfdsGmzwU9x-gKdyEyW0mlnkIDi0BK83wSZnkSlA3" />
+   <id value="VitalSignsExample1" />
    <status value="final" />
    <category>
       <coding>
@@ -43,7 +43,7 @@
       <text value="Weight" />
    </code>
    <subject>
-      <reference value="Patient/eZO66HeGXB6VCJemL-ciSKA3" />
+      <reference value="Patient/PatientExample1" />
       <display value="Meiko Lufhir" />
    </subject>
    <encounter>
@@ -52,8 +52,8 @@
    <effectiveDateTime value="2019-09-05T20:00:00Z" />
    <issued value="2019-09-05T20:49:27Z" />
    <performer>
-      <reference value="Practitioner/euJOUNeZyX6mofWELWG0Ibg3" />
-      <display value="Starter Provider, MD" />
+      <reference value="Practitioner/PractitionerExample1" />
+      <display value="Marty Seeger, MD" />
    </performer>
    <valueQuantity>
       <value value="50" />

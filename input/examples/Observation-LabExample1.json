@@ -15,7 +15,7 @@
       }
     ]
   },
-  "id": "lab.eYPBoo9TgeEej9gvOLVnAK1ZIH0uukmQBClijF2",
+  "id": "LabExample1",
   "status": "amended",
   "category": [
     {
@@ -40,7 +40,7 @@
     "text": "Cholesterol"
   },
   "subject": {
-    "reference": "Patient/eMMKGfU7AJS5yjSRNjZdLxA3",
+    "reference": "Patient/PatientExample1",
     "display": "Fhir D Cds Jr., DDS"
   },
   "effectiveDateTime": "2019-09-23T13:50:39Z",

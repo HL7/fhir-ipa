@@ -1,5 +1,5 @@
 <Immunization xmlns="http://hl7.org/fhir">
-   <id value="eY6KzzE7s5qBWwMbQEnaOCfer8yZikamQVw97ikNG7FI3" />
+   <id value="ImmExample1" />
    <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
          <valueString value="IPA Immunization Example" />
@@ -23,7 +23,7 @@
     <text value="Fluvax (Influenza)"/> 
   </vaccineCode> 
   <patient> 
-    <reference value="Patient/eMMKGfU7AJS5yjSRNjZdLxA3"/> 
+    <reference value="Patient/PatientExample1"/> 
   </patient> 
   <occurrenceDateTime value="2013-01-10"/> 
   <primarySource value="true"/> 
@@ -56,7 +56,7 @@
       </coding> 
     </function> 
       <actor> 
-         <reference value="Practitioner/emDkOufDKgC2R6BzTZASPbz3LBHIKDx8b5ktxiIiLRXM3"/> 
+         <reference value="Practitioner/PractitionerExample1"/> 
       </actor> 
   </performer> 
   <note> 
