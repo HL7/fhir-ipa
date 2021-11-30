@@ -91,6 +91,10 @@
       "resource" : [
         { "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
+            {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -169,6 +173,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
             {
               "extension": [
                 {
@@ -356,6 +364,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
             {
               "extension": [
                 {
@@ -622,6 +634,10 @@
         {
           "extension" : [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
+            {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -728,6 +744,12 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
           "type" : "Medication",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication",
           "documentation" : "The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria  **SHALL**  be supported.",
@@ -755,6 +777,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
             {
               "extension": [
                 {
@@ -928,6 +954,10 @@
         {
           "extension" : [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
+            {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1007,6 +1037,10 @@
         },
         {
           "extension" : [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            },
             {
               "extension": [
                 {
@@ -1216,6 +1250,10 @@
         {
           "extension" : [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            },
+            {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1401,6 +1439,12 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
           "type" : "Practitioner",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
           "interaction" : [
@@ -1426,6 +1470,12 @@
           ]
         },
         {
+          "extension" : [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHOULD"
+            }
+          ],
           "type" : "PractitionerRole",
           "profile" : "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
           "interaction" : [
