@@ -1,1 +1,3 @@
 == Suppressed Messages ==
+# Missing capability for this extension, see https://jira.hl7.org/browse/FHIR-34397
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
