@@ -38,7 +38,7 @@
     }
   ],
   "medicationReference": {
-    "reference": "Medication/xygoh5R9HcYaTHPGS3",
+    "reference": "Medication/MedExample1",
     "display": "Percocet tablet"
   },
   "subject": {

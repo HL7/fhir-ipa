@@ -101,7 +101,7 @@
       </resource>
 	  <resource>
          <reference>
-            <reference value="Medication/xygoh5R9HcYaTHPGS3" />
+            <reference value="Medication/MedExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication" />
          <name value="IPA Medication example" />
