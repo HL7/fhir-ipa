@@ -115,7 +115,7 @@
       </resource>
       <resource>
          <reference>
-            <reference value="MedicationRequest/e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3" />
+            <reference value="MedicationRequest/MedRecExample1" />
          </reference>
          <exampleCanonical value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest" />
          <name value="IPA MedicationRequest example" />
