@@ -4,7 +4,7 @@
    <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
       <valueCodeableConcept>
          <coding>
-            <system value="urn:oid:1.2.840.114350.1.13.5325.1.7.10.698084.131.657370.1194" />
+            <system value="http://hl7.org/fhir/gender-identity" />
             <code value="female" />
          </coding>
       </valueCodeableConcept>
@@ -15,6 +15,10 @@
    <identifier>
       <use value="usual" />
       <type>
+         <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="MR" />
+         </coding>
          <text value="EPI" />
       </type>
       <system value="urn:oid:1.2.840.114350" />
@@ -26,11 +30,13 @@
       <value value="21890" />
    </identifier>
    <identifier>
-      <extension url="http://hl7.org/fhir/StructureDefinition/rendered-value">
-         <valueString value="xxx-xx-7418" />
-      </extension>
       <use value="usual" />
       <system value="urn:oid:2.16.840.1.113883.4.1" />
+      <value>
+         <extension url="http://hl7.org/fhir/StructureDefinition/rendered-value">
+            <valueString value="xxx-xx-7418" />
+         </extension>
+      </value>
    </identifier>
    <active value="true" />
    <name>
@@ -53,23 +59,23 @@
    </telecom>
    <telecom>
       <system value="email" />
-      <value value="meikolu.fhir@gmail.com" />
+      <value value="meikolu.fhir@example.com" />
    </telecom>
-   <gender value="F" />
+   <gender value="female" />
    <birthDate value="1978-03-22" />
    <address>
       <use value="home" />
       <line value="100 Main St" />
       <line value="G-442" />
       <city value="Madison" />
+      <district value="DANE" />
       <state value="WI" />
       <postalCode value="53703" />
       <country value="USA" />
-      <district value="DANE" />
    </address>
    <maritalStatus>
       <coding>
-         <system value="http://hl7.org/fhir/ValueSet/marital-status" />
+         <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" />
          <code value="M" />
          <display value="Married" />
       </coding>
