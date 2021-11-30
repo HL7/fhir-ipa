@@ -39,9 +39,7 @@ The application can also use the [$docref operation](OperationDefinition-docref.
 
 ### Search resources 
 
-The following resources can be searched to access patient information:
-
--- table of resources and search parameters -
+As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information:
 
 |Resource | Required search params| Recommended search params |
 | ------- | ----------------------- | ---------------------- |
