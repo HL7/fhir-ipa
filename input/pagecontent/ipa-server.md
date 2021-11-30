@@ -1,1 +1,1 @@
-This page to be written
+IPA Servers SHALL support the capabilities in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html) as described in [conformance](conformance.html), the [server obligations for access](access.html#server-obligations) and required [SMART on FHIR capabilities](security.html).
