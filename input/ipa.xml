@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="ipa" />
    <url value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/ipa" />
-   <version value="0.1.0" />
+   <version value="0.8.0" />
    <name value="InternationalPatientAccess" />
    <title value="International Patient Access" />
-   <publisher value="HL7" />
+   <publisher value="HL7 International - Patient Care Workgroup" />
    <contact>
       <telecom>
          <system value="url" />
-         <value value="https://www.hl7.org/Special/committees/patientcare/index.cfm" />
+         <value value="https://www.hl7.org/Special/committees/patientcare" />
       </telecom>
    </contact>
    <jurisdiction>
