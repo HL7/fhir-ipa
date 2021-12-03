@@ -12,22 +12,13 @@
       "current": true
     },
     {
-      "version": "0.8.0",
+      "version": "0.1.0",
       "date": "2021-12-02",
-      "desc": "STU 1 Draft",
-      "path": "http://hl7.org/fhir/uv/ipa",
+      "desc": "STU 1 Ballot",
+      "path": "http://hl7.org/fhir/uv/ipa/2022Jan",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",
-      "status": "draft"
-    },
-    {
-      "version": "1.0.0",
-      "date": "2022-03-01",
-      "desc": "STU 1",
-      "path": "http://hl7.org/fhir/uv/ipa/STU1",
-      "sequence": "STU 1",
-      "fhirversion": "4.0.1",
-      "status": "trial-use"
+      "status": "ballot"
     }
   ]
 }
