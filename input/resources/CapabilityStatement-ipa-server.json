@@ -563,6 +563,18 @@
                   "valueCode" : "MAY"
                 }
               ],
+              "name" : "contenttype",
+              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-category",
+              "type" : "token",
+              "documentation" : "Mime type of the content, may include charset"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode" : "MAY"
+                }
+              ],
               "name" : "date",
               "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
               "type" : "date",
@@ -1002,6 +1014,9 @@
           "conditionalCreate" : false,
           "conditionalUpdate" : false,
           "conditionalDelete" : "not-supported",
+          "referencePolicy" : [
+            "resolves"
+          ],
           "searchInclude" : [
             "MedicationRequest:medication"
           ],
