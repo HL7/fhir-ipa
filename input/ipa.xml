@@ -3,7 +3,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="ipa" />
    <url value="http://hl7.org/fhir/uv/ipa/ImplementationGuide/ipa" />
-   <version value="0.8.0" />
+   <version value="0.1.0" />
    <name value="InternationalPatientAccess" />
    <title value="International Patient Access" />
    <publisher value="HL7 International - Patient Care Workgroup" />
@@ -317,7 +317,7 @@
       </parameter>
       <parameter>
          <code value="releaselabel" />
-         <value value="draft" />
+         <value value="STU 1 ballot" />
       </parameter>
       <parameter>
          <code value="copyrightyear" />

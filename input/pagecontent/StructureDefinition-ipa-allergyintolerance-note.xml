@@ -1,0 +1,102 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="lead">Search Parameters</span>
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>Conformance</th>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>SHALL</b>
+                        </td>
+                        <td>
+                            <a href="http://hl7.org/fhir/SearchParameter/clinical-patient">patient</a>
+                        </td>
+                        <td>
+                            <code>reference</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-6">
+            <span class="lead">Combined Search Parameters</span>
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>Conformance</th>
+                        <th>Parameters</th>
+                        <th>Types</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>SHOULD</b>
+                        </td>
+                        <td>
+                            <a href="http://hl7.org/fhir/SearchParameter/clinical-patient">patient</a>
+                            +
+                            <a href="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status">clinical-status</a>
+                        </td>
+                        <td>
+                            <code>reference</code>
+                            +
+                            <code>token</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <span class="lead">Search Parameter Documentation</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <b>patient</b>
+            of type
+            <code>reference</code>
+        </div>
+        <div class="col-lg-9">
+            <div>
+                <p>
+                    The client
+                    <strong>SHALL</strong>
+                    provide at least a id value and
+                    <strong>MAY</strong>
+                    provide both the Type and id values.
+                </p>
+                \n
+                <p>
+                    The server
+                    <strong>SHALL</strong>
+                    support
+                both.
+                </p>
+                \n
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <b>clinical-status</b>
+            of type
+            <code>token</code>
+        </div>
+        <div class="col-lg-9">
+            <div>
+                <p>active | inactive | resolved</p>
+                \n
+            </div>
+        </div>
+    </div>
+</div>
