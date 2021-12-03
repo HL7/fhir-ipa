@@ -20,5 +20,6 @@
       "fhirversion": "4.0.1",
       "status": "ballot"
     }
-  ]
+  ],
+  "category": "Patient Summary"
 }
