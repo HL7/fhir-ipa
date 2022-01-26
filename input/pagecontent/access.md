@@ -2,7 +2,7 @@ An application gets access to a patient record using the [SMART App Launch Proto
 
 ### Client Process
 
-A client application gets access a patient record by following this general sequence of steps:
+A client application gets access to a patient record by following this general sequence of steps:
 
 * Identifying the appropriate end point [URL] at which the International Patient Access API is found. 
   * Note that this specification does not specify how the end-point might be found; different countries will have different arrangements around this 
