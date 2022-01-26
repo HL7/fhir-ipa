@@ -47,4 +47,4 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 
 Notes:
 * Not [all servers provide all of this information](conformance.html)
-* This  API is read-only, though implementations may [provide write access too](conformance.html).
+* This  API is read-only, though implementations may provide write access too.
