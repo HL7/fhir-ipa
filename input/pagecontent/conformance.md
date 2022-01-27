@@ -3,7 +3,7 @@ Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are de
 This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. A system SHALL support the resources as profiled by IPA to represent clinical information (Profile Support) and the RESTful interactions defined for it (Profile Support + Interaction Support). 
 
 
-See: [the RESTful API](http://hl7.org/fhir/R4/http.html)
+See: [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)
 
 
 ### Conformance Artifacts
