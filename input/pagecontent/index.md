@@ -1,7 +1,7 @@
 ### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
-can access information about the patient from an clinical records system using
+can access information about the patient from a clinical records system using
 a FHIR based API. The clinical records system may be supporting a clinical care 
 provider (e.g. a hospital, or a general practitioner), or a health data exchange, 
 including a national health record system.

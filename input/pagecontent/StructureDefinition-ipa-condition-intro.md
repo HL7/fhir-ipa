@@ -2,7 +2,7 @@ This profile describes how applications fetch Condition resources that provide i
 
 ### Example Usage Scenarios:
 
-The most important and obvious use of the condition to resource is to get a list of the patient's 
+The most important and obvious use of the condition resource is to get a list of the patient's 
 current problem list. However there are many other uses for the condition resource, such as 
 recording primary and secondary diagnoses for encounters, or justification for past medications
 etc. 
