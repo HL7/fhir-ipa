@@ -17,7 +17,7 @@ where id is found in some other resource that refers to a Condition. The result 
 a Condition resource, or an error if there is no resource the client can access for that id. 
 Alternatively, the client may search for condition resources.
 
-The current problem list is retrieved by specifying the patient, category and and clinical-status:
+The current problem list is retrieved by specifying the patient, category and  clinical-status:
 
 ```GET [url]/Condition?patient=[patient-id]&category=problem-list-item&clinical-status=active```
 
