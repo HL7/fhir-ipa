@@ -1,6 +1,6 @@
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 
-This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. A system SHALL support the resources as profiled by IPA to represent clinical information (Profile Support) and the RESTful interactions defined for it (Profile Support + Interaction Support). 
+This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. A system SHALL support the resources as profiled by IPA to represent clinical information (Profile Support) and the RESTful interactions defined for it (Interaction Support). 
 
 
 See: [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)
@@ -14,15 +14,20 @@ The Profile elements consist of both Mandatory and Must Support elements. Mandat
 The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Servers as well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
 
 ### Profile Support + Interaction Support
-Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access the information. Systems that implement both can claim conformance to IPA. This is done by implementing all of the IPA CapabilityStatement into their capabilities.
+Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access that information. Only systems that implement both Profile Support and Interaction Support can claim conformance to IPA. 
 
-To claim conformance to an IPA Profile a server:
-* SHALL be able to communicate all profile data elements that are mandatory and/or flagged as Must Support as defined in the below definition of Must Support and by that profile’s StructureDefinition. 
+#### Profile Support
+Profile Support refers to the support of the IPA profiles, such that  meaning the system exposes FHIR resources which adhere to the the IPA profiles' content model. Specifically, a server with IPA Profile Support:
+* SHALL communicate all profile data elements that are mandatory by that profile’s StructureDefinition. 
 * SHALL declare conformance with the the IPA Server Capability Statement by including its official URL in the server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
-* SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement.
-  * Declare support for the IPA Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.supportedProfile` element
-  * Declare support for the IPA Profile’s FHIR RESTful transactions
-    * The IPA Profile’s official or “canonical” URL can be found on each IPA Profile page
+* SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.supportedProfile` element
+
+Note that the IPA Profile’s official or “canonical” URL can be found on each IPA Profile page
+
+#### Interaction Support
+Interaction Support refers to a system that support the IPA RESTful interactions. Specifically, a server with IPA Interaction Support:
+* SHALL implement the RESTful behavior according to the FHIR specification, including Read and Search behavior and required search parameters as defined in the [IPA CapabilityStatement](CapabilityStatement-ipa-server.html#resourcesSummary1).
+* SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile’s FHIR RESTful transactions.
 
 ### Must-support
 In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance as appropriate. Generally, implementations are expected to: 
