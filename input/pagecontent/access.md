@@ -42,4 +42,4 @@ Servers that are conformant to the International Patient Access API conform to t
 * The client SHALL request the `launch/patient` scope and the server SHALL return a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes). 
 * The server enforces [patient privacy and consent](privacy.html).
 
-Note that both the CapabilityStatement and the smart configuration file may be different for authenticated and unauthenticated clients.
+Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
