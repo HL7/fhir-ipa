@@ -1,4 +1,4 @@
-Many applications that use this API to access patient records keep a synchronized copy of the patient record elsewhere.
+Many applications that access patient records keep a synchronized copy of the patient record elsewhere.
 
 In order to make this a safe process, application developers should code defensively. Notably, there's a few surprising reasons why previously accessible resources may no longer be returned by a FHIR server:
 
