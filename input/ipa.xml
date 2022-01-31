@@ -245,7 +245,7 @@
          </page>
          <page>
             <nameUrl value="internationalization.html" />
-            <title value="Internationalization Issues" />
+            <title value="Considerations for internationalization and localization" />
             <generation value="markdown" />
          </page>
          <page>
