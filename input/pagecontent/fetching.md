@@ -27,13 +27,8 @@ or more generally,
 
 Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
-Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
-Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number
-of resources returned, but except for the few search parameters documented clearly below, servers are not obliged to support
-search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters
-were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
+Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. Note that servers may decline to perform some searches unless particular parameters are specified. Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number of resources returned, but except for the few search parameters documented clearly below, servers are not obliged to support search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
-Note that servers may decline to perform some searches unless particular parameters are specified.
 
 The application can also use the [$docref operation](OperationDefinition-docref.html) to obtain a document, or a set of documents, related to the patient. This operation is considered useful especially for implementations that are not based on FHIR and may not generally expose data as FHIR resources. This operation is a way for such implementations to expose the information they have to patient-facing applications.
 
