@@ -24,13 +24,11 @@ These resources are supported by information about [practitioners](StructureDefi
 This International Patient Access specification describes how to access patient 
 records anywhere in the world. It provides a very minimal set of access methods 
 and rules about the content that are true everywhere. Working healthcare systems 
-need additional rules about the access API to meet other use cases, and make many 
+may need additional rules about the access API to meet other use cases, and may make many 
 additional rules about the content based on national laws, regulations and accepted
 practice in order to support the provision of health in their healthcare system. 
 
-No health care system implements the International Patient Access specification 
-directly; instead, each country publishes their own national patient access specification 
-that is consistent with this specification. 
+Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
 
 See [International Patient Access by Country](ipa-by-country.html) for a list of these specifications. 
 
@@ -49,4 +47,4 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 
 Notes:
 * Not [all servers provide all of this information](conformance.html)
-* This  API is read-only, though implementations may [provide write access too](conformance.html).
+* This  API is read-only, though implementations may provide write access too.
