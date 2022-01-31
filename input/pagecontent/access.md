@@ -1,4 +1,4 @@
-An application gets access to a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the stand alone launch sequence.
+An application gets access to a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/), using the standalone launch sequence.
 
 ### Client Process
 
