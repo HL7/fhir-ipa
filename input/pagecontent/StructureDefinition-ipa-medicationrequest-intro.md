@@ -10,3 +10,8 @@ may be influenced by many factors including wording in legislation and regulatio
 
 For this reason, clients implementing the International Patient Access specification SHALL query for both 
 MedicationStatement and MedicationRequest when fetching patient Medication information. 
+
+### Medication specificity
+
+When representing a prescribed medication, servers SHOULD use codings at the level of a clinical drug rather than ingredient or dose form (e.g. “loratadine 10mg oral tablet”, rather than a bare ingredient like “loratadine” or a dose form like “loratadine oral tablet”).
+
