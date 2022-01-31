@@ -64,7 +64,7 @@ resources above, and may be read directly:
 
 All these resources are accessed by 
 
-    GET [ur]/[type]/[id]
+    GET [url]/[type]/[id]
     
 where the type is from the list above, and the [id] is retrieved from a resource obtained from the process above.
 E.g. 
