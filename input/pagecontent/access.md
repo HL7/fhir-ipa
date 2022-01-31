@@ -4,23 +4,23 @@ An application gets access to a patient record using the [SMART App Launch Proto
 
 A client application gets access to a patient record by following this general sequence of steps:
 
-* Identifying the appropriate end point [URL] at which the International Patient Access API is found. 
-  * Note that this specification does not specify how the end-point might be found; different countries will have different arrangements around this 
+* Identify the appropriate endpoint [url] at which the International Patient Access API is found. 
+  * Note that this specification does not specify how the endpoint might be found; different countries will have different arrangements around this. 
   
 * Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html):
 
     ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
-* Fetch the [end-point configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
+* Fetch the [endpoint configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
 
-* Registering itself as a client application with the end-point. 
-  * This may require a manual step on the part of the user or the developer, or the end-point may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
-  * if the application supports automatic registration, the end-point will be specified in the [url]/.well-known/smart-configuration.json
-  * note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported
+* Register itself as a client application with the endpoint. 
+  * This may require a manual step on the part of the user or the developer, or the endpoint may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
+  * if the application supports automatic registration, the endpoint will be specified in the [url]/.well-known/smart-configuration.json
+  * Note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported.
 
-* Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/app-launch.html#step-2-launch-standalone) using the authorization endpoint from the smart-configuration.json file
+* Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/app-launch.html#step-2-launch-standalone) using the authorization endpoint from the smart-configuration.json file.
 
-* At the end of the Smart App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html)
+* At the end of the SMART App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html).
 
 ### Scopes
 
