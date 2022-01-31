@@ -17,9 +17,9 @@ The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines co
 Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access that information. Only systems that implement both Profile Support and Interaction Support can claim conformance to IPA. 
 
 #### Profile Support
-Profile Support refers to the support of the IPA profiles, such that  meaning the system exposes FHIR resources which adhere to the the IPA profiles' content model. Specifically, a server with IPA Profile Support:
+Profile Support refers to the support of the IPA profiles, such that  meaning the system exposes FHIR resources which adhere to the IPA profiles' content model. Specifically, a server with IPA Profile Support:
 * SHALL communicate all profile data elements that are mandatory by that profile’s StructureDefinition. 
-* SHALL declare conformance with the the IPA Server Capability Statement by including its official URL in the server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
+* SHALL declare conformance with the IPA Server Capability Statement by including its official URL in the server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.supportedProfile` element
 
 Note that the IPA Profile’s official or “canonical” URL can be found on each IPA Profile page
