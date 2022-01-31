@@ -86,7 +86,7 @@
       },
       {
         "path": "MedicationRequest.authoredOn",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true
       },
