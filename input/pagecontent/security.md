@@ -6,7 +6,7 @@ Servers SHALL support the following [SMART on FHIR capabilities](http://hl7.org/
 * [client-public](http://hl7.org/fhir/smart-app-launch/conformance.html#client-types)
 * [sso-openid-connect](http://hl7.org/fhir/smart-app-launch/conformance.html#single-sign-on)
 * [context-standalone-patient](http://hl7.org/fhir/smart-app-launch/conformance.html#launch-context-for-standalone-launch)
-* [perrmission-patient](http://hl7.org/fhir/smart-app-launch/conformance.html#permissions)
+* [permission-patient](http://hl7.org/fhir/smart-app-launch/conformance.html#permissions)
 
 Servers SHOULD support the following SMART on FHIR capabilities:
 * [launch-ehr](http://hl7.org/fhir/smart-app-launch/conformance.html#launch-modes)
