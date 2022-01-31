@@ -12,7 +12,7 @@ The details in the patient record should match what the user of the application 
 
 Notes:
 * The server may grant access to a different patient than the user (e.g. a family member)
-* Correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted. This is an especially important check if the client application is [synchronizing it's own copy of the patient record](synchronization.html).
+* Correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted. This is an especially important check if the client application is [synchronizing its own copy of the patient record](synchronization.html).
 * Jurisdications may have applicable law or regulation about displaying / checking this information in the application.
 
 ### Fetching Patient Records 
