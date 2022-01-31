@@ -39,7 +39,9 @@ The application can also use the [$docref operation](OperationDefinition-docref.
 
 ### Search resources 
 
-As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information:
+As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information. Combinations of search parameters are explicitly required or recommended when separated below, by a plus sign. 
+
+For example, an IPA compliant server returns all lab results for a single patient  with: `Observation?patient=123&category=laboratory`, but may not support returning all labs, vital signs, social history, surverys, exams, activities, etc, with: `Observation?category=patient`.
 
 |Resource | Required search params| Recommended search params |
 | ------- | ----------------------- | ---------------------- |
