@@ -25,7 +25,7 @@ or more generally,
 
     GET [url]/[Resource]?[params]
 
-Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
+Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. (See FHIR's [RESTful API](https://www.hl7.org/fhir/http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 
