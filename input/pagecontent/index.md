@@ -46,5 +46,4 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
  - [Application expectations, and how to test conformance](conformance.html)
 
 Notes:
-* Not [all servers provide all of this information](conformance.html)
 * This  API is read-only, though implementations may provide write access too.
