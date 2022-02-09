@@ -41,6 +41,6 @@ Servers that are conformant to the International Patient Access API conform to t
 * If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share.
 * The server ensures that the authenticated user has access to the record being shared.
 
-* The server returns a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes) when the client is granted the `launch/patient` scope. 
+* The server returns a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes) when authorization is granted and includes any `patient/` scopes. 
 
 Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
