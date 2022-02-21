@@ -31,7 +31,7 @@ and/or ignore the requested scopes at the initiation of the stand-alone launch.
 
 Servers that are conformant to the International Patient Access API conform to the following rules:
 
-* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.imports](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.imports), as shown in the following fragment:
+* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates), as shown in the following fragment:
 
     ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
