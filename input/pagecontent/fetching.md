@@ -85,4 +85,4 @@ servers are not required to do this, so clients should be prepared to fetch thes
 Servers SHALL:
 
 * Implement the IPA defined resource types.
- * Note that this does not mean that a patient always has items, but that they server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.
+ * Note that this does not mean that a patient always has items, but that the server is able to return them if the patient requests that they be provided. See [Must-support](conformance.html#must-support) for additional information.
