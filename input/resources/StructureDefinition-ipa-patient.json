@@ -52,9 +52,9 @@
           {
             "key": "ipa-pat-2",
             "severity": "error",
-            "human": "Patient.name.given or Patient.name.family or both SHALL be present",
-            "expression": "family.exists() or given.exists()",
-            "xpath": "f:given or f:family"
+            "human": "Patient.name.given or Patient.name.family or a Data Absent Reason Extension or both Patient.name.given and Patient.name.family SHALL be present",
+            "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "xpath": "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given))"
           }
         ],
         "mustSupport": true
