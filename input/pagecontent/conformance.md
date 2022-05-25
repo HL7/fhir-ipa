@@ -30,27 +30,48 @@ Interaction Support refers to a system that support the IPA RESTful interactions
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile’s FHIR RESTful transactions.
 
 ### Must-support
-In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance. 
+In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides may provide additional guidance. 
 
 In situations where information on a particular data element is not present and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
 Must Support elements are treated differently between IPA servers and requestors. 
 
-#### Must-support if available, for servers
-Servers conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
+#### Must-support if available, for responders
+Responders conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
 
 There are a few potential reasons by a Must Support element may not be available, for example:
 * Elements which are not present for a particular patient, are not available. For example, a registration system may not have the technical capability to collect and store lab results and therefore is not expected to respond with lab results when queried.
 * Elements for which the requestor is not authorized are not available.
 * Elements marked as Must Support in IPA may not have universal applicability from one country to the next. National or regional FHIR specifications may re-use IPA profiles, but also not require support for a given Must-Support element due to localization appropriateness. Elements may be not available if more local FHIR specifications based upon IPA remove support requirements.  
 
-NOTE: Responders who do not have the capability to store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA  conformance resources.
+NOTE: Responders who do not have the capability to store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA conformance resources.
+
+##### Missing data
+There are situations when information on a particular data element is missing and the source system does not know reason for the absence of data.
+
+###### Missing Must-Support, and Optional data
+ If the responder does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element SHALL be omitted from the resource.
+
+Note: an IPS creator may have no data to be included in the IPS either because there are no data, or because data available are not pertinent with the scope of the IPS.
 
 
+
+###### Missing Must-Support, and Required data
+If an IPS creator does not have data to be included in the IPS, the reason for the absence has to be specified as follows:
+
+1. For non-coded data elements, use the [DataAbsentReason Extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type.
+2. For coded data elements:
+  * example, preferred, or extensible binding strengths (CodeableConcept datatypes):
+    * if the source systems has text but no coded data, only the text element is used.
+    * if there is neither text or codes representing actual (i.e non-exceptional) concepts:
+      * use the appropriate exceptional concept code from the value set if available
+      * use the appropriate concept code from the [DataAbsentReason Code System] if the value set does not have it.
+  * required binding strength (CodeableConcept or code datatypes):
+    * use the appropriate exceptional concept code from the value set
 
 #### Must-support means SHALL process, for requestors
 Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail.
 
-TODO: example, Requestors shall be capable of processing is important, for example -- Patient.active. Maybe superior example would be Ovservation.status = EiE
+For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because requestors must be capable of processing this value in order to appropriately handle the resource's clinical data.
 
 NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
