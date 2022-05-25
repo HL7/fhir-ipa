@@ -30,7 +30,7 @@ Interaction Support refers to a system that support the IPA RESTful interactions
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile’s FHIR RESTful transactions.
 
 ### Must-support
-In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance potentially including . 
+In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance. 
 
 In situations where information on a particular data element is not present and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
@@ -48,8 +48,9 @@ NOTE: Responders who do not have the capability to store or return a data elemen
 
 
 
-### Must-support means SHALL process, for requestors
+#### Must-support means SHALL process, for requestors
 Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail.
 
+TODO: example, Requestors shall be capable of processing is important, for example -- Patient.active 
 
 NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
