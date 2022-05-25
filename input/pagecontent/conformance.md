@@ -51,6 +51,6 @@ NOTE: Responders who do not have the capability to store or return a data elemen
 #### Must-support means SHALL process, for requestors
 Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail.
 
-TODO: example, Requestors shall be capable of processing is important, for example -- Patient.active 
+TODO: example, Requestors shall be capable of processing is important, for example -- Patient.active. Maybe superior example would be Ovservation.status = EiE
 
 NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
