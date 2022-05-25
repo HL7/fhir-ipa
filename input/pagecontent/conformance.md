@@ -17,7 +17,7 @@ The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines co
 Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access that information. Only systems that implement both Profile Support and Interaction Support can claim conformance to IPA. 
 
 #### Profile Support
-Profile Support refers to the support of the IPA profiles, such that  meaning the system exposes FHIR resources which adhere to the IPA profiles' content model. Specifically, a server with IPA Profile Support:
+Profile Support refers to the support of the IPA profiles, such that the system exposes FHIR resources which adhere to the IPA profiles' content model. Specifically, a server with IPA Profile Support:
 * SHALL communicate all profile data elements that are mandatory by that profile’s StructureDefinition. 
 * SHALL declare conformance with the IPA Server Capability Statement by including its official URL in the server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server`
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile by including its official URL in the server’s `CapabilityStatement.rest.resource.supportedProfile` element
@@ -30,15 +30,26 @@ Interaction Support refers to a system that support the IPA RESTful interactions
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile’s FHIR RESTful transactions.
 
 ### Must-support
-In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance as appropriate. Generally, implementations are expected to: 
-* be capable of including supported data elements as part of the query results as specified by the IPA conformance resources.
-* interpret missing, supported data elements within resource instances as data not present in the Responder’s systems (or that the requestor is unauthorized).
-
-For example, a registration system may not have the technical capability to collect and store lab results and therefore is not expected to respond with lab results when queried.
+In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides are expected to provide additional guidance potentially including . 
 
 In situations where information on a particular data element is not present and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
+Must Support elements are treated differently between IPA servers and requestors. 
+
+#### Must-support if available, for servers
+Servers conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
+
+There are a few potential reasons by a Must Support element may not be available, for example:
+* Elements which are not present for a particular patient, are not available. For example, a registration system may not have the technical capability to collect and store lab results and therefore is not expected to respond with lab results when queried.
+* Elements for which the requestor is not authorized are not available.
+* Elements marked as Must Support in IPA may not have universal applicability from one country to the next. National or regional FHIR specifications may re-use IPA profiles, but also not require support for a given Must-Support element due to localization appropriateness. Elements may be not available if more local FHIR specifications based upon IPA remove support requirements.  
 
 NOTE: Responders who do not have the capability to store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA  conformance resources.
+
+
+
+### Must-support means SHALL process, for requestors
+Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail.
+
 
 NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
