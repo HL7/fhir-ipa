@@ -13,7 +13,7 @@ Using this API, applications can access the following information about the pati
 * [Medication orders](StructureDefinition-ipa-medicationrequest.html) and [usage](StructureDefinition-ipa-medicationstatement.html)
 * [Immunization history](StructureDefinition-ipa-immunization.html)
 * [Allergies and intolerances](StructureDefinition-ipa-allergyintolerance.html)
-* [Vital signs and other clinical observations](StructureDefinition-ipa-observation.html)
+* [Vital signs, lab results, and other clinical observations](StructureDefinition-ipa-observation.html)
 * [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
 
 These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
