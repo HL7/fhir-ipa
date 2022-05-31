@@ -1,4 +1,4 @@
-An application is authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See required server SMART on FHIR capabilities on the ([security  page]HL7.FHIR.UV.IPA\Security - FHIR v4.0.1).
+An application may be authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See recommended server SMART on FHIR capabilities on the ([security  page]HL7.FHIR.UV.IPA\Security - FHIR v4.0.1). The below describes the use of SMART on FHIR.
 
 ### Client Process
 
@@ -35,12 +35,12 @@ Servers that are conformant to the International Patient Access API conform to t
 
     ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
-* The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
-* The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
-* If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
-* If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share.
-* The server ensures that the authenticated user has access to the record being shared.
-
-* The server returns a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes) when authorization is granted and includes any `patient/` scopes. 
+* If supporting SMART on FHIR: 
+** The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
+** The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
+** If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
+** If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share.
+** The server ensures that the authenticated user has access to the record being shared.
+** The server returns a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes) when authorization is granted and includes any `patient/` scopes. 
 
 Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
