@@ -1,5 +1,5 @@
-Once an application has [obtained a token that provides access to the patient record](access.html), it can 
-find and retrieve information about the patient using the patient FHIR id provided as a SMART launch context parameter (alongside the access token). 
+Once an application has obtained access to the patient record (for example, with a [SMART on FHIR access token](access.html)), it can 
+find and retrieve information about the patient. 
 
 ### Initial Patient Identity Check 
 
@@ -25,7 +25,7 @@ or more generally,
 
     GET [url]/[Resource]?[params]
 
-Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. (See FHIR's [RESTful API](https://www.hl7.org/fhir/http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
+Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier. (See FHIR's [RESTful API](https://www.hl7.org/fhir/http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 
