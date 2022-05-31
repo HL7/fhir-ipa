@@ -337,6 +337,18 @@
                   "valueCode" : "MAY"
                 }
               ],
+              "name" : "verification-status",
+              "definition" : "http://hl7.org/fhir/SearchParameter/Condition-verification-status",
+              "type" : "token",
+              "documentation" : "The verification status of the condition"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode" : "MAY"
+                }
+              ],
               "name" : "code",
               "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
               "type" : "token",
