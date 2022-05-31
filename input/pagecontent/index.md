@@ -2,9 +2,9 @@
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from a clinical records system using
-a FHIR based API. The clinical records system may be supporting a clinical care 
-provider (e.g. a hospital, or a general practitioner), or a health data exchange, 
-including a national health record system.
+a FHIR based API. The clinical records system may be supporting a clinical care
+provider (e.g. a hospital, or a general practitioner), a health data exchange, 
+or other system managing patient records, including a national health record system.
 
 Using this API, applications can access the following information about the patient:
 
