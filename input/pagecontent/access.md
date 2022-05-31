@@ -7,7 +7,7 @@ A client application gets access to a patient record by following this general s
 
 * Register itself as a client application with the endpoint. 
   * This may require a manual step on the part of the user or the developer, or the endpoint may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
-  * if the application supports automatic registration, the endpoint will be specified in the [url]/.well-known/smart-configuration.json
+  * if the application supports automatic registration, the endpoint will be specified in the [url]/.well-known/smart-configuration
   * Note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported.
 
 * Identify the appropriate endpoint [url] at which the International Patient Access API is found. 
@@ -17,9 +17,9 @@ A client application gets access to a patient record by following this general s
 
     ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
 
-* Fetch the [endpoint configuration](http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) from [url]/.well-known/smart-configuration.json 
+* Fetch the [endpoint configuration](https://hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) from [url]/.well-known/smart-configuration. 
 
-* Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/app-launch.html#step-2-launch-standalone) using the authorization endpoint from the smart-configuration.json file and request the `launch/patient` scope. 
+* Follow the [Smart App Launch Protocol](http://www.hl7.org/fhir/smart-app-launch/app-launch.html#step-2-launch-standalone) using the authorization endpoint from the smart-configuration file and request the `launch/patient` scope. 
 
 * At the end of the SMART App Launch Protocol, the application will have a token that provides access to a single patient record. Now, use that to [retrieve patient information](fetching.html).
 
@@ -37,7 +37,7 @@ Servers that are conformant to the International Patient Access API conform to t
     ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
     
 * If supporting SMART on FHIR: 
-** The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration.json that is available to both authenticated and unauthenticated clients.
+** The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration  that is available to both authenticated and unauthenticated clients.
 ** The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
 ** If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
 ** If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share.
