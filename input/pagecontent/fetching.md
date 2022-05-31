@@ -42,7 +42,7 @@ For example, an IPA compliant server returns all lab results for a single patien
 |Resource | Required search params| Recommended search params |
 | ------- | ----------------------- | ---------------------- |
 | AllergyIntolerance    | patient   | patient+clinical-status |
-| Condition             | patient   | patient+category, patient+clinical-status, patient+code, patient+onset-date, patient+category+clinical-status|
+| Condition             | patient   | patient+category, patient+clinical-status, patient+verification-status, patient+code, patient+onset-date, patient+category+clinical-status|
 | DocumentReference     | \_id, patient, patient+category, patient+type | patient+category+date, patient+status, patient+type+period |
 | Immunization          | patient   | patient+date, patient+status |
 | MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
