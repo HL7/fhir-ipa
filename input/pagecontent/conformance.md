@@ -34,7 +34,7 @@ In the context of IPA, Supported on any data element SHALL be interpreted to mea
 
 In situations where information on a particular data element is not present and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
-Must Support elements are treated differently between IPA servers and requestors. 
+Must Support elements are treated differently between IPA responders and requestors. 
 
 #### Must-support if available, for responders
 Responders conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
@@ -52,12 +52,10 @@ There are situations when information on a particular data element is missing an
 ###### Missing Must-Support, and Optional data
  If the responder does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element SHALL be omitted from the resource.
 
-Note: an IPS creator may have no data to be included in the IPS either because there are no data, or because data available are not pertinent with the scope of the IPS.
-
-
+Note: an IPA responder may have no data to be included either because there are no data, or because data available are not pertinent.
 
 ###### Missing Must-Support, and Required data
-If an IPS creator does not have data to be included in the IPS, the reason for the absence has to be specified as follows:
+If an IPA responder does not have data to be included, the reason for the absence has to be specified as follows:
 
 1. For non-coded data elements, use the [DataAbsentReason Extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type.
 2. For coded data elements:
@@ -70,7 +68,8 @@ If an IPS creator does not have data to be included in the IPS, the reason for t
     * use the appropriate exceptional concept code from the value set
 
 #### Must-support means SHALL process, for requestors
-Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail.
+Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing mustSupport data elements, including elements with missing data, without generating an error or causing the application to fail. An element can be processed, for example, if the the receiving application's behavior can differ based upon the value of the element.
+
 
 For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because requestors must be capable of processing this value in order to appropriately handle the resource's clinical data.
 
