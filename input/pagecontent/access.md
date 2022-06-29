@@ -1,4 +1,4 @@
-An application may be authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See recommended server SMART on FHIR capabilities on the ([security  page]HL7.FHIR.UV.IPA\Security - FHIR v4.0.1). The below describes the use of SMART on FHIR.
+An application may be authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See recommended server SMART on FHIR capabilities on the [security page](security.html). The below describes the use of SMART on FHIR.
 
 ### Client Process
 
