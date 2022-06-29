@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, May 18, 2022 19:22+0000 for FHIR v4.6.0 
+  Generated on Wed, Jun 29, 2022 16:35+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -20557,7 +20557,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
           </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).</xs:documentation>
+              <xs:documentation xml:lang="en">The request this appointment is allocated to assess (e.g. incoming referral or procedure request).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
@@ -21519,9 +21519,9 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Unique instance identifiers assigned to a biologically derived product. Note: This is a business identifier, not a resource identifier.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="biologicalSource" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="biologicalSourceEvent" minOccurs="0" maxOccurs="1" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An identifier that supports traceability to the biological entity or entities that is/are the source of the biological material in the product.  Where multiple biological entities are involved, the biologicalSource should provide a link to the pooling event records where linkage to individual entities are maintained.</xs:documentation>
+              <xs:documentation xml:lang="en">An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="processingFacility" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -29021,17 +29021,17 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.  Limits the scope of the map to source codes (ConceptMap2.group.element code or valueSet) that are members of this value set.</xs:documentation>
             </xs:annotation>
-            <xs:element name="sourceUri" type="uri"/>
-            <xs:element name="sourceCanonical" type="canonical"/>
+            <xs:element name="sourceScopeUri" type="uri"/>
+            <xs:element name="sourceScopeCanonical" type="canonical"/>
           </xs:choice>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifier for the target value set that provides important context about how the mapping choices are made.  Limits the scope of the map to target codes (ConceptMap2.group.element.target code or valueSet) that are members of this value set.</xs:documentation>
             </xs:annotation>
-            <xs:element name="targetUri" type="uri"/>
-            <xs:element name="targetCanonical" type="canonical"/>
+            <xs:element name="targetScopeUri" type="uri"/>
+            <xs:element name="targetScopeCanonical" type="canonical"/>
           </xs:choice>
           <xs:element name="group" type="ConceptMap2.Group" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
@@ -29128,7 +29128,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="valueSet" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The set of codes being that the map refers to.</xs:documentation>
+              <xs:documentation xml:lang="en">The set of codes that the map refers to.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relationship" minOccurs="1" maxOccurs="1" type="ConceptMapRelationship">
@@ -29167,7 +29167,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">A reference to a property that holds a value the map depends on. This value can be supplied to the $translate operation to select the appropriate targets.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:choice minOccurs="1" maxOccurs="1" >
+          <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
               <xs:documentation xml:lang="en">Property value that the map depends on.</xs:documentation>
             </xs:annotation>
@@ -29181,6 +29181,11 @@ into another (possibly the same) biological entity.</xs:documentation>
             <xs:element name="valueUri" type="uri"/>
             <xs:element name="valueId" type="id"/>
           </xs:choice>
+          <xs:element name="valueSet" minOccurs="0" maxOccurs="1" type="canonical">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">This mapping applies if the property value is a code from this value set.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -29194,7 +29199,7 @@ into another (possibly the same) biological entity.</xs:documentation>
         <xs:sequence>
           <xs:element name="mode" minOccurs="1" maxOccurs="1" type="ConceptMapGroupUnmappedMode">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).</xs:documentation>
+              <xs:documentation xml:lang="en">Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped source code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="1" type="code">
@@ -29209,10 +29214,15 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="valueSet" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to a each of the fixed codes.</xs:documentation>
+              <xs:documentation xml:lang="en">The set of fixed codes to use when the mode = 'fixed'  - all unmapped codes are mapped to each of the fixed codes.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="url" minOccurs="0" maxOccurs="1" type="canonical">
+          <xs:element name="relationship" minOccurs="0" maxOccurs="1" type="ConceptMapRelationship">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The default relationship value to apply between the source and target concepts when the source code is unmapped and the mode is 'fixed' or 'use-source-code'.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="otherMap" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
               <xs:documentation xml:lang="en">The canonical reference to an additional ConceptMap2 resource instance to use for mapping if this ConceptMap2 resource contains no matching mapping for the source concept.</xs:documentation>
            </xs:annotation>
@@ -32107,9 +32117,9 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Reason for the status of the Device record. For example, why is the record not active.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="biologicalSource" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="biologicalSourceEvent" minOccurs="0" maxOccurs="1" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An identifier that supports traceability to the biological entity that is the source of biological material in the product.</xs:documentation>
+              <xs:documentation xml:lang="en">An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="manufacturer" minOccurs="0" maxOccurs="1" type="string">
@@ -32182,7 +32192,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">The status of the device itself - whether it is switched on, or activated, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="associationState" type="Device.AssociationState" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="association" type="Device.Association" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The details about the device when it is affixed or inside of a patient.</xs:documentation>
            </xs:annotation>
@@ -32429,7 +32439,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="Device.AssociationState">
+  <xs:complexType name="Device.Association">
     <xs:annotation>
       <xs:documentation xml:lang="en">A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.</xs:documentation>
     </xs:annotation>
@@ -32449,6 +32459,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="humanSubject" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The individual to whom the device is affixed or inserted in their body.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The current anatomical location of the device in/on the humanSubject where it is attached or placed.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -32619,13 +32634,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The part number or catalog number of the device.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1" >
+          <xs:element name="manufacturer" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A name of the manufacturer  or legal representative e.g. labeler. Whether this is the actual manufacturer or the labeler or responsible depends on implementation and jurisdiction.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="manufacturerString" type="string"/>
-            <xs:element name="manufacturerReference" type="Reference"/>
-          </xs:choice>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="deviceName" type="DeviceDefinition.DeviceName" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The name or names of the device as given by the manufacturer.</xs:documentation>
@@ -33866,6 +33879,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The reason for asserting the usage status - for example forgot, lost, stolen, broken.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="adherence" type="DeviceUsage.Adherence" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">This indicates how or if the device is being used.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="informationSource" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Who reported the device was being used by the patient.</xs:documentation>
@@ -33889,6 +33907,27 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DeviceUsage.Adherence">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A record of a device being used by a patient where the record is the result of a report from the patient or a clinician.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Type of adherence.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="reason" minOccurs="1" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reason for adherence type.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -34263,7 +34302,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Other identifiers associated with the document, including version independent identifiers.</xs:documentation>
+              <xs:documentation xml:lang="en">Other business identifiers associated with the document, including version independent identifiers.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -34333,7 +34372,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="attester" type="DocumentReference.Attester" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A participant who has attested to the accuracy of the document.</xs:documentation>
+              <xs:documentation xml:lang="en">A participant who has authenticated the accuracy of the document.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="custodian" minOccurs="0" maxOccurs="1" type="Reference">
@@ -34366,11 +34405,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The Patient Information as known when the document was published. May be a reference to a version specific, or contained.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="related" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Related identifiers or resources associated with the DocumentReference.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -34382,7 +34416,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="DocumentAttestationMode">
+          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of attestation the authenticator offers.</xs:documentation>
            </xs:annotation>
@@ -34439,11 +34473,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -34464,41 +34493,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
             <xs:element name="valueCanonical" type="canonical"/>
           </xs:choice>
         </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="DocumentAttestationModeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="personal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Personal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="professional">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Professional</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="legal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Legal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="official">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Official</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="DocumentAttestationMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="DocumentAttestationModeEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -39873,7 +39867,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="performer" type="ImagingSelection.Performer" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Author – human or machine.</xs:documentation>
+              <xs:documentation xml:lang="en">Selector of the instances – human or machine.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -39888,7 +39882,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Describes the imaging selection.</xs:documentation>
+              <xs:documentation xml:lang="en">Reason for referencing the selected content.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="studyUid" minOccurs="0" maxOccurs="1" type="oid">
@@ -48216,22 +48210,17 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="literal" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.</xs:documentation>
+              <xs:documentation xml:lang="en">Sequence that was observed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="formatted" minOccurs="0" maxOccurs="1" type="Attachment">
+          <xs:element name="formatted" minOccurs="0" maxOccurs="unbounded" type="Attachment">
             <xs:annotation>
               <xs:documentation xml:lang="en">Sequence that was observed as file content. Can be an actual file contents, or referenced by a URL to an external system.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="relative" type="MolecularSequence.Relative" minOccurs="0" maxOccurs="1">
+          <xs:element name="relative" type="MolecularSequence.Relative" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A sequence defined relative to another sequence.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="pointer" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Pointer to next atomic sequence which at most contains one variant.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -48271,14 +48260,32 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
+          <xs:element name="referenceSequenceAssembly" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The reference assembly used for reference, e.g. GRCh38.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="chromosome" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="genomeBuild" minOccurs="0" maxOccurs="1" type="string">
+          <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.</xs:documentation>
+              <xs:documentation xml:lang="en">The reference sequence that represents the starting sequence.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="referenceSequenceCodeableConcept" type="CodeableConcept"/>
+            <xs:element name="referenceSequenceString" type="string"/>
+            <xs:element name="referenceSequenceReference" type="Reference"/>
+          </xs:choice>
+          <xs:element name="windowStart" minOccurs="0" maxOccurs="1" type="integer">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Start position of the window on the reference sequence. This value should honor the rules of the coordinateSystem.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="windowEnd" minOccurs="0" maxOccurs="1" type="integer">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">End position of the window on the reference sequence. This value should honor the rules of the  coordinateSystem.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="orientation" minOccurs="0" maxOccurs="1" type="orientationType">
@@ -48286,34 +48293,9 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the &quot;sense&quot; strand, and the opposite complementary strand is the &quot;antisense&quot; strand.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="referenceSeqId" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">This field carries the ID for the reference sequence. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers when they become available. (See- Report sponsored by GEN2PHEN at the European Bioinformatics Institute at Hinxton UK April 24-25, 2008).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="referenceSeqPointer" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A pointer to another MolecularSequence entity as reference sequence.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="referenceSeqString" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A string like &quot;ACGT&quot;.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="strand" minOccurs="0" maxOccurs="1" type="strandType">
             <xs:annotation>
               <xs:documentation xml:lang="en">An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="windowStart" minOccurs="0" maxOccurs="1" type="integer">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="windowEnd" minOccurs="0" maxOccurs="1" type="integer">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -48339,17 +48321,12 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="observedAllele" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.</xs:documentation>
+              <xs:documentation xml:lang="en">Allele that was observed. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed sequence. When the sequence type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="referenceAllele" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Allele in the reference sequence. Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="cigar" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Extended CIGAR string for aligning the sequence with reference bases. See documentation [here](https://samtools.github.io/hts-specs/SAMv1.pdf) and search for CIGAR.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49331,9 +49308,9 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="biologicalSource" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="biologicalSourceEvent" minOccurs="0" maxOccurs="1" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An identifier that supports traceability to the biological entity that is the source of biological material in the product.</xs:documentation>
+              <xs:documentation xml:lang="en">An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -53047,7 +53024,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="specialty" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Specific specialty of the practitioner.</xs:documentation>
+              <xs:documentation xml:lang="en">A type of specialized or skilled care the practitioner is able to deliver in the context of this particular role.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="location" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -62567,7 +62544,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="status" minOccurs="0" maxOccurs="1" type="TransportStatus">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A code specifying the state of the dispense event.</xs:documentation>
+              <xs:documentation xml:lang="en">A code specifying the state of the transport event.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="statusReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -62947,12 +62924,22 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
       </xs:enumeration>
       <xs:enumeration value="completed">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Delivered</xs:documentation>
+          <xs:documentation xml:lang="en">Completed</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="abandoned">
         <xs:annotation>
           <xs:documentation xml:lang="en">Abandoned</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cancelled">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Cancelled</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="planned">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Planned</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="entered-in-error">
@@ -63426,11 +63413,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="focus" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The general focus of the Value Set as it relates to the intended semantic space. This can be the information about clinical relevancy or the statement about the general focus of the Value Set, such as a description of types of messages, payment options, geographic locations, etc.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="inclusionCriteria" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Criteria describing which concepts or codes should be included and why.</xs:documentation>
