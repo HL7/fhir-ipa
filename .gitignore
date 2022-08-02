@@ -22,3 +22,12 @@ Thumbs.db
 ################
 *.bak
 /fsh/build
+
+# shell scripts #
+################
+*.sh
+*.bat
+
+# my-notes #
+############
+My Notes
