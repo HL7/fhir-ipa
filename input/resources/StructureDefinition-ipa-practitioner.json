@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-practitioner",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
-  "version": "0.1.0",
   "name": "IPAPractitioner",
   "title": "IPA-Practitioner",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-08-19T00:00:00+10:00",
+  "date": "2022-08-02",
   "description": "Minimum expectations for a Practitioner resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -17,14 +17,16 @@
   "differential": {
     "element": [
       {
+        "id": "Practitioner.active",
         "path": "Practitioner.active",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "Practitioner.name",
         "path": "Practitioner.name",
-        "comment" : "In some contexts, the real name of the practitioner is obscured. However this is handled, the resource must include at least some useable name for the practitioner in the name.text element",
+        "comment": "In some contexts, the real name of the practitioner is obscured. However this is handled, the resource must include at least some useable name for the practitioner in the name.text element",
         "min": 1,
         "max": "*",
         "mustSupport": true

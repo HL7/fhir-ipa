@@ -1,0 +1,317 @@
+resourceType: ImplementationGuide
+id: hl7.fhir.uv.ipa
+url: http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa
+version: 1.0.0-preview
+name: InternationalPatientAccess
+title: International Patient Access
+status: draft
+date: '2022-08-10'
+publisher: HL7 International - Patient Care Work Group
+contact:
+- name: HL7 International - Patient Care Work Group
+  telecom:
+  - system: url
+    value: http://www.hl7.org/Special/committees/patientcare
+  - system: email
+    value: patientcare@lists.HL7.org
+description: This IG  describes how an application acting on behalf of a patient can
+  access information about the patient from an clinical records system using a FHIR
+  based API. The clinical records system may be supporting a clinical care provider
+  (e.g. a hospital, or a general practitioner), or a health data exchange, including
+  a national health record system.
+jurisdiction:
+- coding:
+  - code: '001'
+    system: http://unstats.un.org/unsd/methods/m49/m49.htm
+    display: World
+copyright: Used by permission of HL7 International all rights reserved Creative Commons
+  License
+packageId: hl7.fhir.uv.ipa
+license: CC0-1.0
+fhirVersion:
+- 4.0.1
+dependsOn:
+- packageId: hl7.fhir.uv.smart-app-launch
+  version: 2.0.0
+  uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
+  id: hl7_fhir_uv_smart_app_launch
+definition:
+  resource:
+  - reference:
+      reference: CapabilityStatement/ipa-server
+    description: This section describes the basic rules for the International Patient
+      Access server actor that is responsible for providing responses to queries submitted
+      by International Patient Access requestors. The complete list of FHIR profiles,
+      RESTful operations, and search parameters supported by International Patient
+      Access servers are defined in this CapabilityStatement. International Patient
+      Access clients have the option of choosing from this list to access necessary
+      data based on their local use cases and other contextual requirements.
+    exampleBoolean: false
+    name: International Patient Access Server CapabilityStatement
+  - reference:
+      reference: OperationDefinition/docref
+    description: "This operation is used to return all the references to documents\
+      \ related to a patient. \n\n The operation requires a patient id and takes the\
+      \ optional input parameters: \n  - start date\n  - end date\n  - document type\
+      \ \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\"\
+      \ containing [DocumentReference](StructureDefinition-ipa-documentreference.html)\
+      \ resources for the patient. If the server has or can create documents that\
+      \ are related to the patient, and that are available for the given user, the\
+      \ server returns the DocumentReference resources needed to support the records.\
+      \  The principle intended use for this operation is to provide a patient with\
+      \ access to their available document information. \n\n This operation is *different*\
+      \ from a search by patient and type and date range because: \n\n 1. It is used\
+      \ to request a server *generate* a document based on the specified parameters.\
+      \ \n\n 1. If no parameters are specified, the server SHALL return a DocumentReference\
+      \ to the patient's most current summary document (depending on jurisdiction)\
+      \ \n\n 1. If the server cannot *generate* a document based on the specified\
+      \ parameters, the operation will return an empty search bundle. \n\n This operation\
+      \ is the *same* as a FHIR RESTful search by patient, type and date range because:\
+      \ \n\n 1. References for *existing* documents that meet the requirements of\
+      \ the request SHOULD also be returned unless the client indicates they are only\
+      \ interested in 'on-demand' documents using the *on-demand* parameter."
+    exampleBoolean: false
+    name: IPA Fetch DocumentReference
+  - reference:
+      reference: StructureDefinition/ipa-allergyintolerance
+    description: Minimum expectations for an AllergyIntolerance resource when accessed
+      via a International Patient Access API
+    exampleBoolean: false
+    name: IPA-AllergyIntolerance
+  - reference:
+      reference: StructureDefinition/ipa-condition
+    description: Minimum expectations for a Condition resource when accessed via a
+      International Patient Access API
+    exampleBoolean: false
+    name: IPA-Condition
+  - reference:
+      reference: StructureDefinition/ipa-documentreference
+    description: Minimum expectations for a DocumentReference resource when accessed
+      via a International Patient Access API
+    exampleBoolean: false
+    name: IPA-DocumentReference
+  - reference:
+      reference: StructureDefinition/ipa-immunization
+    description: Minimum expectations for an Immunization resource when accessed via
+      a International Patient Access API
+    exampleBoolean: false
+    name: IPA-Immunization
+  - reference:
+      reference: StructureDefinition/ipa-medication
+    description: Minimum expectations for a Medication resource when accessed via
+      a International Patient Access API
+    exampleBoolean: false
+    name: IPA-Medication
+  - reference:
+      reference: StructureDefinition/ipa-medicationrequest
+    description: Minimum expectations for a MedicationRequest resource when accessed
+      via a International Patient Access API
+    exampleBoolean: false
+    name: IPA-MedicationRequest
+  - reference:
+      reference: StructureDefinition/ipa-medicationstatement
+    description: Minimum expectations for a MedicationStatement resource when accessed
+      via a International Patient Access API
+    exampleBoolean: false
+    name: IPA-MedicationStatement
+  - reference:
+      reference: StructureDefinition/ipa-observation
+    description: Minimum expectations for an Observation resource when accessed via
+      a International Patient Access API
+    exampleBoolean: false
+    name: IPA-Observation
+  - reference:
+      reference: StructureDefinition/ipa-patient
+    description: Minimum expectations for a Patient resource when accessed via a International
+      Patient Access API
+    exampleBoolean: false
+    name: IPA-Patient
+  - reference:
+      reference: StructureDefinition/ipa-practitioner
+    description: Minimum expectations for a Practitioner resource when accessed via
+      a International Patient Access API
+    exampleBoolean: false
+    name: IPA-Practitioner
+  - reference:
+      reference: StructureDefinition/ipa-practitionerrole
+    description: Minimum expectations for a PractitionerRole resource when accessed
+      via a International Patient Access API
+    exampleBoolean: false
+    name: IPA-PractitionerRole
+  - reference:
+      reference: AllergyIntolerance/AllIntExample1
+    name: AllIntExample1
+    exampleBoolean: true
+  - reference:
+      reference: Condition/ProblemExample1
+    description: This is a problem list item example for the *IPA Condition Profile*.
+    name: IPA Condition Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition
+  - reference:
+      reference: DocumentReference/USClinicalNoteExample1
+    description: This is a DocumentReference example for the *IPA DocumentReference
+      Profile*.
+    name: DocumentReference Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference
+  - reference:
+      reference: Immunization/ImmExample1
+    description: This is an Immunization example for the *IPA Immunization Profile*.
+    name: IPA Immunization Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization
+  - reference:
+      reference: Medication/MedExample1
+    description: This is a Medication example for the *IPA Medication Profile*.
+    name: Medication Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication
+  - reference:
+      reference: MedicationRequest/MedRecExample1
+    description: This is a MedicationRequest example for the *IPA MedicationRequest
+      Profile*.
+    name: MedicationRequest Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest
+  - reference:
+      reference: MedicationStatement/MedStatementExample1
+    description: This is a MedicationStatement example for the *IPA MedicationStatement
+      Profile*.
+    name: MedicationStatement Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement
+  - reference:
+      reference: Observation/LabExample1
+    description: This is a Observation example for the *IPA Observation Profile* containing
+      a lab result.
+    name: Observation Lab Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation
+  - reference:
+      reference: Observation/SmokingExample1
+    description: This is a Observation example for the *IPA Observation Profile*.
+    name: Observation social history smoking Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation
+  - reference:
+      reference: Observation/VitalSignsExample1
+    name: VitalSignsExample1
+    exampleBoolean: true
+  - reference:
+      reference: Patient/PatientExample1
+    description: This is a Patient example for the *IPA Patient Profile*.
+    name: IPA Patient Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
+  - reference:
+      reference: Patient/PatientGenderExample1
+    name: PatientGenderExample1
+    exampleBoolean: true
+  - reference:
+      reference: Practitioner/PractitionerExample1
+    description: This is a Practitioner example for the *IPA Practitioner Profile*.
+    name: Practitioner Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner
+  - reference:
+      reference: PractitionerRole/PractitionerRoleExample1
+    description: This is a PractitionerRole example for the *IPA PractitionerRole
+      Profile*.
+    name: PractitionerRole Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole
+  page:
+    nameUrl: toc.html
+    title: Table of Contents
+    generation: html
+    page:
+    - nameUrl: index.html
+      title: International Patient Access
+      generation: markdown
+      page:
+      - nameUrl: ips-relationship.html
+        title: Relationship with International Patient Summary
+        generation: markdown
+      - nameUrl: ipa-by-country.html
+        title: IPA Specifications by Country
+        generation: markdown
+      - nameUrl: doc-gen.html
+        title: Generating Patient Documents
+        generation: markdown
+    - nameUrl: conformance.html
+      title: Conforming to this Specification
+      generation: markdown
+    - nameUrl: using-the-api.html
+      title: Using the API
+      generation: markdown
+      page:
+      - nameUrl: ipa-server.html
+        title: IPA Server Requirements
+        generation: markdown
+        page:
+        - nameUrl: security.html
+          title: Security
+          generation: markdown
+        - nameUrl: privacy.html
+          title: Privacy and Consent
+          generation: markdown
+      - nameUrl: access.html
+        title: Gaining Access to a Patient Record
+        generation: markdown
+      - nameUrl: fetching.html
+        title: Finding and Retrieving Patient Information
+        generation: markdown
+        page:
+        - nameUrl: safety.html
+          title: Safety Check List
+          generation: markdown
+      - nameUrl: synchronization.html
+        title: Synchronizing Patient Records
+        generation: markdown
+      - nameUrl: internationalization.html
+        title: Internationalization Issues
+        generation: markdown
+    - nameUrl: downloads.html
+      title: Downloads
+      generation: markdown
+  parameter:
+  - code: copyrightyear
+    value: 2022+
+  - code: releaselabel
+    value: STU1
+  - code: path-resource
+    value: input/resources
+  - code: path-resource
+    value: fsh-generated/resources
+  - code: path-pages
+    value: input/pagecontent
+  - code: path-pages
+    value: input/intro-notes
+  - code: path-pages
+    value: fsh-generated/includes
+  - code: apply-contact
+    value: 'true'
+  - code: apply-jurisdiction
+    value: 'true'
+  - code: apply-publisher
+    value: 'true'
+  - code: apply-version
+    value: 'true'
+  - code: show-inherited-invariants
+    value: 'false'
+  - code: usage-stats-opt-out
+    value: 'true'
+  - code: excludexml
+    value: 'false'
+  - code: excludejsn
+    value: 'false'
+  - code: excludettl
+    value: 'true'
+  - code: excludemap
+    value: 'true'
+  - code: excludeexample
+    value: 'true'
+  - code: generate
+    value: xml
+  - code: generate
+    value: json
+  - code: logging
+    value: progress
+  - code: logging
+    value: tx
+  - code: logging
+    value: context
+  - code: logging
+    value: init
+  - code: path-history
+    value: http://hl7.org/fhir/uv/ipa/history.html

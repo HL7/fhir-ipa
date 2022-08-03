@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-medicationrequest",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest",
-  "version": "0.1.0",
   "name": "IPAMedicationRequest",
   "title": "IPA-MedicationRequest",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-08-26T15:10:00+10:00",
+  "date": "2022-08-02",
   "description": "Minimum expectations for a MedicationRequest resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -17,18 +17,21 @@
   "differential": {
     "element": [
       {
+        "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
         "min": 0,
         "max": "1",
@@ -48,6 +51,7 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.medication[x]",
         "path": "MedicationRequest.medication[x]",
         "min": 1,
         "max": "1",
@@ -65,6 +69,7 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.subject",
         "path": "MedicationRequest.subject",
         "min": 1,
         "max": "1",
@@ -79,18 +84,21 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.encounter",
         "path": "MedicationRequest.encounter",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.authoredOn",
         "path": "MedicationRequest.authoredOn",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.requester",
         "path": "MedicationRequest.requester",
         "min": 1,
         "max": "1",
@@ -107,10 +115,12 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.dosageInstruction",
         "path": "MedicationRequest.dosageInstruction",
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.dosageInstruction.text",
         "path": "MedicationRequest.dosageInstruction.text",
         "mustSupport": true
       }
