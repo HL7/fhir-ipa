@@ -36,6 +36,13 @@ dependsOn:
   uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
   id: hl7_fhir_uv_smart_app_launch
 definition:
+  grouping:
+  - id: GroupA
+    name: 'Profiles: Primary Resources'
+    description: Content Definitions for primary resources
+  - id: GroupB
+    name: 'Profiles: Supporting Resources'
+    description: Content Definitions for supporting resources
   resource:
   - reference:
       reference: CapabilityStatement/ipa-server
@@ -78,66 +85,77 @@ definition:
       via a International Patient Access API
     exampleBoolean: false
     name: IPA-AllergyIntolerance
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-condition
     description: Minimum expectations for a Condition resource when accessed via a
       International Patient Access API
     exampleBoolean: false
     name: IPA-Condition
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-documentreference
     description: Minimum expectations for a DocumentReference resource when accessed
       via a International Patient Access API
     exampleBoolean: false
     name: IPA-DocumentReference
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-immunization
     description: Minimum expectations for an Immunization resource when accessed via
       a International Patient Access API
     exampleBoolean: false
     name: IPA-Immunization
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-medication
     description: Minimum expectations for a Medication resource when accessed via
       a International Patient Access API
     exampleBoolean: false
     name: IPA-Medication
+    groupingId: GroupB
   - reference:
       reference: StructureDefinition/ipa-medicationrequest
     description: Minimum expectations for a MedicationRequest resource when accessed
       via a International Patient Access API
     exampleBoolean: false
     name: IPA-MedicationRequest
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-medicationstatement
     description: Minimum expectations for a MedicationStatement resource when accessed
       via a International Patient Access API
     exampleBoolean: false
     name: IPA-MedicationStatement
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-observation
     description: Minimum expectations for an Observation resource when accessed via
       a International Patient Access API
     exampleBoolean: false
     name: IPA-Observation
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-patient
     description: Minimum expectations for a Patient resource when accessed via a International
       Patient Access API
     exampleBoolean: false
     name: IPA-Patient
+    groupingId: GroupA
   - reference:
       reference: StructureDefinition/ipa-practitioner
     description: Minimum expectations for a Practitioner resource when accessed via
       a International Patient Access API
     exampleBoolean: false
     name: IPA-Practitioner
+    groupingId: GroupB
   - reference:
       reference: StructureDefinition/ipa-practitionerrole
     description: Minimum expectations for a PractitionerRole resource when accessed
       via a International Patient Access API
     exampleBoolean: false
     name: IPA-PractitionerRole
+    groupingId: GroupB
   - reference:
       reference: AllergyIntolerance/AllIntExample1
     name: AllIntExample1

@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Aug 3, 2022 01:29+0000 for FHIR v4.6.0 
+  Generated on Wed, Aug 3, 2022 03:11+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -18460,7 +18460,7 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
           </xs:element>
           <xs:element name="contained" type="ResourceContainer" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.</xs:documentation>
+              <xs:documentation xml:lang="en">These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="extension" type="Extension" minOccurs="0" maxOccurs="unbounded">
@@ -20268,6 +20268,11 @@ The duration (usually in minutes) could also be provided to indicate the length 
               <xs:documentation xml:lang="en">Appointment that this response is replying to.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="proposedNewTime" minOccurs="0" maxOccurs="1" type="boolean">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates that the response is proposing a different time that was initially requested.  The new proposed time will be indicated in the start and end properties.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="start" minOccurs="0" maxOccurs="1" type="instant">
             <xs:annotation>
               <xs:documentation xml:lang="en">Date/Time that the appointment is to take place, or requested new start time.</xs:documentation>
@@ -20774,7 +20779,7 @@ The duration (usually in minutes) could also be provided to indicate the length 
         <xs:sequence>
           <xs:element name="what" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies a specific instance of the entity. The reference should be version specific.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifies a specific instance of the entity. The reference should be version specific. This is allowed to be a Parameters resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -21354,7 +21359,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="resource" minOccurs="0" maxOccurs="1" type="ResourceContainer">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.</xs:documentation>
+              <xs:documentation xml:lang="en">The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type. This is allowed to be a Parameters resource if and only if it is referenced by something else within the Bundle that provides context/meaning.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="search" type="Bundle.Search" minOccurs="0" maxOccurs="1">
@@ -27863,7 +27868,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">An absolute URI that is used to identify this Composition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this Composition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the Composition is stored on different servers.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">A version-independent identifier for the Composition. This identifier stays constant as the composition is changed over time.</xs:documentation>
            </xs:annotation>
@@ -27926,11 +27931,6 @@ into another (possibly the same) biological entity.</xs:documentation>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">For any additional notes.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="confidentiality" minOccurs="0" maxOccurs="1" type="Confidentiality">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The code specifying the level of confidentiality of the Composition.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="attester" type="Composition.Attester" minOccurs="0" maxOccurs="unbounded">
@@ -28077,6 +28077,16 @@ into another (possibly the same) biological entity.</xs:documentation>
   </xs:complexType>
   <xs:simpleType name="CompositionStatusEnum">
     <xs:restriction base="code-primitive">
+      <xs:enumeration value="registered">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Registered</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="partial">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Partial</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="preliminary">
         <xs:annotation>
           <xs:documentation xml:lang="en">Preliminary</xs:documentation>
@@ -28092,6 +28102,21 @@ into another (possibly the same) biological entity.</xs:documentation>
           <xs:documentation xml:lang="en">Amended</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="corrected">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Corrected</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="appended">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Appended</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cancelled">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Cancelled</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="entered-in-error">
         <xs:annotation>
           <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
@@ -28100,6 +28125,11 @@ into another (possibly the same) biological entity.</xs:documentation>
       <xs:enumeration value="deprecated">
         <xs:annotation>
           <xs:documentation xml:lang="en">Deprecated</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unknown</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -28112,51 +28142,6 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="CompositionStatusEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="ConfidentialityEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="L">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">low</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="M">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">moderate</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="N">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">normal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="R">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">restricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="U">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">unrestricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="V">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">very restricted</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="Confidentiality">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="ConfidentialityEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -33948,7 +33933,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The set of accounts that may be used for billing for this Encounter.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="hospitalization" type="Encounter.Hospitalization" minOccurs="0" maxOccurs="1">
+          <xs:element name="admission" type="Encounter.Admission" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Details about the admission to a healthcare service.</xs:documentation>
            </xs:annotation>
@@ -33960,7 +33945,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="serviceProvider" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.</xs:documentation>
+              <xs:documentation xml:lang="en">The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed separately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="partOf" minOccurs="0" maxOccurs="1" type="Reference">
@@ -34066,7 +34051,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="Encounter.Hospitalization">
+  <xs:complexType name="Encounter.Admission">
     <xs:annotation>
       <xs:documentation xml:lang="en">An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.</xs:documentation>
     </xs:annotation>
@@ -34090,7 +34075,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="reAdmission" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Whether this hospitalization is a readmission and why if known.</xs:documentation>
+              <xs:documentation xml:lang="en">Whether this admission is a readmission and why if known.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dietPreference" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -34105,7 +34090,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="specialArrangement" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.</xs:documentation>
+              <xs:documentation xml:lang="en">Any special requests that have been made for this admission encounter, such as the provision of specific equipment or other things.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="destination" minOccurs="0" maxOccurs="1" type="Reference">
@@ -47700,7 +47685,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="focus" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The actual data of the message - a reference to the root/focus class of the event.</xs:documentation>
+              <xs:documentation xml:lang="en">The actual data of the message - a reference to the root/focus class of the event. This is allowed to be a Parameters resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="definition" minOccurs="0" maxOccurs="1" type="canonical">
@@ -50806,12 +50791,12 @@ For resource issues, this will be a simple XPath limited to element names, repet
   </xs:complexType>
   <xs:element name="Parameters" type="Parameters">
     <xs:annotation>
-      <xs:documentation xml:lang="en">This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.</xs:documentation>
+      <xs:documentation xml:lang="en">This resource is used to pass information into and back from an operation (whether invoked directly from REST or within a messaging environment).  It is not persisted or allowed to be referenced by other resources.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="Parameters">
     <xs:annotation>
-      <xs:documentation xml:lang="en">This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.</xs:documentation>
+      <xs:documentation xml:lang="en">This resource is used to pass information into and back from an operation (whether invoked directly from REST or within a messaging environment).  It is not persisted or allowed to be referenced by other resources.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -50828,7 +50813,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
   </xs:complexType>
   <xs:complexType name="Parameters.Parameter">
     <xs:annotation>
-      <xs:documentation xml:lang="en">This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.</xs:documentation>
+      <xs:documentation xml:lang="en">This resource is used to pass information into and back from an operation (whether invoked directly from REST or within a messaging environment).  It is not persisted or allowed to be referenced by other resources.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -61612,7 +61597,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="resource" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to the resource (containing the contents of the resource needed for operations).</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to the resource (containing the contents of the resource needed for operations). This is allowed to be a Parameters resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>

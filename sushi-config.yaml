@@ -1,6 +1,6 @@
 # ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.ipa
 canonical: http://hl7.org/fhir/uv/ipa
@@ -25,6 +25,27 @@ version: 1.0.0-preview
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.smart-app-launch: 2.0.0
+
+groups:
+  GroupA:
+    name: 'Profiles: Primary Resources'
+    description: Content Definitions for primary resources
+    resources:
+      - StructureDefinition/ipa-immunization
+      - StructureDefinition/ipa-allergyintolerance
+      - StructureDefinition/ipa-medicationrequest
+      - StructureDefinition/ipa-documentreference
+      - StructureDefinition/ipa-observation
+      - StructureDefinition/ipa-patient
+      - StructureDefinition/ipa-medicationstatement
+      - StructureDefinition/ipa-condition
+  GroupB:
+    name: 'Profiles: Supporting Resources'
+    description: Content Definitions for supporting resources
+    resources:
+      - StructureDefinition/ipa-practitionerrole
+      - StructureDefinition/ipa-medication
+      - StructureDefinition/ipa-practitioner
 
 pages:
   index.md:
@@ -109,12 +130,13 @@ menu:
       Synchronizing Patient Records: synchronization.html
       Internationalization Issues: internationalization.html
   Artifact Index:
-      CapabilityStatements: artifacts.html#1
-      Operations: artifacts.html#2
-      Profiles: artifacts.html#3
+      Profiles: artifacts.html#1
+      CapabilityStatements: artifacts.html#3
+      Operations: artifacts.html#4
+
       # Value Sets: artifacts.html#4
       # Code Systems: artifacts.html#5
-      Examples: artifacts.html#4
+      Examples: artifacts.html#5
   Support: 
       FHIR: "{{site.data.fhir.path}}index.html"
       FHIRPath: http://hl7.org/fhirpath
