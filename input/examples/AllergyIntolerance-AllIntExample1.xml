@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-   <id value="AllIntExample1">
-    <meta>
+   <id value="AllIntExample1" />
+   <meta>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+         <valueString value="IPA AllergyIntolerance Example" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+         <valueMarkdown value="This is an allergy intolerance example for the *IPA AllergyIntolerance Profile*." />
+      </extension>
       <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance" />
-    </meta>
-   </id>
+   </meta>
    <clinicalStatus>
       <coding>
          <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
