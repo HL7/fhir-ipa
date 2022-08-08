@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-medication",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication",
-  "version": "0.1.0",
   "name": "IPAMedication",
   "title": "IPA-Medication",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-05-21T00:00:00+10:00",
-  "description": "Minimum expectations for a Medication resource when accessed via an International Patient Access API",
+  "date": "2022-08-02",
+  "description": "Minimum expectations for a Medication resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -17,6 +17,7 @@
   "differential": {
     "element": [
       {
+        "id": "Medication.code",
         "path": "Medication.code",
         "min": 1,
         "max": "1",
