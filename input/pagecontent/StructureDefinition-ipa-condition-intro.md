@@ -2,7 +2,7 @@ This profile describes how applications fetch Condition resources that provide i
 
 ### Example Usage Scenarios:
 
-The most important and obvious use of the condition to resource is to get a list of the patient's 
+The most important and obvious use of the condition resource is to get a list of the patient's 
 current problem list. However there are many other uses for the condition resource, such as 
 recording primary and secondary diagnoses for encounters, or justification for past medications
 etc. 
@@ -17,7 +17,7 @@ where id is found in some other resource that refers to a Condition. The result 
 a Condition resource, or an error if there is no resource the client can access for that id. 
 Alternatively, the client may search for condition resources.
 
-The current problem list is retrieved by specifying the patient, category and and clinical-status:
+The current problem list is retrieved by specifying the patient, category and  clinical-status:
 
 ```GET [url]/Condition?patient=[patient-id]&category=problem-list-item&clinical-status=active```
 

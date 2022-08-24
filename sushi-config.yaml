@@ -1,0 +1,145 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.uv.ipa
+canonical: http://hl7.org/fhir/uv/ipa
+name: InternationalPatientAccess
+title: International Patient Access
+status: draft
+
+publisher:
+  name: HL7 International - Patient Care Work Group
+  url: 'http://www.hl7.org/Special/committees/patientcare'
+  email: patientcare@lists.HL7.org
+
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
+copyright: >-
+  Used by permission of HL7 International all rights reserved Creative Commons License
+description: >-
+  This IG  describes how an application acting on behalf of a patient can access information about the patient from an clinical records system using a FHIR based API. The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), or a health data exchange, including a national health record system.
+license: CC0-1.0
+date: '2022-08-10'
+version: 1.0.0-preview
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.uv.smart-app-launch: 2.0.0
+
+groups:
+  GroupA:
+    name: 'Profiles: Primary Resources'
+    description: Content Definitions for primary resources
+    resources:
+      - StructureDefinition/ipa-immunization
+      - StructureDefinition/ipa-allergyintolerance
+      - StructureDefinition/ipa-medicationrequest
+      - StructureDefinition/ipa-documentreference
+      - StructureDefinition/ipa-observation
+      - StructureDefinition/ipa-patient
+      - StructureDefinition/ipa-medicationstatement
+      - StructureDefinition/ipa-condition
+  GroupB:
+    name: 'Profiles: Supporting Resources'
+    description: Content Definitions for supporting resources
+    resources:
+      - StructureDefinition/ipa-practitionerrole
+      - StructureDefinition/ipa-medication
+      - StructureDefinition/ipa-practitioner
+
+pages:
+  index.md:
+    title: International Patient Access
+    ips-relationship.md:
+      title: Relationship with International Patient Summary
+    ipa-by-country.md:
+      title: IPA Specifications by Country
+    doc-gen.md:
+      title: Generating Patient Documents
+
+  conformance.md:
+    title: Conforming to this Specification
+  using-the-api.md:
+    title: Using the API
+    ipa-server.md:
+      title: IPA Server Requirements
+      security.md:
+        title: Security
+      privacy.md:
+        title: Privacy and Consent
+    access.md:
+      title: Gaining Access to a Patient Record
+    fetching.md:
+      title: Finding and Retrieving Patient Information
+      safety.md:
+        title: Safety Check List
+    synchronization.md:
+      title: Synchronizing Patient Records
+    internationalization.md:
+      title: Internationalization Issues
+  downloads.md:
+    title: Downloads
+
+
+parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - input/intro-notes
+    - fsh-generated/includes
+  # path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+  # active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  excludexml: 'false'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'true'
+  generate:
+    - xml
+    - json
+  # version-comparison:
+  #    - 1.0.0
+  logging:
+    - progress
+    - tx
+    - context
+    - init
+
+copyrightyear: '2022+'
+# releaselabel: Ballot
+releaselabel: STU1
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Conformance: conformance.html
+  Using The API:
+  #     Exchanging Clinical Data: exchanging-clinical-data.html
+      IPA Server Requirements: ipa-server.html
+      Gaining Access to a Patient Record: access.html
+      Finding and Retrieving Patient Information: fetching.html
+      Synchronizing Patient Records: synchronization.html
+      Internationalization Issues: internationalization.html
+  Artifact Index:
+      Profiles: artifacts.html#1
+      CapabilityStatements: artifacts.html#3
+      Operations: artifacts.html#4
+
+      # Value Sets: artifacts.html#4
+      # Code Systems: artifacts.html#5
+      Examples: artifacts.html#5
+  Support: 
+      FHIR: "{{site.data.fhir.path}}index.html"
+      FHIRPath: http://hl7.org/fhirpath
+      CQL: http://cql.hl7.org
+      Downloads: downloads.html
+  # Change Log: changes.html

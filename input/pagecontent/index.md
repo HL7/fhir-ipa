@@ -1,10 +1,10 @@
 ### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
-can access information about the patient from an clinical records system using
-a FHIR based API. The clinical records system may be supporting a clinical care 
-provider (e.g. a hospital, or a general practitioner), or a health data exchange, 
-including a national health record system.
+can access information about the patient from a clinical records system using
+a FHIR based API. The clinical records system may be supporting a clinical care
+provider (e.g. a hospital, or a general practitioner), a health data exchange, 
+or other system managing patient records, including a national health record system.
 
 Using this API, applications can access the following information about the patient:
 
@@ -13,7 +13,7 @@ Using this API, applications can access the following information about the pati
 * [Medication orders](StructureDefinition-ipa-medicationrequest.html) and [usage](StructureDefinition-ipa-medicationstatement.html)
 * [Immunization history](StructureDefinition-ipa-immunization.html)
 * [Allergies and intolerances](StructureDefinition-ipa-allergyintolerance.html)
-* [Vital signs and other clinical observations](StructureDefinition-ipa-observation.html)
+* [Vital signs, lab results, and other clinical observations](StructureDefinition-ipa-observation.html)
 * [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
 
 These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
@@ -24,13 +24,11 @@ These resources are supported by information about [practitioners](StructureDefi
 This International Patient Access specification describes how to access patient 
 records anywhere in the world. It provides a very minimal set of access methods 
 and rules about the content that are true everywhere. Working healthcare systems 
-need additional rules about the access API to meet other use cases, and make many 
+may need additional rules about the access API to meet other use cases, and may make many 
 additional rules about the content based on national laws, regulations and accepted
 practice in order to support the provision of health in their healthcare system. 
 
-No health care system implements the International Patient Access specification 
-directly; instead, each country publishes their own national patient access specification 
-that is consistent with this specification. 
+Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
 
 See [International Patient Access by Country](ipa-by-country.html) for a list of these specifications. 
 
@@ -40,6 +38,8 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
 
 ### Using the International Patient Access API
 
+The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps. IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".
+
  - [Getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
  - [Finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
  - [Maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
@@ -48,5 +48,4 @@ See [Relationship to the International Patient Summary](ips-relationship.html) f
  - [Application expectations, and how to test conformance](conformance.html)
 
 Notes:
-* Not [all servers provide all of this information](conformance.html)
-* This  API is read-only, though implementations may [provide write access too](conformance.html).
+* This  API is read-only, though implementations may provide write access too.

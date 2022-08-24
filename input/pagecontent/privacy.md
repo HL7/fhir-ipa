@@ -18,7 +18,7 @@ application.
 
 The Authorization server then returns a set of scopes to the application that describe what access
 the user has authorised. Clients need to be aware that the Authorization server cannot fully describe 
-the full set of access rules in the scopes, and SHALL be prepared to handle failure gracefully. 
+the set of access rules in the scopes, and SHALL be prepared to handle failure gracefully. 
 
 Servers MAY choose to inform a client when information is not available, but most servers will simply 
 behave as if it doesn't exist (see [note in FHIR specification](http://hl7.org/fhir/security.html#AccessDenied)).

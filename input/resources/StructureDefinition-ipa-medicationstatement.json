@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-medicationstatement",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement",
-  "version": "0.1.0",
   "name": "IPAMedicationStatement",
   "title": "IPA-MedicationStatement",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-08-26T15:10:00+10:00",
+  "date": "2022-08-02",
   "description": "Minimum expectations for a MedicationStatement resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -17,16 +17,19 @@
   "differential": {
     "element": [
       {
+        "id": "MedicationStatement.status",
         "path": "MedicationStatement.status",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.statusReason",
         "path": "MedicationStatement.statusReason",
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.medication[x]",
         "path": "MedicationStatement.medication[x]",
         "min": 1,
         "max": "1",
@@ -44,6 +47,7 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.subject",
         "path": "MedicationStatement.subject",
         "min": 1,
         "max": "1",
@@ -58,16 +62,19 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.context",
         "path": "MedicationStatement.context",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.effective[x]",
         "path": "MedicationStatement.effective[x]",
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
         "min": 1,
         "max": "1",
@@ -84,10 +91,12 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.dosage",
         "path": "MedicationStatement.dosage",
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.dosage.text",
         "path": "MedicationStatement.dosage.text",
         "mustSupport": true
       }
