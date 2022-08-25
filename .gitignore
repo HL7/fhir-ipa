@@ -3,7 +3,7 @@
 temp
 template
 output
-fsh-generated
+#fsh-generated << source of ig.json and menu
 
 # Don't commit this because it's so large #
 ###########################################

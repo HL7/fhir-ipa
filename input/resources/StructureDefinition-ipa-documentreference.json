@@ -19,29 +19,22 @@
             {
                 "id": "DocumentReference.status",
                 "path": "DocumentReference.status",
-                "min": 1,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.type",
                 "path": "DocumentReference.type",
-                "min": 1,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.category",
                 "path": "DocumentReference.category",
-                "min": 1,
-                "max": "*",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.subject",
                 "path": "DocumentReference.subject",
                 "min": 1,
-                "max": "1",
                 "type": [
                     {
                         "code": "Reference",
@@ -55,15 +48,11 @@
             {
                 "id": "DocumentReference.date",
                 "path": "DocumentReference.date",
-                "min": 0,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.author",
                 "path": "DocumentReference.author",
-                "min": 0,
-                "max": "*",
                 "type": [
                     {
                         "code": "Reference",
@@ -85,8 +74,6 @@
             {
                 "id": "DocumentReference.content.attachment",
                 "path": "DocumentReference.content.attachment",
-                "min": 1,
-                "max": "1",
                 "constraint": [
                     {
                         "key": "ipa-doc-1",
@@ -102,21 +89,16 @@
                 "id": "DocumentReference.content.attachment.contentType",
                 "path": "DocumentReference.content.attachment.contentType",
                 "min": 1,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.content.attachment.data",
                 "path": "DocumentReference.content.attachment.data",
-                "min": 0,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.content.attachment.url",
                 "path": "DocumentReference.content.attachment.url",
-                "min": 0,
-                "max": "1",
                 "mustSupport": true
             },
             {
@@ -127,14 +109,11 @@
             {
                 "id": "DocumentReference.context",
                 "path": "DocumentReference.context",
-                "min": 0,
-                "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.context.encounter",
                 "path": "DocumentReference.context.encounter",
-                "min": 0,
                 "max": "1",
                 "type": [
                     {
