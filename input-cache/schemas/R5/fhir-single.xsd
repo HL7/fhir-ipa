@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Aug 25, 2022 02:17+0000 for FHIR v5.0.0-cibuild 
+  Generated on Thu, Aug 25, 2022 14:59+0000 for FHIR v5.0.0-cibuild 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="5.0.0-cibuild">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -40283,16 +40283,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">A unique identifier assigned to this immunization record.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="instantiatesCanonical" minOccurs="0" maxOccurs="unbounded" type="canonical">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Immunization.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="instantiatesUri" minOccurs="0" maxOccurs="unbounded" type="uri">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Immunization.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A plan, order or recommendation fulfilled in whole or in part by this immunization.</xs:documentation>
@@ -40343,6 +40333,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The visit or admission or other contact between patient and health care provider the immunization was performed as part of.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="supportingInformation" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Additional information that is relevant to the immunization (e.g. for a vaccine recipient who is pregnant, the gestational age of the fetus). The reason why a vaccine was given (e.g. occupation, underlying medical condition) should be conveyed in Immunization.reason, not as supporting information. The reason why a vaccine was not given (e.g. contraindication) should be conveyed in Immunization.statusReason, not as supporting information.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:choice minOccurs="1" maxOccurs="1" >
             <xs:annotation>
               <xs:documentation xml:lang="en">Date vaccine administered or was to be administered.</xs:documentation>
@@ -40352,7 +40347,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:choice>
           <xs:element name="primarySource" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether this record was captured as an original primary source-of-truth record rather than a secondary 'reported' record. A value &quot;true&quot; means this is a primary record of the immunization.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="informationSource" minOccurs="0" maxOccurs="1" type="CodeableReference">
@@ -40405,11 +40400,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Reason why a dose is considered to be subpotent.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="education" type="Immunization.Education" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Educational material presented to the patient (or guardian) at the time of vaccine administration.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="programEligibility" type="Immunization.ProgramEligibility" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates a patient's eligibility for a funding program.</xs:documentation>
@@ -40449,37 +40439,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="actor" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The practitioner or organization who performed the action.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="Immunization.Education">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="documentType" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Identifier of the material presented to the patient.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="reference" minOccurs="0" maxOccurs="1" type="uri">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Reference pointer to the educational material given to the patient if the information was on line.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="publicationDate" minOccurs="0" maxOccurs="1" type="dateTime">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Date the educational material was published.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="presentationDate" minOccurs="0" maxOccurs="1" type="dateTime">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Date the educational material was given to the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -40722,16 +40681,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">A unique identifier assigned to this particular recommendation record.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="instantiatesCanonical" minOccurs="0" maxOccurs="unbounded" type="canonical">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The URL pointing to a FHIR-defined protocol, guideline or other definition that is adhered to in whole or in part by this ImmunizationRecommendation.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="instantiatesUri" minOccurs="0" maxOccurs="unbounded" type="uri">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The URL pointing to an externally maintained protocol, guideline or other definition that is adhered to in whole or in part by this ImmunizationRecommendation.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
