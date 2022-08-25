@@ -13,6 +13,13 @@ The Profile elements consist of both Mandatory and Must Support elements. Mandat
 
 The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Servers as well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
 
+<div class="bg-success" markdown="1">
+
+### Exchange Format Support
+
+In FHIR, resources can be exchanged in the following formats: JSON, XML, and Turtle. Due to the popularity of JavaScript-based apps and ease of usage with JSON, the exchange format for many modern APIs is JSON. To increase certainty and the likelihood of interoperability, IPA mandates the support of JSON. IPA Servers are encouraged to support XML as well.
+</div><!-- new-content -->
+
 ### Profile Support + Interaction Support
 Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access that information. Only systems that implement both Profile Support and Interaction Support can claim conformance to IPA. 
 
