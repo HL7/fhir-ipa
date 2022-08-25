@@ -60,12 +60,12 @@ definition:
     description: "This operation is used to return all the references to documents\
       \ related to a patient. \n\n The operation requires a patient id and takes the\
       \ optional input parameters: \n  - start date\n  - end date\n  - document type\
-      \ \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\"\
-      \ containing [DocumentReference](StructureDefinition-ipa-documentreference.html)\
+      \ \n  - on-demand\n  - profile  \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html)\
+      \ of type \"searchset\" containing [DocumentReference](StructureDefinition-ipa-documentreference.html)\
       \ resources for the patient. If the server has or can create documents that\
       \ are related to the patient, and that are available for the given user, the\
       \ server returns the DocumentReference resources needed to support the records.\
-      \  The principle intended use for this operation is to provide a patient with\
+      \  The principal intended use for this operation is to provide a patient with\
       \ access to their available document information. \n\n This operation is *different*\
       \ from a search by patient and type and date range because: \n\n 1. It is used\
       \ to request a server *generate* a document based on the specified parameters.\
@@ -158,8 +158,10 @@ definition:
     groupingId: GroupB
   - reference:
       reference: AllergyIntolerance/AllIntExample1
-    name: AllIntExample1
-    exampleBoolean: true
+    description: This is an allergy intolerance example for the *IPA AllergyIntolerance
+      Profile*.
+    name: IPA AllergyIntolerance Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance
   - reference:
       reference: Condition/ProblemExample1
     description: This is a problem list item example for the *IPA Condition Profile*.
