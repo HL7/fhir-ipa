@@ -17,7 +17,7 @@ The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines co
 
 ### Exchange Format Support
 
-In FHIR, resources can be exchanged in the following formats: JSON, XML, and Turtle. Due to the popularity of JavaScript-based apps and ease of usage with JSON, the exchange format for many modern APIs is JSON. To increase certainty and the likelihood of interoperability, IPA mandates the support of JSON. IPA Servers are encouraged to support XML as well.
+In FHIR, resources can be exchanged in the following formats: JSON, XML, and Turtle. Due to the popularity of JavaScript-based apps and ease of usage with JSON, the most popular exchange format for REST styled APIs is JSON. To increase certainty and the likelihood of interoperability, IPA mandates the support of JSON. IPA Servers are encouraged to support XML as well.
 </div><!-- new-content -->
 
 ### Profile Support + Interaction Support
