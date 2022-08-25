@@ -6,6 +6,8 @@ a FHIR based API. The clinical records system may be supporting a clinical care
 provider (e.g. a hospital, or a general practitioner), a health data exchange, 
 or other system managing patient records, including a national health record system.
 
+The IPA specification is designed to help patients access their data. However, implementers can use the IPA profiles and the [SMART App Launch](http://hl7.org/fhir/smart-app-launch/) specification to support clinician-facing and backend-access to patient records too.
+
 Using this API, applications can access the following information about the patient:
 
 * [Basic patient details](StructureDefinition-ipa-patient.html)
