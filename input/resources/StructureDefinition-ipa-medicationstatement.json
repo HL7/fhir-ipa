@@ -19,8 +19,6 @@
             {
                 "id": "MedicationStatement.status",
                 "path": "MedicationStatement.status",
-                "min": 1,
-                "max": "1",
                 "mustSupport": true
             },
             {
@@ -31,8 +29,6 @@
             {
                 "id": "MedicationStatement.medication[x]",
                 "path": "MedicationStatement.medication[x]",
-                "min": 1,
-                "max": "1",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -49,8 +45,6 @@
             {
                 "id": "MedicationStatement.subject",
                 "path": "MedicationStatement.subject",
-                "min": 1,
-                "max": "1",
                 "type": [
                     {
                         "code": "Reference",
@@ -64,8 +58,6 @@
             {
                 "id": "MedicationStatement.context",
                 "path": "MedicationStatement.context",
-                "min": 0,
-                "max": "1",
                 "mustSupport": true
             },
             {
@@ -76,8 +68,6 @@
             {
                 "id": "MedicationStatement.informationSource",
                 "path": "MedicationStatement.informationSource",
-                "min": 1,
-                "max": "1",
                 "type": [
                     {
                         "code": "Reference",
@@ -85,7 +75,8 @@
                             "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
                             "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
                             "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Organization"
+                            "http://hl7.org/fhir/StructureDefinition/Organization",
+                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
                         ]
                     }
                 ],
