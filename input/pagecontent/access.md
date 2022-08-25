@@ -25,10 +25,9 @@ A client application gets access to a patient record by following this general s
 
 ### Scopes
 
-Scopes work as described in the SMART on FHIR specification. Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHOULD** allow users to select a subset of the requested scopes at the approval time.
-
-The app should inspect the returned scopes and accommodate the differences from the scopes it requested and registered. 
-{:.bg-info}
+<div class="bg-success" markdown="1">
+Scopes work as described in the SMART on FHIR specification. Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHOULD** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it requested and registered.
+</div><!-- new-content -->
 
 ### Server Obligations
 
