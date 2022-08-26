@@ -9,7 +9,7 @@ may be influenced by many factors including wording in legislation and regulatio
 For this reason, clients implementing the International Patient Access specification SHALL query for both 
 MedicationStatement and MedicationRequest when fetching patient Medication information.
 
-As noted their is currently no consensus how a patient can access their active, historical and future (planned) medications list. Feedback is welcome on what additional guidance can be given to promote more international alignment.
+As noted there is currently no consensus how a patient can access their active, historical and future (planned) medications list. Feedback is welcome on what additional guidance can be given to promote more international alignment.
 {:.stu-note}
 
 ### Medication specificity
