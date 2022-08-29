@@ -66,11 +66,13 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "condition": ["ipa-obs-1"],
         "mustSupport": true
       },
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
+        "condition": ["ipa-obs-1"],       
         "mustSupport": true
       }
     ]
