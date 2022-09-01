@@ -1,100 +1,127 @@
-resourceType: StructureDefinition
-id: ipa-documentreference
-url: 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference'
-name: IPADocumentReference
-title: IPA-DocumentReference
-status: active
-experimental: false
-date: '2022-08-02'
-description: Minimum expectations for a DocumentReference resource when accessed via a International Patient Access API
-fhirVersion: 4.0.0
-kind: resource
-abstract: false
-type: DocumentReference
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/DocumentReference'
-derivation: constraint
-differential:
-    element:
-        - 
-            id: DocumentReference.status
-            path: DocumentReference.status
-            mustSupport: true
-        - 
-            id: DocumentReference.type
-            path: DocumentReference.type
-            mustSupport: true
-        - 
-            id: DocumentReference.category
-            path: DocumentReference.category
-            mustSupport: true
-        - 
-            id: DocumentReference.subject
-            path: DocumentReference.subject
-            min: 1
-            type:
-                - 
-                    code: Reference
-                    targetProfile:
-                        - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient'
-            mustSupport: true
-        - 
-            id: DocumentReference.date
-            path: DocumentReference.date
-            mustSupport: true
-        - 
-            id: DocumentReference.author
-            path: DocumentReference.author
-            type:
-                - 
-                    code: Reference
-                    targetProfile:
-                        - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner'
-                        - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole'
-                        - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient'
-            mustSupport: true
-        - 
-            id: DocumentReference.content
-            path: DocumentReference.content
-            min: 1
-            mustSupport: true
-        - 
-            id: DocumentReference.content.attachment
-            path: DocumentReference.content.attachment
-            constraint:
-                - 
-                    key: ipa-doc-1
-                    severity: error
-                    human: DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.
-                    expression: url.exists() or data.exists()
-                    xpath: 'f:url or f:content'
-            mustSupport: true
-        - 
-            id: DocumentReference.content.attachment.contentType
-            path: DocumentReference.content.attachment.contentType
-            min: 1
-            mustSupport: true
-        - 
-            id: DocumentReference.content.attachment.data
-            path: DocumentReference.content.attachment.data
-            mustSupport: true
-        - 
-            id: DocumentReference.content.attachment.url
-            path: DocumentReference.content.attachment.url
-            mustSupport: true
-        - 
-            id: DocumentReference.content.format
-            path: DocumentReference.content.format
-            mustSupport: true
-        - 
-            id: DocumentReference.context
-            path: DocumentReference.context
-            mustSupport: true
-        - 
-            id: DocumentReference.context.encounter
-            path: DocumentReference.context.encounter
-            max: '1'
-            mustSupport: true
-        - 
-            id: DocumentReference.context.period
-            path: DocumentReference.context.period
-            mustSupport: true
+{
+    "resourceType": "StructureDefinition",
+    "id": "ipa-documentreference",
+    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
+    "name": "IPADocumentReference",
+    "title": "IPA-DocumentReference",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-08-02",
+    "description": "Minimum expectations for a DocumentReference resource when accessed via a International Patient Access API",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DocumentReference",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "DocumentReference.status",
+                "path": "DocumentReference.status",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.type",
+                "path": "DocumentReference.type",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.category",
+                "path": "DocumentReference.category",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.subject",
+                "path": "DocumentReference.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.date",
+                "path": "DocumentReference.date",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.author",
+                "path": "DocumentReference.author",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content",
+                "path": "DocumentReference.content",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment",
+                "path": "DocumentReference.content.attachment",
+                "constraint": [
+                    {
+                        "key": "ipa-doc-1",
+                        "severity": "error",
+                        "human": "DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.",
+                        "expression": "url.exists() or data.exists()",
+                        "xpath": "f:url or f:content"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment.contentType",
+                "path": "DocumentReference.content.attachment.contentType",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment.data",
+                "path": "DocumentReference.content.attachment.data",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.attachment.url",
+                "path": "DocumentReference.content.attachment.url",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.content.format",
+                "path": "DocumentReference.content.format",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.context",
+                "path": "DocumentReference.context",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.context.encounter",
+                "path": "DocumentReference.context.encounter",
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "DocumentReference.context.period",
+                "path": "DocumentReference.context.period",
+                "mustSupport": true
+            }
+        ]
+    }
+}
