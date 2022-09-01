@@ -115,11 +115,6 @@
                 "id": "DocumentReference.context.encounter",
                 "path": "DocumentReference.context.encounter",
                 "max": "1",
-                "type": [
-                    {
-                        "code": "Reference"
-                    }
-                ],
                 "mustSupport": true
             },
             {
