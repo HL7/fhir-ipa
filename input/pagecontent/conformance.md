@@ -37,7 +37,7 @@ Interaction Support refers to a system that support the IPA RESTful interactions
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile’s FHIR RESTful transactions.
 
 ### Must-support
-In the context of IPA, Supported on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) and realm-specific implementation guides may provide additional guidance. 
+In the context of IPA, the "supported flag" on any data element SHALL be interpreted to mean [FHIR's MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport).  Realm-specific implementation guides may provide additional guidance. <span class="bg-success" markdown="1">However, they SHOULD clearly identify and document these differences.</span><!-- new-content -->
 
 In situations where information on a particular data element is not present and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
