@@ -188,6 +188,14 @@
       },
       {
         "reference": {
+          "reference": "AllergyIntolerance/NKAExample"
+        },
+        "description": "This is an example AllergyIntolerance using the no-known-allergies code.",
+        "name": "IPA NO Known Allergies AllergyIntolerance Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance"
+      },
+      {
+        "reference": {
           "reference": "Condition/ProblemExample1"
         },
         "description": "This is a problem list item example for the *IPA Condition Profile*.",
