@@ -26,7 +26,7 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.smart-app-launch: 2.0.0
 
-groups:
+groups: #**** NEED TO LIST NEW PROFILES IN A GROUP OR THEY WONT SHOW UP***
   GroupA:
     name: 'Profiles: Primary Resources'
     description: Content Definitions for primary resources
@@ -39,6 +39,7 @@ groups:
       - StructureDefinition/ipa-patient
       - StructureDefinition/ipa-medicationstatement
       - StructureDefinition/ipa-condition
+      - StructureDefinition/ipa-problem-list-item
   GroupB:
     name: 'Profiles: Supporting Resources'
     description: Content Definitions for supporting resources

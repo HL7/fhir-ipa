@@ -10,11 +10,12 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="DocumentReference/USClinicalNoteExample1" key="DocumentReference-USClinicalNoteExample1" name="DocumentReference Example"/>
 <artifact id="AllergyIntolerance/AllIntExample1" key="AllergyIntolerance-AllIntExample1" name="IPA AllergyIntolerance Example"/>
-<artifact id="Condition/ProblemExample1" key="Condition-ProblemExample1" name="IPA Condition Example"/>
+<artifact id="Condition/EncounterExample1" key="Condition-EncounterExample1" name="IPA Condition Example"/>
 <artifact id="OperationDefinition/docref" key="OperationDefinition-docref" name="IPA Fetch DocumentReference"/>
 <artifact id="Immunization/ImmExample1" key="Immunization-ImmExample1" name="IPA Immunization Example"/>
-<artifact id="AllergyIntolerance/NKAExample" key="AllergyIntolerance-NKAExample" name="IPA NO Known Allergies AllergyIntolerance Example"/>
+<artifact id="AllergyIntolerance/NKAExample" key="AllergyIntolerance-NKAExample" name="IPA No Known Allergies AllergyIntolerance Example"/>
 <artifact id="Patient/PatientExample1" key="Patient-PatientExample1" name="IPA Patient Example"/>
+<artifact id="Condition/ProblemExample1" key="Condition-ProblemExample1" name="IPA Problem List Item Example"/>
 <artifact id="StructureDefinition/ipa-allergyintolerance" key="StructureDefinition-ipa-allergyintolerance" name="IPA-AllergyIntolerance"/>
 <artifact id="StructureDefinition/ipa-condition" key="StructureDefinition-ipa-condition" name="IPA-Condition"/>
 <artifact id="StructureDefinition/ipa-documentreference" key="StructureDefinition-ipa-documentreference" name="IPA-DocumentReference"/>
@@ -26,6 +27,7 @@
 <artifact id="StructureDefinition/ipa-patient" key="StructureDefinition-ipa-patient" name="IPA-Patient"/>
 <artifact id="StructureDefinition/ipa-practitioner" key="StructureDefinition-ipa-practitioner" name="IPA-Practitioner"/>
 <artifact id="StructureDefinition/ipa-practitionerrole" key="StructureDefinition-ipa-practitionerrole" name="IPA-PractitionerRole"/>
+<artifact id="StructureDefinition/ipa-problem-list-item" key="StructureDefinition-ipa-problem-list-item" name="IPA-problem-list-item"/>
 <artifact id="CapabilityStatement/ipa-server" key="CapabilityStatement-ipa-server" name="International Patient Access Server CapabilityStatement"/>
 <artifact id="Medication/MedExample1" key="Medication-MedExample1" name="Medication Example"/>
 <artifact id="MedicationRequest/MedRecExample1" key="MedicationRequest-MedRecExample1" name="MedicationRequest Example"/>

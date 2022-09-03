@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Condition xmlns="http://hl7.org/fhir">
-   <id value="ProblemExample1" />
+   <id value="EncounterExample1" />
       <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
-         <valueString value="IPA Problem List Item Example" />
+         <valueString value="IPA Condition Example" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
-         <valueMarkdown value="This is a problem list item example for the *IPA Problem List Item Profile*." />
+         <valueMarkdown value="This is am encounter diagnosis example for the *IPA Condition Profile*." />
       </extension>
-      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item" />
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
    </meta>
    <clinicalStatus>
       <coding>
@@ -29,21 +29,21 @@
    <category>
       <coding>
          <system value="http://terminology.hl7.org/CodeSystem/condition-category" />
-         <code value="problem-list-item" />
-         <display value="Problem List Item" />
+         <code value="encounter-diagnosis" />
+         <display value="Encounter Diagnosis" />
       </coding>
-      <text value="Problem List Item" />
+      <text value="Encounter Diagnosis" />
    </category>
    <code>
       <coding>
          <system value="http://hl7.org/fhir/sid/icd-10" />
-         <code value="L60.0" />
+         <code value="R21" />
       </coding>
       <coding>
          <system value="http://snomed.info/sct" />
-         <code value="400097005" />
+         <code value="271807003" />
       </coding>
-      <text value="Ingrowing nail" />
+      <text value="Skin rash" />
    </code>
    <subject>
       <reference value="Patient/PatientExample1" />

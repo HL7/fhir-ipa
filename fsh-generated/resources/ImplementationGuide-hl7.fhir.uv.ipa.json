@@ -180,6 +180,15 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ipa-problem-list-item"
+        },
+        "description": "Minimum expectations for a Condition resource for representing the patient’s problem list items.",
+        "exampleBoolean": false,
+        "name": "IPA-problem-list-item",
+        "groupingId": "GroupA"
+      },
+      {
+        "reference": {
           "reference": "AllergyIntolerance/AllIntExample1"
         },
         "description": "This is an allergy intolerance example for the *IPA AllergyIntolerance Profile*.",
@@ -190,17 +199,25 @@
         "reference": {
           "reference": "AllergyIntolerance/NKAExample"
         },
-        "description": "This is an example AllergyIntolerance using the no-known-allergies code.",
-        "name": "IPA NO Known Allergies AllergyIntolerance Example",
+        "description": "This is an example AllergyIntolerance using a no-known-allergies code.",
+        "name": "IPA No Known Allergies AllergyIntolerance Example",
         "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance"
+      },
+      {
+        "reference": {
+          "reference": "Condition/EncounterExample1"
+        },
+        "description": "This is am encounter diagnosis example for the *IPA Condition Profile*.",
+        "name": "IPA Condition Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition"
       },
       {
         "reference": {
           "reference": "Condition/ProblemExample1"
         },
-        "description": "This is a problem list item example for the *IPA Condition Profile*.",
-        "name": "IPA Condition Example",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition"
+        "description": "This is a problem list item example for the *IPA Problem List Item Profile*.",
+        "name": "IPA Problem List Item Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item"
       },
       {
         "reference": {
