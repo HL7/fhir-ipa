@@ -36,6 +36,5 @@ profiles on practitioner that apply in the servers context.
 
 #### Search
 
-Servers are not required to support search functionality on Practitioner, but may do so. If they do, the 
-search SHALL be limited to Practitioner resources that relate to the patient in scope. Typical search
+Servers are not required to support search functionality on Practitioner. If they do, appropriate measures SHOULD be taken to follow the [security/privacy guidance](privacy.html). Typical search
 parameters a Server could choose to support would be ```name``` and ```active```
