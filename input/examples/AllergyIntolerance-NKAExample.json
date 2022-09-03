@@ -9,7 +9,7 @@
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an example AllergyIntolerance using the no-known-allergies code."
+                "valueMarkdown": "This is an example AllergyIntolerance using a no-known-allergies code."
             }
         ],
         "profile": [
@@ -40,6 +40,11 @@
                 "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
                 "code": "no-known-allergies",
                 "display": "No known allergies"
+            },
+            {
+                "system": "http: //snomed.info/sct",
+                "code": "716186003",
+                "display": "No known allergy"
             }
         ],
         "text": "No known allergies"
