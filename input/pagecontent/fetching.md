@@ -46,7 +46,7 @@ For example, an IPA compliant server returns all lab results for a single patien
 | DocumentReference     | \_id, patient, patient+category, patient+type | patient+category+date, patient+status, patient+type+period |
 | Immunization          | patient   | patient+date, patient+status |
 | MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
-| MedicationStatement   | subject	| subject+status                    |
+| MedicationStatement   | patient	| patient+status                    |
 | Observation           | patient+category, patient+code, patient+category+date 	| patient+category+status, patient+code+date |
 | Patient               | \_id, identifier | birthdate, family, gender, given, name, family+gender, birthdate+family, birthdate+name, gender+name |
 
