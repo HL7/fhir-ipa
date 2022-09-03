@@ -13,6 +13,7 @@
 <artifact id="Condition/ProblemExample1" key="Condition-ProblemExample1" name="IPA Condition Example"/>
 <artifact id="OperationDefinition/docref" key="OperationDefinition-docref" name="IPA Fetch DocumentReference"/>
 <artifact id="Immunization/ImmExample1" key="Immunization-ImmExample1" name="IPA Immunization Example"/>
+<artifact id="AllergyIntolerance/NKAExample" key="AllergyIntolerance-NKAExample" name="IPA NO Known Allergies AllergyIntolerance Example"/>
 <artifact id="Patient/PatientExample1" key="Patient-PatientExample1" name="IPA Patient Example"/>
 <artifact id="StructureDefinition/ipa-allergyintolerance" key="StructureDefinition-ipa-allergyintolerance" name="IPA-AllergyIntolerance"/>
 <artifact id="StructureDefinition/ipa-condition" key="StructureDefinition-ipa-condition" name="IPA-Condition"/>
