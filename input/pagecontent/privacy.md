@@ -14,14 +14,20 @@ Once the OAuth process is launched, the Authorization server considers rules suc
 
 Once the server has determined what information the user has a right to access, then it asks the user to 
 additionally choose what subset of that information they wish to share with the client
-application. 
+application.
 
 The Authorization server then returns a set of scopes to the application that describe what access
-the user has authorised. Clients need to be aware that the Authorization server cannot fully describe 
+the user has authorized. Clients need to be aware that the Authorization server cannot fully describe 
 the set of access rules in the scopes, and SHALL be prepared to handle failure gracefully. 
 
-Servers MAY choose to inform a client when information is not available, but most servers will simply 
+<div class="bg-success" markdown="1">
+- Servers are not required to support search functionality on Practitioner. If they do, it's important to balance the privacy of healthcare workers with the patient's access to information. Only information about the practitioners that relate to the patient is relevant.
+
+- Servers MAY choose to inform a client when information is not available, but most servers will simply 
 behave as if it doesn't exist (see [note in FHIR specification](http://hl7.org/fhir/security.html#AccessDenied)).
 
-Note that this specification labels some elements as [must-support](conformance.html#must-support). This 
+- This specification labels some elements as [must-support](conformance.html#must-support). This 
 does not override the patient's right to decide whether to authorize an application to access their information.
+
+</div><!-- new-content -->
+
