@@ -1,13 +1,13 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "ipa-condition",
-    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition",
-    "name": "IPACondition",
-    "title": "IPA-Condition",
+    "id": "ipa-problem-list-item",
+    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item",
+    "name": "IPAProblemListItem",
+    "title": "IPA-problem-list-item",
     "status": "active",
     "experimental": false,
-    "date": "2022-08-02",
-    "description": "Minimum expectations for a Condition resource when accessed via a International Patient Access API",
+    "date": "2022-09-02",
+    "description": "Minimum expectations for a Condition resource for representing the patient’s problem list items.",
     "kind": "resource",
     "abstract": false,
     "type": "Condition",
@@ -28,6 +28,32 @@
             {
                 "id": "Condition.category",
                 "path": "Condition.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.category:problem-list-item",
+                "path": "Condition.category",
+                "sliceName": "problem-list-item",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                            "code": "problem-list-item"
+                        }
+                    ]
+                },
                 "mustSupport": true
             },
             {
