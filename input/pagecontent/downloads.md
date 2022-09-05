@@ -1,5 +1,11 @@
-# Downloads
-* [Open API (fka Swagger) Definition file](ipa-server.openapi.json)
+<!-- # Downloads -->
+
+
+
+### Open API (a.k.a., Swagger) Definition File
+
+- [Open API](ipa-server.openapi.json)
+  
 ### Downloadable Copy of Entire Specification
 
 A downloadable version of this IG is available so it can be hosted locally:

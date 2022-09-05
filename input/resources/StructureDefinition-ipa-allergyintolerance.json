@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-allergyintolerance",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-allergyintolerance",
-  "version": "0.1.0",
   "name": "IPAAllergyIntolerance",
   "title": "IPA-AllergyIntolerance",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-08-26T15:10:00+10:00",
+  "date": "2022-08-02",
   "description": "Minimum expectations for an AllergyIntolerance resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -17,30 +17,35 @@
   "differential": {
     "element": [
       {
+        "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "AllergyIntolerance.category",
         "path": "AllergyIntolerance.category",
-        "comment" : "This element is often not supported. Applications should not depend on it, but it may be useful to group allergies if present",
+        "comment": "This element is often not supported. Applications should not depend on it, but it may be useful to group allergies if present",
         "min": 0,
         "max": "1"
       },
       {
+        "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
+        "id": "AllergyIntolerance.patient",
         "path": "AllergyIntolerance.patient",
         "min": 1,
         "max": "1",

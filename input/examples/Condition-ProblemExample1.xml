@@ -3,12 +3,12 @@
    <id value="ProblemExample1" />
       <meta>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
-         <valueString value="IPA Condition Example" />
+         <valueString value="IPA Problem List Item Example" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
-         <valueMarkdown value="This is a problem list item example for the *IPA Condition Profile*." />
+         <valueMarkdown value="This is a problem list item example for the *IPA Problem List Item Profile*." />
       </extension>
-      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition" />
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item" />
    </meta>
    <clinicalStatus>
       <coding>

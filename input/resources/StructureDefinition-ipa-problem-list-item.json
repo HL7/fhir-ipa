@@ -1,0 +1,80 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "ipa-problem-list-item",
+    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item",
+    "name": "IPAProblemListItem",
+    "title": "IPA-problem-list-item",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-09-02",
+    "description": "Minimum expectations for a Condition resource for representing the patient’s problem list items.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Condition",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Condition.clinicalStatus",
+                "path": "Condition.clinicalStatus",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.verificationStatus",
+                "path": "Condition.verificationStatus",
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.category",
+                "path": "Condition.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.category:problem-list-item",
+                "path": "Condition.category",
+                "sliceName": "problem-list-item",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                            "code": "problem-list-item"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.code",
+                "path": "Condition.code",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Condition.subject",
+                "path": "Condition.subject",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

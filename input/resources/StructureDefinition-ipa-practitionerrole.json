@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "ipa-practitionerrole",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
-  "version": "0.1.0",
   "name": "IPAPractitionerRole",
   "title": "IPA-PractitionerRole",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-08-26T15:10:00+10:00",
+  "date": "2022-08-02",
   "description": "Minimum expectations for a PractitionerRole resource when accessed via a International Patient Access API",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -17,15 +17,8 @@
   "differential": {
     "element": [
       {
-        "path": "PractitionerRole.active",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
+        "id": "PractitionerRole.practitioner",
         "path": "PractitionerRole.practitioner",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

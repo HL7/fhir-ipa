@@ -1,5 +1,5 @@
-Once an application has [obtained a token that provides access to the patient record](access.html), it can 
-find and retrieve information about the patient using the patient FHIR id provided as a SMART launch context parameter (alongside the access token). 
+Once an application has obtained access to the patient record (for example, with a [SMART on FHIR access token](access.html)), it can 
+find and retrieve information about the patient. 
 
 ### Initial Patient Identity Check 
 
@@ -11,9 +11,9 @@ This [read](http://hl7.org/fhir/http.html#read) returns a single FHIR Patient re
 The details in the patient record should match what the user of the application is expecting. The application chooses how to check this, though some jurisdictions may make additional rules about how it is done. 
 
 Notes:
-* The server may grant access to a different patient than the user (e.g. a family member)
-* Correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted. This is an especially important check if the client application is [synchronizing it's own copy of the patient record](synchronization.html).
-* Jurisdications may have applicable law or regulation about displaying / checking this information in the application.
+* A user may grant access to their own record, or to another patient’s record (e.g., a family member or other patient for whom the user is an authorized representative).
+* Correctly identifying the patient is a significant challenge - and [safety issue](safety.html), and the application should never take a correct match for granted. This is an especially important check if the client application is [synchronizing its own copy of the patient record](synchronization.html).
+* Jurisdictions may have applicable law or regulation about displaying / checking this information in the application.
 
 ### Fetching Patient Records 
 
@@ -23,32 +23,30 @@ Once the patient identity is confirmed, the application can access the patient r
     
 or more generally, 
 
-    GET [url]/XX?[params]
+    GET [url]/[Resource]?[params]
 
-Where XX is the name of a resource taken from the table below and the list of parameters includes the patient identifier initially provided during the SMART launch. Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
+Where [Resource] is the name of a resource taken from the table below and the list of parameters includes the patient identifier. (See FHIR's [RESTful API](https://www.hl7.org/fhir/http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
-Clients may use any of the search parameters documented below to narrow the scope of the search, and reduce the number
-of resources returned, but except for the few search parameters documented clearly below, servers are not obliged to support
-search parameters. For this reason, clients should always check the [self link on the search](http://hl7.org/fhir/search.html#errors) to see what parameters
-were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
-Note that servers may decline to perform some searches unless particular parameters are specified.
+Servers SHALL support the required, and SHOULD support the recommended search parameters [documented](#search-resources); therefore clients may use any of these required search parameters to narrow the scope of the search and reduce the number of resources returned. Except for these required search parameters, servers are not obligated to support other  search parameters. For this reason, clients should always check the [self link in the returned result of the search](http://hl7.org/fhir/search.html#errors) to see what parameters were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
 The application can also use the [$docref operation](OperationDefinition-docref.html) to obtain a document, or a set of documents, related to the patient. This operation is considered useful especially for implementations that are not based on FHIR and may not generally expose data as FHIR resources. This operation is a way for such implementations to expose the information they have to patient-facing applications.
 
 ### Search resources 
 
-As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information:
+As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information. Combinations of search parameters are explicitly required or recommended when separated below, by a plus sign. 
+
+For example, an IPA compliant server returns all lab results for a single patient  with: `Observation?patient=123&category=laboratory`, but may not support returning all labs, vital signs, social history, surverys, exams, activities, etc, with: `Observation?category=patient`.
 
 |Resource | Required search params| Recommended search params |
 | ------- | ----------------------- | ---------------------- |
 | AllergyIntolerance    | patient   | patient+clinical-status |
-| Condition             | patient   | patient+category, patient+clinical-status, patient+code, patient+onset-date, patient+category+clinical_status|
+| Condition             | patient   | patient+category, patient+clinical-status, patient+verification-status, patient+code, patient+onset-date, patient+category+clinical-status|
 | DocumentReference     | \_id, patient, patient+category, patient+type | patient+category+date, patient+status, patient+type+period |
 | Immunization          | patient   | patient+date, patient+status |
 | MedicationRequest     | patient   | patient+intent, patient+intent+authoredon, patient+intent+status |
-| MedicationStatement   | subject	| subject+status                    |
+| MedicationStatement   | patient	| patient+status                    |
 | Observation           | patient+category, patient+code, patient+category+date 	| patient+category+status, patient+code+date |
 | Patient               | \_id, identifier | birthdate, family, gender, given, name, family+gender, birthdate+family, birthdate+name, gender+name |
 
@@ -64,7 +62,7 @@ resources above, and may be read directly:
 
 All these resources are accessed by 
 
-    GET [ur]/[type]/[id]
+    GET [url]/[type]/[id]
     
 where the type is from the list above, and the [id] is retrieved from a resource obtained from the process above.
 E.g. 
