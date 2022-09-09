@@ -12,10 +12,8 @@ A client application gets access to a patient record by following this general s
 
 * Identify the appropriate endpoint [url] at which the International Patient Access API is found. 
   * Note that this specification does not specify how the endpoint might be found; different countries will have different arrangements around this. 
-  
-* Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html):
 
-    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
+* Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html)
 
 * Fetch the [endpoint configuration](https://hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) from [url]/.well-known/smart-configuration. 
 
@@ -35,8 +33,23 @@ Servers that are conformant to the International Patient Access API conform to t
 
 * The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates), as shown in the following fragment:
 
-    ```"instantiates" : ["http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"]```
-    
+    ```
+    {
+      "resourceType": "CapabilityStatement",
+      ...
+      "instantiates": [
+        "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"
+      ],
+      ...  
+      "rest": [
+        {
+          "mode": "server",
+        ...
+        }
+      ] 
+    }
+    ```
+
 * If supporting SMART on FHIR: 
   * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration  that is available to both authenticated and unauthenticated clients.
   * The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
