@@ -66,7 +66,7 @@
                         "key": "ipa-pat-3",
                         "severity": "warning",
                         "human": "To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.",
-                        "expression": "text.exist()",
+                        "expression": "text.exists()",
                         "xpath": "/f:name/f:text"
                     }
                 ],
