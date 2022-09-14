@@ -1,30 +1,44 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "ipa-practitioner",
-  "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
-  "name": "IPAPractitioner",
-  "title": "IPA-Practitioner",
-  "status": "active",
-  "experimental": false,
-  "date": "2022-08-02",
-  "description": "Minimum expectations for a Practitioner resource when accessed via a International Patient Access API",
-  "fhirVersion": "4.0.0",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Practitioner",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-
-      {
-        "id": "Practitioner.name",
-        "path": "Practitioner.name",
-        "comment": "In some contexts, the real name of the practitioner is obscured. However this is handled, the resource must include at least some useable name for the practitioner in the name.text element",
-        "min": 1,
-        "max": "*",
-        "mustSupport": true
-      }
-    ]
-  }
+    "resourceType": "StructureDefinition",
+    "id": "ipa-practitioner",
+    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
+    "name": "IPAPractitioner",
+    "title": "IPA-Practitioner",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-08-02",
+    "description": "Minimum expectations for a Practitioner resource when accessed via a International Patient Access API",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Practitioner",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Practitioner.name",
+                "path": "Practitioner.name",
+                "comment": "In some contexts, the real name of the practitioner is obscured. However this is handled, the resource must include at least some useable name for the practitioner in the name.text element",
+                "min": 1,
+                "max": "*",
+                "constraint": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http: //hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "key": "ipa-pract-1",
+                        "severity": "warning",
+                        "human": "To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.",
+                        "expression": "text.exist()",
+                        "xpath": "/f:name/f:text"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
 }
