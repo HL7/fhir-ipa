@@ -59,7 +59,7 @@
                     {
                         "extension": [
                             {
-                                "url": "http: //hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
                                 "valueBoolean": true
                             }
                         ],
