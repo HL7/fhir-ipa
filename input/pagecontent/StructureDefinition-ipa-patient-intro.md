@@ -6,7 +6,7 @@ The patient record is fixed to a single individual patient by the user and the A
 the [Authorization process](access.html). The client application can access the patient 
 record using the following API call:
 
-```GET [url]/Patient```
+```GET [url]/Patient/[id]```
 
 Servers are not required to support any additional search parameters, and clients SHOULD not expect servers to do so.
 
