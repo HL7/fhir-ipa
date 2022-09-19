@@ -1,8 +1,5 @@
-This profile describes how applications fetch the Patient resource to check the patient identity and access basic demographics and other administrative information about the patient. 
 
-### Example Usage Scenarios:
-
-{% include patient-access-rules.md %}
+### Mandatory and Must Support Data Elements
 
 Each Patient SHALL have:
 
@@ -20,3 +17,7 @@ Applications [must also support](conformance.html):
 
 Servers may choose to provide additional information, or may be required to do so by national or other additional profiles on patient that apply in the servers context.
 
+
+### Profile Specific Implementation Rules and Guidance
+
+{% include patient-access-rules.md %}

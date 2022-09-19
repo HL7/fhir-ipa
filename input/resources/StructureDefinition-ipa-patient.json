@@ -7,7 +7,7 @@
     "status": "active",
     "experimental": false,
     "date": "2022-08-02",
-    "description": "Minimum expectations for a Patient resource when accessed via a International Patient Access API",
+    "description": "Minimum expectations for a Patient resource when accessed via a International Patient Access API. This profile describes how applications fetch the Patient resource to check the patient identity and access basic demographics and other administrative information about the patient.",
     "fhirVersion": "4.0.0",
     "kind": "resource",
     "abstract": false,
