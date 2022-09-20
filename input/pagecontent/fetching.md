@@ -1,4 +1,4 @@
-Once an application has obtained access to the patient record (for example, with a [SMART on FHIR access token](access.html)), it can 
+Once an application has obtained access to the patient record with a <span class="bg-success" markdown="1">[SMART on FHIR access token](access.html)</span><!-- new-content -->, it can 
 find and retrieve information about the patient. 
 
 ### Initial Patient Identity Check 
