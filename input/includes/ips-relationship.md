@@ -1,5 +1,7 @@
 ### Relationship between IPA and IPS 
 
+The [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips) specifies a more extensive set of rules about the content that clinical systems may conform to.
+
 * IPA (this specification): a specification for access to a patient record with minimal expectations about the content
 * [IPS](http://hl7.org/fhir/uv/ips/): a specification that describes a package that contains a clinical summary for the patient
 
@@ -17,10 +19,6 @@ These rules are consistent; the content rules in this specification are a subset
 and any system that meets the information requirements in IPS automatically conforms to the 
 requirements on the content specified here. 
 
-Note that not all systems that conform to IPS are required to provide  direct patient access, though many will. 
+Note that not all systems that conform to IPS are required to provide direct patient access, though many will. 
 Also, many systems that provide access to patient as described by this specification will not be able to conform IPS, but some will.
 
-### Generating IPS Documents 
-
-If a server conforms to this specification and also to IPS, this API can be used to generate IPS documents, 
-using the [$doc-ref operation](doc-gen.html) with a specific code as defined in the [IPS implementation guide](http://hl7.org/fhir/uv/ips/principles.html#publishing-or-accessing-the-ips).

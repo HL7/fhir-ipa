@@ -25,23 +25,6 @@ Using this API, applications can access the following information about the pati
 These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
 
 
-### Relationship to National Specifications 
-
-This International Patient Access specification describes how to access patient 
-records anywhere in the world. It provides a very minimal set of access methods 
-and rules about the content that are true everywhere. Working healthcare systems 
-may need additional rules about the access API to meet other use cases, and may make many 
-additional rules about the content based on national laws, regulations and accepted
-practice in order to support the provision of health in their healthcare system. 
-
-Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
-
-See [International Patient Access by Country](ipa-by-country.html) for a list of these specifications. 
-
-In addition, there is an [International Patient Summary](http://hl7.org/fhir/uv/ips) specification which specifies
-a more extensive set of rules about the content that clinical systems may conform to.
-See [Relationship to the International Patient Summary](ips-relationship.html) for further details.
-
 ### Using the International Patient Access API
 
 The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps. IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".
@@ -55,3 +38,23 @@ The IPA specification is designed to help patients access their own data through
 
 Notes:
 * This  API is read-only, though implementations may provide write access too.
+
+### Relationship to National Specifications 
+
+This International Patient Access specification describes how to access patient 
+records anywhere in the world. It provides a very minimal set of access methods 
+and rules about the content that are true everywhere. Working healthcare systems 
+may need additional rules about the access API to meet other use cases, and may make many 
+additional rules about the content based on national laws, regulations and accepted
+practice in order to support the provision of health in their healthcare system. 
+
+Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
+
+<span class="bg-success" markdown="1">This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
+{:.bg-info}
+
+</span><!-- new-content -->
+
+<div class="bg-success" markdown="1">
+{% include ips-relationship.md %}
+</div><!-- new-content -->

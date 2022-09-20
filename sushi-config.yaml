@@ -51,33 +51,34 @@ groups: #**** NEED TO LIST NEW PROFILES IN A GROUP OR THEY WONT SHOW UP***
 pages:
   index.md:
     title: International Patient Access
-    ips-relationship.md:
-      title: Relationship with International Patient Summary
-    ipa-by-country.md:
-      title: IPA Specifications by Country
-    doc-gen.md:
-      title: Generating Patient Documents
+    # ips-relationship.md:
+    #   title: Relationship with International Patient Summary
+    # ipa-by-country.md:
+    #   title: IPA Specifications by Country
+    # doc-gen.md:
+    #   title: Generating Patient Documents
 
   conformance.md:
     title: Conforming to this Specification
   using-the-api.md:
     title: Using the API
-    ipa-server.md:
-      title: IPA Server Requirements
-      security.md:
-        title: Security
-      privacy.md:
-        title: Privacy and Consent
+    # ipa-server.md:
+    #   title: IPA Server Requirements
+      # security.md:
+      #   title: Security
+      # privacy.md:
+      #   title: Privacy and Consent
     access.md:
       title: Gaining Access to a Patient Record
     fetching.md:
       title: Finding and Retrieving Patient Information
-      safety.md:
-        title: Safety Check List
+      # safety.md:
+      #   title: Safety Check List
     synchronization.md:
       title: Synchronizing Patient Records
     internationalization.md:
       title: Internationalization Issues
+  security.md:
   downloads.md:
     title: Downloads
 
@@ -125,19 +126,20 @@ menu:
   Conformance: conformance.html
   Using The API:
   #     Exchanging Clinical Data: exchanging-clinical-data.html
-      IPA Server Requirements: ipa-server.html
+      # IPA Server Requirements: ipa-server.html
       Gaining Access to a Patient Record: access.html
       Finding and Retrieving Patient Information: fetching.html
       Synchronizing Patient Records: synchronization.html
       Internationalization Issues: internationalization.html
+  Security: Security.html 
   Artifact Index:
       Profiles: artifacts.html#1
       CapabilityStatements: artifacts.html#3
       Operations: artifacts.html#4
-
       # Value Sets: artifacts.html#4
       # Code Systems: artifacts.html#5
       Examples: artifacts.html#5
+
   Support: 
       FHIR: "{{site.data.fhir.path}}index.html"
       Downloads: downloads.html

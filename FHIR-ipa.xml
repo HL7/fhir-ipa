@@ -45,14 +45,14 @@
 <page key="downloads" name="Downloads"/>
 <page key="fetching" name="Finding and Retrieving Patient Information"/>
 <page key="access" name="Gaining Access to a Patient Record"/>
-<page key="doc-gen" name="Generating Patient Documents"/>
-<page key="ipa-server" name="IPA Server Requirements"/>
-<page key="ipa-by-country" name="IPA Specifications by Country"/>
+<page deprecated="true" key="doc-gen" name="Generating Patient Documents"/>
+<page deprecated="true" key="ipa-server" name="IPA Server Requirements"/>
+<page deprecated="true" key="ipa-by-country" name="IPA Specifications by Country"/>
 <page key="index" name="International Patient Access"/>
 <page key="internationalization" name="Internationalization Issues"/>
-<page key="privacy" name="Privacy and Consent"/>
-<page key="ips-relationship" name="Relationship with International Patient Summary"/>
-<page key="safety" name="Safety Check List"/>
+<page deprecated="true" key="privacy" name="Privacy and Consent"/>
+<page deprecated="true" key="ips-relationship" name="Relationship with International Patient Summary"/>
+<page deprecated="true" key="safety" name="Safety Check List"/>
 <page key="security" name="Security"/>
 <page key="synchronization" name="Synchronizing Patient Records"/>
 <page key="toc" name="Table of Contents"/>
