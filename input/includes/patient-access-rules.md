@@ -12,7 +12,7 @@ This [search](http://hl7.org/fhir/http.html#search) SHALL return a [Bundle](http
 records that all concern the same patient. If more than one resource is returned, the Patient record(s) SHALL use the `Patient.link` attribute
 to cross-link the Patient resources.
 
-Additional rules and guidance for supporting  `Patient.link`: 
+#### Additional rules and guidance for supporting  `Patient.link`: 
 
 The server:
 

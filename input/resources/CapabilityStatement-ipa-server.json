@@ -80,7 +80,7 @@
             "extension": [
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "SHOULD"
+                    "valueCode": "SHALL"
                 }
             ]
         }
@@ -88,7 +88,7 @@
     "rest": [
         {
             "mode": "server",
-            "documentation": "The IPA Server **SHALL**:\n\n\n1. Support the IPA Patient resource profile.\n1. Support at least one additional resource profile from the list of IPA Profiles.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n\n   - (Status 400): invalid parameter\n\n   - (Status 401/4xx): unauthorized request\n\n   - (Status 403): insufficient scope\n\n   - (Status 404): unknown resource\n\n   - (Status 410): deleted resource.\n\n1. Support JSON source formats for all IPA interactions.\n1. Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.\n\n\nThe IPA Server **SHOULD**:\n\n\n1. Support XML source formats for all IPA interactions.",
+            "documentation": "The IPA Server **SHALL**:\n\n\n\n\n1. Support the IPA Patient resource profile.\n1. Support at least one additional resource profile from the list of IPA Profiles.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n\n\n\n   - (Status 400): invalid parameter\n\n\n\n   - (Status 401/4xx): unauthorized request\n\n\n\n   - (Status 403): insufficient scope\n\n\n\n   - (Status 404): unknown resource\n\n\n\n   - (Status 410): deleted resource.\n\n\n\n1. Support JSON source formats for all IPA interactions.\n1. Declare a CapabilityStatement identifying the list of profiles, operations, and search parameters supported.\n\n\n\n\nThe IPA Server **SHOULD**:\n\n\n\n\n1. Support XML source formats for all IPA interactions.",
             "security": {
                 "description": "1. See the [General Security Considerations](security.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an HTTP `401 Unauthorized`, `403 Forbidden`, or `404 Not Found` response code."
             },
@@ -172,7 +172,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ]
                 },
@@ -375,7 +375,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ]
                 },
@@ -643,7 +643,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ],
                     "operation": [
@@ -656,7 +656,7 @@
                             ],
                             "name": "docref",
                             "definition": "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref",
-                            "documentation": "A server **SHOULD** be capable of responding to a $docref operation and capable of returning at least a reference to a CDA document, if available. **MAY** provide references to other 'on-demand' and 'stable' documents (or 'delayed/deferred assembly') that meet the query parameters as well. If a context date range is supplied the server ** SHOULD**  provide references to any document that falls within the date range If no date range is supplied, then the server **SHALL** provide references to last or current encounter.  **SHOULD** document what resources, if any, are returned as included resources\n\n\n`GET [base]/DocumentReference/$docref?patient=[id]`"
+                            "documentation": "A server **SHOULD** be capable of responding to a $docref operation and capable of returning at least a reference to a CDA document, if available. **MAY** provide references to other 'on-demand' and 'stable' documents (or 'delayed/deferred assembly') that meet the query parameters as well. If a context date range is supplied the server ** SHOULD**  provide references to any document that falls within the date range If no date range is supplied, then the server **SHALL** provide references to last or current encounter.  **SHOULD** document what resources, if any, are returned as included resources\n\n\n\n\n`GET [base]/DocumentReference/$docref?patient=[id]`"
                         }
                     ]
                 },
@@ -768,7 +768,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ]
                 },
@@ -976,7 +976,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ]
                 },
@@ -1275,7 +1275,7 @@
                             "name": "patient",
                             "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
                             "type": "reference",
-                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.\n\n\n\n\nThe server **SHALL** support both."
                         }
                     ]
                 },
@@ -1409,7 +1409,7 @@
                             "name": "birthdate",
                             "definition": "http://hl7.org/fhir/SearchParameter/individual-birthdate",
                             "type": "date",
-                            "documentation": "A client **SHALL** provide a value precise to the *day*.\n\n\nA server **SHALL** support a value a value precise to the *day*."
+                            "documentation": "A client **SHALL** provide a value precise to the *day*.\n\n\n\n\nA server **SHALL** support a value a value precise to the *day*."
                         },
                         {
                             "extension": [
@@ -1433,7 +1433,7 @@
                             "name": "gender",
                             "definition": "http://hl7.org/fhir/SearchParameter/individual-gender",
                             "type": "token",
-                            "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\nThe server **SHALL** support both."
+                            "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\n\n\nThe server **SHALL** support both."
                         },
                         {
                             "extension": [
@@ -1456,7 +1456,7 @@
                             "name": "identifier",
                             "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
                             "type": "token",
-                            "documentation": "The client **SHALL** provide both the system and code values.\n\n\nThe server **SHALL NOT** support only code values."
+                            "documentation": "The client **SHALL** provide both the system and code values.\n\n\n\n\nThe server **SHALL NOT** support only code values."
                         },
                         {
                             "extension": [
