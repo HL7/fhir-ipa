@@ -5,10 +5,12 @@ An application <span class="bg-success" markdown="1">is</span><!-- new-content 
 A client application gets access to a patient record by following this general sequence of steps:
 
 
+<div class="bg-success" markdown="1">
 * Register itself as a client application with the endpoint. 
   * This may require a manual step on the part of the user or the developer, or the endpoint may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
   * if the application supports automatic registration, the endpoint will be specified in the [url]/.well-known/smart-configuration
   * Note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported.
+</div><!-- new-content -->
 
 * Identify the appropriate endpoint [url] at which the International Patient Access API is found. 
   * Note that this specification does not specify how the endpoint might be found; different countries will have different arrangements around this. 
