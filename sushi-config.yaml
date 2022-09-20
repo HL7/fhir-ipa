@@ -131,7 +131,7 @@ menu:
       Finding and Retrieving Patient Information: fetching.html
       Synchronizing Patient Records: synchronization.html
       Internationalization Issues: internationalization.html
-  Security: Security.html 
+  Security: security.html 
   Artifact Index:
       Profiles: artifacts.html#1
       CapabilityStatements: artifacts.html#3
