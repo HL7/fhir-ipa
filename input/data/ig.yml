@@ -259,16 +259,6 @@ definition:
     - nameUrl: index.html
       title: International Patient Access
       generation: markdown
-      page:
-      - nameUrl: ips-relationship.html
-        title: Relationship with International Patient Summary
-        generation: markdown
-      - nameUrl: ipa-by-country.html
-        title: IPA Specifications by Country
-        generation: markdown
-      - nameUrl: doc-gen.html
-        title: Generating Patient Documents
-        generation: markdown
     - nameUrl: conformance.html
       title: Conforming to this Specification
       generation: markdown
@@ -276,32 +266,21 @@ definition:
       title: Using the API
       generation: markdown
       page:
-      - nameUrl: ipa-server.html
-        title: IPA Server Requirements
-        generation: markdown
-        page:
-        - nameUrl: security.html
-          title: Security
-          generation: markdown
-        - nameUrl: privacy.html
-          title: Privacy and Consent
-          generation: markdown
       - nameUrl: access.html
         title: Gaining Access to a Patient Record
         generation: markdown
       - nameUrl: fetching.html
         title: Finding and Retrieving Patient Information
         generation: markdown
-        page:
-        - nameUrl: safety.html
-          title: Safety Check List
-          generation: markdown
       - nameUrl: synchronization.html
         title: Synchronizing Patient Records
         generation: markdown
       - nameUrl: internationalization.html
         title: Internationalization Issues
         generation: markdown
+    - nameUrl: security.html
+      title: Security
+      generation: markdown
     - nameUrl: downloads.html
       title: Downloads
       generation: markdown

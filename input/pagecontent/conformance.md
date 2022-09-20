@@ -1,10 +1,11 @@
+<div class="bg-success" markdown="1">
+This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. IPA conformant servers SHALL support:
+
+ - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support) which is documented on this page.
+ - the SMART on FHIR obligations and capabilities which is documented on the [Gaining Access to a Patient Record](access.html) page.
+
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
-
-This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. A system SHALL support the resources as profiled by IPA to represent clinical information (Profile Support) and the RESTful interactions defined for it (Interaction Support). 
-
-
-See: [the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)
-
+</div><!-- new-content -->
 
 ### Conformance Artifacts
 The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defined for this implementation guide. Core Profile [StructureDefinitions](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Many Profile pages also contain additional guidance.
@@ -20,8 +21,8 @@ The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines co
 In FHIR, resources can be exchanged in the following formats: JSON, XML, and Turtle. Due to the popularity of JavaScript-based apps and ease of usage with JSON, the most popular exchange format for REST styled APIs is JSON. To increase certainty and the likelihood of interoperability, IPA mandates the support of JSON. IPA Servers are encouraged to support XML as well.
 </div><!-- new-content -->
 
-### Profile Support + Interaction Support
-Systems deploy, and support, the IPA Profiles to represent clinical information and the IPA RESTful interactions to access that information. Only systems that implement both Profile Support and Interaction Support can claim conformance to IPA. 
+### Profile and Interaction Support
+Systems deploy, and support, the IPA *profiles* to represent clinical information and the IPA RESTful *interactions* to access that information. To claim conformance to IPA, servers need to implement and support both IPA profiles and interactions.
 
 #### Profile Support
 Profile Support refers to the support of the IPA profiles, such that the system exposes FHIR resources which adhere to the IPA profiles' content model. Specifically, a server with IPA Profile Support:

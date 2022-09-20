@@ -77,6 +77,12 @@ in support of existing records that refer directly to them.
 In order to save time, client applications may ask for these resources to be included in the search response, but
 servers are not required to do this, so clients should be prepared to fetch these directly and cache them locally. 
 
+### Generating Patient Documents
+
+<div class="bg-success" markdown="1">
+{% include doc-gen.md %}
+</div><!-- new-content -->
+
 
 ### Server Obligations
 

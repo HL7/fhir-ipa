@@ -22,9 +22,6 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="ipa-server.html">IPA Server Requirements</a>
-      </li>
-      <li>
         <a href="access.html">Gaining Access to a Patient Record</a>
       </li>
       <li>
@@ -37,6 +34,9 @@
         <a href="internationalization.html">Internationalization Issues</a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="Security.html">Security</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifact Index
