@@ -1,7 +1,7 @@
 Servers and clients <span class="bg-success" markdown="1">SHALL follow the security requirements and SHOULD follow the security best practices</span><!-- new-content --> as outlined in [FHIR Security](https://www.hl7.org/fhir/security.html) and elsewhere.
 
 ### SMART on FHIR Capabilities
-<div class="bg-success" markdown="1">Servers SHALL support the following [SMART on FHIR capabilities](http://hl7.org/fhir/smart-app-launch/conformance.html#capabilities). Client apps will need to support a number of these capabilities in order to function:
+<div class="bg-success" markdown="1">Servers SHALL support the following [SMART on FHIR capabilities](http://hl7.org/fhir/smart-app-launch/conformance.html#capabilities). Client apps will need to support a subset of these capabilities to function:
 
  * [launch-standalone](http://hl7.org/fhir/smart-app-launch/conformance.html#launch-modes)
  * [context-standalone-patient](http://hl7.org/fhir/smart-app-launch/conformance.html#launch-context-for-standalone-launch)
