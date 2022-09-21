@@ -27,6 +27,7 @@ Thumbs.db
 ################
 *.sh
 *.bat
+!gen_cs.sh
 
 # my-notes #
 ############
