@@ -24,6 +24,12 @@ Using this API, applications can access the following information about the pati
 
 These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
 
+<div class="bg-success" markdown="1">
+
+#### Example Scenario
+
+*Salma Kahil uses a personal health record app to track her health and assemble her records from multiple healthcare providers. Her healthcare providers support the International Patient Access API, and Salma's health record app provides a user-friendly IPA application to provide safe, quick, and reliable access to data. Because retrieving and updating her medical information from her healthcare providers is secure, fast, and simple, Salma is a more informed and engaged patient.*
+</div><!-- new-content -->
 
 ### Using the International Patient Access API
 
