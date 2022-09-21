@@ -15,6 +15,7 @@
 <artifact id="Immunization/ImmExample1" key="Immunization-ImmExample1" name="IPA Immunization Example"/>
 <artifact id="AllergyIntolerance/NKAExample" key="AllergyIntolerance-NKAExample" name="IPA No Known Allergies AllergyIntolerance Example"/>
 <artifact id="Patient/PatientExample1" key="Patient-PatientExample1" name="IPA Patient Example"/>
+<artifact id="Patient/PatientGenderExample1" key="Patient-PatientGenderExample1" name="IPA Patient Gender Example"/>
 <artifact id="Condition/ProblemExample1" key="Condition-ProblemExample1" name="IPA Problem List Item Example"/>
 <artifact id="StructureDefinition/ipa-allergyintolerance" key="StructureDefinition-ipa-allergyintolerance" name="IPA-AllergyIntolerance"/>
 <artifact id="StructureDefinition/ipa-condition" key="StructureDefinition-ipa-condition" name="IPA-Condition"/>
@@ -33,11 +34,10 @@
 <artifact id="MedicationRequest/MedRecExample1" key="MedicationRequest-MedRecExample1" name="MedicationRequest Example"/>
 <artifact id="MedicationStatement/MedStatementExample1" key="MedicationStatement-MedStatementExample1" name="MedicationStatement Example"/>
 <artifact id="Observation/LabExample1" key="Observation-LabExample1" name="Observation Lab Example"/>
+<artifact id="Observation/VitalSignsExample1" key="Observation-VitalSignsExample1" name="Observation Vital Signs Example"/>
 <artifact id="Observation/SmokingExample1" key="Observation-SmokingExample1" name="Observation social history smoking Example"/>
-<artifact id="Patient/PatientGenderExample1" key="Patient-PatientGenderExample1" name="PatientGenderExample1"/>
 <artifact id="Practitioner/PractitionerExample1" key="Practitioner-PractitionerExample1" name="Practitioner Example"/>
 <artifact id="PractitionerRole/PractitionerRoleExample1" key="PractitionerRole-PractitionerRoleExample1" name="PractitionerRole Example"/>
-<artifact id="Observation/VitalSignsExample1" key="Observation-VitalSignsExample1" name="VitalSignsExample1"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
@@ -53,7 +53,7 @@
 <page deprecated="true" key="privacy" name="Privacy and Consent"/>
 <page deprecated="true" key="ips-relationship" name="Relationship with International Patient Summary"/>
 <page deprecated="true" key="safety" name="Safety Check List"/>
-<page key="security" name="Security"/>
+<page key="security" name="Security and Privacy"/>
 <page key="synchronization" name="Synchronizing Patient Records"/>
 <page key="toc" name="Table of Contents"/>
 <page key="using-the-api" name="Using the API"/>

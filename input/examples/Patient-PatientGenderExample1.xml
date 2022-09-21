@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
    <id value="PatientGenderExample1" />
+      <meta>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+         <valueString value="IPA Patient Gender Example" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+         <valueMarkdown value="This is a Patient example for the *IPA Patient Profile* with US Core extension for birthsex." />
+      </extension>
+      <profile value="http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient" />
+   </meta>
    <extension url="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity">
       <valueCodeableConcept>
          <coding>

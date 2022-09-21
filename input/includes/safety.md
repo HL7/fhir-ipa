@@ -3,7 +3,7 @@ or missing correct records, or displaying records incorrectly can create real ha
 
 Also note that it's also very serious if health care records are interpreted incorrectly by 
 software, but this specification does not provide enough information about the records being 
-accessed in order to support interpretation of the content. [Country specific guides](ipa-by-country.html) must be consulted for this.
+accessed in order to support interpretation of the content. The country specific guides must be consulted for this.
 
 The [Implementer Safety Checklist page](https://www.hl7.org/fhir/safety.html) gathers clinical safety advice acquired from experience of access health records across
 FHIR APIs like this one. All implementers should carefully consider each of the items on the check list.

@@ -18,4 +18,4 @@ vary so much.
     * Note that some Condition resources may not have these status codes - this is usually due to poor record keeping reflected in legacy data
     * Servers SHOULD avoid leaving these status codes missing
 * Clients SHALL pay attention to the ```clinicalStatus``` and ```verificationStatus``` and display and process them correctly
-* Clients SHALL still work safely when the server does not support all the search parameters listed above (see [Search advice](safety.html))
+* Clients SHALL still work safely when the server does not support all the search parameters listed above (see [Search advice](security.html#patient-safety))

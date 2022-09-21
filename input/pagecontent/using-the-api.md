@@ -1,10 +1,6 @@
   <!-- using-the-api.md: -->
   
-- [IPA Server Requirements](ipa-server.html)
-  - [Security](security.html)
-  - [Privacy and Consent](privacy.html)
-- [Gaining Access to a patient record](access.html)
-- [Finding and Retrieving information about the patient](fetching.html)
-  - [Safety Check List](safety.html)
-- [Synchronizing Patient Records](synchronization.html)
-- [Internationalization Issues](internationalization.html)
+- [Gaining Access to a Patient Record](access.html)\: This page documents how to access a patient record securely.
+- [Finding and Retrieving Patient Information](fetching.html)\: This page documents how to find and retrieve information about a patient and generate documents on request.
+- [Synchronizing Patient Records](synchronization.html)\: This page describes how to maintain a synchronized copy of the patient's information safely.
+- [Internationalization Issues](internationalization.html)\: This page discusses how to best support a wide range of international applications.

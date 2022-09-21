@@ -229,8 +229,10 @@ definition:
     exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation
   - reference:
       reference: Observation/VitalSignsExample1
-    name: VitalSignsExample1
-    exampleBoolean: true
+    description: This is a Observation example for the *IPA Observation Profile* containing
+      the vital sign for body weight.
+    name: Observation Vital Signs Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation
   - reference:
       reference: Patient/PatientExample1
     description: This is a Patient example for the *IPA Patient Profile*.
@@ -238,8 +240,10 @@ definition:
     exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
   - reference:
       reference: Patient/PatientGenderExample1
-    name: PatientGenderExample1
-    exampleBoolean: true
+    description: This is a Patient example for the *IPA Patient Profile* with US Core
+      extension for birthsex.
+    name: IPA Patient Gender Example
+    exampleCanonical: http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
   - reference:
       reference: Practitioner/PractitionerExample1
     description: This is a Practitioner example for the *IPA Practitioner Profile*.
@@ -279,7 +283,7 @@ definition:
         title: Internationalization Issues
         generation: markdown
     - nameUrl: security.html
-      title: Security
+      title: Security and Privacy
       generation: markdown
     - nameUrl: downloads.html
       title: Downloads

@@ -4,7 +4,7 @@
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from a clinical records system using
-a FHIR based API. The clinical records system may be supporting a clinical care
+a FHIR-based API. The clinical records system may be supporting a clinical care
 provider (e.g. a hospital, or a general practitioner), a health data exchange, 
 or other system managing patient records, including a national health record system.
 
@@ -27,17 +27,39 @@ These resources are supported by information about [practitioners](StructureDefi
 
 ### Using the International Patient Access API
 
-The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps. IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".
+The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps.  <span class="bg-success" markdown="1"> Note that this API is *read-only*, though implementations may provide write access too. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".</span><!-- new-content -->
 
- - [Getting access to a patient record](access.html) and doing it [in a secure fashion](security.html)
- - [Finding/retrieving information about the patient](fetching.html) (and [generating documents by request](doc-gen.html))
- - [Maintaining a synchronized copy](synchronization.html) of the patient's information and [doing it safely](safety.html)
- - [Managing privacy and consent](privacy.html)
- - [Internationalization](internationalization.html) - how to best support a wide range of international applications  
- - [Application expectations, and how to test conformance](conformance.html)
 
-Notes:
-* This  API is read-only, though implementations may provide write access too.
+<div class="bg-success" markdown="1">
+
+#### Actors and Sequence Diagram
+
+The sequence diagram in the figure below outlines a successful interaction between a patient and an IPA server to query and retrieve the patient's clinical data:
+
+{% include img.html img="ipa-simple-sequence.svg" %}
+
+
+#### How To Read this Guide
+
+This Guide is divided into several pages which are listed at the top of each page in the menu bar.
+
+- [Home](index.html)\: The home page introduces the IPA project and guide.
+- [Conformance](conformance.html)\: This page describes the rules to claim conformance to this guide and defines the expectations for must-support elements in the IPA Profiles.
+- Using The API:
+  - [Gaining Access to a Patient Record](access.html)\: This page documents how to access a patient record securely.
+  - [Finding and Retrieving Patient Information](fetching.html)\: This page documents how to find and retrieve information about a patient and generate documents on request.
+  - [Synchronizing Patient Records](synchronization.html)\: This page describes how to maintain a synchronized copy of the patient's information safely.
+  - [Internationalization Issues](internationalization.html)\: This page discusses how to best support a wide range of international applications.
+- [Security](security.html)\: This page documents the IPA security requirements and discusses patient privacy and safety topics.
+- [Artifact Index](artifacts.html)\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+    - [Profiles](artifacts.html#1)\: The set of Profiles that a patient can access. They contain clinical and supporting information about the patient. In addition, each Profile page includes a narrative description, guidance, and a formal definition.
+    - [CapabilityStatements](artifacts.html#3)\: This page defines the expected FHIR capabilities of an IPA server.
+    - [Operations](artifacts.html#4)\: This page defines the $docref operation for retrieving  generated documents on request. 
+    - [Examples](artifacts.html#5)\: The list of all the examples used in this guide. These examples show what data produced and consumed by systems conforming with this implementation guide might look like. Every effort has been made to ensure that the examples are correct and valuable. However, they are not a normative part of the specification, nor are they fully representative of real-world examples.
+- Support:
+    - [Downloads](downloads.html)\: This page provides links to downloadable artifacts that developers can use to help them implement this guide.
+</div><!-- new-content -->
+
 
 ### Relationship to National Specifications 
 

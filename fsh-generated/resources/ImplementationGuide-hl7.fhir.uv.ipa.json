@@ -279,8 +279,9 @@
         "reference": {
           "reference": "Observation/VitalSignsExample1"
         },
-        "name": "VitalSignsExample1",
-        "exampleBoolean": true
+        "description": "This is a Observation example for the *IPA Observation Profile* containing the vital sign for body weight.",
+        "name": "Observation Vital Signs Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
       },
       {
         "reference": {
@@ -294,8 +295,9 @@
         "reference": {
           "reference": "Patient/PatientGenderExample1"
         },
-        "name": "PatientGenderExample1",
-        "exampleBoolean": true
+        "description": "This is a Patient example for the *IPA Patient Profile* with US Core extension for birthsex.",
+        "name": "IPA Patient Gender Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
       },
       {
         "reference": {
@@ -358,7 +360,7 @@
         },
         {
           "nameUrl": "security.html",
-          "title": "Security",
+          "title": "Security and Privacy",
           "generation": "markdown"
         },
         {
