@@ -31,14 +31,31 @@ These resources are supported by information about [practitioners](StructureDefi
 *Salma Kahil uses a personal health record app to track her health and assemble her records from multiple healthcare providers. Her healthcare providers support the International Patient Access API, and Salma's health record app provides a user-friendly IPA application to provide safe, quick, and reliable access to data. Because retrieving and updating her medical information from her healthcare providers is secure, fast, and simple, Salma is a more informed and engaged patient.*
 </div><!-- new-content -->
 
-### Using the International Patient Access API
+#### Using the International Patient Access API
 
 The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps.  <span class="bg-success" markdown="1"> Note that this version of IPA is read-only, though specific implementations may choose to provide write access. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".</span><!-- new-content -->
 
 
 <div class="bg-success" markdown="1">
 
-#### Actors and Sequence Diagram
+
+
+### IPA Actors
+
+The following actors are part of the IPA IG:
+
+IPA Requestor
+: An application that initiates a data access request to retrieve patient data. It can be thought of as the client in a client-server interaction. The terms "app", "patient app", and "client" are used interchangeably throughout this guide and are not meant to limit this actor to only patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+<br/><br/>
+
+IPA Responder
+: A product that responds to the data access request providing patient data. It can be thought of as the server in a client-server interaction. The terms "server", "IPA FHIR server", and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+<br/><br/>
+
+SMART on FHIR Authorization Server
+: A product that responds to authentication and authorization requests as defined in the [SMART App Launch](http://hl7.org/fhir/smart-app-launch/) specification. It can be thought of as the server in a client-server interaction. The terms "Authorization server", "SMART on FHIR server", and "OAuth2.0 server" are used interchangeably throughout this guide.
+
+### IPA Sequence Diagram
 
 The sequence diagram in the figure below outlines a successful interaction between a patient and an IPA server to query and retrieve the patient's clinical data:
 
