@@ -96,7 +96,6 @@ Jurisdictions are encouraged to use this specification directly and may also pub
 <span class="bg-success" markdown="1">This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
 {:.bg-info}
 
-</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 {% include ips-relationship.md %}
