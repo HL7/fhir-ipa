@@ -41,6 +41,7 @@ Servers that are conformant to the International Patient Access API declare conf
     }
     ```
 Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
+</div><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 
