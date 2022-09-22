@@ -49,12 +49,14 @@ For example, an IPA compliant server returns all lab results for a single patien
 | MedicationStatement   | patient	| patient+status                    |
 | Observation           | patient+category, patient+code, patient+category+date 	| patient+category+status, patient+code+date |
 | Patient               | \_id, identifier | birthdate, family, gender, given, name, family+gender, birthdate+family, birthdate+name, gender+name |
+{:.grid}
 
 
 ### Supporting Resources
 
-The API also provides access to a number of supporting resources. The following resources are referred to from the 
-resources above, and may be read directly:
+<div class="bg-success" markdown="1">
+The API also provides access to the following resources which are referred to from the resources above and may be read directly. Servers are not required to support search functionality on Practitioner or PractitionerRole. If they do, they may choose to communicate only relevant information that relates to the patient (for example, only the practitioner name).
+</div><!-- new-content -->
 
 * Medication
 * Practitioner

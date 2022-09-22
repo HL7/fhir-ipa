@@ -22,8 +22,6 @@ Using this API, applications can access the following information about the pati
 * [Vital signs, lab results, and other clinical observations](StructureDefinition-ipa-observation.html)
 * [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
 
-These resources are supported by information about [practitioners](StructureDefinition-ipa-practitioner.html) and their [roles](StructureDefinition-ipa-practitionerrole.html).
-
 <div class="bg-success" markdown="1">
 
 #### Example Scenario
