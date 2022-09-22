@@ -12,13 +12,14 @@ set -e
 # NA='http://tx.fhir.org'
 NA='N/A'
 path=~/Downloads/publisher-1.2.4-SNAPSHOT.jar # path to publisher
-INPUT=~/input/resources/CapabilityStatement-ipa-server.json # path to the CapabilityStatement
-OUT=~/out.tmp # path to the temporary output folder
+INPUT=input/resources/CapabilityStatement-ipa-server.json # path to the CapabilityStatement
+OUT=out.tmp # path to the temporary output folder
 
 echo "================================================================="
 echo "=== remove the existing text element from the Capstatement in INPUT ==="
+echo "======= INPUT= $INPUT ==========================="
+echo "======= OUT= $OUT ==========================="
 echo "================================================================="
-echo jq 'del(.text)' \$INPUT > \$OUT && mv \$OUT \$INPUT
 jq 'del(.text)' $INPUT > $OUT && mv $OUT $INPUT
 
 echo "================================================================="
