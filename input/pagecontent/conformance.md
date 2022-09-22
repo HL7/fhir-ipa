@@ -1,8 +1,10 @@
 <div class="bg-success" markdown="1">
-This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements. IPA conformant servers SHALL support:
+IPA conformant servers SHALL support:
 
- - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support) which is documented on this page.
- - the SMART on FHIR obligations and capabilities which is documented on the [Gaining Access to a Patient Record](access.html) page.
+ - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
+ - the SMART on FHIR obligations and capabilities
+
+This page documents how CapabilityStatements declare conformance to the IPA Profiles and their FHIR Interactions. It also defines the expectations for mandatory and must-support elements. The SMART on FHIR obligations and capabilities are documented on the [Gaining Access to a Patient Record](access.html) page.
 
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 </div><!-- new-content -->
@@ -13,6 +15,32 @@ The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defin
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) guidance requires specifications to define exactly the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and subelements labeled Mandatory and Must Support for requesters and responders.
 
 The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Servers as well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
+
+<div class="bg-success" markdown="1">
+
+### Declaring Conformance
+
+Servers that are conformant to the International Patient Access API declare conformance by:
+
+* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates), as shown in the following fragment:
+
+    ```
+    {
+      "resourceType": "CapabilityStatement",
+      ...
+      "instantiates": [
+        "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"
+      ],
+      ...  
+      "rest": [
+        {
+          "mode": "server",
+        ...
+        }
+      ] 
+    }
+    ```
+Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
 
 <div class="bg-success" markdown="1">
 

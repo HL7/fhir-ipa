@@ -29,34 +29,21 @@ A client application gets access to a patient record by following this general s
 Scopes work as described in the SMART on FHIR specification. Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHOULD** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it requested and registered.
 </div><!-- new-content -->
 
-### Server Obligations
 
-Servers that are conformant to the International Patient Access API conform to the following rules:
 
-* The server hosts a [capability statement](http://hl7.org/fhir/capabilitystatement.html) at [url]/metadata that is available to both authenticated and unauthenticated clients, and that declares that IPA is supported using [CapabilityStatement.instantiates](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates), as shown in the following fragment:
+### SMART on FHIR Server Obligations and Capabilities:
 
-    ```
-    {
-      "resourceType": "CapabilityStatement",
-      ...
-      "instantiates": [
-        "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa"
-      ],
-      ...  
-      "rest": [
-        {
-          "mode": "server",
-        ...
-        }
-      ] 
-    }
-    ```
-<span class="bg-success" markdown="1">Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.</span><!-- new-content -->
 
-<div class="bg-success" markdown="1">
-
-#### SMART on FHIR Server Obligations:
 </div><!-- new-content -->
+
+IPA conformant servers SHALL support:
+
+ - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
+ - the SMART on FHIR obligations and capabilities
+
+This section documents the SMART on FHIR obligations and capabilities. Support for IPA Profiles and their FHIR Interactions are documented on the [Conformance](conformance.html) page.
+
+#### SMART on FHIR Server Obligations
  
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration  that is available to both authenticated and unauthenticated clients.
 * The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
