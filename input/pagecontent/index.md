@@ -33,7 +33,7 @@ These resources are supported by information about [practitioners](StructureDefi
 
 ### Using the International Patient Access API
 
-The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps.  <span class="bg-success" markdown="1"> Note that this API is *read-only*, though implementations may provide write access too. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".</span><!-- new-content -->
+The IPA specification is designed to help patients access their own data through any app of their choice. The underlying SMART App Launch specifications have also been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps.  <span class="bg-success" markdown="1"> Note that this version of IPA is read-only, though specific implementations may choose to provide write access. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".</span><!-- new-content -->
 
 
 <div class="bg-success" markdown="1">
