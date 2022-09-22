@@ -12,7 +12,7 @@ A client application gets access to a patient record by following this general s
   * Note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported.
 </div><!-- new-content -->
 
-* Identify the appropriate endpoint [url] at which the International Patient Access API is found. 
+* <span class="bg-success" markdown="1">Identifying the appropriate end point [URL] at which the IPA-compatible API is found.</span><!-- new-content -->
   * Note that this specification does not specify how the endpoint might be found; different countries will have different arrangements around this. 
 
 * Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html)
