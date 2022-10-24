@@ -1,7 +1,7 @@
 The patient record is fixed to a single individual patient by the user and the Authorization service record during
-the [Authorization process](access.html). <span class="bg-success" markdown="1"> For the purposes of safety, client applications specify the patient id when searching other resources. 
+the [Authorization process](access.html). <span class="bg-success" markdown="1">For the purposes of safety, client applications specify the patient id when searching other resources. </span><!-- new-content --> 
 
-Servers SHALL support and</span><!-- new-content --> Client applications can access the patient 
+<span class="bg-success" markdown="1">Servers SHALL support and</span><!-- new-content --> Client applications can access the patient 
 record using the following API call:
 
 ```GET [url]/Patient/[id]```
