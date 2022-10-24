@@ -12,9 +12,9 @@ Once the OAuth process is launched, the Authorization server considers rules suc
 * Existing Patient consent agreements
 * Application access request 
 
-Once the server has determined what information the user has a right to access, then it asks the user to 
-additionally choose what subset of that information they wish to share with the client
-application.
+Once the authorization server has determined what information the user has a right to 
+access, it then prompts the user to additionally choose what subset of that 
+information they wish to share with the client application.
 
 The Authorization server then returns a set of scopes to the application that describe what access
 the user has authorized. Clients need to be aware that the Authorization server cannot fully describe 
