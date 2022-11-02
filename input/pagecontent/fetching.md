@@ -8,7 +8,9 @@ The first thing that the application should do is retrieve the patient record th
     GET [url]/Patient/[id]
 
 This [read](http://hl7.org/fhir/http.html#read) returns a single FHIR Patient resource.
-The details in the patient record should match what the user of the application is expecting. The application chooses how to check this, though some jurisdictions may make additional rules about how it is done. 
+The details in the patient record should match what the user of the application is expecting. The application chooses how to check this, though some jurisdictions may make additional rules about how it is done. If the app suspects it has been incorrectly granted access, consider: informing the resource server owner, aborting the workflow without showing data to the current user, and looking to local jurisdictional policies for guidance.
+
+
 
 Notes:
 * A user may grant access to their own record, or to another patient’s record (e.g., a family member or other patient for whom the user is an authorized representative).
