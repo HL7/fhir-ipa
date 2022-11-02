@@ -3,4 +3,8 @@ Accessing Patient records raises many questions of safety. Accessing the wrong p
 FHIR APIs like this one. All implementers should carefully consider each of the items on the checklist. Getting these issues right is necessary but insufficient to deliver safe patient applications.
 
 Note that software can misinterpret health care records which can also lead to dire consequences. However, this specification does not provide enough information about accessing records to support interpreting the content. Implementers must consult their country-specific guides for this.
+
+#### Patient matching
+When [synchronizing](synchronization.html) a patient record, it's important to match not just on a pre-existing patient identifier, but also to match patient demographics. Additional care should be taken for patient merge and un-merge scenarios.
+
 </div><!-- new-content -->
