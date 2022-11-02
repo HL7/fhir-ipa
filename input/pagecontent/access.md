@@ -46,11 +46,8 @@ This section documents the SMART on FHIR obligations and capabilities. Support f
 #### SMART on FHIR Server Obligations
  
 * The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration  that is available to both authenticated and unauthenticated clients.
-* The server conforms to the [SMART App Launch specification](http://hl7.org/fhir/smart-app-launch/), and checks that the authenticated user of the application has access. 
-* If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record. 
-* If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share. (A patient often has access to multiple records in the case of a parent or family caregiver).
-* The server ensures that the authenticated user has access to the record being shared.
-* The server returns a Patient FHIR resource identifier as the `patient` [SMART launch context parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#patient-specific-scopes) when authorization is granted and includes any `patient/` scopes. 
+* Specific obligations for server support of SMART on FHIR capabilities are defined below, and include the server hosting a smart-configuration file at [url]/.well-known/smart-configuration that is available to both authenticated and unauthenticated clients.
+
 
 <div class="bg-success" markdown="1">
 
@@ -59,4 +56,11 @@ This section documents the SMART on FHIR obligations and capabilities. Support f
 {% include smart-capabilities.md %}
 </div><!-- new-content -->
 
+#### SMART on FHIR Server Process
 
+The  steps described below are generally performed when a server grants access to a client -- 
+* The server conforms to the SMART App Launch specification, and checks that the authenticated user of the application has access.
+*  If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record.
+*  If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share. (A patient often has access to multiple records in the case of a parent or family caregiver).
+*  The server ensures that the authenticated user has access to the record being shared.
+*  The server returns a Patient FHIR resource identifier as the patient SMART launch context parameter when authorization is granted and includes any patient/ scopes, as defined by the SMART App Launch Protocol.
