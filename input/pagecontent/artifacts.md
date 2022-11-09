@@ -15,7 +15,7 @@ Profiles: Content Definitions for primary resources
 * [MedicationRequest](StructureDefinition-ipa-medicationrequest.html) (e.g. prescription)
 * [MedicationStatement](StructureDefinition-ipa-medicationstatement.html) (medication usage, including patient reported)
 * [Patient](StructureDefinition-ipa-patient.html)
-* [Vitalsigns Observation](http://hl7.org/fhir/StructureDefinition/vitalsigns) and [Observation](StructureDefinition-ipa-observation.html)
+* [Vital Signs Observation](http://hl7.org/fhir/StructureDefinition/vitalsigns) and [Observation](StructureDefinition-ipa-observation.html)
 
 Profiles: Content definitions for supporting resources
 * [Medication](StructureDefinition-ipa-medication.html)

@@ -5,7 +5,7 @@ and even within jurisdictions very wildly. This specification does not fix any k
 controls what kind of codes can be used - other national specifications etc will place their own 
 restrictions on the codes. 
 
-Client Applications should be prepared to encounter codes they do not recognise and handle the records 
+Client Applications should be prepared to encounter codes they do not recognize and handle the records 
 accordingly. Servers SHOULD populate Condition.code.coding.display and/or Condition.code.text so that 
 clients can always at least display the condition even if they do not know the codes that are used.
 

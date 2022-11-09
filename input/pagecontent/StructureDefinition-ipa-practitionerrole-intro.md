@@ -28,7 +28,7 @@ The PractitionerRole SHALL have:
 * a practitioner reference (which is an [IPA Practitioner](StructureDefinition-ipa-practitioner.html))
 
 Servers may choose to provide additional information, or may be required to do so by national or other additional 
-profiles on practitionerrole that apply in the servers context. The ```role``` property is often required by such
+profiles on PractitionerRole that apply in the servers context. The ```role``` property is often required by such
 profiles.
 
 #### Search
