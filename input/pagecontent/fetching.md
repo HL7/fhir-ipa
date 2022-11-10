@@ -31,13 +31,13 @@ Where [Resource] is the name of a resource taken from the table below and the li
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 
-Servers SHALL support the required, and SHOULD support the recommended search parameters [documented](#search-resources); therefore clients may use any of these required search parameters to narrow the scope of the search and reduce the number of resources returned. Except for these required search parameters, servers are not obligated to support other  search parameters. For this reason, clients should always check the [self link in the returned result of the search](http://hl7.org/fhir/search.html#errors) to see what parameters were processed (or consult the [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
+Servers SHALL support the required, and SHOULD support the recommended search parameters [documented](#search-resources); therefore clients may use any of these required search parameters to narrow the scope of the search and reduce the number of resources returned. Except for these required search parameters, servers are not obligated to support other  search parameters. For this reason, clients should always check the [self link in the returned result of the search](http://hl7.org/fhir/search.html#errors) to see what parameters were processed (or consult the server's [CapabilityStatement](CapabilityStatement-ipa-server.html) in advance to know which parameters are supported). 
 
 The application can also use the [$docref operation](OperationDefinition-docref.html) to obtain a document, or a set of documents, related to the patient. This operation is considered useful especially for implementations that are not based on FHIR and may not generally expose data as FHIR resources. This operation is a way for such implementations to expose the information they have to patient-facing applications.
 
 ### Search resources 
 
-As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html), the following resources can be searched to access patient information. Combinations of search parameters are explicitly required or recommended when separated below, by a plus sign. 
+As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html) <span class="bg-success" markdown="1">and [IPA Client Capability Statement](CapabilityStatement-ipa-client.html)</span><!-- new-content -->, the following resources can be searched to access patient information. Combinations of search parameters are explicitly required or recommended when separated below, by a plus sign. <span class="bg-success" markdown="1">IPA Clients are expected to support at least the required search parameters for each IPA resource type they support.</span><!-- new-content -->
 
 For example, an IPA compliant server returns all lab results for a single patient  with: `Observation?patient=123&category=laboratory`, but may not support returning all labs, vital signs, social history, surveys, exams, activities, etc, with: `Observation?category=patient`.
 

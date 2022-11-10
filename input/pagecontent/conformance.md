@@ -14,7 +14,15 @@ The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defin
 
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) guidance requires specifications to define exactly the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for requesters and responders.
 
-The [Capability Statement page](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Servers as well as the specific profiles and RESTful transactions that need to be supported. Note that country-specific profiles must define terminology bindings and invariants. 
+<div class="bg-success" markdown="1">
+#### Capability Statements 
+
+The [International Patient Access Client CapabilityStatement](CapabilityStatement-ipa-client.html) outlines conformance requirements and expectations for the IPA Clients. {{site.data.resources['CapabilityStatement/ipa-client'].description }}
+
+The [International Patient Access Server CapabilityStatement](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Clients {{site.data.resources.['CapabilityStatement/ipa-server'].description}}
+
+Note that country-specific profiles must define terminology bindings and invariants. 
+</div><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 
