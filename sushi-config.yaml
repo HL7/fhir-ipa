@@ -51,29 +51,14 @@ groups: #**** NEED TO LIST NEW PROFILES IN A GROUP OR THEY WONT SHOW UP***
 pages:
   index.md:
     title: International Patient Access
-    # ips-relationship.md:
-    #   title: Relationship with International Patient Summary
-    # ipa-by-country.md:
-    #   title: IPA Specifications by Country
-    # doc-gen.md:
-    #   title: Generating Patient Documents
-
   conformance.md:
     title: Conforming to this Specification
   using-the-api.md:
     title: Using the API
-    # ipa-server.md:
-    #   title: IPA Server Requirements
-      # security.md:
-      #   title: Security
-      # privacy.md:
-      #   title: Privacy and Consent
     access.md:
       title: Gaining Access to a Patient Record
     fetching.md:
       title: Finding and Retrieving Patient Information
-      # safety.md:
-      #   title: Safety Check List
     synchronization.md:
       title: Synchronizing Patient Records
     internationalization.md:
@@ -82,6 +67,8 @@ pages:
     title: Security and Privacy
   downloads.md:
     title: Downloads
+  ImplementationGuide-hl7.fhir.uv.ipa.md:
+    title: IPA ImplementationGuide Resource
 
 parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

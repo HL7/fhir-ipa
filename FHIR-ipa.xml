@@ -47,6 +47,7 @@
 <page key="fetching" name="Finding and Retrieving Patient Information"/>
 <page key="access" name="Gaining Access to a Patient Record"/>
 <page deprecated="true" key="doc-gen" name="Generating Patient Documents"/>
+<page key="ImplementationGuide-hl7.fhir.uv.ipa" name="IPA ImplementationGuide Resource"/>
 <page deprecated="true" key="ipa-server" name="IPA Server Requirements"/>
 <page deprecated="true" key="ipa-by-country" name="IPA Specifications by Country"/>
 <page key="index" name="International Patient Access"/>

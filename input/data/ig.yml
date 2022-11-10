@@ -308,6 +308,9 @@ definition:
     - nameUrl: downloads.html
       title: Downloads
       generation: markdown
+    - nameUrl: ImplementationGuide-hl7.fhir.uv.ipa.html
+      title: IPA ImplementationGuide Resource
+      generation: markdown
   parameter:
   - code: copyrightyear
     value: 2022+

@@ -1,11 +1,11 @@
+
 {% include new-content-note.md %}
 
 ### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from a clinical records system using
-a FHIR-based API. The clinical records system may be supporting a clinical care
-provider (e.g. a hospital, or a general practitioner), a health data exchange, 
+a <span class="bg-success" markdown="1">FHIR R4 based API[^1].</span><!-- new-content --> The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), a health data exchange, 
 or other system managing patient records, including a national health record system.
 
 <div class="bg-success" markdown="1">
@@ -100,3 +100,16 @@ Jurisdictions are encouraged to use this specification directly and may also pub
 <div class="bg-success" markdown="1">
 {% include ips-relationship.md %}
 </div><!-- new-content -->
+
+<div class="bg-success" markdown="1">
+
+### Copyrights
+{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
+
+{{ ip-statement | remove: '<p>' | remove: '</p>'}}
+
+</div><!-- new-content -->
+
+[^1]: {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
+
+

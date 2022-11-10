@@ -18,3 +18,13 @@ All the examples that are used in this Implementation Guide available for downlo
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
+
+<div class="bg-success" markdown="1">
+
+### Implementation Guide Details
+
+Technical details about the [ImplementationGuide]({{site.data.fhir.path}}implementationguide.html) resource that define this specification, including dependencies and implementation guide publishing parameter settings.
+
+- [IPA ImplementationGuide Resource](ImplementationGuide-hl7.fhir.uv.ipa.html)
+
+</div><!-- new-content -->
