@@ -11,16 +11,18 @@ set -e
 
 # NA='http://tx.fhir.org'
 NA='N/A'
-path=~/Downloads/publisher-1.2.4-SNAPSHOT.jar # path to publisher
-INPUT=input/resources/CapabilityStatement-ipa-server.json # path to the CapabilityStatement
+path=~/Downloads/publisher-1.2.14-SNAPSHOT.jar # path to publisher
+IN1=input/resources/CapabilityStatement-ipa-server.json # path to the Server CapabilityStatement
+IN2=input/resources/CapabilityStatement-ipa-client.json # path to the Client CapabilityStatement
 OUT=out.tmp # path to the temporary output folder
 
 echo "================================================================="
-echo "=== remove the existing text element from the Capstatement in INPUT ==="
-echo "======= INPUT= $INPUT ==========================="
+echo "=== remove the existing text element from the Capstatement in IN1 ==="
+echo "======= IN1= $IN1 ==========================="
 echo "======= OUT= $OUT ==========================="
 echo "================================================================="
-jq 'del(.text)' $INPUT > $OUT && mv $OUT $INPUT
+jq 'del(.text)' $IN1 > $OUT && mv $OUT $IN1
+jq 'del(.text)' $IN2 > $OUT && mv $OUT $IN2
 
 echo "================================================================="
 echo "=== run the just the igpublisher ==="

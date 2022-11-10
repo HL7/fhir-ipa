@@ -29,6 +29,7 @@
 <artifact id="StructureDefinition/ipa-practitioner" key="StructureDefinition-ipa-practitioner" name="IPA-Practitioner"/>
 <artifact id="StructureDefinition/ipa-practitionerrole" key="StructureDefinition-ipa-practitionerrole" name="IPA-PractitionerRole"/>
 <artifact id="StructureDefinition/ipa-problem-list-item" key="StructureDefinition-ipa-problem-list-item" name="IPA-problem-list-item"/>
+<artifact id="CapabilityStatement/ipa-client" key="CapabilityStatement-ipa-client" name="International Patient Access Client CapabilityStatement"/>
 <artifact id="CapabilityStatement/ipa-server" key="CapabilityStatement-ipa-server" name="International Patient Access Server CapabilityStatement"/>
 <artifact id="Medication/MedExample1" key="Medication-MedExample1" name="Medication Example"/>
 <artifact id="MedicationRequest/MedRecExample1" key="MedicationRequest-MedRecExample1" name="MedicationRequest Example"/>
