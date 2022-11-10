@@ -65,6 +65,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "CapabilityStatement/ipa-client"
+        },
+        "description": "This  CapabilityStatement describes the basic rules for the International Patient Access client actor that initiates a data access request to and retrieves patient data from an IPA Responder. In addition, it lists the client conformance expectations for each resource type documented in IPA. These expectations include supported FHIR profiles, RESTful operations, and search parameters. International Patient Access clients define their capabilities by choosing from this list based on the resource types they need to access.",
+        "exampleBoolean": false,
+        "name": "International Patient Access Client CapabilityStatement"
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/ipa-server"
         },
         "description": "This section describes the basic rules for the International Patient Access server actor that is responsible for providing responses to queries submitted by International Patient Access requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by International Patient Access servers are defined in this CapabilityStatement. International Patient Access clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
