@@ -15,7 +15,7 @@ Regardless of which way they are accessed, all Condition resources have to confo
 
 * They SHOULD have a ```clinicalStatus```
 * They SHOULD have a ```verificationStatus```
-* They SHALL have at least one category
+* They SHOULD have at least one category
 * They SHALL have a code 
 * They SHALL have a subject
 
