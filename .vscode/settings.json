@@ -1,6 +1,0 @@
-{
-    "python.formatting.provider": "black",
-    "[shellscript]": {
-        "rewrap.wrappingColumn": 80
-    }
-}
