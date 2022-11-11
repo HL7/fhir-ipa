@@ -91,7 +91,7 @@ may need additional rules about the access API to meet other use cases, and may 
 additional rules about the content based on national laws, regulations and accepted
 practice in order to support the provision of health in their healthcare system. 
 
-Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
+<span class="bg-success" markdown="1">Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. </span><!-- new-content -->
 
 <span class="bg-success" markdown="1">This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
 {:.bg-info}
