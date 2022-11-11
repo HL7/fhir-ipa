@@ -31,7 +31,7 @@ Scopes work as described in the SMART on FHIR specification. Servers **MAY** lim
 
 ### SMART on FHIR Obligations and Capabilities:
 
-IPA conformant servers SHALL support:
+IPA conformant servers <span class="bg-success" markdown="1">and clients</span><!-- new-content --> SHALL support:
 
  - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
  - the SMART on FHIR obligations and capabilities
