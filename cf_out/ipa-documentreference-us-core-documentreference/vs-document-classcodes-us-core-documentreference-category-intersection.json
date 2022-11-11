@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4bcfd20f-84a5-4cc4-a186-d0ed7f0ace3d-9",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4bcfd20f-84a5-4cc4-a186-d0ed7f0ace3d-9",
+  "name" : "IntersectionDocumentClassValueSetAndUSCoreDocumentReferenceCategory",
+  "title" : "Intersection of Document Class Value Set And US Core DocumentReference Category",
+  "status" : "active",
+  "date" : "2022-11-11T15:28:40-08:00"
+}
