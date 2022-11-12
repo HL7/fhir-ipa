@@ -12,6 +12,25 @@ MedicationStatement and MedicationRequest when fetching patient Medication infor
 As noted there is currently no consensus how a patient can access their active, historical and future (planned) medications list. Feedback is welcome on what additional guidance can be given to promote more international alignment.
 {:.stu-note}
 
+### Fetching Medications
+
+The MedicationRequest and MedicationStatement resources can represent a medication using either
+a code or refer to the Medication resource. When referencing Medication, the
+resource may be [contained](http://hl7.org/fhir/R4/references.html#contained)
+or an external resource. The server application **MAY** choose any one way or
+more than one method, but if an external reference to Medication is used, the
+server **SHALL** support the `_include` parameter for searching this element.
+The client application **SHALL** support all methods. For example, A server
+**SHALL** be capable of returning all medications for a patient using one of
+or both:
+
+  `GET /MedicationStatement?patient=[id]`
+
+  `GET/MedicationStatement?patient=[id]&_include=MedicationStatement:medication`
+
+{% if include.medrequest %}
 ### Medication specificity
 
 When representing a prescribed medication, servers SHOULD use codings at the level of a clinical drug rather than ingredient or dose form (e.g. “loratadine 10mg oral tablet”, rather than a bare ingredient like “loratadine” or a dose form like “loratadine oral tablet”).
+{% endif %}
+
