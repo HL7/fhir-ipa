@@ -65,12 +65,9 @@ sleep 2
 echo "Comparing $LEFT and $RIGHT...." 
 LFILENAME=$(basename $LEFT)
 RFILENAME=$(basename $RIGHT)
-echo "LFILENAME=$LFILENAME , RFILENAME=$RFILENAME"
 OUT=$OUT/$LFILENAME-$RFILENAME # path to the destination folder it will overwrite existing content
 mkdir -p $OUT
 echo "OUT=$OUT"
-# echo "...exiting..."
-# exit 0
 
 echo "================================================================="
 echo "=== run the validator to compare profiles ==="
