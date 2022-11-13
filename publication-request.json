@@ -1,0 +1,8 @@
+{
+    "package-id": "hl7.fhir.uv.ipa",
+    "version": "1.0.0-preview",
+    "path": "http://hl7.org/fhir/uv/ipa/STU1",
+    "status": "draft",
+    "sequence": "STU 1",
+    "desc": "Continuous Integration Build (latest in version control)"
+}

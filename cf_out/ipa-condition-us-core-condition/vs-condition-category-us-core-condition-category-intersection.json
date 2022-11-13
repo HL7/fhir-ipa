@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "36e47a98-8989-42b6-9003-33b2efd7470a-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/36e47a98-8989-42b6-9003-33b2efd7470a-6",
+  "name" : "IntersectionConditionCategoryCodesAndUSCoreConditionCategoryCodes",
+  "title" : "Intersection of Condition Category Codes And US Core Condition Category Codes",
+  "status" : "draft",
+  "date" : "2022-11-11T15:26:33-08:00",
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "problem-list-item",
+      "display" : "Problem List Item"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "encounter-diagnosis",
+      "display" : "Encounter Diagnosis"
+    }]
+  }
+}

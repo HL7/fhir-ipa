@@ -1,11 +1,11 @@
+
 {% include new-content-note.md %}
 
 ### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from a clinical records system using
-a FHIR-based API. The clinical records system may be supporting a clinical care
-provider (e.g. a hospital, or a general practitioner), a health data exchange, 
+a <span class="bg-success" markdown="1">FHIR R4 based API[^1].</span><!-- new-content --> The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), a health data exchange, 
 or other system managing patient records, including a national health record system.
 
 <div class="bg-success" markdown="1">
@@ -71,10 +71,10 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Finding and Retrieving Patient Information](fetching.html)\: This page documents how to find and retrieve information about a patient and generate documents on request.
   - [Synchronizing Patient Records](synchronization.html)\: This page describes how to maintain a synchronized copy of the patient's information safely.
   - [Internationalization Issues](internationalization.html)\: This page discusses how to best support a wide range of international applications.
-- [Security](security.html)\: This page documents the IPA security requirements and discusses patient privacy and safety topics.
+- [Security and Privacy](security.html)\: This page documents the IPA security requirements and discusses patient privacy and safety topics.
 - [Artifact Index](artifacts.html)\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
     - [Profiles](artifacts.html#1)\: The set of Profiles that a patient can access. They contain clinical and supporting information about the patient. In addition, each Profile page includes a narrative description, guidance, and a formal definition.
-    - [CapabilityStatements](artifacts.html#3)\: This page defines the expected FHIR capabilities of an IPA server.
+    - [CapabilityStatements](artifacts.html#3)\: This page defines the expected FHIR capabilities of an IPA client and server.
     - [Operations](artifacts.html#4)\: This page defines the $docref operation for retrieving  generated documents on request. 
     - [Examples](artifacts.html#5)\: The list of all the examples used in this guide. These examples show what data produced and consumed by systems conforming with this implementation guide might look like. Every effort has been made to ensure that the examples are correct and valuable. However, they are not a normative part of the specification, nor are they fully representative of real-world examples.
 - Support:
@@ -91,7 +91,7 @@ may need additional rules about the access API to meet other use cases, and may 
 additional rules about the content based on national laws, regulations and accepted
 practice in order to support the provision of health in their healthcare system. 
 
-Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. 
+<span class="bg-success" markdown="1">Jurisdictions are encouraged to use this specification directly and may also publish their own patient access specifications that further refine the profiles in this implementation guide. </span><!-- new-content -->
 
 <span class="bg-success" markdown="1">This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
 {:.bg-info}
@@ -100,3 +100,16 @@ Jurisdictions are encouraged to use this specification directly and may also pub
 <div class="bg-success" markdown="1">
 {% include ips-relationship.md %}
 </div><!-- new-content -->
+
+<div class="bg-success" markdown="1">
+
+### Copyrights
+{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
+
+{{ ip-statement | remove: '<p>' | remove: '</p>'}}
+
+</div><!-- new-content -->
+
+[^1]: {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
+
+

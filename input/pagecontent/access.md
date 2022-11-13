@@ -29,14 +29,9 @@ A client application gets access to a patient record by following this general s
 Scopes work as described in the SMART on FHIR specification. Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHOULD** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it requested and registered.
 </div><!-- new-content -->
 
+### SMART on FHIR Obligations and Capabilities:
 
-
-### SMART on FHIR Server Obligations and Capabilities:
-
-
-</div><!-- new-content -->
-
-IPA conformant servers SHALL support:
+IPA conformant servers <span class="bg-success" markdown="1">and clients</span><!-- new-content --> SHALL support:
 
  - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
  - the SMART on FHIR obligations and capabilities
@@ -53,7 +48,33 @@ This section documents the SMART on FHIR obligations and capabilities. Support f
 
 #### SMART on FHIR Server Capabilities
 
-{% include smart-capabilities.md %}
+Servers SHALL support the following [SMART on FHIR capabilities](http://hl7.org/fhir/smart-app-launch/conformance.html#capabilities):
+
+ * [launch-standalone]
+ * [context-standalone-patient]
+ * [permission-patient]
+ * [permission-offline]
+ * [sso-openid-connect]
+ * [client-public]
+ * [client-confidential-asymmetric]
+
+
+ Servers MAY support the other SMART on FHIR capabilities, such as:
+ * [launch-ehr]
+ * [context-ehr-patient]
+ * [permission-user]
+ * [client-confidential-symmetric]
+
+#### SMART on FHIR Client Capabilities
+
+Client apps will need to support a subset of the SMART on FHIR server capabilities to function:
+
+- SHALL support [launch-standalone] or [launch-ehr] or both.
+-  SHOULD support [launch-standalone] and MAY support [launch-ehr].
+- Patient-facing apps SHALL support [context-standalone-patient] and SHOULD support [permission-patient].
+- Apps with the technical capability to keep a secret SHALL support [client-confidential-asymmetric] and MAY support [permission-offline].
+- Apps without the technical capability to keep a secret SHALL support [client-public] and SHALL NOT support [client-confidential-asymmetric].
+
 </div><!-- new-content -->
 
 #### SMART on FHIR Server Process
@@ -64,3 +85,15 @@ The  steps described below are generally performed when a server grants access t
 *  If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share. (A patient often has access to multiple records in the case of a parent or family caregiver).
 *  The server ensures that the authenticated user has access to the record being shared.
 *  The server returns a Patient FHIR resource identifier as the patient SMART launch context parameter when authorization is granted and includes any patient/ scopes, as defined by the SMART App Launch Protocol.
+
+[launch-standalone]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-modes
+[context-standalone-patient]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-context-for-standalone-launch
+[permission-patient]: http://hl7.org/fhir/smart-app-launch/conformance.html#permissions
+[permission-offline]: http://hl7.org/fhir/smart-app-launch/conformance.html#permissions
+[sso-openid-connect]: http://hl7.org/fhir/smart-app-launch/conformance.html#single-sign-on
+[client-public]: http://hl7.org/fhir/smart-app-launch/conformance.html#client-types
+[client-confidential-asymmetric]: http://hl7.org/fhir/smart-app-launch/conformance.html#client-types
+[launch-ehr]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-modes
+[context-ehr-patient]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-context-for-ehr-launch
+[permission-user]: http://hl7.org/fhir/smart-app-launch/conformance.html#permissions
+[client-confidential-symmetric]: http://hl7.org/fhir/smart-app-launch/conformance.html#client-types

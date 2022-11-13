@@ -28,7 +28,12 @@ Thumbs.db
 *.sh
 *.bat
 !gen_cs.sh
+!cf_prof.sh
 
 # my-notes #
 ############
 My Notes
+
+#Text editor generated files #
+############
+.vscode
