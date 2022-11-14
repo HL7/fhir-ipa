@@ -97,6 +97,17 @@ practice in order to support the provision of health in their healthcare system.
 {:.bg-info}
 
 
+
+<div class="bg-success" markdown="1">
+#### Declaring support for IPA
+As jurisdiction-specific FHIR profiles proliferate, specification authors should strive to build on top of IPA to better serve their implementors, care givers, and patients. A FHIR implementation guide declares a relationship with IPA by refencing IPA in its published CapabilityStatement. Similarly, systems can also indicate their support of IPA in their CapabilityStatement. An implementation guide or system can support IPA in two distinct manners:
+
+1. An implementation guide is **compliant** with IPA if it requires all that IPA requires, including support for SMART on FHIR and IPA's profiles. Similarly, a system is compliant with IPA if it supports all of the requirements in IPA. In both cases, the CapabilityStatement communicates compliance by referencing the canonical IPA uri in its [implementationGuide element](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.implementationGuide). 
+2. An implementation guide is an instantiation of IPA if it requires some of IPA's requirements. A system **instantiates** IPA if it supports parts of IPA. The CapabilityStatement communicates this by referencing the canonical url of the appropriate IPA CapabilityStatement url in its [instantiates element](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates). 
+
+Implementers and users of a system or specification which instantiates IPA, should take care to ensure that the desired functionality from IPA is what's instantiated. The "instantiates" form of support for IPA is imprecise.
+</div><!-- new-content -->
+
 <div class="bg-success" markdown="1">
 {% include ips-relationship.md %}
 </div><!-- new-content -->
