@@ -125,3 +125,47 @@ Clients conforming to a profile in IPA SHALL be capable of processing resource i
 For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because requestors must be capable of processing this value in order to appropriately handle the resource's clinical data.
 
 NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
+
+<div class="bg-success" markdown="1">
+#### Must Support - Resource References
+
+Some elements labeled as *Must Support* reference multiple resource types or profiles (e.g., `DocumentReference.author`). IPA servers SHALL support *at least one* referenced resource or profile for each element listed in the table below. IPA client apps SHALL support *all* referenced resource or profile listed in the table below.
+
+IPA Profile Name|Must Support Reference Element|Must Support Reference
+---|---|---
+IPA-MedicationRequest|MedicationRequest.reported[x]|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole
+IPA-MedicationRequest|MedicationRequest.requester|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
+IPA-DocumentReference|DocumentReference.author|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
+IPA-DocumentReference|DocumentReference.context.encounter|http://hl7.org/fhir/StructureDefinition/Encounter, http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+IPA-MedicationStatement|MedicationStatement.context|http://hl7.org/fhir/StructureDefinition/Encounter, http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+IPA-MedicationStatement|MedicationStatement.informationSource|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient, http://hl7.org/fhir/StructureDefinition/Organization, http://hl7.org/fhir/StructureDefinition/RelatedPerson
+{:.grid}
+
+For example, when claiming conformance to the IPA DocumentReference Profile:
+
+* IPA Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, or an IPA PractitioneRole Profile, or an IPA Patient Profile, or any combination of them if the element is available
+* IPA Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, IPA PractitionerRole Profile and an IPA Patient Profile.
+
+#### Must Support - Choice of Data Types
+
+Some elements labeled as *Must Support* allow different data types (e.g., `Observation.effective[x]`) for their content. IPA servers SHALL support *at least one* data type for each element listed in the table below. IPA client apps SHALL support *all* data types listed in the table below.
+
+IPA Profile Name|Must Support Choice Element|Must Support Data Types
+---|---|---
+IPA-Immunization|Immunization.occurrence[x]|dateTime, string
+IPA-MedicationRequest|MedicationRequest.reported[x]|boolean, Reference
+IPA-MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
+IPA-Observation|Observation.effective[x]|dateTime, Period
+IPA-Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, time, dateTime, Period
+IPA-MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
+IPA-MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
+{:.grid}
+
+For example, when claiming conformance to the IPA Observation Profile:
+
+* IPA Responders **SHALL** be capable of populating `Observation.effectiveDateTime` or `Observation.effectivePeriod` or both if the element is available.
+* IPA Requestors **SHALL** be capable of processing `Observation.effectiveDateTime` and `Observation.effectivePeriod`
+
+Systems **MAY** support populating and processing other choice elements not listed in the table (such as `Observation.effectiveInstant`), but this is not a requirement.
+
+</div><!-- new-content -->
