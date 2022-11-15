@@ -14,8 +14,8 @@ The following data elements must always be present (in other words, mandatory re
 * a biz
 * a baz -->
 </div><!-- new-content -->
-<!-- (only if present) -->
 
+<!-- (only if present) -->
 ### Profile Specific Implementation Rules and Guidance
 
 This section describes how applications fetch Practitioner resources that provide information about other individuals that are involved in the care of the patient.
