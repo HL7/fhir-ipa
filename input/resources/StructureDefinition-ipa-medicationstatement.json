@@ -7,7 +7,7 @@
     "status": "active",
     "experimental": false,
     "date": "2022-08-02",
-    "description": "Minimum expectations for a MedicationStatement resource when accessed via a International Patient Access API",
+    "description": "Minimum expectations for a MedicationStatement resource when accessed via a International Patient Access API. The MedicationStatement resource represents all medications a patient is taking, be it those ordered by a clinician or reported by another organization, the patient or a caregiver.",
     "fhirVersion": "4.0.0",
     "kind": "resource",
     "abstract": false,

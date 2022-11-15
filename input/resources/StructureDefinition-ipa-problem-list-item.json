@@ -7,7 +7,7 @@
     "status": "active",
     "experimental": false,
     "date": "2022-09-02",
-    "description": "Minimum expectations for a Condition resource for representing the patient’s problem list items.",
+    "description": "Minimum expectations for a Condition resource for representing the patient's problem list items. The most important and prominent use of the condition resource is to get a list of the patient's current problem list. This Condition profile communicates information about a patient's problems. For other uses for the Condition resource, such as recording primary and secondary diagnoses for encounters or justification for past medications, use the [IPA-Condition](StructureDefinition-ipa-condition.html) profile instead. The difference between this profile and the IPA Condition profile is that this profile requires a mandatory category of 'problem-list-item'.",
     "kind": "resource",
     "abstract": false,
     "type": "Condition",

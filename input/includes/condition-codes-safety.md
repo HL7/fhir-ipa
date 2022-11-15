@@ -1,4 +1,4 @@
-### Condition Codes
+#### Condition Codes
 
 All Condition resources are required to have a code, but the coding systems used around the world 
 and even within jurisdictions very wildly. This specification does not fix any kind of value set that 
@@ -12,7 +12,7 @@ clients can always at least display the condition even if they do not know the c
 Clients should be careful making use of the ```code``` search parameter given that the codes used
 vary so much.
 
-### Safety Issues
+#### Safety Issues
 
 * Clients SHALL not treat all conditions as if they are part of the patient's current problem list
     * Note that some Condition resources may not have these status codes - this is usually due to poor record keeping reflected in legacy data

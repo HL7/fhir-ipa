@@ -1,4 +1,4 @@
-### Medication Statement and Medication Request 
+#### Medication Statement and Medication Request 
 
 While the relationship between Medication Statement and Medication Request is clear in principle, 
 in practice, when patients report medications, these may also be implicitly treated as statements of intent 
@@ -12,7 +12,7 @@ MedicationStatement and MedicationRequest when fetching patient Medication infor
 As noted there is currently no consensus how a patient can access their active, historical and future (planned) medications list. Feedback is welcome on what additional guidance can be given to promote more international alignment.
 {:.stu-note}
 
-### Fetching Medications
+#### Fetching Medications
 
 The MedicationRequest and MedicationStatement resources can represent a medication using either
 a code or refer to the Medication resource. When referencing Medication, the
@@ -29,7 +29,7 @@ or both:
   `GET/MedicationStatement?patient=[id]&_include=MedicationStatement:medication`
 
 {% if include.medrequest %}
-### Medication specificity
+#### Medication specificity
 
 When representing a prescribed medication, servers SHOULD use codings at the level of a clinical drug rather than ingredient or dose form (e.g. “loratadine 10mg oral tablet”, rather than a bare ingredient like “loratadine” or a dose form like “loratadine oral tablet”).
 {% endif %}

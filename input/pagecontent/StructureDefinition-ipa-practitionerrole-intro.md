@@ -1,6 +1,22 @@
-This profile describes how applications fetch PractitionerRole resources that provide information about other individuals that are involved in the care of the patient. 
 
-### Example Usage Scenarios:
+### Mandatory and Must Support Data Elements
+
+<div class="bg-success" markdown="1">
+<!-- Boilerplate -->
+The following data elements must always be present (in other words, mandatory resource properties with a minimum cardinality of 1) or must be supported ([Must Support](conformance.html#must-support) definition). Servers cannot restrict access to mandatory elements when authorizing an application. However, servers may choose to provide additional information or may be required to do so by national or other profiles that apply to the server's context.
+
+<!-- **Each <Resource Type> SHALL have:**
+* one or more name(s) associated with the practitioner -->
+ 
+**Applications must support:**
+* a practitioner reference (which is an [IPA Practitioner](StructureDefinition-ipa-practitioner.html))
+</div><!-- new-content -->
+<!-- (only if present) -->
+### Profile Specific Implementation Rules and Guidance
+
+This section describes how applications fetch PractitionerRole resources that provide information about other individuals that are involved in the care of the patient. 
+
+#### Example Usage Scenarios:
 
 A patient's record is full of records of events or planned actions where the actors are 
 care practitioners of various kinds. Note that these include any person employed by a healthcare provider,
@@ -21,15 +37,6 @@ Clients access PractitionerRole resources using this call:
 
 where id is found in some other resource that refers to a PractitionerRole. The result of this request is 
 a PractitionerRole resource, or an error if there is no resource the client can access for that id. 
-
-The PractitionerRole SHALL have:
-
-* an active flag
-* a practitioner reference (which is an [IPA Practitioner](StructureDefinition-ipa-practitioner.html))
-
-Servers may choose to provide additional information, or may be required to do so by national or other additional 
-profiles on PractitionerRole that apply in the servers context. The ```role``` property is often required by such
-profiles.
 
 #### Search
 

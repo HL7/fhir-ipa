@@ -1,113 +1,113 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "ipa-medicationrequest",
-  "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest",
-  "name": "IPAMedicationRequest",
-  "title": "IPA-MedicationRequest",
-  "status": "active",
-  "experimental": false,
-  "date": "2022-08-02",
-  "description": "Minimum expectations for a MedicationRequest resource when accessed via a International Patient Access API",
-  "fhirVersion": "4.0.0",
-  "kind": "resource",
-  "abstract": false,
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "MedicationRequest.status",
-        "path": "MedicationRequest.status",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.intent",
-        "path": "MedicationRequest.intent",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.reported[x]",
-        "path": "MedicationRequest.reported[x]",
-        "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.medication[x]",
-        "path": "MedicationRequest.medication[x]",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.subject",
-        "path": "MedicationRequest.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.encounter",
-        "path": "MedicationRequest.encounter",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.authoredOn",
-        "path": "MedicationRequest.authoredOn",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.requester",
-        "path": "MedicationRequest.requester",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
-              "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction",
-        "path": "MedicationRequest.dosageInstruction",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction.text",
-        "path": "MedicationRequest.dosageInstruction.text",
-        "mustSupport": true
-      }
-    ]
-  }
+    "resourceType": "StructureDefinition",
+    "id": "ipa-medicationrequest",
+    "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest",
+    "name": "IPAMedicationRequest",
+    "title": "IPA-MedicationRequest",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-08-02",
+    "description": "Minimum expectations for a MedicationRequest resource when accessed via a International Patient Access API. The MedicationRequest resource represents an order or request for both supply of the medication and the instructions for administration of the medication to a patient.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationRequest.status",
+                "path": "MedicationRequest.status",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.intent",
+                "path": "MedicationRequest.intent",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.reported[x]",
+                "path": "MedicationRequest.reported[x]",
+                "type": [
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.medication[x]",
+                "path": "MedicationRequest.medication[x]",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.subject",
+                "path": "MedicationRequest.subject",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.encounter",
+                "path": "MedicationRequest.encounter",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.authoredOn",
+                "path": "MedicationRequest.authoredOn",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.requester",
+                "path": "MedicationRequest.requester",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction",
+                "path": "MedicationRequest.dosageInstruction",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.text",
+                "path": "MedicationRequest.dosageInstruction.text",
+                "mustSupport": true
+            }
+        ]
+    }
 }
