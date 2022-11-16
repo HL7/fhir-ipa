@@ -24,14 +24,6 @@ The [International Patient Access Server CapabilityStatement](CapabilityStatemen
 Note that country-specific profiles must define terminology bindings and invariants. 
 </div><!-- new-content -->
 
-<div class="bg-success" markdown="1">
-
-#### Global Profiles
-
-{% include globals-table.xhtml %}
-
-<div class="bg-success" markdown="1">
-
 ### Declaring Conformance
 
 Servers that are conformant to the International Patient Access API declare conformance by:
