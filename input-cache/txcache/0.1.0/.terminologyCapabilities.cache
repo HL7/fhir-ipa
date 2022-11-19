@@ -5,7 +5,7 @@
   "version" : "1.0.0",
   "name" : "FHIR Reference Server Teminology Capability Statement",
   "status" : "active",
-  "date" : "2022-08-04T22:40:16.629Z",
+  "date" : "2022-11-17T13:25:38.792Z",
   "contact" : [{
     "telecom" : [{
       "system" : "other",
@@ -926,6 +926,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/appropriateness-score"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/attribute-estimate-type"
   },
   {
@@ -1269,6 +1272,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/hl7-work-group"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
@@ -3263,6 +3269,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManufacturerModelNameExample"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
   },
   {
@@ -3423,6 +3432,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-SoftwareNameExample"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"

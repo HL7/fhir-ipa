@@ -2,37 +2,17 @@
     "resourceType": "OperationDefinition",
     "id": "docref",
     "url": "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref",
-    "version": "0.1.0",
     "name": "IPAFetchDocumentReference",
     "title": "IPA Fetch DocumentReference",
     "status": "draft",
     "kind": "operation",
-    "date": "2021-10-05",
-    "publisher": "HL7 International - Patient Care WG",
-    "contact": [
-        {
-            "name": "HL7 International - Patient Care WG",
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.hl7.org/Special/committees/patientcare/index.cfm"
-                }
-            ]
-        }
-    ],
-    "description": "This operation is used to return all the requested references to documents related to a patient. \n\n The operation requires a patient id and takes the optional input parameters: \n  - start date\n  - end date\n  - document type \n  - on-demand\n  - profile  \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\" containing [DocumentReference](StructureDefinition-ipa-documentreference.html) resources for the patient. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns DocumentReference resources.  The principal intended use for this operation is to provide a patient with access to their available document information. \n\n This operation *differs* from a search by patient and type and date range because: \n\n 1. It is used to request a server *generate* one or more documents based on the specified parameters. \n\n 1. If not otherwise specified, the server SHALL return a DocumentReference to the patient's most current summary document. The type of such summary document will depend on jurisdiction, for example, it may be a C-CDA CCD. It is expected that such a summary document will always exist, or can be dynamically generated; however, a jurisdiction may define the outcome of the operation when such a document is missing. \n\n 1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle. \n\n This operation is *similar* to a FHIR RESTful search by patient, type and date range when there are existing documentations that meet the requirements of the request, because: \n\n 1. References for *existing* documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter.",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-                    "code": "001"
-                }
-            ]
-        }
-    ],
+    "date": "2022-11-18",
+    "description": "\nThis operation is used to return all the references to documents related to a\npatient. It is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances. \n\n The operation requires a patient id and takes the optional input parameters: \n  - start date\n  - end date\n  - document type \n  - on-demand\n  - profile  \n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html) containing [DocumentReference](StructureDefinition-ipa-documentreference.html) resources for the patient. If the server has stored documents or can create documents for the patient and those documents are available for the user, the server returns the DocumentReference resources associated with documents. This operation's intended use is to provide a way for providers or patients to access their available documents. The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository. \n\nThis operation is *different* from a FHIR RESTful query on DocumentReference by patient and type and date range because: \n\n1. It is used to request a server to *generate* a document based on the specified parameters.\n\n1. If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current summary document. The type of such summary document will depend on jurisdiction. For example, it may be a C-CDA CCD. It is expected that such a summary document will always exist or can be dynamically generated; however, a jurisdiction may define the outcome of the operation when such a document is missing.\n\n1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle.\n\nUnless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter, the server SHOULD return DocumentReference instances for *existing* documents that meet the request parameters  In this regard, this operation is *similar* to a FHIR RESTful query.",
     "code": "docref",
-    "comment": " - The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository. \n\n - It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user and patient records is outside the scope of this specification. \n\n - A server may generate an on-demand document upon returning its DocumentReference during the $docref response, or once the client accesses the actual document. This specification places no requirements upon exactly when a server generate an on-demand document, and encourages server developers to balance the performance cost of creating unread documents against the response time to retrieve new documents.",
+    "comment": "\n - It is assumed that the server has identified and secured the context appropriately and can either associate the authorization context with a single patient or determine whether the context has the rights to the nominated patient if there is one. If there is no nominated patient (e.g., the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user, and patient records is outside the scope of this specification. \n\n - A server may generate an on-demand document upon returning its DocumentReference during the $docref response or once the client accesses it. This specification places no requirements upon when a server generates an on-demand document and encourages server developers to balance the performance cost of creating unread documents against the response time to retrieve new documents.",
+    "resource": [
+        "DocumentReference"
+    ],
     "system": false,
     "type": true,
     "instance": false,
@@ -42,7 +22,7 @@
             "use": "in",
             "min": 1,
             "max": "1",
-            "documentation": "The id of the patient resource located on the server on which this operation is executed.  If there is no match, an empty Bundle is returned",
+            "documentation": "The id of the patient resource. If there is no match, an empty Bundle is returned.",
             "type": "id"
         },
         {
@@ -50,7 +30,7 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no start date is provided, all documents prior to the end date are in scope.  If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client **SHOULD** provide values precise to the second + time offset.",
+            "documentation": "The date range relates to care dates, not record currency dates - e.g., all records relating to care provided in a specific date range. If no start date is provided, all documents before the end date are in scope. The most recent or current document is in scope if neither a start date nor an end date is provided. The client **SHOULD** provide values precise to the second + time offset.",
             "type": "dateTime"
         },
         {
@@ -58,18 +38,18 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no end date is provided, all documents subsequent to the start date are in scope. If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client **SHOULD** provide values precise to the second + time offset.",
+            "documentation": "The date range relates to care dates, not record currency dates - e.g., all records relating to care provided in a specific date range. If no end date is provided, all documents after the start date are in scope. The most recent or current document is in scope if neither a start date nor an end date is provided. The client **SHOULD** provide values precise to the second + time offset.",
             "type": "dateTime"
         },
         {
             "name": "type",
             "use": "in",
             "min": 0,
-            "max": "1",
-            "documentation": "The type of document being requested. It relates to document type, e.g. the LOINC code for a C-CDA Continuity of Care Document (CCD) is 34133-9 (Summary of episode note). If no type is provided, a CDA document, if available, SHOULD be in scope and all other document types MAY be in scope",
-            "type": "CodeableConcept",
+            "max": "*",
+            "documentation": "The type relates to document type e.g., for the LOINC code for a C-CDA Clinical Summary of Care (CCD) is 34133-9 (Summary of episode note). If no type is provided, the CCD document, if available, SHALL be in scope, and all other document types MAY be in scope. It is at the server's discretion how to respond if multiple types are provided. The server MAY return documents to any of the specified types. The server's CapabilityStatement should document its behavior and what types it supports.",
+            "type": "Coding",
             "binding": {
-                "strength": "example",
+                "strength": "required",
                 "valueSet": "http://hl7.org/fhir/ValueSet/c80-doc-typecodes"
             }
         },
@@ -78,15 +58,15 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "This on-demand parameter allows client to dictate whether they are requesting only ‘on-demand’ or both ‘on-demand’ and 'stable' documents (or delayed/deferred assembly) that meet the query parameters",
+            "documentation": "This on-demand parameter allows the client to dictate whether they are requesting only 'on-demand' or both 'on-demand' and 'stable' documents (or delayed/deferred assembly) that meet the query parameters",
             "type": "boolean"
         },
         {
             "name": "profile",
             "use": "in",
             "min": 0,
-            "max": "1",
-            "documentation": "This parameter allows the client to request documents according to a specific profile, using the profile's canonical reference",
+            "max": "*",
+            "documentation": "This parameter allows the client to request documents according to a specific profile using the profile's canonical reference. It is at the server's discretion how to respond if multiple profiles are provided. The server MAY return documents to any of the specified profiles. The server's CapabilityStatement should document its behavior and what profiles it supports.",
             "type": "canonical"
         },
         {

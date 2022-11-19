@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "f69885cc-301c-46e7-abec-187b93779ea9-12",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/f69885cc-301c-46e7-abec-187b93779ea9-12",
-  "name" : "IntersectionCommonLanguagesAndLanguageCodesWithLanguageAndOptionallyARegionModifier",
-  "title" : "Intersection of Common Languages And Language codes with language and optionally a region modifier",
-  "status" : "draft",
-  "date" : "2022-11-11T15:24:25-08:00"
-}

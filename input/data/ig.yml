@@ -66,31 +66,35 @@ definition:
     name: International Patient Access Server CapabilityStatement
   - reference:
       reference: OperationDefinition/docref
-    description: "This operation is used to return all the requested references to\
-      \ documents related to a patient. \n\n The operation requires a patient id and\
+    description: "\nThis operation is used to return all the references to documents\
+      \ related to a\npatient. It is invoked on a FHIR Server's DocumentReference\
+      \ endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all\
+      \ DocumentReference instances. \n\n The operation requires a patient id and\
       \ takes the optional input parameters: \n  - start date\n  - end date\n  - document\
-      \ type \n  - on-demand\n  - profile  \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html)\
-      \ of type \"searchset\" containing [DocumentReference](StructureDefinition-ipa-documentreference.html)\
-      \ resources for the patient. If the server has or can create documents that\
-      \ are related to the patient, and that are available for the given user, the\
-      \ server returns DocumentReference resources.  The principal intended use for\
-      \ this operation is to provide a patient with access to their available document\
-      \ information. \n\n This operation *differs* from a search by patient and type\
-      \ and date range because: \n\n 1. It is used to request a server *generate*\
-      \ one or more documents based on the specified parameters. \n\n 1. If not otherwise\
-      \ specified, the server SHALL return a DocumentReference to the patient's most\
-      \ current summary document. The type of such summary document will depend on\
-      \ jurisdiction, for example, it may be a C-CDA CCD. It is expected that such\
-      \ a summary document will always exist, or can be dynamically generated; however,\
-      \ a jurisdiction may define the outcome of the operation when such a document\
-      \ is missing. \n\n 1. If the server cannot *generate* a document based on the\
-      \ specified parameters, the operation will return an empty search bundle. \n\
-      \n This operation is *similar* to a FHIR RESTful search by patient, type and\
-      \ date range when there are existing documentations that meet the requirements\
-      \ of the request, because: \n\n 1. References for *existing* documents that\
-      \ meet the requirements of the request SHOULD also be returned unless the client\
-      \ indicates they are only interested in 'on-demand' documents using the *on-demand*\
-      \ parameter."
+      \ type \n  - on-demand\n  - profile  \n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html)\
+      \ containing [DocumentReference](StructureDefinition-ipa-documentreference.html)\
+      \ resources for the patient. If the server has stored documents or can create\
+      \ documents for the patient and those documents are available for the user,\
+      \ the server returns the DocumentReference resources associated with documents.\
+      \ This operation's intended use is to provide a way for providers or patients\
+      \ to access their available documents. The document itself can be subsequently\
+      \ retrieved using the link provided  in the `DocumentReference.content.attachment.url\
+      \ element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html)\
+      \ Resource or some other document repository. \n\nThis operation is *different*\
+      \ from a FHIR RESTful query on DocumentReference by patient and type and date\
+      \ range because: \n\n1. It is used to request a server to *generate* a document\
+      \ based on the specified parameters.\n\n1. If no parameters are specified, the\
+      \ server SHALL return a DocumentReference to the patient's most current summary\
+      \ document. The type of such summary document will depend on jurisdiction. For\
+      \ example, it may be a C-CDA CCD. It is expected that such a summary document\
+      \ will always exist or can be dynamically generated; however, a jurisdiction\
+      \ may define the outcome of the operation when such a document is missing.\n\
+      \n1. If the server cannot *generate* a document based on the specified parameters,\
+      \ the operation will return an empty search bundle.\n\nUnless the client indicates\
+      \ they are only interested in 'on-demand' documents using the *on-demand* parameter,\
+      \ the server SHOULD return DocumentReference instances for *existing* documents\
+      \ that meet the request parameters  In this regard, this operation is *similar*\
+      \ to a FHIR RESTful query."
     exampleBoolean: false
     name: IPA Fetch DocumentReference
   - reference:

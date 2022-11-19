@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "055fd7d9-1dbc-4892-aa57-1843badc9ff9-15",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/055fd7d9-1dbc-4892-aa57-1843badc9ff9-15",
-  "name" : "IntersectionSNOMEDCTMedicationCodesAndUSCoreMedicationCodes",
-  "title" : "Intersection of SNOMED CT Medication Codes And US Core Medication Codes (RxNorm)",
-  "status" : "draft",
-  "date" : "2022-11-11T15:30:55-08:00"
-}

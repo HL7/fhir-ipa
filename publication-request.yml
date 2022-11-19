@@ -1,5 +1,5 @@
 package-id: hl7.fhir.uv.ipa
-version: 1.0.0-preview
+version: 1.0.0
 path: http://hl7.org/fhir/uv/ipa/STU1
 status: draft
 sequence: STU 1

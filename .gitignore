@@ -28,7 +28,7 @@ Thumbs.db
 *.sh
 *.bat
 !gen_cs.sh
-!cf_prof.sh
+cf_prof.sh
 
 # my-notes #
 ############
