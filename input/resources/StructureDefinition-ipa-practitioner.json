@@ -32,7 +32,7 @@
                         ],
                         "key": "ipa-pract-1",
                         "severity": "warning",
-                        "human": "To be usable for a wide range of internationally available applications, the Patient.name.text SHOULD be present.",
+                        "human": "To be usable for a wide range of internationally available applications, the Practitioner.name.text SHOULD be present.",
                         "expression": "text.exists()",
                         "xpath": "/f:name/f:text"
                     }
