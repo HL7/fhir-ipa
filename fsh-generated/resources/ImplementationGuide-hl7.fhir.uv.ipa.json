@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.uv.ipa",
-  "url": "http://hl7.org/fhir/uv/ipa",
+  "url": "http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa",
   "version": "1.0.0-preview",
   "name": "InternationalPatientAccess",
   "title": "International Patient Access",

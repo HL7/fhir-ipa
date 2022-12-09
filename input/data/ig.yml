@@ -66,7 +66,7 @@ definition:
     name: International Patient Access Server CapabilityStatement
   - reference:
       reference: OperationDefinition/docref
-    description: "\nThis operation is used to return all the references to documents\
+    description: "This operation is used to return all the references to documents\
       \ related to a\npatient. It is invoked on a FHIR Server's DocumentReference\
       \ endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all\
       \ DocumentReference instances. \n\n The operation requires a patient id and\
