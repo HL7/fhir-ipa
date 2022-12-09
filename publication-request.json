@@ -4,5 +4,5 @@
     "path": "http://hl7.org/fhir/uv/ipa/STU1",
     "status": "draft",
     "sequence": "STU 1",
-    "desc": "Continuous Integration Build (latest in version control)"
+    "desc": "STU1 Version the International Patient Access (IPA) Implementation Guide: This is the first published version of this guide and the result of the resolution of community comments for the January 2022 Ballot Version."
 }

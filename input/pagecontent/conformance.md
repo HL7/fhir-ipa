@@ -1,7 +1,7 @@
 <div class="bg-success" markdown="1">
 IPA conformant servers SHALL support:
 
- - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API](http://hl7.org/fhir/R4/http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
+ - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API]({{site.data.fhir.path}}http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
  - the SMART on FHIR obligations and capabilities
 
 This page documents how CapabilityStatements declare conformance to the IPA Profiles and their FHIR Interactions. It also defines the expectations for mandatory and must-support elements. The SMART on FHIR obligations and capabilities are documented on the [Gaining Access to a Patient Record](access.html) page.
@@ -10,9 +10,9 @@ Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are de
 </div><!-- new-content -->
 
 ### Conformance Artifacts
-The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defined for this implementation guide. Core Profile [StructureDefinitions](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Many Profile pages also contain additional guidance.
+The [Artifacts](artifacts.html) page lists the IPA Profiles that have been defined for this implementation guide. Core Profile [StructureDefinitions]({{site.data.fhir.path}}structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Many Profile pages also contain additional guidance.
 
-The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) guidance requires specifications to define exactly the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for requesters and responders.
+The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define exactly the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for requesters and responders.
 
 <div class="bg-success" markdown="1">
 #### Capability Statements 
@@ -100,7 +100,7 @@ Note: an IPA responder may have no data to be included either because there are 
 ###### Missing Must-Support, and Required data
 If an IPA responder does not have data to be included, the reason for the absence has to be specified as follows:
 
-1. For non-coded data elements, use the [DataAbsentReason Extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type.
+1. For non-coded data elements, use the [DataAbsentReason Extension]({{site.data.fhir.path}}extension-data-absent-reason.html) in the data type.
 2. For coded data elements:
   * example, preferred, or extensible binding strengths (CodeableConcept datatypes):
     * if the source systems has text but no coded data, only the text element is used.
@@ -116,7 +116,7 @@ Clients conforming to a profile in IPA SHALL be capable of processing resource i
 
 For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because requestors must be capable of processing this value in order to appropriately handle the resource's clinical data.
 
-NOTE: Readers are advised to understand [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html) requirements, [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) based on the HTTP protocol, along with [FHIR DataTypes](http://hl7.org/fhir/R4/datatypes.html), [FHIR Search](http://hl7.org/fhir/R4/search.html) and [FHIR Resource](http://hl7.org/fhir/R4/resource.html) formats when implementing IPA requirements.
+NOTE: Readers are advised to understand [FHIR Terminology]({{site.data.fhir.path}}terminologies.html) requirements, [FHIR RESTful API]({{site.data.fhir.path}}http.html) based on the HTTP protocol, along with [FHIR DataTypes]({{site.data.fhir.path}}datatypes.html), [FHIR Search]({{site.data.fhir.path}}search.html) and [FHIR Resource]({{site.data.fhir.path}}resource.html) formats when implementing IPA requirements.
 
 <div class="bg-success" markdown="1">
 #### Must Support - Resource References

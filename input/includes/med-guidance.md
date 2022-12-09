@@ -16,7 +16,7 @@ As noted there is currently no consensus how a patient can access their active, 
 
 The MedicationRequest and MedicationStatement resources can represent a medication using either
 a code or refer to the Medication resource. When referencing Medication, the
-resource may be [contained](http://hl7.org/fhir/R4/references.html#contained)
+resource may be [contained]({{site.data.fhir.path}}references.html#contained)
 or an external resource. The server application **MAY** choose any one way or
 more than one method, but if an external reference to Medication is used, the
 server **SHALL** support the `_include` parameter for searching this element.

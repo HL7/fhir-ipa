@@ -4,14 +4,14 @@ echo "================================================================="
 echo "=== This Script runs the Custom IG publisher with improved CapabilityStatement rendering  ==="
 echo "=== To update the Capstatement renderings before pushing to the autobuild ==="
 echo "===The custom ig-pbulishing jar is at ==="
-echo "=== https://github.com/vassilpeytchev/fhir-ig-publisher/releases/tag/customPublisher.1.2.4-SNAPSHOT ==="
+echo "=== https://github.com/vassilpeytchev/fhir-ig-publisher/releases/tag/customPublisher.1.2.nnn-SNAPSHOT ==="
 echo "===and needs to be downloaded to a local dir identified by the path variable ==="
 echo "================================================================="
 set -e
 
 # NA='http://tx.fhir.org'
 NA='N/A'
-path=~/Downloads/publisher-1.2.14-SNAPSHOT.jar # path to publisher
+path=~/Downloads/publisher-1.2.23-SNAPSHOT.jar # path to publisher
 IN1=input/resources/CapabilityStatement-ipa-server.json # path to the Server CapabilityStatement
 IN2=input/resources/CapabilityStatement-ipa-client.json # path to the Client CapabilityStatement
 OUT=out.tmp # path to the temporary output folder

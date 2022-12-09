@@ -1,18 +1,23 @@
 During the [Authorization process](access.html), the user and the Authorization service fixes the patient record to a single individual patient. <span class="bg-success" markdown="1">For safety, client applications should specify the patient id when searching other resources.</span><!-- new-content --> 
 
-<div class="bg-success" markdown="1">
-Servers SHALL support and client applications SHALL be able to access
-the patient record using all of the following API calls:
+The client application SHALL be capable of accessing the patient record using the following API call:
 
 ```GET [url]/Patient/[id]```
 
-```GET [url]/Patient?_id=[id]```
+<!-- ```GET [url]/Patient?_id=[id]```
 
-```GET [url]/Patient?identifier=[identifier]```
+```GET [url]/Patient?identifier=[identifier]``` -->
 
-Servers are not required to support any additional search parameters,
-and clients SHOULD not expect servers to do so.
+<div class="bg-success" markdown="1">
+The client application MAY use these search parameters that servers are required to support to access the patient record:
 
+- [`_id`]({{site.data.fhir.path}}resource.html#search)
+- [`identifier`]({{site.data.fhir.path}}patient.html#search)
+</div><!-- new-content -->
+
+Servers are not required to support any additional search parameters, and clients SHOULD NOT expect servers to do so.
+
+<div class="bg-success" markdown="1">
 Additional rules and guidance for supporting `Patient.link`: 
 
 - The server:

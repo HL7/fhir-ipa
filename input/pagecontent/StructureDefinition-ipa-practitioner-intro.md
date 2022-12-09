@@ -44,7 +44,7 @@ where id is found in some other resource that refers to a Practitioner. The resu
 a Practitioner resource, or an error if there is no resource the client can access for that id. 
 
 \* Note that in some cases, the actual name of the practitioner is not made available. In such cases,
-the server SHALL provider some human-useful text in [HumanName.text](http://hl7.org/fhir/R4/datatypes-definitions.html#HumanName.text)
+the server SHALL provider some human-useful text in [HumanName.text]({{site.data.fhir.path}}datatypes-definitions.html#HumanName.text)
 that the client can use. 
 
 #### Search
