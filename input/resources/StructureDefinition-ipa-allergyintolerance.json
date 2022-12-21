@@ -31,13 +31,6 @@
         "mustSupport": true
       },
       {
-        "id": "AllergyIntolerance.category",
-        "path": "AllergyIntolerance.category",
-        "comment": "This element is often not supported. Applications should not depend on it, but it may be useful to group allergies if present",
-        "min": 0,
-        "max": "1"
-      },
-      {
         "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
         "min": 1,

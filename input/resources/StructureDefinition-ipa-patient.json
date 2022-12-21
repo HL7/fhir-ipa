@@ -75,7 +75,7 @@
             {
                 "id": "Patient.gender",
                 "path": "Patient.gender",
-                "min": 1,
+                "min": 0,
                 "mustSupport": true
             },
             {
