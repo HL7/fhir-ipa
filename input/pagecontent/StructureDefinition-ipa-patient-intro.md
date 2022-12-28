@@ -7,15 +7,18 @@ The following data elements must always be present (in other words, mandatory re
 </div><!-- new-content -->
 
 **Each Patient SHALL have:**
-* an active flag
+
 * a patient identifier (e.g. MRN)
 * a patient name
 * an administrative gender (note: this is for administrative purposes; see [note about Patient Gender and Sex for discussion](http://hl7.org/fhir/patient.html#gender))
   
 **Applications must also support:**
-* Birth date
-* Patient Links
 
+* <span class="bg-success" markdown="1"> an active flag (It SHALL be present if patients links are present)*</span><!-- new-content -->
+* Birth date
+* Patient Links*
+
+<span class="bg-success" markdown="1">\* See guidance below</span><!-- new-content -->
 
 <!-- (only if present) -->
 ### Profile Specific Implementation Rules and Guidance
