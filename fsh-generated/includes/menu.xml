@@ -44,6 +44,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="artifacts.html">Artifacts Summary</a>
+      </li>
+      <li>
         <a href="artifacts.html#1">Profiles</a>
       </li>
       <li>

@@ -120,6 +120,7 @@ menu:
       Internationalization Issues: internationalization.html
   Security and Privacy: security.html 
   Artifact Index:
+      Artifacts Summary: artifacts.html
       Profiles: artifacts.html#1
       CapabilityStatements: artifacts.html#3
       Operations: artifacts.html#4

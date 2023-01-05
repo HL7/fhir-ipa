@@ -1,4 +1,4 @@
-An application <span class="bg-success" markdown="1">is</span><!-- new-content --> authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See the <span class="bg-success" markdown="1">required server and client</span><!-- new-content --> SMART on FHIR capabilities on the [security page](security.html). <span class="bg-success" markdown="1">The use of SMART on FHIR is described below.</span><!-- new-content -->
+An application <span class="bg-success" markdown="1">is</span><!-- new-content --> authorized to access a patient record using the [SMART App Launch Protocol](http://hl7.org/fhir/smart-app-launch/)'s standalone launch sequence. See the <span class="bg-success" markdown="1">required server and client</span><!-- new-content --> SMART on FHIR capabilities on the [security page](security.html). <span class="bg-success" markdown="1">The use of SMART on FHIR is described below.</span><!-- new-content -->
 
 ### Client Process
 
@@ -8,12 +8,12 @@ A client application gets access to a patient record by following this general s
 <div class="bg-success" markdown="1">
 * Register itself as a client application with the endpoint. 
   * This may require a manual step on the part of the user or the developer, or the endpoint may support automatic registration (see [OAuth 2.0 Dynamic Client Registration Protocol](https://tools.ietf.org/html/rfc7591)). 
-  * if the application supports automatic registration, the endpoint will be specified in the [url]/.well-known/smart-configuration
+  * if the application supports automatic registration, the [url]/.well-known/smart-configuration will specify the endpoint.
   * Note that most healthcare systems exercise control over which clients can access healthcare records, and automatic registration is not supported.
 </div><!-- new-content -->
 
-* <span class="bg-success" markdown="1">Identifying the appropriate end point [URL] at which the IPA-compatible API is found.</span><!-- new-content -->
-  * Note that this specification does not specify how the endpoint might be found; different countries will have different arrangements around this. 
+* <span class="bg-success" markdown="1">Identifying the appropriate endpoint [URL] for the IPA-compatible API.</span><!-- new-content -->
+  * Note that this specification does not specify how to find the endpoint; different countries will have different arrangements. 
 
 * Fetch the system capability statement from [url]/metadata and check that [it implements the IPA API](conformance.html)
 
@@ -36,12 +36,12 @@ IPA conformant servers <span class="bg-success" markdown="1">and clients</span><
  - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class="bg-success" markdown="1">[the RESTful FHIR API]({{site.data.fhir.path}}http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
  - the SMART on FHIR obligations and capabilities
 
-This section documents the SMART on FHIR obligations and capabilities. Support for IPA Profiles and their FHIR Interactions are documented on the [Conformance](conformance.html) page.
+This section documents the SMART on FHIR obligations and capabilities. The [Conformance](conformance.html) page documents the support for IPA Profiles and their FHIR interactions.
 
 #### SMART on FHIR Server Obligations
  
-* The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration  that is available to both authenticated and unauthenticated clients.
-* Specific obligations for server support of SMART on FHIR capabilities are defined below, and include the server hosting a smart-configuration file at [url]/.well-known/smart-configuration that is available to both authenticated and unauthenticated clients.
+* The server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at [url]/.well-known/smart-configuration that is available to both authenticated and unauthenticated clients.
+* Specific obligations for server support of SMART on FHIR capabilities are defined below. They include the server hosting a smart-configuration file at [url]/.well-known/smart-configuration that is available to both authenticated and unauthenticated clients.
 
 
 <div class="bg-success" markdown="1">
@@ -79,12 +79,12 @@ Client apps will need to support a subset of the SMART on FHIR server capabiliti
 
 #### SMART on FHIR Server Process
 
-The  steps described below are generally performed when a server grants access to a client -- 
-* The server conforms to the SMART App Launch specification, and checks that the authenticated user of the application has access.
+The  steps described below are typically performed when a server grants access to a client -- 
+* The server conforms to the SMART App Launch specification and checks that the authenticated user of the application has access.
 *  If the client requests access to a patient record, the server checks that the authenticated user of the application has access to the specified record.
 *  If the authenticated user is authorized to access multiple patient records, the server typically requires that the user choose a single patient record to share. (A patient often has access to multiple records in the case of a parent or family caregiver).
-*  The server ensures that the authenticated user has access to the record being shared.
-*  The server returns a Patient FHIR resource identifier as the patient SMART launch context parameter when authorization is granted and includes any patient/ scopes, as defined by the SMART App Launch Protocol.
+*  The server ensures that the authenticated user has access to the record.
+*  The server returns a Patient FHIR resource identifier as the patient SMART launch context parameter when authorization is granted and includes any patient/ scopes defined by the SMART App Launch Protocol.
 
 [launch-standalone]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-modes
 [context-standalone-patient]: http://hl7.org/fhir/smart-app-launch/conformance.html#launch-context-for-standalone-launch
