@@ -1,0 +1,30 @@
+resourceType: DocumentReference
+id: USClinicalNoteExample1
+status: current
+docStatus: final
+type:
+  coding:
+  - system: http://loinc.org
+    code: 11506-3
+    display: Progress Note
+  text: Progress Note
+category:
+- coding:
+  - system: http://loinc.org
+    code: 34109-9
+    display: Note
+  text: Clinical Note
+subject:
+  reference: Patient/PatientExample1
+  display: Lufhir, Meiko
+date: '2019-05-21T20:19:30Z'
+author:
+- reference: Practitioner/PractitionerExample1
+  display: Marty Seeger
+content:
+- attachment:
+    contentType: text/html
+    url: Binary/ekAJmRWsOeeVsqjgMnmX-5ZTCqyW.NZW3fvSH8mNXZSg3
+context:
+  period:
+    start: '2019-05-21T04:59:00Z'

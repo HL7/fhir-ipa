@@ -1,0 +1,14 @@
+resourceType: Practitioner
+id: PractitionerExample1
+identifier:
+- use: usual
+  system: urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.295
+  value: '1538344056'
+active: true
+name:
+- use: usual
+  text: Marty Seeger
+  family: Seeger
+  given:
+  - Marty
+gender: male

@@ -1,0 +1,44 @@
+resourceType: MedicationStatement
+id: MedStatementExample1
+identifier:
+- use: usual
+  system: urn:1.2.840.114350.1.13.861.1.7.2.798268
+  value: '5131734'
+status: active
+medicationReference:
+  reference: Medication/MedExample1
+  display: Percocet
+effectivePeriod:
+  start: '2017-04-26T22:00:00Z'
+informationSource:
+  reference: Practitioner/PractitionerExample1
+  display: Seeger, Marty
+subject:
+  reference: Patient/PatientExample1
+  display: Lufhir, Meiko
+dosage:
+- timing:
+    repeat:
+      boundsPeriod:
+        start: '2017-04-26T22:00:00Z'
+      timeOfDay:
+      - '12:00:00'
+      - '18:00:00'
+  asNeededBoolean: false
+  route:
+    coding:
+    - system: http://snomed.info/sct
+      code: '260548002'
+      display: Oral
+    text: Oral
+  doseAndRate:
+  - type:
+      coding:
+      - system: http://terminology.hl7.org/CodeSystem/dose-rate-type
+        code: ordered
+        display: Ordered
+    doseQuantity:
+      value: 1
+      unit: mL
+      system: http://unitsofmeasure.org
+      code: mL

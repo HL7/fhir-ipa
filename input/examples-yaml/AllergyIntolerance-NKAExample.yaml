@@ -1,0 +1,22 @@
+resourceType: AllergyIntolerance
+id: NKAExample
+clinicalStatus:
+  coding:
+  - system: http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+    code: active
+  text: Active
+verificationStatus:
+  coding:
+  - system: http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+    code: confirmed
+  text: Confirmed
+code:
+  coding:
+  - system: http://snomed.info/sct
+    code: '716186003'
+    display: No known allergy
+  text: No known allergies
+patient:
+  reference: Patient/PatientExample1
+  display: Lufhir, Meiko
+recordedDate: '2022-09-02'

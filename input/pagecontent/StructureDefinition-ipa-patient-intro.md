@@ -1,10 +1,10 @@
 
 ### Mandatory and Must Support Data Elements
 
-<div class="bg-success" markdown="1">
+
 <!-- Boilerplate -->
 The following data elements must always be present (in other words, mandatory resource properties with a minimum cardinality of 1) or must be supported ([Must Support](conformance.html#must-support) definition). Servers cannot restrict access to mandatory elements when authorizing an application. However, servers may choose to provide additional information or may be required to do so by national or other profiles that apply to the server's context.
-</div><!-- new-content -->
+
 
 **Each Patient SHALL have:**
 
@@ -14,11 +14,11 @@ The following data elements must always be present (in other words, mandatory re
   
 **Applications must also support:**
 
-* <span class="bg-success" markdown="1"> an active flag (It SHALL be present if patients links are present)*</span><!-- new-content -->
+*  an active flag (It SHALL be present if patients links are present)*
 * Birth date
 * Patient Links*
 
-<span class="bg-success" markdown="1">\* See guidance below</span><!-- new-content -->
+\* See guidance below
 
 <!-- (only if present) -->
 ### Profile Specific Implementation Rules and Guidance

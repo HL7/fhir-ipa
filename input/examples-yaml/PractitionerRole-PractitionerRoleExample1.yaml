@@ -1,0 +1,23 @@
+resourceType: PractitionerRole
+id: PractitionerRoleExample1
+active: true
+practitioner:
+  reference: Practitioner/PractitionerExample1
+  display: Marty Seeger
+code:
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/practitioner-role
+    code: doctor
+    display: Doctor
+  text: Physician
+specialty:
+- coding:
+  - system: http://snomed.info/sct
+    code: '419772000'
+    display: Family Practice
+  text: Family Practice
+- coding:
+  - system: http://snomed.info/sct
+    code: '419192003'
+    display: Internal medicine
+  text: Internal Medicine

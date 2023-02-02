@@ -1,0 +1,54 @@
+{
+  "resourceType": "Condition",
+  "id": "ProblemExample1",
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active",
+        "display": "Active"
+      }
+    ],
+    "text": "Active"
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed",
+        "display": "Confirmed"
+      }
+    ],
+    "text": "Confirmed"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        }
+      ],
+      "text": "Problem List Item"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "L60.0"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "400097005"
+      }
+    ],
+    "text": "Ingrowing nail"
+  },
+  "subject": {
+    "reference": "Patient/PatientExample1",
+    "display": "Lufhir, Meiko H Jr., MD"
+  },
+  "recordedDate": "2018-11"
+}

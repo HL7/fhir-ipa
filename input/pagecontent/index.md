@@ -1,16 +1,13 @@
-
-{% include new-content-note.md %}
-
 ### Welcome to the International Patient Access API Specification
 
 This specification describes how an application acting on behalf of a patient
 can access information about the patient from a clinical records system using
-a <span class="bg-success" markdown="1">FHIR R4 based API.</span><!-- new-content --> The clinical records system may be supporting a clinical care provider (e.g., a hospital or a general practitioner), a health data exchange, 
+a FHIR R4 based API. The clinical records system may be supporting a clinical care provider (e.g., a hospital or a general practitioner), a health data exchange, 
 or other system managing patient records, including a national health record system.
 
-<div class="bg-success" markdown="1">
+
 The IPA specification is designed to help patients access their data. In addition, implementers can use the IPA profiles and the [SMART App Launch](http://hl7.org/fhir/smart-app-launch/) specification to support clinician-facing applications and backend access to patient records.
-</div><!-- new-content -->
+
 
 Applications that conform to IPA can access the following information about the patient:
 
@@ -22,19 +19,19 @@ Applications that conform to IPA can access the following information about the 
 * [Vital signs, lab results, and other clinical observations](StructureDefinition-ipa-observation.html)
 * [Clinical notes & other patient documents](StructureDefinition-ipa-documentreference.html)
 
-<div class="bg-success" markdown="1">
+
 
 #### Example Scenario
 
 *Salma Kahil uses a personal health record app to track her health and assemble her records from multiple healthcare providers. Her healthcare providers support the International Patient Access API, and Salma's health record app provides a user-friendly IPA application to provide safe, quick, and reliable access to data. Because retrieving and updating her medical information from her healthcare providers is secure, fast, and simple, Salma is a more informed and engaged patient.*
-</div><!-- new-content -->
+
 
 #### Using the International Patient Access API
 
-The IPA specification is designed to help patients access their data through patient-facing applications. The underlying SMART App Launch specifications have been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps  <span class="bg-success" markdown="1">This version of IPA is read-only. However, implementations may choose to provide write access. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".</span><!-- new-content -->
+The IPA specification is designed to help patients access their data through patient-facing applications. The underlying SMART App Launch specifications have been deployed at scale for clinician-facing and backend access to patient records using EHR-integrated SMART apps  This version of IPA is read-only. However, implementations may choose to provide write access. In addition, IPA implementers are encouraged to re-use IPA profiles and support additional SMART App Launch capabilities, such as the "[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets)" scenario or "[Backend Services](http://hl7.org/fhir/smart-app-launch/backend-services.html)".
 
 
-<div class="bg-success" markdown="1">
+
 
 
 
@@ -79,7 +76,7 @@ This Guide is divided into several pages listed at the top of each page in the m
     - [Examples](artifacts.html#5)\: The list of all the examples used in this guide. They illustrate the data produced and consumed by systems conforming to this implementation guide. Every effort has been made to ensure that the examples are correct and valuable. However, they are neither a normative part of the specification nor fully representative of real-world examples.
 - Support:
     - [Downloads](downloads.html)\: This page provides links to downloadable artifacts that developers can use to help them implement this guide.
-</div><!-- new-content -->
+
 
 
 ### Relationship to National Specifications 
@@ -90,14 +87,14 @@ and content rules that are true everywhere. Working healthcare systems
 may need to make additional rules about the access API to support other use cases and their national laws, regulations, and accepted
 practices.
 
-<span class="bg-success" markdown="1">Jurisdictions are encouraged to use this specification directly and may also publish their patient access specifications that further refine the profiles in this implementation guide. </span><!-- new-content -->
+Jurisdictions are encouraged to use this specification directly and may also publish their patient access specifications that further refine the profiles in this implementation guide. 
 
-<span class="bg-success" markdown="1">This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
+This project intends to create and maintain a registry of FHIR implementation guides consistent with IPA as countries adopt it in their national FHIR standards.
 {:.bg-info}
 
 
 
-<div class="bg-success" markdown="1">
+
 #### Declaring support for IPA
 As jurisdiction-specific FHIR profiles proliferate, specification authors should strive to build on top of IPA to better serve their implementors, caregivers, and patients. A FHIR implementation guide declares a relationship with IPA by referencing IPA in its published CapabilityStatement. Similarly, systems can also indicate their support of IPA in their CapabilityStatement. An implementation guide or system can support IPA in two distinct manners:
 
@@ -105,8 +102,35 @@ As jurisdiction-specific FHIR profiles proliferate, specification authors should
 2. An implementation guide is an instantiation of IPA if it requires only some of IPA's requirements. A system **instantiates** IPA if it supports parts of IPA. The CapabilityStatement communicates this by referencing the canonical URL of the appropriate IPA CapabilityStatement URL in its [instantiates element](http://hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.instantiates). 
 
 Because the "instantiates" form of support for IPA is imprecise, implementers and users of a system or specification that instantiates IPA should ensure that the desired functionality is instantiated.
-</div><!-- new-content -->
 
-<div class="bg-success" markdown="1">
+
+
 {% include ips-relationship.md %}
-</div><!-- new-content -->
+
+
+---
+
+### Credits
+
+
+*This Implementation Guide was made possible by the contributions of the [Argonaut Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home) member organizations and the [Patient Care](http://www.hl7.org/Special/committees/patientcare/) Work Group,*
+
+*Authors:*
+
+- *Eric Haas, Health eData Inc*
+- *Grahame Grieve, Health Intersections Pty. Ltd.*
+- *Isaac Vetter, Epic*
+- *Mikael Rinnetmaki, Sensotrend Oy, HL7 Finland*
+- *Rob Hausam, Hausam Consulting LLC*
+- *Vassil Peytchev, Epic*
+
+
+*Individual Contributors:*
+
+- *Brett Marquard, WaveOne*
+- *Cori Thompson, Drummond Group*
+- *John D'Amore, More Informatics*
+- *John Moehrke, By Light Professional IT Services LLC*
+- *Sheridan Cook, Canada Health Infoway*
+
+---

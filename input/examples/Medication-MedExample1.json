@@ -1,21 +1,6 @@
 {
   "resourceType": "Medication",
   "id": "MedExample1",
-      "meta": {
-    "profile": [
-      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication"
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Medication Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a Medication example for the *IPA Medication Profile*."
-      }
-    ]
-  },
   "code": {
     "coding": [
       {

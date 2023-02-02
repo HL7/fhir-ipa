@@ -47,9 +47,9 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Jan 4, 2023 02:39+0000 for FHIR v5.0.0-snapshot3 
+  Generated on Thu, Feb 2, 2023 00:48+0000 for FHIR v5.0.0-cibuild 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="5.0.0-snapshot3">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="5.0.0-cibuild">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="fhir-xhtml.xsd"/>
@@ -649,11 +649,6 @@
       <xs:enumeration value="DiagnosticReport">
         <xs:annotation>
           <xs:documentation xml:lang="en">DiagnosticReport</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DocumentManifest">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DocumentManifest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DocumentReference">
@@ -1491,11 +1486,6 @@
           <xs:documentation xml:lang="en">DiagnosticReport</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="DocumentManifest">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DocumentManifest</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="DocumentReference">
         <xs:annotation>
           <xs:documentation xml:lang="en">DocumentReference</xs:documentation>
@@ -2121,6 +2111,11 @@
           <xs:documentation xml:lang="en">SupplyRequest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Task">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Task</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="VisionPrescription">
         <xs:annotation>
           <xs:documentation xml:lang="en">VisionPrescription</xs:documentation>
@@ -2199,11 +2194,6 @@
       <xs:enumeration value="DiagnosticReport">
         <xs:annotation>
           <xs:documentation xml:lang="en">DiagnosticReport</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DocumentManifest">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DocumentManifest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DocumentReference">
@@ -2354,6 +2344,11 @@
       <xs:enumeration value="ChargeItemDefinition">
         <xs:annotation>
           <xs:documentation xml:lang="en">ChargeItemDefinition</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ClinicalUseDefinition">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ClinicalUseDefinition</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="EventDefinition">
@@ -2814,11 +2809,6 @@
       <xs:enumeration value="Distance">
         <xs:annotation>
           <xs:documentation xml:lang="en">Distance</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DocumentManifest">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DocumentManifest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DocumentReference">
@@ -3819,11 +3809,6 @@
       <xs:enumeration value="DiagnosticReport">
         <xs:annotation>
           <xs:documentation xml:lang="en">DiagnosticReport</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DocumentManifest">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DocumentManifest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DocumentReference">
@@ -15306,7 +15291,6 @@
       <xs:element ref="DeviceRequest"/>
       <xs:element ref="DeviceUsage"/>
       <xs:element ref="DiagnosticReport"/>
-      <xs:element ref="DocumentManifest"/>
       <xs:element ref="DocumentReference"/>
       <xs:element ref="Encounter"/>
       <xs:element ref="Endpoint"/>
@@ -17306,9 +17290,9 @@ If a pattern[x] is declared on a repeating element, the pattern applies to all r
     <xs:complexContent>
       <xs:extension base="BackboneType">
         <xs:sequence>
-          <xs:element name="code" type="Coding" minOccurs="1" maxOccurs="1">
+          <xs:element name="code" type="Coding" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Codes, potentially combination code, that describe the obligations that apply to implementing applications.</xs:documentation>
+              <xs:documentation xml:lang="en">A code that describes the obligations that apply to implementing applications.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="actor" type="canonical" minOccurs="0" maxOccurs="unbounded">
@@ -19298,7 +19282,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
               <xs:documentation xml:lang="en">Indicates the service area, hospital, department, etc. with responsibility for managing the Account.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Provides additional information about what the account tracks and how it is used.</xs:documentation>
            </xs:annotation>
@@ -20153,6 +20137,11 @@ A coverage may only be responsible for specific types of charges, and the sequen
               <xs:documentation xml:lang="en">A device that is integral to the medicinal product, in effect being considered as an &quot;ingredient&quot; of the medicinal product. This is not intended for devices that are just co-packaged.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A general description of the product, when in its final form, suitable for administration e.g. effervescent blue liquid, to be swallowed. Intended to be used when the other structured properties of this resource are insufficient or cannot be supported. It is not intended to duplicate information already carried elswehere.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="property" type="AdministrableProductDefinition.Property" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Characteristics e.g. a product's onset of action.</xs:documentation>
@@ -20295,12 +20284,12 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:element name="AdverseEvent" type="AdverseEvent">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="AdverseEvent">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -20435,7 +20424,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.Participant">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20456,7 +20445,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.SuspectEntity">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20479,7 +20468,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.Causality">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20505,7 +20494,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.ContributingFactor">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20523,7 +20512,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.PreventiveAction">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20541,7 +20530,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.MitigatingAction">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20559,7 +20548,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
   </xs:complexType>
   <xs:complexType name="AdverseEvent.SupportingInfo">
     <xs:annotation>
-      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
+      <xs:documentation xml:lang="en">An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research participant. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Adverse events can be reported by healthcare providers, patients, caregivers or by medical products manufacturers. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -20959,7 +20948,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.</xs:documentation>
+              <xs:documentation xml:lang="en">The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the note field.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="replaces" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -21015,6 +21004,11 @@ A coverage may only be responsible for specific types of charges, and the sequen
           <xs:element name="created" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="cancellationDate" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date/time describing when the appointment was cancelled.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
@@ -22366,6 +22360,11 @@ into another (possibly the same) biological entity.</xs:documentation>
           <xs:element name="bodyLandmarkOrientation" type="BodyStructure.BodyLandmarkOrientation" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Body locations in relation to a specific body landmark (tatoo, scar, other body structure).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="spatialReference" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">XY or XYZ-coordinate orientation for structure.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="qualifier" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -25474,6 +25473,13 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The identifier that is used to identify this version of the citation record when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the citation record author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the mechanism used to compare versions to determine which is more current.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="versionAlgorithmString" type="string"/>
+            <xs:element name="versionAlgorithmCoding" type="Coding"/>
+          </xs:choice>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A natural language name identifying the citation record. This name should be usable as an identifier for the module by machine processing applications such as code generation.</xs:documentation>
@@ -25532,6 +25538,11 @@ of the resource representation.</xs:documentation>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Use and/or publishing restrictions for the citation record, not for the cited artifact.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyrightLabel" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A short string (&lt;50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
@@ -25970,24 +25981,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">Issue, part or supplement of journal or other collection in which the article is published.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="publicationDateYear" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="articleDate" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Year in which the cited artifact was published.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="publicationDateMonth" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Month in which the cited artifact was published.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="publicationDateDay" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Day on which the cited artifact was published.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="publicationDateSeason" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Spring, Summer, Fall/Autumn, Winter.</xs:documentation>
+              <xs:documentation xml:lang="en">The date the article was added to the database, or the date the article was released.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="publicationDateText" minOccurs="0" maxOccurs="1" type="string">
@@ -25995,9 +25991,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">Text representation of the date on which the issue of the cited artifact was published.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="articleDate" minOccurs="0" maxOccurs="1" type="dateTime">
+          <xs:element name="publicationDateSeason" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The date the article was added to the database, or the date the article was released.</xs:documentation>
+              <xs:documentation xml:lang="en">Spring, Summer, Fall/Autumn, Winter.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="lastRevisionDate" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -27473,9 +27469,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -27486,6 +27482,37 @@ of the resource representation.</xs:documentation>
           <xs:element name="detail" type="ClaimResponse.Detail" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">A claim detail. Either a simple (a product or service) or a 'group' of sub-details which are simple items.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ClaimResponse.ReviewOutcome">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This resource provides the adjudication details from the processing of a Claim resource.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="reason" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The reasons for the result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="preAuthRef" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reference from the Insurer which is used in later communications which refers to this adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="preAuthPeriod" minOccurs="0" maxOccurs="1" type="Period">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The time frame during which this authorization is effective.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -27540,9 +27567,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -27576,9 +27603,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -27692,9 +27719,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -27789,9 +27816,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -27865,9 +27892,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ClaimResponse.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ClaimResponse.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -34233,17 +34260,17 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">A source of information or reference for this guideline.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="indication" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+          <xs:element name="indication" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A clinical condition for which the device was designed to be used.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="contraindication" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+          <xs:element name="contraindication" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A specific situation when a device should not be used because it may cause harm.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="warning" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+          <xs:element name="warning" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Specific hazard alert information that a user needs to know before using the device.</xs:documentation>
            </xs:annotation>
@@ -35492,104 +35519,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DocumentManifest" type="DocumentManifest">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A collection of documents compiled for a purpose together with metadata that applies to the collection.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="DocumentManifest">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A collection of documents compiled for a purpose together with metadata that applies to the collection.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="DomainResource">
-        <xs:sequence>
-          <xs:element name="masterIdentifier" minOccurs="0" maxOccurs="1" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Other identifiers associated with the document manifest, including version independent  identifiers.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="status" minOccurs="1" maxOccurs="1" type="DocumentReferenceStatus">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The status of this document manifest.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The code specifying the type of clinical activity that resulted in placing the associated content into the DocumentManifest.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Who or what the set of documents is about. The documents can be about a person, (patient or healthcare practitioner), a device (i.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure). If the documents cross more than one subject, then more than one subject is allowed here (unusual use case).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="created" minOccurs="0" maxOccurs="1" type="dateTime">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">When the document manifest was created for submission to the server (not necessarily the same thing as the actual resource last modified time, since it may be modified, replicated, etc.).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="author" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies who is the author of the manifest. Manifest author is not necessarly the author of the references included.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="recipient" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A patient, practitioner, or organization for which this set of documents is intended.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="source" minOccurs="0" maxOccurs="1" type="uri">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies the source system, application, or software that produced the document manifest.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Human-readable description of the source document. This is sometimes known as the &quot;title&quot;.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="content" minOccurs="1" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The list of Resources that consist of the parts of this manifest.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="related" type="DocumentManifest.Related" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Related identifiers or resources associated with the DocumentManifest.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="DocumentManifest.Related">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A collection of documents compiled for a purpose together with metadata that applies to the collection.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Related identifier to this DocumentManifest.  For example, Order numbers, accession numbers, XDW workflow numbers.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="ref" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Related Resource to this DocumentManifest. For example, Order, ServiceRequest,  Procedure, EligibilityRequest, etc.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="DocumentReference" type="DocumentReference">
     <xs:annotation>
       <xs:documentation xml:lang="en">A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this &quot;document&quot; encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.</xs:documentation>
@@ -36079,7 +36008,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="reAdmission" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Whether this admission is a readmission and why if known.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates that this encounter is directly related to a prior admission, often because the conditions addressed in the prior admission were not fully addressed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dietPreference" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -36864,6 +36793,13 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The identifier that is used to identify this version of the summary when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the summary author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the mechanism used to compare versions to determine which is more current.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="versionAlgorithmString" type="string"/>
+            <xs:element name="versionAlgorithmCoding" type="Coding"/>
+          </xs:choice>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A natural language name identifying the evidence. This name should be usable as an identifier for the module by machine processing applications such as code generation.</xs:documentation>
@@ -36894,11 +36830,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="date" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date  (and optionally time) when the summary was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the summary changes.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="useContext" minOccurs="0" maxOccurs="unbounded" type="UsageContext">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
@@ -36939,6 +36870,26 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="endorser" minOccurs="0" maxOccurs="unbounded" type="ContactDetail">
             <xs:annotation>
               <xs:documentation xml:lang="en">An individiual, organization, or device responsible for officially endorsing the content for use in some setting.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="useContext" minOccurs="0" maxOccurs="unbounded" type="UsageContext">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="purpose" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Explanation of why this Evidence is needed and why it has been designed as it has.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A copyright statement relating to the Evidence and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the Evidence.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyrightLabel" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A short string (&lt;50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relatedArtifact" minOccurs="0" maxOccurs="unbounded" type="RelatedArtifact">
@@ -37689,6 +37640,13 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the mechanism used to compare versions to determine which is more current.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="versionAlgorithmString" type="string"/>
+            <xs:element name="versionAlgorithmCoding" type="Coding"/>
+          </xs:choice>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A natural language name identifying the evidence variable. This name should be usable as an identifier for the module by machine processing applications such as code generation.</xs:documentation>
@@ -37749,9 +37707,19 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence variable instances.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="purpose" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Explanation of why this EvidenceVariable is needed and why it has been designed as it has.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyrightLabel" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A short string (&lt;50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
@@ -39126,9 +39094,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -39160,6 +39128,37 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="subSite" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">A region or surface of the bodySite, e.g. limb region or tooth surface(s).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExplanationOfBenefit.ReviewOutcome">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="reason" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The reasons for the result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="preAuthRef" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reference from the Insurer which is used in later communications which refers to this adjudication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="preAuthPeriod" minOccurs="0" maxOccurs="1" type="Period">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The time frame during which this authorization is effective.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -39279,9 +39278,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -39380,9 +39379,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -39501,9 +39500,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -39603,9 +39602,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -39684,9 +39683,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The numbers associated with notes below which apply to the adjudication of this item.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="decision" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="reviewOutcome" type="ExplanationOfBenefit.ReviewOutcome" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The result of the claim, predetermination, or preauthorization adjudication.</xs:documentation>
+              <xs:documentation xml:lang="en">The high-level results of the adjudication if adjudication has been performed.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="adjudication" type="ExplanationOfBenefit.Adjudication" minOccurs="0" maxOccurs="unbounded">
@@ -41502,7 +41501,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Further description of the service as it would be presented to a consumer while searching.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Any additional description of the service and/or any specific issues not covered by the other attributes, which can be displayed as further detail under the serviceName.</xs:documentation>
            </xs:annotation>
@@ -41695,11 +41694,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Each imaging selection includes one or more selected DICOM SOP instances.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="imageRegion" type="ImagingSelection.ImageRegion1" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Each imaging selection might includes a 3D image region, specified by a region type and a set of 3D coordinates.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -41757,17 +41751,22 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
        - A list of Region of Interest (ROI) numbers selected from a radiotherapy structure set SOP Instance.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="imageRegion" type="ImagingSelection.ImageRegion" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="imageRegion2D" type="ImagingSelection.ImageRegion2D" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Each imaging selection instance or frame list might includes an image region, specified by a region type and a set of 2D coordinates.
        If the parent imagingSelection.instance contains a subset element of type frame, the image region applies to all frames in the subset list.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="imageRegion3D" type="ImagingSelection.ImageRegion3D" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Each imaging selection might includes a 3D image region, specified by a region type and a set of 3D coordinates.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ImagingSelection.ImageRegion">
+  <xs:complexType name="ImagingSelection.ImageRegion2D">
     <xs:annotation>
       <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
@@ -41789,7 +41788,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="ImagingSelection.ImageRegion1">
+  <xs:complexType name="ImagingSelection.ImageRegion3D">
     <xs:annotation>
       <xs:documentation xml:lang="en">A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource.</xs:documentation>
     </xs:annotation>
@@ -42506,7 +42505,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Additional information about the evaluation.</xs:documentation>
            </xs:annotation>
@@ -42634,7 +42633,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Contains the description about the protocol under which the vaccine was administered.</xs:documentation>
            </xs:annotation>
@@ -44980,6 +44979,11 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A place for providing any notes that are relevant to the component, e.g. removed during process, adjusted for loss on drying.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="manufacturer" type="Ingredient.Manufacturer" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.</xs:documentation>
@@ -45102,7 +45106,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="substance" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:element name="substance" minOccurs="1" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Relevant reference substance.</xs:documentation>
            </xs:annotation>
@@ -45715,7 +45719,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="lineItem" type="Invoice.LineItem" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.</xs:documentation>
+              <xs:documentation xml:lang="en">Each line item represents one charge for goods and services rendered. Details such.ofType(date), code and amount are found in the referenced ChargeItem resource.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="totalPriceComponent" minOccurs="0" maxOccurs="unbounded" type="MonetaryComponent">
@@ -46281,7 +46285,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">A list of alternate names that the location is known as, or was known as, in the past.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Description of the Location, which helps in finding or referencing the place.</xs:documentation>
            </xs:annotation>
@@ -49555,7 +49559,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">A value for the characteristic.text.</xs:documentation>
             </xs:annotation>
             <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
-            <xs:element name="valueString" type="string"/>
+            <xs:element name="valueMarkdown" type="markdown"/>
             <xs:element name="valueQuantity" type="Quantity"/>
             <xs:element name="valueInteger" type="integer"/>
             <xs:element name="valueDate" type="date"/>
@@ -49698,7 +49702,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="graph" minOccurs="0" maxOccurs="1" type="canonical">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.</xs:documentation>
+              <xs:documentation xml:lang="en">Graph is Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a GraphDefinition that it controls what additional resources are to be added to the Bundle when building the message. The GraphDefinition can also specify profiles that apply to the various resources.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49837,7 +49841,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
         <xs:sequence>
           <xs:choice minOccurs="1" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification have the system value &quot;http://terminology.hl7.org/CodeSystem/message-events&quot;.  Alternatively a canonical uri to the EventDefinition.</xs:documentation>
+              <xs:documentation xml:lang="en">Code that identifies the event this message represents and connects it with its definition. Events defined as part of the FHIR specification are defined by the implementation.  Alternatively a canonical uri to the EventDefinition.</xs:documentation>
             </xs:annotation>
             <xs:element name="eventCoding" type="Coding"/>
             <xs:element name="eventCanonical" type="canonical"/>
@@ -49850,11 +49854,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           <xs:element name="sender" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifies the sending system to allow the use of a trust relationship.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="enterer" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The person or device that performed the data entry leading to this message. When there is more than one candidate, pick the most proximal to the message. Can provide other enterers in extensions.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="author" minOccurs="0" maxOccurs="1" type="Reference">
@@ -49903,6 +49902,11 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
+          <xs:element name="endpoint" minOccurs="0" maxOccurs="1" type="url">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates where the message should be routed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Human-readable name for the target system.</xs:documentation>
@@ -49911,11 +49915,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           <xs:element name="target" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Identifies the target end system in situations where the initial message transmission is to an intermediary system.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="endpoint" minOccurs="0" maxOccurs="1" type="url">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates where the message should be routed to.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="receiver" minOccurs="0" maxOccurs="1" type="Reference">
@@ -49934,6 +49933,11 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
+          <xs:element name="endpoint" minOccurs="0" maxOccurs="1" type="url">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifies the routing target to send acknowledgements to.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Human-readable name for the source system.</xs:documentation>
@@ -49952,11 +49956,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           <xs:element name="contact" minOccurs="0" maxOccurs="1" type="ContactPoint">
             <xs:annotation>
               <xs:documentation xml:lang="en">An e-mail, phone, website or other contact point to use to resolve issues with message communications.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="endpoint" minOccurs="0" maxOccurs="1" type="url">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies the routing target to send acknowledgements to.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -52909,7 +52908,7 @@ For resource issues, this will be a simple XPath limited to element names, repet
               <xs:documentation xml:lang="en">A list of alternate names that the organization is known as, or was known as in the past.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Description of the organization, which helps provide additional general context on the organization to ensure that the correct organization is selected.</xs:documentation>
            </xs:annotation>
@@ -57782,7 +57781,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+          <xs:element name="linkId" minOccurs="0" maxOccurs="1" type="id">
             <xs:annotation>
               <xs:documentation xml:lang="en">Allows the comparisonGroup for the study and the comparisonGroup for the subject to be linked easily.</xs:documentation>
            </xs:annotation>
@@ -57875,12 +57874,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
   </xs:complexType>
   <xs:element name="ResearchSubject" type="ResearchSubject">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A physical entity which is the primary unit of operational and/or administrative interest in a study.</xs:documentation>
+      <xs:documentation xml:lang="en">A ResearchSubject is a participant or object which is the recipient of investigative activities in a research study.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="ResearchSubject">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A physical entity which is the primary unit of operational and/or administrative interest in a study.</xs:documentation>
+      <xs:documentation xml:lang="en">A ResearchSubject is a participant or object which is the recipient of investigative activities in a research study.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -57916,17 +57915,17 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">The record of the person, animal or other entity involved in the study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="assignedArm" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="assignedComparisonGroup" minOccurs="0" maxOccurs="1" type="id">
             <xs:annotation>
               <xs:documentation xml:lang="en">The name of the arm in the study the subject is expected to follow as part of this study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="actualArm" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="actualComparisonGroup" minOccurs="0" maxOccurs="1" type="id">
             <xs:annotation>
               <xs:documentation xml:lang="en">The name of the arm in the study the subject actually followed as part of this study.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="consent" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="consent" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">A record of the patient's informed agreement to participate in the study.</xs:documentation>
            </xs:annotation>
@@ -57937,7 +57936,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
   </xs:complexType>
   <xs:complexType name="ResearchSubject.Progress">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A physical entity which is the primary unit of operational and/or administrative interest in a study.</xs:documentation>
+      <xs:documentation xml:lang="en">A ResearchSubject is a participant or object which is the recipient of investigative activities in a research study.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -58173,7 +58172,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a &quot;template&quot; for planning outside these dates.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Comments on the availability to describe any extended information. Such as custom constraints on the slots that may be associated.</xs:documentation>
            </xs:annotation>
@@ -58693,7 +58692,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="supportingInfo" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="supportingInfo" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Additional clinical information about the patient or specimen that may influence the services or their interpretations.     This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as &quot;ask at order entry questions (AOEs)&quot;.  This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example,  reporting the amount of inspired oxygen for blood gas measurements.</xs:documentation>
            </xs:annotation>
@@ -61565,17 +61564,17 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="form" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The specific chemical entity of the substance being characterized, to distinguish for example salt or base.</xs:documentation>
+              <xs:documentation xml:lang="en">Describes the nature of the chemical entity and explains, for instance, whether this is a base or a salt form.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Narrative text, data, tables about the characterization.</xs:documentation>
+              <xs:documentation xml:lang="en">The description or justification in support of the interpretation of the data file.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="file" minOccurs="0" maxOccurs="unbounded" type="Attachment">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An image or data file that characterizes this substance.</xs:documentation>
+              <xs:documentation xml:lang="en">The data produced by the analytical instrument or a pictorial representation of that data. Examples: a JCAMP, JDX, or ADX file, or a chromatogram or spectrum analysis.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -65064,6 +65063,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
               <xs:documentation xml:lang="en">The mime-type contents to compare against the request or response message 'Content-Type' header.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="defaultManualCompletion" minOccurs="0" maxOccurs="1" type="AssertionManualCompletionType">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The default manual completion outcome applied to this assertion.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="expression" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">The FHIRPath expression to be evaluated against the request or response message contents - HTTP headers and payload.</xs:documentation>
@@ -65076,7 +65080,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="minimumId" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The ID of a fixture.  Asserts that the response contains at a minimum the fixture specified by minimumId.</xs:documentation>
+              <xs:documentation xml:lang="en">The ID of a fixture. Asserts that the response contains at a minimum the fixture specified by minimumId.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="navigationLinks" minOccurs="0" maxOccurs="1" type="boolean">
@@ -65086,7 +65090,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="operator" minOccurs="0" maxOccurs="1" type="AssertionOperatorType">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The operator type defines the conditional behavior of the assert. If not defined, the default is equals.</xs:documentation>
+              <xs:documentation xml:lang="en">The operator type defines the conditional behavior of the assert.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="path" minOccurs="0" maxOccurs="1" type="string">
@@ -65111,7 +65115,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="response" minOccurs="0" maxOccurs="1" type="AssertionResponseTypes">
             <xs:annotation>
-              <xs:documentation xml:lang="en">okay | created | noContent | notModified | bad | forbidden | notFound | methodNotAllowed | conflict | gone | preconditionFailed | unprocessable.</xs:documentation>
+              <xs:documentation xml:lang="en">continue | switchingProtocols | okay | created | accepted | nonAuthoritativeInformation | noContent | resetContent | partialContent | multipleChoices | movedPermanently | found | seeOther | notModified | useProxy | temporaryRedirect | permanentRedirect | badRequest | unauthorized | paymentRequired | forbidden | notFound | methodNotAllowed | notAcceptable | proxyAuthenticationRequired | requestTimeout | conflict | gone | lengthRequired | preconditionFailed | contentTooLarge | uriTooLong | unsupportedMediaType | rangeNotSatisfiable | expectationFailed | misdirectedRequest | unprocessableContent | upgradeRequired | internalServerError | notImplemented | badGateway | serviceUnavailable | gatewayTimeout | httpVersionNotSupported.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="responseCode" minOccurs="0" maxOccurs="1" type="string">
@@ -65250,6 +65254,41 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="AssertionManualCompletionTypeEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="fail">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Fail</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pass">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Pass</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="skip">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Skip</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stop">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Stop</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AssertionManualCompletionType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="AssertionManualCompletionTypeEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="AssertionDirectionTypeEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="response">
@@ -65332,6 +65371,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:documentation xml:lang="en">evaluate</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="manualEval">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">manualEvaluate</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="AssertionOperatorType">
@@ -65347,64 +65391,224 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
   </xs:complexType>
   <xs:simpleType name="AssertionResponseTypesEnum">
     <xs:restriction base="code-primitive">
+      <xs:enumeration value="continue">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Continue</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="switchingProtocols">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Switching Protocols</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="okay">
         <xs:annotation>
-          <xs:documentation xml:lang="en">okay</xs:documentation>
+          <xs:documentation xml:lang="en">OK</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="created">
         <xs:annotation>
-          <xs:documentation xml:lang="en">created</xs:documentation>
+          <xs:documentation xml:lang="en">Created</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="accepted">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Accepted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nonAuthoritativeInformation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Non-Authoritative Information</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="noContent">
         <xs:annotation>
-          <xs:documentation xml:lang="en">noContent</xs:documentation>
+          <xs:documentation xml:lang="en">No Content</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="resetContent">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Reset Content</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="partialContent">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Partial Content</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="multipleChoices">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Multiple Choices</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="movedPermanently">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Moved Permanently</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="found">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Found</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="seeOther">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">See Other</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="notModified">
         <xs:annotation>
-          <xs:documentation xml:lang="en">notModified</xs:documentation>
+          <xs:documentation xml:lang="en">Not Modified</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="bad">
+      <xs:enumeration value="useProxy">
         <xs:annotation>
-          <xs:documentation xml:lang="en">bad</xs:documentation>
+          <xs:documentation xml:lang="en">Use Proxy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="temporaryRedirect">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Temporary Redirect</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="permanentRedirect">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Permanent Redirect</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="badRequest">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Bad Request</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unauthorized">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unauthorized</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="paymentRequired">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Payment Required</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="forbidden">
         <xs:annotation>
-          <xs:documentation xml:lang="en">forbidden</xs:documentation>
+          <xs:documentation xml:lang="en">Forbidden</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="notFound">
         <xs:annotation>
-          <xs:documentation xml:lang="en">notFound</xs:documentation>
+          <xs:documentation xml:lang="en">Not Found</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="methodNotAllowed">
         <xs:annotation>
-          <xs:documentation xml:lang="en">methodNotAllowed</xs:documentation>
+          <xs:documentation xml:lang="en">Method Not Allowed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="notAcceptable">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Not Acceptable</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="proxyAuthenticationRequired">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Proxy Authentication Required</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="requestTimeout">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Request Timeout</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="conflict">
         <xs:annotation>
-          <xs:documentation xml:lang="en">conflict</xs:documentation>
+          <xs:documentation xml:lang="en">Conflict</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="gone">
         <xs:annotation>
-          <xs:documentation xml:lang="en">gone</xs:documentation>
+          <xs:documentation xml:lang="en">Gone</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lengthRequired">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Length Required</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="preconditionFailed">
         <xs:annotation>
-          <xs:documentation xml:lang="en">preconditionFailed</xs:documentation>
+          <xs:documentation xml:lang="en">Precondition Failed</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="unprocessable">
+      <xs:enumeration value="contentTooLarge">
         <xs:annotation>
-          <xs:documentation xml:lang="en">unprocessable</xs:documentation>
+          <xs:documentation xml:lang="en">Content Too Large</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="uriTooLong">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">URI Too Long</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unsupportedMediaType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unsupported Media Type</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rangeNotSatisfiable">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Range Not Satisfiable</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="expectationFailed">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Expectation Failed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="misdirectedRequest">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Misdirected Request</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unprocessableContent">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unprocessable Content</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="upgradeRequired">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Upgrade Required</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="internalServerError">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Internal Server Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="notImplemented">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Not Implemented</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="badGateway">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Bad Gateway</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="serviceUnavailable">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Service Unavailable</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gatewayTimeout">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Gateway Timeout</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="httpVersionNotSupported">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">HTTP Version Not Supported</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -65631,6 +65835,11 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="currentLocation" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The current location for the entity to be transported.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="reason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The business status of the person or item being currently transported.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="reasonCode" minOccurs="0" maxOccurs="1" type="CodeableConcept">

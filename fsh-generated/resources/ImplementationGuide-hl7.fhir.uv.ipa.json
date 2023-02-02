@@ -2,11 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.uv.ipa",
   "url": "http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa",
-  "version": "1.0.0-preview",
+  "version": "1.0.0",
   "name": "InternationalPatientAccess",
   "title": "International Patient Access",
   "status": "draft",
-  "date": "2022-08-10",
+  "date": "2023-02-01",
   "publisher": "HL7 International - Patient Care Work Group",
   "contact": [
     {
@@ -455,6 +455,10 @@
       {
         "code": "generate",
         "value": "json"
+      },
+      {
+        "code": "suppressed-ids",
+        "value": "$examples"
       },
       {
         "code": "logging",

@@ -1,10 +1,10 @@
 
 ### Mandatory and Must Support Data Elements
 
-<div class="bg-success" markdown="1">
+
 <!-- Boilerplate -->
 The following data elements must always be present (in other words, mandatory resource properties with a minimum cardinality of 1) or must be supported ([Must Support](conformance.html#must-support) definition). Servers cannot restrict access to mandatory elements when authorizing an application. However, servers may choose to provide additional information or may be required to do so by national or other profiles that apply to the server's context.
-</div><!-- new-content -->
+
 
 **Each Observation SHALL have:**
 * a status
@@ -16,7 +16,7 @@ The following data elements must always be present (in other words, mandatory re
 * clinically relevant time/time-period for the observation
 * the observation result value
 * a reason why the result value is missing
-</div><!-- new-content -->
+
 <!-- (only if present) -->
 ### Profile Specific Implementation Rules and Guidance
 
@@ -26,12 +26,12 @@ Note that the base FHIR specification defines a profile on the Observation resou
 
 The IPA-Observation profile defined here SHALL be used to represent Observations other than vital signs such as:
 
-<div class="bg-success" markdown="1">
+
 - Laboratory data (for example, blood glucose)
 - Imaging or clinical test results (for example, bone density or electrocardiogram (ECG))
 - Social history (for example, tobacco use or occupation data<sup>1</sup>)
 - General health status (for example, pregnancy status)
-</div><!-- new-content -->
+
 
 <!-- (and only if present) -->
 <!-- ### Example Usage Scenarios -->

@@ -1,0 +1,64 @@
+resourceType: MedicationRequest
+id: MedRecExample1
+identifier:
+- use: usual
+  system: urn:oid:1.2.840.114350.1.13.861.1.7.2.798268
+  value: '2454978'
+status: active
+intent: order
+category:
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/medicationrequest-category
+    code: outpatient
+    display: Outpatient
+  text: Outpatient
+medicationReference:
+  reference: Medication/MedExample1
+  display: Percocet tablet
+subject:
+  reference: Patient/PatientExample1
+  display: Friend, All
+authoredOn: '2018-09-20T15:41:39Z'
+requester:
+  reference: Practitioner/PractitionerExample1
+  display: Clinician User
+recorder:
+  reference: Practitioner/PractitionerExample1
+  display: Clinician User
+dosageInstruction:
+- timing:
+    repeat:
+      boundsPeriod:
+        start: '2018-09-21T04:00:00Z'
+    code:
+      text: '2100'
+  asNeededBoolean: false
+  route:
+    coding:
+    - system: http://snomed.info/sct
+      code: '260548002'
+      display: Oral
+    text: Oral
+  doseAndRate:
+  - type:
+      coding:
+      - system: http://terminology.hl7.org/CodeSystem/dose-rate-type
+        code: calculated
+        display: calculated
+      text: calculated
+    doseQuantity:
+      value: 15
+      unit: mg
+      system: http://unitsofmeasure.org
+      code: mg
+  - type:
+      coding:
+      - system: http://terminology.hl7.org/CodeSystem/dose-rate-type
+        code: ordered
+        display: ordered
+      text: ordered
+    doseQuantity:
+      value: 10
+      unit: mg
+      system: http://unitsofmeasure.org
+      code: mg

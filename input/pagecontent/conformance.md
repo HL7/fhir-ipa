@@ -1,20 +1,20 @@
-<div class="bg-success" markdown="1">
+
 IPA conformant servers SHALL support:
 
- - the resources as profiled by IPA to represent clinical information (Profile Support) and <span class= "bg-success" markdown= "1">[the RESTful FHIR API]({{site.data.fhir.path}}http.html)</span><!-- new-content --> interactions defined for it (Interaction Support)
+ - the resources as profiled by IPA to represent clinical information (Profile Support) and [the RESTful FHIR API]({{site.data.fhir.path}}http.html) interactions defined for it (Interaction Support)
  - the SMART on FHIR obligations and capabilities
 
 This page documents how CapabilityStatements declare conformance to the IPA Profiles and their FHIR Interactions. It also defines the expectations for mandatory and must-support elements. The [Gaining Access to a Patient Record](access.html) page documents the SMART on FHIR obligations and capabilities.
 
 Note that the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) defines the conformance verbs - SHALL, SHOULD, MAY - used in this guide
-</div><!-- new-content -->
+
 
 ### Conformance Artifacts
 The [Artifacts](artifacts.html) page lists the IPA Profiles defined for this implementation guide. Core Profile [StructureDefinitions]({{site.data.fhir.path}}structuredefinition.html) defines the minimum elements, extensions, vocabularies, and value sets which SHALL be present when using the profile. Many Profile pages also contain additional guidance.
 
 The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for requesters and responders.
 
-<div class="bg-success" markdown="1">
+
 #### Capability Statements 
 
 The [International Patient Access Client CapabilityStatement](CapabilityStatement-ipa-client.html) outlines conformance requirements and expectations for the IPA Clients. {{site.data.resources['CapabilityStatement/ipa-client'].description }}
@@ -22,7 +22,7 @@ The [International Patient Access Client CapabilityStatement](CapabilityStatemen
 The [International Patient Access Server CapabilityStatement](CapabilityStatement-ipa-server.html) outlines conformance requirements and expectations for the IPA Clients {{site.data.resources.['CapabilityStatement/ipa-server'].description}}
 
 Note that country-specific profiles must define terminology bindings and invariants. 
-</div><!-- new-content -->
+
 
 ### Declaring Conformance
 
@@ -47,14 +47,14 @@ Servers that are conformant to the International Patient Access API declare conf
     }
     ```
 Note that the CapabilityStatement may be different for authenticated and unauthenticated clients.
-</div><!-- new-content -->
 
-<div class="bg-success" markdown="1">
+
+
 
 ### Exchange Format Support
 
 In FHIR, resources are exchanged in the following formats: JSON, XML, and Turtle. Due to the popularity of JavaScript-based apps and ease of usage with JSON, the most popular exchange format for REST-styled APIs is JSON. To increase certainty and the likelihood of interoperability, IPA mandates the support of JSON. IPA Servers are encouraged to support XML as well.
-</div><!-- new-content -->
+
 
 ### Profile and Interaction Support
 Systems deploy and support the IPA *profiles* to represent clinical information and the IPA RESTful *interactions* to access that information. Therefore, servers must implement and support IPA profiles and interactions to claim conformance to IPA.
@@ -73,7 +73,7 @@ Interaction Support refers to a system that supports the IPA RESTful interaction
 * SHALL specify the full capability details from the IPA CapabilityStatement it claims to implement, including declaring support for the IPA Profile's FHIR RESTful transactions.
 
 ### Must Support
-In the context of IPA, the "supported flag" on any data element SHALL be interpreted to mean [FHIR's MustSupport]({{site.data.fhir.path}}conformance-rules.html#mustSupport). Realm-specific implementation guides may provide additional guidance. <span class= "bg-success" markdown= "1">However, they SHOULD identify and document these differences.</span><!-- new-content -->
+In the context of IPA, the "supported flag" on any data element SHALL be interpreted to mean [FHIR's MustSupport]({{site.data.fhir.path}}conformance-rules.html#mustSupport). Realm-specific implementation guides may provide additional guidance. However, they SHOULD identify and document these differences.
 
 When information on a particular data element is not present, and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
@@ -102,13 +102,13 @@ If an IPA responder does not have data to be included, the reason for the absenc
 
 1. For non-coded data elements, use the [DataAbsentReason Extension]({{site.data.fhir.path}}extension-data-absent-reason.html) in the data type.
 2. For coded data elements:
-  * example, preferred, or extensible binding strengths (CodeableConcept datatypes):
-    * if the source systems have text but no coded data, only the text element is used.
-    * if there is neither text nor codes representing actual (i.e., non-exceptional) concepts:
-      * use the appropriate exceptional concept code from the value set if available
-      * use the appropriate concept code from the [DataAbsentReason Code System] if the value set does not have it.
-  * required binding strength (CodeableConcept or code datatypes):
-    * use the appropriate exceptional concept code from the value set
+     - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept datatypes):
+       - if the source systems have text but no coded data, only the text element is used.
+       - if there is neither text nor codes representing actual (i.e., non-exceptional) concepts:
+         - use the appropriate exceptional concept code from the value set if available
+         - use the appropriate concept code from the [DataAbsentReason Value Set]({{site.data.fhir.path}}valueset-data-absent-reason.html) if the value set does not have it.
+     - *required* binding strength (CodeableConcept or code datatypes):
+       - use the appropriate exceptional concept code from the value set
 
 #### Must Support Means SHALL Process, for Requestors
 Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing must-support data elements, including elements with missing data, without generating an error or causing the application to fail. An element can be processed, for example, if the receiving application's behavior can differ based on the element's value.
@@ -118,7 +118,7 @@ For example, one possible value of the [Observation.status element](StructureDef
 
 Note: Readers are advised to understand [FHIR Terminology]({{site.data.fhir.path}}terminologies.html) requirements, [FHIR RESTful API]({{site.data.fhir.path}}http.html) based on the HTTP protocol, along with [FHIR DataTypes]({{site.data.fhir.path}}datatypes.html), [FHIR Search]({{site.data.fhir.path}}search.html) and [FHIR Resource]({{site.data.fhir.path}}resource.html) formats when implementing IPA requirements.
 
-<div class="bg-success" markdown="1">
+
 #### Must Support - Resource References
 
 Some elements labeled as *Must Support* reference multiple resource types or profiles (e.g., `DocumentReference.author`). IPA servers SHALL support *at least one* referenced resource or profile for each element listed in the table below. IPA client apps SHALL support *all* referenced resources or profiles listed in the table below.
@@ -160,4 +160,3 @@ For example, when claiming conformance to the IPA Observation Profile:
 
 Systems **MAY** support populating and processing other choice elements not listed in the table (such as `Observation.effectiveInstant`), but this is not a requirement.
 
-</div><!-- new-content -->

@@ -1,4 +1,4 @@
-Once an application has obtained access to the patient record with a <span class= "bg-success" markdown= "1">[SMART on FHIR access token](access.html)</span><!-- new-content -->, it can 
+Once an application has obtained access to the patient record with a [SMART on FHIR access token](access.html), it can 
 find and retrieve information about the patient. 
 
 ### Initial Patient Identity Check 
@@ -27,7 +27,7 @@ or more generally,
 
     GET [url]/[Resource]?[params]
 
-Where [Resource] is the name of a resource taken from the table below, and the list of parameters includes the patient identifier. (See FHIR's [RESTful API]({{site.data.fhir.path}}http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
+Where "[Resource]" is the name of a resource taken from the table below, and the list of parameters includes the patient identifier. (See FHIR's [RESTful API]({{site.data.fhir.path}}http.html#styleguide) for the details). Some of the lists returned from these calls will be relatively short, but some may be very long - potentially many thousands of resources for Observation and DocumentReference, for example. 
 
 Servers will generally use [paging](http://hl7.org/fhir/http.html#paging) to manage requests for long lists of resources. 
 
@@ -37,7 +37,7 @@ The application can also use the [$docref operation](OperationDefinition-docref.
 
 ### Supported Searches by Resource 
 
-As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html) <span class= "bg-success" markdown= "1">and [IPA Client Capability Statement](CapabilityStatement-ipa-client.html)</span><!-- new-content -->, the following resources can be searched to access patient information. Required or recommended combinations of search parameters are separated by a plus sign. <span class= "bg-success" markdown= "1">IPA Clients are expected to support the required search parameters for each IPA resource type they support.</span><!-- new-content -->
+As defined in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html) and [IPA Client Capability Statement](CapabilityStatement-ipa-client.html), the following resources can be searched to access patient information. Required or recommended combinations of search parameters are separated by a plus sign. IPA Clients are expected to support the required search parameters for each IPA resource type they support.
 
 For example, an IPA-compliant server returns all lab results for a single patient with: `Observation?patient=123&category=laboratory` but may not support returning all labs, vital signs, social history, surveys, exams, activities, etc, with: `Observation?patient=123`.
 
@@ -56,9 +56,9 @@ For example, an IPA-compliant server returns all lab results for a single patien
 
 ### Supporting Resources
 
-<div class="bg-success" markdown="1">
+
 The API also provides access to the following resources, which are referred to from the resources above and may be read directly. Servers are not required to support search functionality on Practitioner or PractitionerRole. However, if they do, they may choose to communicate only relevant information related to the patient (for example, only the practitioner's name).
-</div><!-- new-content -->
+
 
 * Medication
 * Practitioner
@@ -68,7 +68,7 @@ All these resources are accessed by
 
     GET [url]/[type]/[id]
     
-[type] is from the list above, and [id] is the FHIR ID obtained from clinical resources that refer directly to them.
+[type] is from the list above, and "[id]" is the FHIR ID obtained from clinical resources that refer directly to them.
 E.g. 
 
     "author": {
@@ -81,7 +81,7 @@ Client applications may ask for these resources to be [included](http://hl7.org/
 
 ### Generating Patient Documents
 
-<div class="bg-success" markdown="1">
+
 {% include doc-gen.md %}
-</div><!-- new-content -->
+
 

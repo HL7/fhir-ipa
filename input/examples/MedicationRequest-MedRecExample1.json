@@ -1,20 +1,5 @@
 {
   "resourceType": "MedicationRequest",
-    "meta": {
-    "profile": [
-      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationrequest"
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "MedicationRequest Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a MedicationRequest example for the *IPA MedicationRequest Profile*."
-      }
-    ]
-  },
   "id": "MedRecExample1",
   "identifier": [
     {

@@ -18,4 +18,4 @@ vary so much.
     * Note that some Condition resources may not have these status codes - this is usually due to poor record keeping reflected in legacy data
     * Servers SHOULD avoid leaving these status codes missing
 * Clients SHALL pay attention to the ```clinicalStatus``` and ```verificationStatus``` and display and process them correctly
-* Clients SHALL still work safely when the server does not support <span class="bg-success" markdown="1">all the search parameters listed in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html).</span><!-- new-content --> (see also [Search advice](security.html#patient-safety))
+* Clients SHALL still work safely when the server does not support all the search parameters listed in the [IPA Server Capability Statement](CapabilityStatement-ipa-server.html). (see also [Search advice](security.html#patient-safety))

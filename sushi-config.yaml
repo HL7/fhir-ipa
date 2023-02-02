@@ -20,8 +20,8 @@ copyright: >-
 description: >-
   This IG  describes how an application acting on behalf of a patient can access information about the patient from an clinical records system using a FHIR based API. The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), or a health data exchange, including a national health record system.
 license: CC0-1.0
-date: '2022-08-10'
-version: 1.0.0-preview
+date: '2023-02-01'
+version: 1.0.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.smart-app-launch: 2.0.0
@@ -96,6 +96,7 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - json
   # version-comparison:
   #    - 1.0.0
+  suppressed-ids: '$examples'
   logging:
     - progress
     - tx
