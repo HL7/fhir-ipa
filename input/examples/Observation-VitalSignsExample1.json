@@ -1,5 +1,10 @@
 {
   "resourceType": "Observation",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
+    ]
+  },
   "id": "VitalSignsExample1",
   "status": "final",
   "category": [

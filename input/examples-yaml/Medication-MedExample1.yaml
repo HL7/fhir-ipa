@@ -1,44 +1,52 @@
 resourceType: Medication
 id: MedExample1
+meta:
+  profile:
+    - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medication'
+  extension:
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+      valueString: Medication Example
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+      valueMarkdown: This is a Medication example for the *IPA Medication Profile*.
 code:
   coding:
-  - system: http://hl7.org/fhir/sid/ndc
-    code: 16590-619-30
-    display: PERCOCET, 30 TABLET in 1 BOTTLE (16590-619-30) (package)
+    - system: 'http://hl7.org/fhir/sid/ndc'
+      code: 16590-619-30
+      display: 'PERCOCET, 30 TABLET in 1 BOTTLE (16590-619-30) (package)'
 form:
   coding:
-  - system: http://snomed.info/sct
-    code: '385055001'
-    display: Tablet
+    - system: 'http://snomed.info/sct'
+      code: '385055001'
+      display: Tablet
 ingredient:
-- itemCodeableConcept:
-    coding:
-    - system: http://www.nlm.nih.gov/research/umls/rxnorm
-      code: '82063'
-      display: oxyCODONE hydrochloride
-  strength:
-    numerator:
-      value: 5
-      system: http://unitsofmeasure.org
-      code: mg
-    denominator:
-      value: 1
-      system: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
-      code: TAB
-- itemCodeableConcept:
-    coding:
-    - system: http://www.nlm.nih.gov/research/umls/rxnorm
-      code: '161'
-      display: Acetaminophen
-  strength:
-    numerator:
-      value: 325
-      system: http://unitsofmeasure.org
-      code: mg
-    denominator:
-      value: 1
-      system: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
-      code: TAB
+  - itemCodeableConcept:
+      coding:
+        - system: 'http://www.nlm.nih.gov/research/umls/rxnorm'
+          code: '82063'
+          display: oxyCODONE hydrochloride
+    strength:
+      numerator:
+        value: 5
+        system: 'http://unitsofmeasure.org'
+        code: mg
+      denominator:
+        value: 1
+        system: 'http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm'
+        code: TAB
+  - itemCodeableConcept:
+      coding:
+        - system: 'http://www.nlm.nih.gov/research/umls/rxnorm'
+          code: '161'
+          display: Acetaminophen
+    strength:
+      numerator:
+        value: 325
+        system: 'http://unitsofmeasure.org'
+        code: mg
+      denominator:
+        value: 1
+        system: 'http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm'
+        code: TAB
 batch:
   lotNumber: '658484'
   expirationDate: '2020-07-31'

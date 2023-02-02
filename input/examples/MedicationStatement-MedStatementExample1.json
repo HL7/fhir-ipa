@@ -1,5 +1,10 @@
 {
   "resourceType": "MedicationStatement",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-medicationstatement"
+    ]
+  },
   "id": "MedStatementExample1",
   "identifier": [
     {

@@ -1,6 +1,11 @@
 {
   "resourceType": "Patient",
   "id": "PatientExample1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+    ]
+  },
   "identifier": [
     {
       "use": "usual",

@@ -1,6 +1,11 @@
 {
   "resourceType": "Condition",
   "id": "ProblemExample1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-problem-list-item"
+    ]
+  },
   "clinicalStatus": {
     "coding": [
       {

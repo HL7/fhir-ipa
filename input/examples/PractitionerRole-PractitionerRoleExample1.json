@@ -1,5 +1,10 @@
 {
   "resourceType": "PractitionerRole",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole"
+    ]
+  },
   "id": "PractitionerRoleExample1",
   "active": true,
   "practitioner": {

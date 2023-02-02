@@ -1,14 +1,22 @@
 resourceType: Practitioner
+meta:
+  profile:
+    - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner'
+  extension:
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+      valueString: Practitioner Example
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+      valueMarkdown: This is a Practitioner example for the *IPA Practitioner Profile*.
 id: PractitionerExample1
 identifier:
-- use: usual
-  system: urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.295
-  value: '1538344056'
+  - use: usual
+    system: 'urn:oid:1.2.840.114350.1.13.861.1.7.5.737384.295'
+    value: '1538344056'
 active: true
 name:
-- use: usual
-  text: Marty Seeger
-  family: Seeger
-  given:
-  - Marty
+  - use: usual
+    text: Marty Seeger
+    family: Seeger
+    given:
+      - Marty
 gender: male

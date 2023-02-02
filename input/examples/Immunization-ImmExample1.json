@@ -1,6 +1,11 @@
 {
   "resourceType": "Immunization",
   "id": "ImmExample1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-immunization"
+    ]
+  },
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",

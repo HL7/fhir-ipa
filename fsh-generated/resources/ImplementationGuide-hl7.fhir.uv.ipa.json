@@ -457,10 +457,6 @@
         "value": "json"
       },
       {
-        "code": "suppressed-ids",
-        "value": "$examples"
-      },
-      {
         "code": "logging",
         "value": "progress"
       },

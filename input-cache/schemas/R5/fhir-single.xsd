@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Feb 2, 2023 00:48+0000 for FHIR v5.0.0-cibuild 
+  Generated on Thu, Feb 2, 2023 22:35+0000 for FHIR v5.0.0-cibuild 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="5.0.0-cibuild">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -866,9 +866,9 @@
           <xs:documentation xml:lang="en">MedicationRequest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MedicationUsage">
+      <xs:enumeration value="MedicationStatement">
         <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationUsage</xs:documentation>
+          <xs:documentation xml:lang="en">MedicationStatement</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MedicinalProductDefinition">
@@ -1701,9 +1701,9 @@
           <xs:documentation xml:lang="en">MedicationRequest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MedicationUsage">
+      <xs:enumeration value="MedicationStatement">
         <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationUsage</xs:documentation>
+          <xs:documentation xml:lang="en">MedicationStatement</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MedicinalProductDefinition">
@@ -2266,9 +2266,9 @@
           <xs:documentation xml:lang="en">MedicationDispense</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MedicationUsage">
+      <xs:enumeration value="MedicationStatement">
         <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationUsage</xs:documentation>
+          <xs:documentation xml:lang="en">MedicationStatement</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="NutritionIntake">
@@ -3096,9 +3096,9 @@
           <xs:documentation xml:lang="en">MedicationRequest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MedicationUsage">
+      <xs:enumeration value="MedicationStatement">
         <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationUsage</xs:documentation>
+          <xs:documentation xml:lang="en">MedicationStatement</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MedicinalProductDefinition">
@@ -4031,9 +4031,9 @@
           <xs:documentation xml:lang="en">MedicationRequest</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MedicationUsage">
+      <xs:enumeration value="MedicationStatement">
         <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationUsage</xs:documentation>
+          <xs:documentation xml:lang="en">MedicationStatement</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="MedicinalProductDefinition">
@@ -15334,7 +15334,7 @@
       <xs:element ref="MedicationDispense"/>
       <xs:element ref="MedicationKnowledge"/>
       <xs:element ref="MedicationRequest"/>
-      <xs:element ref="MedicationUsage"/>
+      <xs:element ref="MedicationStatement"/>
       <xs:element ref="MedicinalProductDefinition"/>
       <xs:element ref="MessageDefinition"/>
       <xs:element ref="MessageHeader"/>
@@ -21405,12 +21405,12 @@ The duration (usually in minutes) could also be provided to indicate the length 
               <xs:documentation xml:lang="en">A Person, Location, HealthcareService, or Device that is participating in the appointment.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="participantStatus" minOccurs="1" maxOccurs="1" type="ParticipationStatus">
+          <xs:element name="participantStatus" minOccurs="1" maxOccurs="1" type="AppointmentResponseStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">Participation status of the participant. When the status is declined or tentative if the start/end times are different to the appointment, then these times should be interpreted as a requested time change. When the status is accepted, the times can either be the time of the appointment (as a confirmation of the time) or can be empty.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="comment" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">Additional comments about the appointment.</xs:documentation>
            </xs:annotation>
@@ -21434,6 +21434,46 @@ The duration (usually in minutes) could also be provided to indicate the length 
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="AppointmentResponseStatusEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="accepted">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Accepted</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="declined">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Declined</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tentative">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Tentative</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="needs-action">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Needs Action</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered in error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AppointmentResponseStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="AppointmentResponseStatusEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="ArtifactAssessment" type="ArtifactAssessment">
     <xs:annotation>
       <xs:documentation xml:lang="en">This Resource provides one or more comments, classifiers or ratings about a Resource and supports attribution and rights management metadata for the added content.</xs:documentation>
@@ -21450,6 +21490,11 @@ The duration (usually in minutes) could also be provided to indicate the length 
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="title" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A short title for the assessment for use in displaying and selecting.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
@@ -25274,7 +25319,7 @@ of the resource representation.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="MetadataResource">
         <xs:sequence>
-          <xs:element name="url" minOccurs="1" maxOccurs="1" type="uri">
+          <xs:element name="url" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
               <xs:documentation xml:lang="en">An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers.</xs:documentation>
            </xs:annotation>
@@ -25289,6 +25334,13 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the mechanism used to compare versions to determine which is more current.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="versionAlgorithmString" type="string"/>
+            <xs:element name="versionAlgorithmCoding" type="Coding"/>
+          </xs:choice>
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">A natural language name identifying the ChargeItemDefinition. This name should be usable as an identifier for the module by machine processing applications such as code generation.</xs:documentation>
@@ -25362,6 +25414,11 @@ of the resource representation.</xs:documentation>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="copyrightLabel" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A short string (&lt;50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="approvalDate" minOccurs="0" maxOccurs="1" type="date">
@@ -36224,14 +36281,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The interval during which the endpoint is expected to be operational.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="payloadType" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="payload" type="Endpoint.Payload" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The payload type describes the acceptable content that can be communicated on the endpoint.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="payloadMimeType" minOccurs="0" maxOccurs="unbounded" type="code">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType).</xs:documentation>
+              <xs:documentation xml:lang="en">The set of payloads that are provided/available at this endpoint.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="address" minOccurs="1" maxOccurs="1" type="url">
@@ -36242,6 +36294,27 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="header" minOccurs="0" maxOccurs="unbounded" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Additional headers / information to send as part of the notification.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Endpoint.Payload">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b, a REST endpoint for another FHIR server, or a s/Mime email address. This may include any security context information.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="type" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The payload type describes the acceptable content that can be communicated on the endpoint.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="mimeType" minOccurs="0" maxOccurs="unbounded" type="code">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType).</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -37662,11 +37735,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="subtitle" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">An explanatory or alternate title for the EvidenceVariable giving additional information about its content.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="PublicationStatus">
             <xs:annotation>
               <xs:documentation xml:lang="en">The status of this evidence variable. Enables tracking the life-cycle of the content.</xs:documentation>
@@ -37850,7 +37918,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="timeFromEvent" type="EvidenceVariable.TimeFromEvent" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Observation time from study specified event.</xs:documentation>
+              <xs:documentation xml:lang="en">Timing in which the characteristic is determined.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -37892,7 +37960,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:choice>
           <xs:element name="offset" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Defines the reference point for comparison when valueQuantity is not compared to zero.</xs:documentation>
+              <xs:documentation xml:lang="en">Defines the reference point for comparison when valueQuantity or valueRange is not compared to zero.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -37953,12 +38021,12 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:choice>
           <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the observation at a defined amount of time after the study start.</xs:documentation>
+              <xs:documentation xml:lang="en">Used to express the observation at a defined amount of time before or after the event.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="range" minOccurs="0" maxOccurs="1" type="Range">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used to express the observation within a period after the study start.</xs:documentation>
+              <xs:documentation xml:lang="en">Used to express the observation within a period before and/or after the event.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -47608,6 +47676,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
             </xs:annotation>
             <xs:element name="occurenceDateTime" type="dateTime"/>
             <xs:element name="occurencePeriod" type="Period"/>
+            <xs:element name="occurenceTiming" type="Timing"/>
           </xs:choice>
           <xs:element name="recorded" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
@@ -48739,7 +48808,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="supportingInformation" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationUsage for the patient).</xs:documentation>
+              <xs:documentation xml:lang="en">Information to support fulfilling (i.e. dispensing or administering) of the medication, for example, patient height and weight, a MedicationStatement for the patient).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="authoredOn" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -48797,9 +48866,19 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Extra information about the prescription that could not be conveyed by the other attributes.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="dose" type="MedicationRequest.Dose" minOccurs="0" maxOccurs="1">
+          <xs:element name="renderedDosageInstruction" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates how the medication is to be used by the patient.</xs:documentation>
+              <xs:documentation xml:lang="en">The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="effectiveDosePeriod" minOccurs="0" maxOccurs="1" type="Period">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="dosageInstruction" minOccurs="0" maxOccurs="unbounded" type="Dosage">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Specific instructions for how the medication is to be used by the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dispenseRequest" type="MedicationRequest.DispenseRequest" minOccurs="0" maxOccurs="1">
@@ -48815,32 +48894,6 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:element name="eventHistory" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="MedicationRequest.Dose">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called &quot;MedicationRequest&quot; rather than &quot;MedicationPrescription&quot; or &quot;MedicationOrder&quot; to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="renderedDosageInstruction" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="effectiveDosePeriod" minOccurs="0" maxOccurs="1" type="Period">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The period over which the medication is to be taken.  Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="dosageInstruction" minOccurs="0" maxOccurs="unbounded" type="Dosage">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Specific instructions for how the medication is to be used by the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -49062,22 +49115,22 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="MedicationUsage" type="MedicationUsage">
+  <xs:element name="MedicationStatement" type="MedicationStatement">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
 
-The MedicationUsage resource was previously called MedicationStatement.</xs:documentation>
+The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="MedicationUsage">
+  <xs:complexType name="MedicationStatement">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
 
-The MedicationUsage resource was previously called MedicationStatement.</xs:documentation>
+The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -49085,22 +49138,22 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifiers associated with this Medication Statement that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A larger event of which this particular MedicationUsage is a component or step.</xs:documentation>
+              <xs:documentation xml:lang="en">A larger event of which this particular MedicationStatement is a component or step.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="status" minOccurs="1" maxOccurs="1" type="MedicationUsageStatusCodes">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="MedicationStatementStatusCodes">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A code representing the status of recording the medication usage.</xs:documentation>
+              <xs:documentation xml:lang="en">A code representing the status of recording the medication statement.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Type of medication usage (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).</xs:documentation>
+              <xs:documentation xml:lang="en">Type of medication statement (for example, drug classification like ATC, where meds would be administered, legal category of the medication.).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="medication" minOccurs="1" maxOccurs="1" type="CodeableReference">
@@ -49115,29 +49168,30 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The encounter that establishes the context for this MedicationUsage.</xs:documentation>
+              <xs:documentation xml:lang="en">The encounter that establishes the context for this MedicationStatement.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).</xs:documentation>
+              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.adherence element is Not Taking).</xs:documentation>
             </xs:annotation>
             <xs:element name="effectiveDateTime" type="dateTime"/>
             <xs:element name="effectivePeriod" type="Period"/>
+            <xs:element name="effectiveTiming" type="Timing"/>
           </xs:choice>
           <xs:element name="dateAsserted" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The date when the Medication Usage was asserted by the information source.</xs:documentation>
+              <xs:documentation xml:lang="en">The date when the Medication Statement was asserted by the information source.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="informationSource" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationUsage is derived from other resources, e.g. Claim or MedicationRequest.</xs:documentation>
+              <xs:documentation xml:lang="en">The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="derivedFrom" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Allows linking the MedicationUsage to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationUsage.</xs:documentation>
+              <xs:documentation xml:lang="en">Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="reason" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
@@ -49147,15 +49201,15 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Provides extra information about the Medication Usage that is not conveyed by the other attributes.</xs:documentation>
+              <xs:documentation xml:lang="en">Provides extra information about the Medication Statement that is not conveyed by the other attributes.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relatedClinicalInformation" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Link to information that is relevant to a medication usage, for example, illicit drug use, gestational age, etc.</xs:documentation>
+              <xs:documentation xml:lang="en">Link to information that is relevant to a medication statement, for example, illicit drug use, gestational age, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="renderedDosageInstruction" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="renderedDosageInstruction" minOccurs="0" maxOccurs="1" type="markdown">
             <xs:annotation>
               <xs:documentation xml:lang="en">The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.</xs:documentation>
            </xs:annotation>
@@ -49165,7 +49219,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">Indicates how the medication is/was or should be taken by the patient.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="adherence" type="MedicationUsage.Adherence" minOccurs="0" maxOccurs="1">
+          <xs:element name="adherence" type="MedicationStatement.Adherence" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates whether the medication is or is not being consumed or administered.</xs:documentation>
            </xs:annotation>
@@ -49174,13 +49228,13 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MedicationUsage.Adherence">
+  <xs:complexType name="MedicationStatement.Adherence">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+      <xs:documentation xml:lang="en">A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationstatement and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationstatement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
 
-The MedicationUsage resource was previously called MedicationStatement.</xs:documentation>
+The MedicationStatement resource was previously called MedicationStatement.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -49199,7 +49253,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="MedicationUsageStatusCodesEnum">
+  <xs:simpleType name="MedicationStatementStatusCodesEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="recorded">
         <xs:annotation>
@@ -49218,14 +49272,14 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="MedicationUsageStatusCodes">
+  <xs:complexType name="MedicationStatementStatusCodes">
     <xs:annotation>
       <xs:documentation xml:lang="en"></xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="MedicationUsageStatusCodesEnum" use="optional"/>
+        <xs:attribute name="value" type="MedicationStatementStatusCodesEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

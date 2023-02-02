@@ -1,6 +1,11 @@
 {
   "resourceType": "Condition",
   "id": "EncounterExample1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition"
+    ]
+  },
   "clinicalStatus": {
     "coding": [
       {

@@ -1,6 +1,11 @@
 {
   "resourceType": "DocumentReference",
   "id": "USClinicalNoteExample1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference"
+    ]
+  },
   "status": "current",
   "docStatus": "final",
   "type": {

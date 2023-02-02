@@ -1,23 +1,33 @@
 resourceType: Observation
+meta:
+  profile:
+    - 'http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation'
+  extension:
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+      valueString: Observation Vital Signs Example
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+      valueMarkdown: >-
+        This is a Observation example for the *IPA Observation Profile*
+        containing the vital sign for body weight.
 id: VitalSignsExample1
 status: final
 category:
-- coding:
-  - system: http://terminology.hl7.org/CodeSystem/observation-category
-    code: vital-signs
-    display: Vital Signs
-  text: Vital Signs
+  - coding:
+      - system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+        code: vital-signs
+        display: Vital Signs
+    text: Vital Signs
 code:
   coding:
-  - system: http://loinc.org
-    code: 29463-7
-    display: Body weight
-  - system: http://loinc.org
-    code: 3141-9
-    display: Body weight Measured
-  - system: http://loinc.org
-    code: 8716-3
-    display: Vital signs
+    - system: 'http://loinc.org'
+      code: 29463-7
+      display: Body weight
+    - system: 'http://loinc.org'
+      code: 3141-9
+      display: Body weight Measured
+    - system: 'http://loinc.org'
+      code: 8716-3
+      display: Vital signs
   text: Weight
 subject:
   reference: Patient/PatientExample1
@@ -25,10 +35,10 @@ subject:
 effectiveDateTime: '2019-09-05T20:00:00Z'
 issued: '2019-09-05T20:49:27Z'
 performer:
-- reference: Practitioner/PractitionerExample1
-  display: Marty Seeger, MD
+  - reference: Practitioner/PractitionerExample1
+    display: 'Marty Seeger, MD'
 valueQuantity:
   value: 50
   unit: kg
-  system: http://unitsofmeasure.org
+  system: 'http://unitsofmeasure.org'
   code: kg

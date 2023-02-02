@@ -360,8 +360,6 @@ definition:
     value: xml
   - code: generate
     value: json
-  - code: suppressed-ids
-    value: $examples
   - code: logging
     value: progress
   - code: logging

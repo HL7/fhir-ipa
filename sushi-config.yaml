@@ -96,7 +96,7 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - json
   # version-comparison:
   #    - 1.0.0
-  suppressed-ids: '$examples'
+  # suppressed-ids: '$examples'
   logging:
     - progress
     - tx
