@@ -27,13 +27,6 @@
                         "human": "At least one of Patient.identifier.system or Patient.identifier.type or Patient.identifier.assigner SHALL be present",
                         "expression": "system.exists() or type.exists() or assigner.exists()",
                         "xpath": "f:system or f:type or f:assigner"
-                    },
-                    {
-                        "key": "ipa-pat-4",
-                        "severity": "error",
-                        "human": "If Patient.link is present, then Patient.active SHALL be present",
-                        "expression": "link.exists() implies active.exists()",
-                        "xpath": "not(f:link) or f:active"
                     }
                 ],
                 "mustSupport": true
@@ -48,10 +41,16 @@
             {
                 "id": "Patient.active",
                 "path": "Patient.active",
-                "condition": [
-                    "ipa-pat-4"
-                ],
-                "mustSupport": true
+                "mustSupport": true,
+                "constraint": [
+                    {
+                        "key": "ipa-pat-4",
+                        "severity": "error",
+                        "human": "If Patient.link is present, then Patient.active SHALL be present",
+                        "expression": "link.exists() implies active.exists()",
+                        "xpath": "not(f:link) or f:active"
+                    }
+                ]
             },
             {
                 "id": "Patient.name",
