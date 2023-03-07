@@ -8,29 +8,24 @@ The following data elements must always be present (in other words, mandatory re
 {% raw %}
 <blockquote class="stu-note">
 <p>
-This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> indicating "International Patient Access (FHIR)" as the specification.
+This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> indicating "International Patient Access (FHIR)" as the specification. The publishers of the specification are seeking feedback on two elements proposed as manadatory in this Patient profile.
 </p>
 <p>
-The publishers of the specification are seeking feedback on having the Patient.identifier element as mandatory. The intent is that all servers must provide a business identifier that can facilitate a federated approach to accessing patient information. Please provide any evidence for or against this decision.
+<ol>
+<li>
+Currently, Patient.identifier element is identified as mandatory. The intent is that all servers must provide a business identifier that can facilitate a federated approach to accessing patient information. Please provide any evidence for or against this decision.
+</li>
+In the balloted version of this specification, Patient.name was identified as mandatory (meaning that use of the  <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason (DAR) extension</a>) was allowed). In this published version, Patient.name is not mandatory. It was expressed that this requirement may not enable privacy preserving mechanisms, for example: patients limiting application access to their demographic information, including name, as part of the authorization process. Implementer feedback is requested: should Patient.name be a mandatory element? For a more general question, how should IPA relate to use-case-agnostic, base specifications?
+<li>
+
+</li>
+</ol
 </p>
 </blockquote>
 {% endraw %}
 **Each Patient SHALL have:**
 
 * a patient identifier (e.g. MRN)
-
-{% raw %}
-<blockquote class="stu-note">
-<p>
-The ballot version required servers to always provide Patient.name (with allowed use of the <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason (DAR) extension)</a>. It was expressed that this requirement may not enable privacy preserving mechanisms, for example: patients limiting application access to their demographic information, including name, as part of the authorization process.
-
-Implementer feedback is requested: should Patient.name be a mandatory element? For a more general question, how should IPA relate to use-case-agnostic, base specifications? 
-</p>
-<p>
-Feedback is welcome and may be submitted through the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> indicating "International Patient Access (FHIR)" as the specification.
-</p>
-</blockquote>
-{% endraw %}
 
 **Applications must also support:**
 
