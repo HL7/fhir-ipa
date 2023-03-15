@@ -15,7 +15,7 @@ This specification is currently published as a Standard for Trial Use (STU).  Fe
 <li>
 Currently, the Patient.identifier element is identified as mandatory. The intent is that all servers must provide a unique patient identifier that can facilitate a federated approach to accessing patient information. Please provide any evidence for or against this decision.
 </li>
-<li>In the balloted version of this specification, the Patient.name element was identified as mandatory (meaning minimal cardinality of 1) and provided a rule that the use of the  <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason (DAR) extension</a> was allowed. In this published version, Patient.name is not mandatory. It was expressed that having the minimal cardinality of 1 may not enable privacy preserving mechanisms, such as patients limiting client application access to their demographic information, including name, as part of the authorization process. Implementer feedback is requested: should Patient.name be a mandatory element?
+<li>In the balloted version of this specification, the Patient.name element was identified as mandatory (meaning minimal cardinality of 1) and provided a rule that the use of the  <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason (DAR) extension</a> was allowed. In this published version, Patient.name is not mandatory. It was expressed that having the minimal cardinality of 1 may not enable privacy preserving mechanisms, such as patients limiting client application access to their demographic information, including name, as part of the authorization process. Implementer feedback is requested on whether Patient.name should be a mandatory element.
 </li>
 </ol>
 </p>
