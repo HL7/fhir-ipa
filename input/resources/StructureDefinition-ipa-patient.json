@@ -55,7 +55,7 @@
             {
                 "id": "Patient.name",
                 "path": "Patient.name",
-                "min": 1,
+                "min": 0,
                 "constraint": [
                     {
                         "key": "ipa-pat-2",
