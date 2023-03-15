@@ -18,7 +18,7 @@ Currently, Patient.identifier element is identified as mandatory. The intent is 
 <li>
 In the balloted version of this specification, Patient.name was identified as mandatory (meaning minimal cardinality of 1) and provided a rule that the use of the  <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason (DAR) extension</a>) was allowed. In this published version, Patient.name is not mandatory. It was expressed that having the minimal cardinality of 1 may not enable privacy preserving mechanisms, for example: patients limiting application access to their demographic information, including name, as part of the authorization process. Implementer feedback is requested: should Patient.name be a mandatory element? For a more general question, how should IPA relate to use-case-agnostic, base specifications?
 </li>
-</ol
+</ol>
 </p>
 </blockquote>
 {% endraw %}
