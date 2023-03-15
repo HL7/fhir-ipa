@@ -8,7 +8,7 @@ The following data elements must always be present (in other words, mandatory re
 {% raw %}
 <blockquote class="stu-note">
 <p>
-This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> indicating "International Patient Access (FHIR)" as the specification. The publishers of the specification are seeking feedback on two elements proposed as manadatory in this Patient profile.
+This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> indicating "International Patient Access (FHIR)" as the specification. The publishers of the specification are seeking feedback on two elements in this Patient profile.
 </p>
 <p>
 <ol>
