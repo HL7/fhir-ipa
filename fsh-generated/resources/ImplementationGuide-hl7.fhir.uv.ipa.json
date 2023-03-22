@@ -433,7 +433,7 @@
         "value": "false"
       },
       {
-        "code": "excludejsn",
+        "code": "excludejson",
         "value": "false"
       },
       {
@@ -442,10 +442,6 @@
       },
       {
         "code": "excludemap",
-        "value": "true"
-      },
-      {
-        "code": "excludeexample",
         "value": "true"
       },
       {
