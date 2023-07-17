@@ -1,6 +1,6 @@
 # International Patient Access FHIR Specification
 
-Authors: Grahame Grieve, Rob Hausam, Mikael Rinnetmäki, Vassil Peytchev, Isaac Vetter
+Authors: Grahame Grieve, Eric Haas, Rob Hausam, Vassil Peytchev, Mikael Rinnetmäki, Isaac Vetter
 
 The International Patient Access API Specification describes how an application acting on behalf of
 a patient or a practitioner can access information about the patient from a clinical records system
