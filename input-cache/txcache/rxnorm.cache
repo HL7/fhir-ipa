@@ -7,7 +7,11 @@
 v: {
   "display" : "oxycodone hydrochloride",
   "code" : "82063",
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -18,7 +22,11 @@ v: {
 v: {
   "display" : "acetaminophen",
   "code" : "161",
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -29,6 +37,145 @@ v: {
 v: {
   "display" : "smallpox vaccine live, New York City Board of Health vaccinia strain 500000000 UNT/ML Injectable Solution",
   "code" : "833082",
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "833082",
+  "display" : "smallpox (vaccinia) vaccine, live Injectable Solution"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "smallpox vaccine live, New York City Board of Health vaccinia strain 500000000 UNT/ML Injectable Solution",
+  "code" : "833082",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "82063",
+  "display" : "oxyCODONE hydrochloride"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "oxycodone hydrochloride",
+  "code" : "82063",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "161",
+  "display" : "Acetaminophen"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "acetaminophen",
+  "code" : "161",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "833082",
+  "display" : "smallpox (vaccinia) vaccine, live Injectable Solution"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "smallpox vaccine live, New York City Board of Health vaccinia strain 500000000 UNT/ML Injectable Solution",
+  "code" : "833082",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "82063",
+  "display" : "oxyCODONE hydrochloride"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "oxycodone hydrochloride",
+  "code" : "82063",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "161",
+  "display" : "Acetaminophen"
+}, "valueSet" :null, "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "acetaminophen",
+  "code" : "161",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "version" : "??",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------

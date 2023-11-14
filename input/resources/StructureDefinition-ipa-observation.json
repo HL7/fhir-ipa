@@ -1,5 +1,15 @@
 {
   "resourceType": "StructureDefinition",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode" : "pc"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "trial-use"
+    }
+  ],
   "id": "ipa-observation",
   "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation",
   "name": "IPAObservation",

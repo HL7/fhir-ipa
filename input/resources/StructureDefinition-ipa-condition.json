@@ -1,6 +1,16 @@
 {
     "resourceType": "StructureDefinition",
     "id": "ipa-condition",
+    "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+          "valueCode" : "pc"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode" : "trial-use"
+        }
+    ],
     "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-condition",
     "name": "IPACondition",
     "title": "IPA-Condition",
