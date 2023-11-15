@@ -34,7 +34,7 @@
                         "key": "ipa-pat-4",
                         "severity": "error",
                         "human": "If Patient.link is present, then Patient.active SHALL be present",
-                        "expression": "link.exists() implies active.exists()",
+                        "expression": "Patient.link.exists() implies Patient.active.exists()",
                         "xpath": "not(f:link) or f:active"
                     }
                 ]
@@ -64,10 +64,10 @@
             {
                 "id": "Patient.active",
                 "path": "Patient.active",
-                "mustSupport": true,
                 "condition": [
                     "ipa-pat-4"
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Patient.name",
@@ -111,10 +111,10 @@
             {
                 "id": "Patient.link",
                 "path": "Patient.link",
-                "mustSupport": true,
                 "condition": [
                     "ipa-pat-4"
-                ]
+                ],
+                "mustSupport": true               
             }
         ]
     }
