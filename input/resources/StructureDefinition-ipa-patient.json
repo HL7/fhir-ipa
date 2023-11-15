@@ -1,6 +1,16 @@
 {
     "resourceType": "StructureDefinition",
     "id": "ipa-patient",
+    "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+          "valueCode" : "pc"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode" : "trial-use"
+        }
+    ],
     "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
     "name": "IPAPatient",
     "title": "IPA-Patient",
@@ -16,6 +26,19 @@
     "derivation": "constraint",
     "differential": {
         "element": [
+            {
+                "id": "Patient",
+                "path": "Patient",
+                "constraint": [
+                    {
+                        "key": "ipa-pat-4",
+                        "severity": "error",
+                        "human": "If Patient.link is present, then Patient.active SHALL be present",
+                        "expression": "link.exists() implies active.exists()",
+                        "xpath": "not(f:link) or f:active"
+                    }
+                ]
+            },
             {
                 "id": "Patient.identifier",
                 "path": "Patient.identifier",
@@ -41,16 +64,11 @@
             {
                 "id": "Patient.active",
                 "path": "Patient.active",
-                "mustSupport": true,
-                "constraint": [
-                    {
-                        "key": "ipa-pat-4",
-                        "severity": "error",
-                        "human": "If Patient.link is present, then Patient.active SHALL be present",
-                        "expression": "link.exists() implies active.exists()",
-                        "xpath": "not(f:link) or f:active"
-                    }
-                ]
+                "condition": [
+                    "ipa-pat-4"
+                ],
+                "mustSupport": true
+                
             },
             {
                 "id": "Patient.name",
