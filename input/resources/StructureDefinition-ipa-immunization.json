@@ -31,6 +31,35 @@
         "path": "Immunization.status",
         "min": 1,
         "max": "1",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "able-to-populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+            ]
+          }   
+      ],
         "mustSupport": true
       },
       {
@@ -38,13 +67,29 @@
         "path": "Immunization.statusReason",
         "min": 0,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": false
       },
       {
         "id": "Immunization.vaccineCode",
         "path": "Immunization.vaccineCode",
         "min": 1,
         "max": "1",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:explain"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+        } 
+      ],
         "mustSupport": true
       },
       {
@@ -60,6 +105,35 @@
             ]
           }
         ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "able-to-populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+            ]
+          }   
+      ],
         "mustSupport": true
       },
       {
@@ -67,6 +141,35 @@
         "path": "Immunization.occurrence[x]",
         "min": 1,
         "max": "1",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:explain"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "no-error"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+            ]
+          }   
+      ],
         "mustSupport": true
       }
     ]

@@ -8,7 +8,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueCode" : "trial-use"
+          "valueCode" : "trial-use"           
         }
     ],
     "url": "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-documentreference",
@@ -29,8 +29,13 @@
             {
                 "id": "DocumentReference.status",
                 "path": "DocumentReference.status",
-                "mustSupport": true
-            },
+                "extension": [
+                    {
+                    "url": "http://hl7.org/fhir/StructureDefinition/obligation"
+                    }
+                ],
+                "mustSupport": true  
+                        },
             {
                 "id": "DocumentReference.type",
                 "path": "DocumentReference.type",
