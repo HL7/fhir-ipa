@@ -38,11 +38,3 @@ My Notes
 #Text editor generated files #
 ############
 .vscode
-FHIR-ipa.xml
-_updatePublisher.bat
-_gencontinuous.bat
-_gencontinuous.sh
-_genonce.bat
-_genonce.sh
-_updatePublisher.sh
-FHIR-ipa.xml

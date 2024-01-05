@@ -8,7 +8,7 @@
     "url" : "http://hl7.org/fhir/uv/ipa/ActorDefinition/client",
     "version" : "0.1.0",
     "name" : "ClientActor",
-    "title" : "Client Actor",
+    "title" : "Client",
     "status" : "active",
     "date" : "2023-07-21T14:31:30.239Z",
     "description" : "IPA Client Actor",

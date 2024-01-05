@@ -1,3 +1,10 @@
+{% raw %}
+<blockquote class="stu-note">
+<p>
+We are proposing to removing MS from stautsReason. Implementer feedback is encouraged.
+</p>
+</blockquote>
+{% endraw %}
 
 ### Mandatory and Must Support Data Elements
 
@@ -33,3 +40,4 @@ The following data elements must always be present (in other words, mandatory re
 
 <!-- include content or add inline -->
 
+</body>

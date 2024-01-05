@@ -37,7 +37,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "able-to-populate"
+                    "valueCode": "SHALL:populate"
                 },
                 {
                     "url": "actor",
@@ -51,7 +51,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "handle"
+                    "valueCode": "SHALL:handle"
                 },
                 {
                     "url": "actor",
@@ -80,7 +80,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:explain"
+                    "valueCode": "SHALL:populate"
                 },
                 {
                     "url": "actor",
@@ -88,7 +88,20 @@
                 }
             
           ]
-        } 
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
       ],
         "mustSupport": true
       },
@@ -111,7 +124,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "able-to-populate"
+                    "valueCode": "SHALL:populate"
                 },
                 {
                     "url": "actor",
@@ -125,14 +138,14 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "handle"
+                    "valueCode": "SHALL:handle"
                 },
                 {
                     "url": "actor",
                     "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
                 }
-            ]
-          }   
+              ]
+          }
       ],
         "mustSupport": true
       },
@@ -147,7 +160,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:explain"
+                    "valueCode": "SHALL:populate"
                 },
                 {
                     "url": "actor",
@@ -161,14 +174,14 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "no-error"
+                    "valueCode": "SHALL:handle"
                 },
                 {
                     "url": "actor",
                     "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
                 }
-            ]
-          }   
+              ]
+          }
       ],
         "mustSupport": true
       }

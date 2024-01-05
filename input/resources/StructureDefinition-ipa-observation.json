@@ -42,16 +42,103 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
         "id": "Observation.category",
         "path": "Observation.category",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHOULD:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
@@ -66,23 +153,139 @@
             ]
           }
         ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "condition": ["ipa-obs-1"],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "mustSupport": true
       },
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
-        "condition": ["ipa-obs-1"],       
+        "condition": ["ipa-obs-1"], 
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],      
         "mustSupport": true
       }
     ]

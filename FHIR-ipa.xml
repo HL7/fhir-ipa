@@ -8,7 +8,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ActorDefinition/client" key="ActorDefinition-client" name="Client Actor"/>
+<artifact id="ActorDefinition/client" key="ActorDefinition-client" name="Client"/>
 <artifact id="DocumentReference/USClinicalNoteExample1" key="DocumentReference-USClinicalNoteExample1" name="DocumentReference Example"/>
 <artifact id="AllergyIntolerance/AllIntExample1" key="AllergyIntolerance-AllIntExample1" name="IPA AllergyIntolerance Example"/>
 <artifact id="Condition/EncounterExample1" key="Condition-EncounterExample1" name="IPA Condition Example"/>
@@ -39,7 +39,7 @@
 <artifact id="Observation/SmokingExample1" key="Observation-SmokingExample1" name="Observation social history smoking Example"/>
 <artifact id="Practitioner/PractitionerExample1" key="Practitioner-PractitionerExample1" name="Practitioner Example"/>
 <artifact id="PractitionerRole/PractitionerRoleExample1" key="PractitionerRole-PractitionerRoleExample1" name="PractitionerRole Example"/>
-<artifact id="ActorDefinition/server" key="ActorDefinition-server" name="Server Actor"/>
+<artifact id="ActorDefinition/server" key="ActorDefinition-server" name="Server"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
