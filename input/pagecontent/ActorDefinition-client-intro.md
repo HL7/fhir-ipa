@@ -1,0 +1,3 @@
+### IPA Client
+
+The IPA client - also known as a requestor, is an application that initiates a data access request to retrieve patient data. It is the client in a client-server interaction. The terms “app”, “patient app”, "requestor" and “client” are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a “user application”.

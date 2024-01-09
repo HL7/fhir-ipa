@@ -52,6 +52,35 @@
                         "xpath": "f:system or f:type or f:assigner"
                     }
                 ],
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:explain"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -59,6 +88,22 @@
                 "path": "Patient.identifier.value",
                 "short": "The value that is unique within the system.",
                 "min": 1,
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -66,6 +111,22 @@
                 "path": "Patient.active",
                 "condition": [
                     "ipa-pat-4"
+                ],
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    }
                 ],
                 "mustSupport": true
             },
@@ -95,17 +156,91 @@
                         "xpath": "/f:name/f:text"
                     }
                 ],
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
                 "id": "Patient.gender",
                 "path": "Patient.gender",
                 "min": 0,
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
                 "id": "Patient.birthDate",
                 "path": "Patient.birthDate",
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -113,6 +248,35 @@
                 "path": "Patient.link",
                 "condition": [
                     "ipa-pat-4"
+                ],
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
                 ],
                 "mustSupport": true               
             }

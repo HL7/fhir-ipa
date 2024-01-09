@@ -1,0 +1,22 @@
+{
+    "resourceType" : "ActorDefinition",
+    "id" : "client",
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><tr><td><b>Actor: ClientActor</b></td><td>Client Actor 1</td><td>Type: system</td></tr><tr><td colspan=\"3\"/></tr></table></div>"
+    },
+    "url" : "http://hl7.org/fhir/uv/ipa/ActorDefinition/client",
+    "version" : "0.1.0",
+    "name" : "ClientActor",
+    "title" : "Client",
+    "status" : "active",
+    "date" : "2023-07-21T14:31:30.239Z",
+    "description" : "IPA Client Actor",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "code" : "001"
+      }]
+    }],
+    "type" : "system"
+  }
