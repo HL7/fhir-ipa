@@ -1,4 +1,7 @@
 
+IPA is introducing Obligations on actors for its profiles. See section 2.6 for details. Implementer feedback is encouraged.
+{:.stu-note}
+
 IPA conformant servers SHALL support:
 
  - the resources as profiled by IPA to represent clinical information (Profile Support) and [the RESTful FHIR API]({{site.data.fhir.path}}http.html) interactions defined for it (Interaction Support)
@@ -159,4 +162,23 @@ For example, when claiming conformance to the IPA Observation Profile:
 * IPA Requestors **SHALL** be capable of processing `Observation.effectiveDateTime` and `Observation.effectivePeriod`
 
 Systems **MAY** support populating and processing other choice elements not listed in the table (such as `Observation.effectiveInstant`), but this is not a requirement.
+
+### Obligations
+
+In the context of IPA, the "obligation flag" on any data element documents the obligations associated with its use. The listed obligations on the data element outlines the expected behavior of the actor (responder or requestor) interoperating the data element.
+
+For a data element to include an Obligation, the data element must be labelled as MustSupport. Obligations provide additional guidance on how implementations that produce or consume the resource are able to "support" the element in a meaningful way. 
+
+Elements with Obligations are treated differently between IPA responders and requestors. Obligations can be found in the formal view section of a resource. 
+
+{% include img.html img="ipa-obligationsExample.png" %}
+
+#### Obligations for Responders
+Responders conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element.
+
+#### Obligations for Requestors
+Responders conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
+
+#### Obligation Code Definitions
+Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html). 
 
