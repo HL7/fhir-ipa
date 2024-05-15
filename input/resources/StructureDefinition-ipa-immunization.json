@@ -37,7 +37,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:populate"
+                    "valueCode": "SHALL:populate-if-known"
                 },
                 {
                     "url": "actor",
@@ -80,7 +80,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:populate"
+                    "valueCode": "SHALL:populate-if-known"
                 },
                 {
                     "url": "actor",
@@ -124,7 +124,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:populate"
+                    "valueCode": "SHALL:populate-if-known"
                 },
                 {
                     "url": "actor",
@@ -160,7 +160,7 @@
             "extension":[
                 {
                     "url": "code",
-                    "valueCode": "SHALL:populate"
+                    "valueCode": "SHALL:populate-if-known"
                 },
                 {
                     "url": "actor",
