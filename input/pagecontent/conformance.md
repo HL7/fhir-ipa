@@ -1,5 +1,5 @@
 
-IPA is introducing Obligations on actors for its profiles. See section 2.6 for details. Implementer feedback is encouraged.
+IPA is introducing Obligations on actors for its profiles. See [section 2.6](#obligations) for details. Implementer feedback is encouraged.
 {:.stu-note}
 
 IPA conformant servers SHALL support:
@@ -165,19 +165,19 @@ Systems **MAY** support populating and processing other choice elements not list
 
 ### Obligations
 
-In the context of IPA, the "obligation flag" on any data element documents the obligations associated with its use. The listed obligations on the data element outlines the expected behavior of the actor (responder or requestor) interoperating the data element.
+In the context of IPA, the "obligation flag" on any data element documents the Obligations associated with its use. The listed Obligations on the data element outlines the expected behavior of the actor (responder or requestor) interoperating the data element.
 
 For a data element to include an Obligation, the data element must be labelled as MustSupport. Obligations provide additional guidance on how implementations that produce or consume the resource are able to "support" the element in a meaningful way. 
 
 Elements with Obligations are treated differently between IPA responders and requestors. Obligations can be found in the formal view section of a resource. 
 
-{% include img.html img="ipa-obligationsExample.png" %}
+{% include img.html img="ipa-obligations-example.png" %}
 
 #### Obligations for Responders
-Responders conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element.
+[Responders](ActorDefinition-client.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element. Implementers may notice that the vast majority of IPA Obligations on Responders is SHALL handle.
 
 #### Obligations for Requestors
-Responders conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
+[Requestors](ActorDefinition-server.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
 
 #### Obligation Code Definitions
 Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html). 

@@ -80,6 +80,40 @@
                 }
                 ],
                 "mustSupport": true
+            }, 
+            {
+                "id": "MedicationRequest.doNotPerform",
+                "path": "MedicationRequest.doNotPerform",
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHOULD:populate"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
+                ]
+                    
             },
             {
                 "id": "MedicationRequest.reported[x]",
@@ -368,40 +402,6 @@
                     }
                 ],
                 "mustSupport": true
-            },
-            {
-                "id": "MedicationRequest.doNotPerform",
-                "path": "MedicationRequest.doNotPerform",
-                "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
-                      "extension":[
-                          {
-                              "url": "code",
-                              "valueCode": "SHOULD:populate"
-                          },
-                          {
-                              "url": "actor",
-                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
-                          }
-                      
-                    ]
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
-                      "extension":[
-                          {
-                              "url": "code",
-                              "valueCode": "SHALL:handle"
-                          },
-                          {
-                              "url": "actor",
-                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
-                          }
-                        ]
-                    }
-                ]
-                    
             }
             
         ]
