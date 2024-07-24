@@ -180,5 +180,5 @@ Elements with Obligations are treated differently between IPA responders and req
 [Requestors](ActorDefinition-client.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
 
 #### Obligation Code Definitions
-Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://build.fhir.org/ig/HL7/fhir-extensions//CodeSystem-obligation.html). 
+Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). 
 
