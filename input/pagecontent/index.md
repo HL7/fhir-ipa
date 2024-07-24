@@ -131,6 +131,7 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *Cori Thompson, Drummond Group*
 - *John D'Amore, More Informatics*
 - *John Moehrke, By Light Professional IT Services LLC*
+- *Rashid Kolaghassi, Epic*
 - *Sheridan Cook, Canada Health Infoway*
 
 ---
