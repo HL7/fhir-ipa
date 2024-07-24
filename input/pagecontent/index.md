@@ -122,6 +122,7 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *Isaac Vetter, Epic*
 - *Mikael Rinnetmaki, Sensotrend Oy, HL7 Finland*
 - *Rob Hausam, Hausam Consulting LLC*
+- *Sheridan Cook, Canada Health Infoway*
 - *Vassil Peytchev, Epic*
 
 
@@ -131,6 +132,5 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *Cori Thompson, Drummond Group*
 - *John D'Amore, More Informatics*
 - *John Moehrke, By Light Professional IT Services LLC*
-- *Sheridan Cook, Canada Health Infoway*
-
+- *Rashid Kolaghassi, Epic*
 ---
