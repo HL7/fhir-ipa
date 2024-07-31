@@ -16,10 +16,6 @@ Greater access to your health information empowers you to be informed and prepar
 
 ### Frequently Asked Questions
 
-**How can I share my health data?**
-
-With IPA, sharing your health data is simple and secure. You can grant access to specific healthcare providers, hospitals, clinics, or health apps of your choice. This selective sharing is managed through consent management features, ensuring that only those you trust can view your information. *<--- Question:  Is this actually a true feature of IPA? If a doc uses the launch are there any patient controls that the spec covers? Suggest removing if it's something we aren't confident in*
-
 **What hospitals or clinics allow me to access my data?**
 
 Many hospitals and clinics worldwide are adopting the HL7 FHIR standards, enabling them to participate in the IPA project. To find out if your local healthcare providers support IPA, check with them directly or visit our [official blog](https://blog.hl7.org/international-patient-access) for a list of participating institutions.
