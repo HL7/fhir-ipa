@@ -11,7 +11,7 @@ Greater access to your health information empowers you to be informed and prepar
 
 **All Your Records in One Place**: IPA helps you gather all your health records from various doctors and hospitals into one easy-to-access place. This way, you can track your health trends over time and get a clearer picture of your overall well-being.
 
-**Interoperability**: IPA supports seamless integration with various healthcare systems globally. This allows your health data to be easily shared with apps of your choice.
+**Interoperability**: IPA supports seamless integration with various healthcare systems globally. This allows your health data to be digitally accessible and standardized so that it can be easily shared with apps of your choice.
 
 
 ### Frequently Asked Questions
