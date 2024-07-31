@@ -18,11 +18,11 @@ Greater access to your health information empowers you to be informed and prepar
 
 **What hospitals or clinics allow me to access my data?**
 
-Many hospitals and clinics worldwide are adopting the HL7 FHIR standards, enabling them to participate in the IPA project. To find out if your local healthcare providers support IPA, check with them directly or visit our [official blog](https://blog.hl7.org/international-patient-access) for a list of participating institutions.
+Many hospitals and clinics worldwide are adopting the HL7 FHIR standards, enabling them to participate in the IPA project. To find out if your local healthcare providers support IPA, check with them directly or visit our [directory of participating institutions]().
 
 **What apps can I share my data with?**
 
-Numerous health apps are integrating with IPA to provide seamless data sharing capabilities. These apps range from personal health management tools to specialized medical applications. For a comprehensive list of compatible apps, visit our [official blog](https://blog.hl7.org/international-patient-access).
+Numerous health apps are integrating with IPA to provide seamless data sharing capabilities. These apps range from personal health management tools to specialized medical applications. For a comprehensive list of compatible apps, visit our list of [self-submitted patient apps]().
 
 **How is my data protected?**
 
