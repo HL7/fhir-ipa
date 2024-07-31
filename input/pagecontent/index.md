@@ -133,4 +133,5 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *John D'Amore, More Informatics*
 - *John Moehrke, By Light Professional IT Services LLC*
 - *Rashid Kolaghassi, Epic*
+
 ---
