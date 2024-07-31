@@ -28,7 +28,7 @@ Numerous health apps are integrating with IPA to provide seamless data sharing c
 
 IPA uses robust security measures to protect your health data. Encryption, secure authentication, and other advanced protocols are in place to ensure that your information remains confidential and safe from unauthorized access.
 
-### Does your nation enable your sharing of your health data?**
+### Does your nation enable your sharing of your health data?
 
 Healthcare regulations and data sharing capabilities vary by country. It's important to understand your local regulations and how they support the secure sharing of health data. Reach out to your national health authority or check our resources to learn more about your country's stance on health data sharing.
 
