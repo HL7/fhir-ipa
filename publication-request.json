@@ -2,7 +2,7 @@
     "package-id": "hl7.fhir.uv.ipa",
     "version": "1.0.0",
     "path": "http://hl7.org/fhir/uv/ipa/STU1",
-    "milestone": true,
+    "mode": "milestone",
     "status": "trial-use",
     "sequence": "STU 1",
     "desc": "STU1 Version the International Patient Access (IPA) Implementation Guide: This is the first published version of this guide and the result of the resolution of community comments for the January 2022 Ballot Version."
