@@ -1,7 +1,7 @@
 {% raw %}
 <blockquote class="stu-note">
 <p>
-We propose to remove MS from stautsReason. Implementer feedback is encouraged.
+We propose to remove MS from statusReason. Implementer feedback is encouraged.
 
 </p>
 </blockquote>
