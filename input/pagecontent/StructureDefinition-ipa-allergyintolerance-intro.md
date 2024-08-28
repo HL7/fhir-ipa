@@ -13,8 +13,6 @@ The following data elements must always be present (in other words, mandatory re
 **Applications must also support:**
 * a clinical status
 * a verification status
-* one or more category codes used to group allergies
-
 
 <!-- (only if present) -->
 <!-- ### Profile Specific Implementation Rules and Guidance -->
