@@ -3,7 +3,7 @@
     "id" : "server",
     "text" : {
       "status" : "generated",
-      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><tr><td><b>Actor: ServerActor</b></td><td>Server Actor 1</td><td>Type: system</td></tr><tr><td colspan=\"3\"/></tr></table></div>"
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><tr><td><b>Actor: ServerActor</b></td><td>Server</td><td>Type: system</td></tr><tr><td colspan=\"3\"/></tr></table></div>"
     },
     "url" : "http://hl7.org/fhir/uv/ipa/ActorDefinition/server",
     "identifier" : [{
