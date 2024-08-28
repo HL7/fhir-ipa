@@ -41,4 +41,3 @@ The following data elements must always be present (in other words, mandatory re
 
 <!-- include content or add inline -->
 
-</body>
