@@ -15,7 +15,7 @@ Note that the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.htm
 ### Conformance Artifacts
 The [Artifacts](artifacts.html) page lists the IPA Profiles defined for this implementation guide. Core Profile [StructureDefinitions]({{site.data.fhir.path}}structuredefinition.html) defines the minimum elements, extensions, vocabularies, and value sets which SHALL be present when using the profile. Many Profile pages also contain additional guidance.
 
-The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for requesters and responders.
+The Profile elements consist of both Mandatory and Must Support elements. Mandatory elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support]({{site.data.fhir.path}}profiling.html#mustsupport) guidance requires specifications to define the support expected for profile elements labeled Must Support. The sections below explain how these elements are displayed and define the rules for interpreting profile elements and sub-elements labeled Mandatory and Must Support for clients and servers.
 
 
 #### Capability Statements 
@@ -78,30 +78,30 @@ Interaction Support refers to a system that supports the IPA RESTful interaction
 ### Must Support
 In the context of IPA, the "supported flag" on any data element SHALL be interpreted to mean [FHIR's MustSupport]({{site.data.fhir.path}}conformance-rules.html#mustSupport). Realm-specific implementation guides may provide additional guidance. However, they SHOULD identify and document these differences.
 
-When information on a particular data element is not present, and the reason for absence is unknown, IPA Responders SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Requestors SHALL be able to process resource instances containing data elements asserting missing information.
+When information on a particular data element is not present, and the reason for absence is unknown, IPA Servers SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Clients SHALL be able to process resource instances containing data elements asserting missing information.
 
-Must Support elements are treated differently between IPA responders and requestors. 
+Must Support elements are treated differently between IPA serverss and clients. 
 
-#### Must Support If Available, For Responders
-Responders conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
+#### Must Support If Available, For Servers
+Servers conforming to a profile in IPA SHALL return a Must Support element if that element is available. 
 
 There are a few potential reasons by a Must Support element may not be available, for example:
 * Elements for a particular patient are not available. For example, a registration system may not have the technical capability to collect and store lab results and therefore is not expected to respond with lab results when queried.
-* Elements are available, but the requestor is not authorized to access the data.
+* Elements are available, but the client is not authorized to access the data.
 * Elements marked as Must Support in IPA may not have universal applicability from one country to the next. Due to localization appropriateness, national or regional FHIR specifications may re-use IPA profiles but not require support for a given Must-Support element. Elements may not be available if more local FHIR specifications based upon IPA remove support requirements.  
 
-Note: Responders who cannot store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA conformance resources.
+Note: Servers who cannot store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA conformance resources.
 
 ##### Missing Data
 There are situations when information on a particular data element is missing, and the source system does not know the reason for the absence of data.
 
 ###### Missing Must-Support and Optional Data
- If the responder does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element SHALL be omitted from the resource.
+ If the server does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element SHALL be omitted from the resource.
 
-Note: an IPA responder may have no data to be included either because there are no data or because the data available are not pertinent.
+Note: an IPA server may have no data to be included either because there are no data or because the data available are not pertinent.
 
 ###### Missing Must Support and Required Data
-If an IPA responder does not have data to be included, the reason for the absence has to be specified as follows:
+If an IPA server does not have data to be included, the reason for the absence has to be specified as follows:
 
 1. For non-coded data elements, use the [DataAbsentReason Extension]({{site.data.fhir.path}}extension-data-absent-reason.html) in the data type.
 2. For coded data elements:
@@ -113,11 +113,11 @@ If an IPA responder does not have data to be included, the reason for the absenc
      - *required* binding strength (CodeableConcept or code datatypes):
        - use the appropriate exceptional concept code from the value set
 
-#### Must Support Means SHALL Process, for Requestors
+#### Must Support Means SHALL Process, for Clients
 Clients conforming to a profile in IPA SHALL be capable of processing resource instances containing must-support data elements, including elements with missing data, without generating an error or causing the application to fail. An element can be processed, for example, if the receiving application's behavior can differ based on the element's value.
 
 
-For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because requestors must be capable of processing this value to handle the resource's clinical data appropriately.
+For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because clients must be capable of processing this value to handle the resource's clinical data appropriately.
 
 Note: Readers are advised to understand [FHIR Terminology]({{site.data.fhir.path}}terminologies.html) requirements, [FHIR RESTful API]({{site.data.fhir.path}}http.html) based on the HTTP protocol, along with [FHIR DataTypes]({{site.data.fhir.path}}datatypes.html), [FHIR Search]({{site.data.fhir.path}}search.html) and [FHIR Resource]({{site.data.fhir.path}}resource.html) formats when implementing IPA requirements.
 
@@ -138,8 +138,8 @@ IPA-MedicationStatement|MedicationStatement.informationSource|http://hl7.org/fhi
 
 For example, when claiming conformance to the IPA DocumentReference Profile:
 
-* IPA Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, an IPA PractitioneRole Profile, an IPA Patient Profile, or any combination of them if the element is available
-* IPA Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, IPA PractitionerRole Profile, and an IPA Patient Profile.
+* IPA Server **SHALL** be capable of providing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, an IPA PractitioneRole Profile, an IPA Patient Profile, or any combination of them if the element is available
+* IPA Clients **SHALL** be capable of processing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, IPA PractitionerRole Profile, and an IPA Patient Profile.
 
 #### Must Support - Choice of Data Types
 
@@ -158,26 +158,26 @@ IPA-MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
 
 For example, when claiming conformance to the IPA Observation Profile:
 
-* IPA Responders **SHALL** be capable of populating `Observation.effectiveDateTime`, `Observation.effectivePeriod`, or both if the element is available.
-* IPA Requestors **SHALL** be capable of processing `Observation.effectiveDateTime` and `Observation.effectivePeriod`
+* IPA Servers **SHALL** be capable of populating `Observation.effectiveDateTime`, `Observation.effectivePeriod`, or both if the element is available.
+* IPA Clients **SHALL** be capable of processing `Observation.effectiveDateTime` and `Observation.effectivePeriod`
 
 Systems **MAY** support populating and processing other choice elements not listed in the table (such as `Observation.effectiveInstant`), but this is not a requirement.
 
 ### Obligations
 
-In the context of IPA, the "obligation flag" on any data element documents the Obligations associated with its use. The listed Obligations on the data element outlines the expected behavior of the actor (responder or requestor) interoperating the data element.
+In the context of IPA, the "obligation flag" on any data element documents the Obligations associated with its use. The listed Obligations on the data element outlines the expected behavior of the actor (Server or Client) interoperating the data element.
 
 For a data element to include an Obligation, the data element must be labelled as MustSupport. Obligations provide additional guidance on how implementations that produce or consume the resource are able to "support" the element in a meaningful way. 
 
-Elements with Obligations are treated differently between IPA responders and requestors. Obligations can be found in the formal view section of a resource. 
+Elements with Obligations are treated differently between IPA Servers and Clients. Obligations can be found in the formal view section of a resource. 
 
 {% include img.html img="ipa-obligations-example.png" %}
 
-#### Obligations for Responders
-[Responders](ActorDefinition-server.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element. Implementers may notice that the vast majority of IPA Obligations on Responders is SHALL handle.
+#### Obligations for Servers
+[IPA Servers](ActorDefinition-server.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element. Implementers may notice that the vast majority of IPA Obligations on Servers is SHALL populate-if-known.
 
-#### Obligations for Requestors
-[Requestors](ActorDefinition-client.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
+#### Obligations for Clients
+[IPA Clients](ActorDefinition-client.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.
 
 #### Obligation Code Definitions
 Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). 
