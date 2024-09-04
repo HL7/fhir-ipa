@@ -182,3 +182,100 @@ Elements with Obligations are treated differently between IPA Servers and Client
 #### Obligation Code Definitions
 Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). 
 
+
+
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+### Must Support and Obligations
+
+In the context of IPA, [Obligations](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) defines how an actor (Server or Client) must “support” a given element. All [MustSupport]({{site.data.fhir.path}}conformance-rules.html#mustSupport) elements in this publication are accompanied by an explicit obligation, which identifies structured expectations for a given actor. If an MustSupport element has no obligation for a given actor, that element need not be supported by that actor. Obligations can be found in the formal view section of a resource.
+
+{% include img.html img="ipa-obligations-example.png" %}
+
+Because IPA is a foundational standard -- consideration is given to implementation guides, their authors and implementors that inherit from IPA. Realm-specific implementation guides may apply additional obligations and/or provide additional guidance on the definition of MustSupport. However, they SHOULD identify and document these differences. Feedback to IPA is encouraged on the use of Obligations and generally how IPA can be more useful for local use-cases. 
+
+When information on a particular data element is not present, and the reason for absence is unknown, IPA Servers SHALL NOT include the data elements in the resource instance returned as part of the query results. Conversely, IPA Clients SHALL be able to process resource instances containing data elements asserting missing information.
+
+Must Support elements are treated differently between IPA serverss and clients. 
+
+#### Obligations for Servers
+[IPA Servers](ActorDefinition-server.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Server Actor under a given data element. Implementers may notice that the vast majority of IPA Obligations on Servers is SHALL:populate-if-known, which requires that servers populate an element if that element is available. There are a few potential reasons by a Must Support element may not be available, for example:
+* Elements for a particular patient are not available. For example, a registration system may not have the technical capability to collect and store lab results and therefore is not expected to respond with lab results when queried.
+* Elements are available, but the client is not authorized to access the data.
+* Elements marked as Must Support in IPA may not have universal applicability from one country to the next. Due to localization appropriateness, national or regional FHIR specifications may re-use IPA profiles but not require support for a given Must-Support element. Elements may not be available if more local FHIR specifications based upon IPA remove support requirements.  
+
+Note: Servers who cannot store or return a data element tagged as Supported in IPA profiles can still claim conformance to the IPA profiles per the IPA conformance resources.
+
+##### Missing Data
+There are situations when information on a particular data element is missing, and the source system does not know the reason for the absence of data.
+
+###### Missing Must-Support and Optional Data
+ If the server does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element SHALL be omitted from the resource.
+
+Note: an IPA server may have no data to be included either because there are no data or because the data available are not pertinent.
+
+###### Missing Must Support and Required Data
+If an IPA server does not have data to be included, the reason for the absence has to be specified as follows:
+
+1. For non-coded data elements, use the [DataAbsentReason Extension]({{site.data.fhir.path}}extension-data-absent-reason.html) in the data type.
+2. For coded data elements:
+     - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept datatypes):
+       - if the source systems have text but no coded data, only the text element is used.
+       - if there is neither text nor codes representing actual (i.e., non-exceptional) concepts:
+         - use the appropriate exceptional concept code from the value set if available
+         - use the appropriate concept code from the [DataAbsentReason Value Set]({{site.data.fhir.path}}valueset-data-absent-reason.html) if the value set does not have it.
+     - *required* binding strength (CodeableConcept or code datatypes):
+       - use the appropriate exceptional concept code from the value set
+
+#### Obligations for Clients
+[IPA Clients](ActorDefinition-client.html) conforming to a profile in IPA SHALL support the behavior defined in the Obligations section for the Client Actor under a given data element.  Generally, IPA applies the SHALL:handle obligation code on clients, which requires that client be capable of processing resource instances containing must-support data elements, including elements with missing data, without generating an error or causing the application to fail. An element can be processed, for example, if the receiving application's behavior can differ based on the element's value.
+
+For example, one possible value of the [Observation.status element](StructureDefinition-ipa-observation-definitions.html#Observation.status) is `entered-in-error`. This element is marked as Must Support because clients must be capable of processing this value to handle the resource's clinical data appropriately.
+
+Note: Readers are advised to understand [FHIR Terminology]({{site.data.fhir.path}}terminologies.html) requirements, [FHIR RESTful API]({{site.data.fhir.path}}http.html) based on the HTTP protocol, along with [FHIR DataTypes]({{site.data.fhir.path}}datatypes.html), [FHIR Search]({{site.data.fhir.path}}search.html) and [FHIR Resource]({{site.data.fhir.path}}resource.html) formats when implementing IPA requirements.
+
+#### Obligation Code Definitions
+Further clarification on the obligation code defined for an actor can be found by clicking the hyperlink on the obligation or by navigating to [obligation code value set](https://hl7.org/fhir/extensions/CodeSystem-obligation.html). 
+
+#### Must Support - Resource References
+
+Some elements labeled as *Must Support* reference multiple resource types or profiles (e.g., `DocumentReference.author`). IPA servers SHALL support *at least one* referenced resource or profile for each element listed in the table below. IPA client apps SHALL support *all* referenced resources or profiles listed in the table below.
+
+IPA Profile Name|Must Support Reference Element|Must Support Reference
+---|---|---
+IPA-MedicationRequest|MedicationRequest.reported[x]|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole
+IPA-MedicationRequest|MedicationRequest.requester|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
+IPA-DocumentReference|DocumentReference.author|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient
+IPA-DocumentReference|DocumentReference.context.encounter|http://hl7.org/fhir/StructureDefinition/Encounter, http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+IPA-MedicationStatement|MedicationStatement.context|http://hl7.org/fhir/StructureDefinition/Encounter, http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+IPA-MedicationStatement|MedicationStatement.informationSource|http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole, http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient, http://hl7.org/fhir/StructureDefinition/Organization, http://hl7.org/fhir/StructureDefinition/RelatedPerson
+{:.grid}
+
+For example, when claiming conformance to the IPA DocumentReference Profile:
+
+* IPA Server **SHALL** be capable of providing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, an IPA PractitioneRole Profile, an IPA Patient Profile, or any combination of them if the element is available
+* IPA Clients **SHALL** be capable of processing a DocumentReference.author with a valid reference to an IPA Practitioner Profile, IPA PractitionerRole Profile, and an IPA Patient Profile.
+
+#### Must Support - Choice of Data Types
+
+Some elements labeled as *Must Support* allow different data types (e.g., `Observation.effective[x]`) for their content. IPA servers SHALL support *at least one* data type for each element listed in the table below. IPA client apps SHALL support *all* data types listed in the table below.
+
+IPA Profile Name|Must Support Choice Element|Must Support Data Types
+---|---|---
+IPA-Immunization|Immunization.occurrence[x]|dateTime, string
+IPA-MedicationRequest|MedicationRequest.reported[x]|boolean, Reference
+IPA-MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
+IPA-Observation|Observation.effective[x]|dateTime, Period
+IPA-Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, time, dateTime, Period
+IPA-MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
+IPA-MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
+{:.grid}
+
+For example, when claiming conformance to the IPA Observation Profile:
+
+* IPA Servers **SHALL** be capable of populating `Observation.effectiveDateTime`, `Observation.effectivePeriod`, or both if the element is available.
+* IPA Clients **SHALL** be capable of processing `Observation.effectiveDateTime` and `Observation.effectivePeriod`
+
+Systems **MAY** support populating and processing other choice elements not listed in the table (such as `Observation.effectiveInstant`), but this is not a requirement.
+
