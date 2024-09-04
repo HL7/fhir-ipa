@@ -139,17 +139,22 @@
                     ]
                 },
                 "mustSupport": true,
-                "extension":[
+                "extension": [
                     {
-                        "url": "code",
-                        "valueCode": "SHALL:populate-if-known"
-                    },
-                    {
-                        "url": "actor",
-                        "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate-if-known"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
                     }
-                
-              ]
+                ]  
             },
             {
                 "id": "Condition.code",
