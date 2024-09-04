@@ -1,15 +1,5 @@
 {
     "resourceType": "StructureDefinition",
-    "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-          "valueCode" : "pc"
-        },
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueCode" : "trial-use"
-        }
-    ],
     "id": "ipa-medicationstatement",
     "extension" : [
         {
@@ -254,6 +244,35 @@
             {
                 "id": "MedicationStatement.dosage",
                 "path": "MedicationStatement.dosage",
+                "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHALL:populate-if-known"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                          }
+                      
+                    ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+                      "extension":[
+                          {
+                              "url": "code",
+                              "valueCode": "SHOULD:handle"
+                          },
+                          {
+                              "url": "actor",
+                              "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                          }
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {

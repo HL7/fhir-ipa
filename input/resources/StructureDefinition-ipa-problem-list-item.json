@@ -138,7 +138,18 @@
                         }
                     ]
                 },
-                "mustSupport": true
+                "mustSupport": true,
+                "extension":[
+                    {
+                        "url": "code",
+                        "valueCode": "SHALL:populate-if-known"
+                    },
+                    {
+                        "url": "actor",
+                        "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                    }
+                
+              ]
             },
             {
                 "id": "Condition.code",
