@@ -1,7 +1,8 @@
 {% raw %}
 <blockquote class="stu-note">
 <p>
-We are proposing to removing MS from stautsReason. Implementer feedback is encouraged.
+We propose to remove MS from statusReason. Implementer feedback is encouraged.
+
 </p>
 </blockquote>
 {% endraw %}
@@ -40,4 +41,3 @@ The following data elements must always be present (in other words, mandatory re
 
 <!-- include content or add inline -->
 
-</body>

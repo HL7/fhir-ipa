@@ -201,7 +201,10 @@
                         "targetProfile": [
                             "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitioner",
                             "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-practitionerrole",
-                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
+                            "http://hl7.org/fhir/StructureDefinition/Organization",
+                            "http://hl7.org/fhir/StructureDefinition/Device",
+                            "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient",
+                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"   
                         ]
                     }
                 ],

@@ -39,12 +39,12 @@ The IPA specification is designed to help patients access their data through pat
 
 The following actors are part of the IPA IG:
 
-IPA Requestor
-: An application that initiates a data access request to retrieve patient data. It can be thought of as the client in a client-server interaction. The terms "app", "patient app", and "client" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
+IPA Server ("Responder")
+: A product that responds to the data access request providing patient data. It can be thought of as the server in a client-server interaction. The terms "server", "IPA FHIR server", and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
 <br/><br/>
 
-IPA Responder
-: A product that responds to the data access request providing patient data. It can be thought of as the server in a client-server interaction. The terms "server", "IPA FHIR server", and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an "interoperable healthcare platform".
+IPA Client ("Requestor")
+: An application that initiates a data access request to retrieve patient data. It can be thought of as the client in a client-server interaction. The terms "app", "patient app", and "client" are used interchangeably throughout this guide and are not meant to limit this actor to patient and provider apps. Payers and other users can use the same technology. Consider these terms a short-hand notation for a "user application".
 <br/><br/>
 
 SMART on FHIR Authorization Server
@@ -122,6 +122,7 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *Isaac Vetter, Epic*
 - *Mikael Rinnetmaki, Sensotrend Oy, HL7 Finland*
 - *Rob Hausam, Hausam Consulting LLC*
+- *Sheridan Cook, Canada Health Infoway*
 - *Vassil Peytchev, Epic*
 
 
@@ -131,6 +132,6 @@ Because the "instantiates" form of support for IPA is imprecise, implementers an
 - *Cori Thompson, Drummond Group*
 - *John D'Amore, More Informatics*
 - *John Moehrke, By Light Professional IT Services LLC*
-- *Sheridan Cook, Canada Health Infoway*
+- *Rashid Kolaghassi, Epic*
 
 ---
