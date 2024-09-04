@@ -11,10 +11,6 @@ The following data elements must always be present (in other words, mandatory re
 * a code that identifies the allergy or intolerance
 * a patient
 * date vaccine administered or was to be administered.
-  
-**Applications must also support:**
-* a status reason 
-
 
 
 <!-- (only if present) -->
