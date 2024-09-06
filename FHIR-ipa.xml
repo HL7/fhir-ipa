@@ -43,6 +43,7 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="change-log" name="Change Log"/>
 <page key="conformance" name="Conforming to this Specification"/>
 <page key="downloads" name="Downloads"/>
 <page key="fetching" name="Finding and Retrieving Patient Information"/>
