@@ -1,15 +1,16 @@
 package-id: hl7.fhir.uv.ipa
-version: 1.0.0
-path: http://hl7.org/fhir/uv/ipa/STU1
+version: 1.1.0
+path: http://hl7.org/fhir/uv/ipa/STU1.1
 status: draft
 sequence: STU 1
+title: International Patient Access (IPA)
 desc: Continuous Integration Build (latest in version control)
 # descmd: '{markdown desc of release} (optional)'
 # changes: '{relative link to description of changes} (optional)'
 # title: International Patient Access
 # ci-build: https://build.fhir.org/ig/HL7/fhir-ipa/
 # category: Patient Summary
-# introduction: 'The International Patient Access implementation guide (IPA) defines a minimal, base set of FHIR profiles and FHIR RESTful interactions. In addition, IPA specifies the use of SMART on FHIR for authentication and authorization. It can be used as-is or as a foundation for developing national standards to enable patients access to their healthcare data via FHIR-enabled patient-facing apps. The IPA Profiles are informed by a range of national base FHIR specifications circa 2022. As a foundational guide with an international focus, its content will continue to grow to meet global needs.'
+introduction: 'The International Patient Access implementation guide (IPA) defines a minimal, base set of FHIR profiles and FHIR RESTful interactions. In addition, IPA specifies the use of SMART on FHIR for authentication and authorization. It can be used as-is or as a foundation for developing national standards to enable patients access to their healthcare data via FHIR-enabled patient-facing apps. The IPA Profiles are informed by a range of national base FHIR specifications circa 2022. As a foundational guide with an international focus, its content will continue to grow to meet global needs.'
 
 # doco:
 

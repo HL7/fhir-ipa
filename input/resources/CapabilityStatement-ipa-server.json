@@ -1,6 +1,9 @@
 {
   "resourceType" : "CapabilityStatement",
   "id" : "ipa-server",
+  "text" : {
+    "status" : "extensions"
+  },
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -12,13 +15,13 @@
     }
   ],
   "url" : "http://hl7.org/fhir/uv/ipa/CapabilityStatement/ipa-server",
-  "version" : "1.0.0-preview",
+  "version" : "1.0.0",
   "name" : "InternationalPatientAccessAPI",
   "title" : "International Patient Access Server CapabilityStatement",
   "status" : "active",
   "experimental" : false,
-  "date" : "2022-12-09",
-  "publisher" : "HL7 International - Patient Care Work Group",
+  "date" : "2023-11-14",
+  "publisher" : "HL7 International - Patient Care",
   "contact" : [{
     "name" : "HL7 International - Patient Care Work Group",
     "telecom" : [{

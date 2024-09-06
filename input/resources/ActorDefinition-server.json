@@ -1,0 +1,29 @@
+{
+    "resourceType" : "ActorDefinition",
+    "id" : "server",
+    "url" : "http://hl7.org/fhir/uv/ipa/ActorDefinition/server",
+    "identifier" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.113883.4.642.27.1"
+    }],
+    "version" : "0.1.0",
+    "name" : "ServerActor",
+    "title" : "Server",
+    "status" : "active",
+    "date" : "2021-11-02T14:31:30.239Z",
+    "publisher" : "HL7 International / FHIR Infrastructure",
+    "contact" : [{
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://hl7.org/Special/committees/fhir-i"
+      }]
+    }],
+    "description" : "IPA Server Actor",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "code" : "001"
+      }]
+    }],
+    "type" : "system"
+  }

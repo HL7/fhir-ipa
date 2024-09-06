@@ -1,0 +1,3 @@
+### IPA Server
+
+The IPA Server - also known as a responder, responds to the data access request providing patient data. It can be thought of as the server in a client-server interaction. The terms “server”, “IPA FHIR server”, and “EHR” are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. HIEs, care coordination platforms, population health systems, etc., can use the same technology. Consider these terms a short-hand notation for an “interoperable healthcare platform”.

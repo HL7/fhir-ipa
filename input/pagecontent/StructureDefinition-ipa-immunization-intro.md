@@ -3,7 +3,7 @@
 
 
 <!-- Boilerplate -->
-The following data elements must always be present (in other words, mandatory resource properties where the minimum cardinality is 1) or must be supported ([Must Support](conformance.html#must-support) definition). Servers cannot restrict access to mandatory elements when authorizing an application. However, servers may choose to provide additional information or may be required to do so by national or other profiles that apply to the server's context.
+The following data elements must always be present (in other words, mandatory resource properties where the minimum cardinality is 1) or must be supported ([Must Support](conformance.html#must-support-and-obligations) definition). Servers cannot restrict access to mandatory elements when authorizing an application. However, servers may choose to provide additional information or may be required to do so by national or other profiles that apply to the server's context.
 
 
 **Each Immunization SHALL have:**
@@ -11,10 +11,6 @@ The following data elements must always be present (in other words, mandatory re
 * a code that identifies the allergy or intolerance
 * a patient
 * date vaccine administered or was to be administered.
-  
-**Applications must also support:**
-* a status reason 
-
 
 
 <!-- (only if present) -->

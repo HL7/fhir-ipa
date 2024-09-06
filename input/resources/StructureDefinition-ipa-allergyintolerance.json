@@ -29,6 +29,35 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate-if-known"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -36,6 +65,35 @@
       {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate-if-known"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+            ]
+          }   
+      ],
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -43,6 +101,35 @@
       {
         "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate-if-known"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }
+            
+          ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHOULD:handle"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/client"
+                }
+              ]
+          }
+      ],
         "min": 1,
         "max": "1",
         "mustSupport": true
@@ -59,7 +146,22 @@
               "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-patient"
             ]
           }
-        ],
+        ],        
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension":[
+                {
+                    "url": "code",
+                    "valueCode": "SHALL:populate-if-known"
+                },
+                {
+                    "url": "actor",
+                    "valueCanonical": "http://hl7.org/fhir/uv/ipa/ActorDefinition/server"
+                }          
+          ]
+          }
+      ],
         "mustSupport": true
       }
     ]

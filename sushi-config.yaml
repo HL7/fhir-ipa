@@ -67,6 +67,8 @@ pages:
     title: Security and Privacy
   downloads.md:
     title: Downloads
+  change-log.md:
+    title: Change Log
   ImplementationGuide-hl7.fhir.uv.ipa.md:
     title: IPA ImplementationGuide Resource
 
@@ -132,4 +134,4 @@ menu:
   Support: 
       FHIR: "{{site.data.fhir.path}}index.html"
       Downloads: downloads.html
-  # Change Log: changes.html
+      Change Log: change-log.html

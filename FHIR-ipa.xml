@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/ipa/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-ipa" defaultVersion="1.0.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-ipa" url="http://hl7.org/fhir/uv/ipa">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/ipa/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-ipa" defaultVersion="1.1.0" defaultWorkgroup="pc" gitUrl="https://github.com/HL7/fhir-ipa" url="http://hl7.org/fhir/uv/ipa">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-ipa"/>
+<version code="1.1.0" url="http://hl7.org/fhir/uv/ipa/STU1.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/uv/ipa/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/uv/ipa/2022Jan"/>
 <version code="0.8.0" deprecated="true"/>
@@ -8,6 +9,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="ActorDefinition/client" key="ActorDefinition-client" name="Client"/>
 <artifact id="DocumentReference/USClinicalNoteExample1" key="DocumentReference-USClinicalNoteExample1" name="DocumentReference Example"/>
 <artifact id="AllergyIntolerance/AllIntExample1" key="AllergyIntolerance-AllIntExample1" name="IPA AllergyIntolerance Example"/>
 <artifact id="Condition/EncounterExample1" key="Condition-EncounterExample1" name="IPA Condition Example"/>
@@ -38,9 +40,11 @@
 <artifact id="Observation/SmokingExample1" key="Observation-SmokingExample1" name="Observation social history smoking Example"/>
 <artifact id="Practitioner/PractitionerExample1" key="Practitioner-PractitionerExample1" name="Practitioner Example"/>
 <artifact id="PractitionerRole/PractitionerRoleExample1" key="PractitionerRole-PractitionerRoleExample1" name="PractitionerRole Example"/>
+<artifact id="ActorDefinition/server" key="ActorDefinition-server" name="Server"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="change-log" name="Change Log"/>
 <page key="conformance" name="Conforming to this Specification"/>
 <page key="downloads" name="Downloads"/>
 <page key="fetching" name="Finding and Retrieving Patient Information"/>

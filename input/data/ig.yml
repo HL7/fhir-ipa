@@ -6,9 +6,9 @@ name: InternationalPatientAccess
 title: International Patient Access
 status: draft
 date: '2023-02-01'
-publisher: HL7 International - Patient Care Work Group
+publisher: HL7 International - Patient Care
 contact:
-- name: HL7 International - Patient Care Work Group
+- name: HL7 International - Patient Care
   telecom:
   - system: url
     value: http://www.hl7.org/Special/committees/patientcare
@@ -348,13 +348,11 @@ definition:
     value: 'true'
   - code: excludexml
     value: 'false'
-  - code: excludejsn
+  - code: excludejson
     value: 'false'
   - code: excludettl
     value: 'true'
   - code: excludemap
-    value: 'true'
-  - code: excludeexample
     value: 'true'
   - code: generate
     value: xml
