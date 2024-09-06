@@ -1,7 +1,4 @@
 
-IPA is introducing Obligations on actors for its profiles. See [section 2.6](#obligations) for details. Implementer feedback is encouraged.
-{:.stu-note}
-
 IPA conformant servers SHALL support:
 
  - the resources as profiled by IPA to represent clinical information (Profile Support) and [the RESTful FHIR API]({{site.data.fhir.path}}http.html) interactions defined for it (Interaction Support)
