@@ -379,6 +379,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl":"change-log.html",
+          "title":"Change Log",
+          "generation":"markdown"
+        },
+        {
           "nameUrl": "ImplementationGuide-hl7.fhir.uv.ipa.html",
           "title": "IPA ImplementationGuide Resource",
           "generation": "markdown"
