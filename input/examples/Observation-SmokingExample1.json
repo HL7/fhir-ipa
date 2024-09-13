@@ -116,9 +116,7 @@
       },
       "valueQuantity": {
         "value": 3.72,
-        "unit": "{PackYears}",
-        "system": "http://unitsofmeasure.org",
-        "code": "{PackYears}"
+        "unit": "pack-years"
       }
     },
     {
