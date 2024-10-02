@@ -2,6 +2,8 @@
 # Missing capability for this extension, see https://jira.hl7.org/browse/FHIR-34397
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 
+# This project doesn't profile language, so we think it's appropriate to ignore this warning.
+binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental
 
 # ================================================================================
 # ===  ERRORS ===
