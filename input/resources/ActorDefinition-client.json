@@ -2,7 +2,7 @@
     "resourceType" : "ActorDefinition",
     "id" : "client",
     "url" : "http://hl7.org/fhir/uv/ipa/ActorDefinition/client",
-    "version" : "0.1.0",
+    "version" : "1..0",
     "name" : "ClientActor",
     "title" : "Client",
     "status" : "active",
