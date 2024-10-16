@@ -7,8 +7,9 @@ This element does not match any known slice defined in the profile http://hl7.or
 # This project doesn't profile language, so we think it's appropriate to ignore this warning.
 binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental
 
-# We think that this is the correct codesystem to use, even though it's still draft 
+# We think that these are the correct codesystems to use, even though draft 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0
 
 
 # ================================================================================
