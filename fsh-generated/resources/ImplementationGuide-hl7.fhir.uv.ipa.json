@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "InternationalPatientAccess",
   "title": "International Patient Access",
   "status": "active",
