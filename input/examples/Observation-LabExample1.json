@@ -35,6 +35,12 @@
   },
   "effectiveDateTime": "2019-09-23T13:50:39Z",
   "issued": "2019-09-23T14:50:39Z",
+  "performer":[
+    {
+      "reference":"Practitioner/PractitionerExample1",
+      "display":"Marty Seeger, MD"
+    }
+  ],
   "valueQuantity": {
     "value": 105,
     "unit": "mg/dL",
