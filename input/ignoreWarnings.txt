@@ -4,12 +4,3 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-ty
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-verification|4.0.1
-
-
-# ================================================================================
-# ===  ERRORS ===
-# ===========================================================-=====================
-
-# ===  These errors are pending an update to the IG publisher for resolution; currently, there is no timeline for their correction. They are related by R4 and R5 value sets having different values, but using an R4 values returns the same error. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG ====
-ERROR: ActorDefinition/client: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
-ERROR: ActorDefinition/server: ActorDefinition.type: The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'system' in the ValueSet 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; The provided code '#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0')
