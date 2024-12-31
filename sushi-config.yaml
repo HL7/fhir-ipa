@@ -18,7 +18,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 copyright: >-
   Used by permission of HL7 International all rights reserved Creative Commons License
 description: >-
-  This IG  describes how an application acting on behalf of a patient can access information about the patient from an clinical records system using a FHIR based API. The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), or a health data exchange, including a national health record system.
+  This IG describes how an application acting on behalf of a patient can access information about the patient from an clinical records system using a FHIR based API. The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), or a health data exchange, including a national health record system.
 license: CC0-1.0
 date: '2024-01-31'
 version: 1.1.0
