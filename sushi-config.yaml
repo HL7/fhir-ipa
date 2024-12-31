@@ -20,7 +20,7 @@ copyright: >-
 description: >-
   This IG  describes how an application acting on behalf of a patient can access information about the patient from an clinical records system using a FHIR based API. The clinical records system may be supporting a clinical care provider (e.g. a hospital, or a general practitioner), or a health data exchange, including a national health record system.
 license: CC0-1.0
-date: '2023-02-01'
+date: '2024-01-31'
 version: 1.1.0
 fhirVersion: 4.0.1
 dependencies:
@@ -105,9 +105,9 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - context
     - init
 
-copyrightyear: '2022+'
+copyrightyear: '2024+'
 # releaselabel: Ballot
-releaselabel: STU1
+releaselabel: STU1.1
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

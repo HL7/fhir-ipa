@@ -47,8 +47,8 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "260548002",
-            "display": "Oral"
+            "code": "26643006",
+            "display": "Oral route"
           }
         ],
         "text": "Oral"
