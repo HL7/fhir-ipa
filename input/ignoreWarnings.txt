@@ -12,5 +12,4 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === We believe that this is a tooling issue and doesn't identify an actual problem with the IG. And investigation is ongoing.  ===
 
 # === Quoted from US Core's ignoreWarning for the exact same issue: "Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419" ===
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
-
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination%
