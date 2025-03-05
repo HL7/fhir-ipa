@@ -19,3 +19,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # == Rule is new, we didn't determine IG FMM during ballot. Will do so as part of next ballot.
 New Rule:  HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+
+# === Extension was deprecated during IPA publication process. Will add next ballot.
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
