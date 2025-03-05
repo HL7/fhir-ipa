@@ -12,7 +12,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === We believe that this is a tooling issue and doesn't identify an actual problem with the IG. And investigation is ongoing.  ===
 
 # === Quoted from US Core's ignoreWarning for the exact same issue: "Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419" ===
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
 
 # === This is a new requirement. FMM for IPA is more complicated than the typical IG. We'll ballot an FMM level as part of the next ballot.  ===
 %HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm%
