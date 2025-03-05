@@ -16,3 +16,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # === This is a new requirement. FMM for IPA is more complicated than the typical IG. We'll ballot an FMM level as part of the next ballot.  ===
 %HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm%
+
+# == Rule is new, we didn't determine IG FMM during ballot. Will do so as part of next ballot.
+New Rule:  HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
