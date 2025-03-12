@@ -1,13 +1,20 @@
 == Suppressed Messages ==
 
+# Versions of SMART beyond SMARTv2.0.0 specify behavior that is not widely implemented. This is intentional.
+WARNING: ImplementationGuide/hl7.fhir.uv.ipa: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.uv.smart-app-launch#2.0.0 released on 2021-11-26, but the most recent version is 2.2.0. This reference is getting old and the more recent version should be considered
+
+# QA error began appearing well into the publication process, well after IG was approved for publication by the various, multiple HL7 committees.
+WARNING: StructureDefinition/ipa-documentreference: StructureDefinition.snapshot.element[49].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.0', found versions: 2018-08-12, 3.0.0
+
+# QA error began appearing well into the publication process, well after IG was approved for publication by the various, multiple HL7 committees. 
+WARNING: StructureDefinition/ipa-medicationrequest: StructureDefinition.snapshot.element[77].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.0', found versions: 2014-03-26, 3.0.0
+WARNING: StructureDefinition/ipa-medicationrequest: StructureDefinition.snapshot.element[78].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '3.0.0', found versions: 2014-03-26, 3.0.0
+
 # === We think that these are the correct codesystems to use, even though draft ===
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
 
 # === "The deprecation [of this valueset] in R5 was eroneous." -- https://chat.fhir.org/#narrow/channel/179165-committers/topic/deprecated.20valueset/near/418829938 ===
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-
-# === Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities ===
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # === This is a new requirement. FMM for IPA is more complicated than the typical IG. We'll ballot an FMM level as part of the next ballot.  ===
 WARNING: ImplementationGuide/hl7.fhir.uv.ipa: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
@@ -15,8 +22,7 @@ WARNING: ImplementationGuide/hl7.fhir.uv.ipa: ImplementationGuide: HL7 Implement
 # === Extension was deprecated during IPA publication process. Will add next ballot.
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
 
-# === Quoted from US Core's ignoreWarning for the exact same issue: "Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419" ===
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+# === US Core's ignoreWarning for the exact same issue: "Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419" ===
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[0].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -45,7 +51,6 @@ INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resourc
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[8].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[8].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-client: CapabilityStatement.rest[0].resource[8].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-== input/resources/CapabilityStatement-ipa-server.json ==
 INFORMATION: CapabilityStatement/ipa-server: CapabilityStatement.rest[0].resource[0].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-server: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: CapabilityStatement/ipa-server: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
